@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EBA090FC29E5C2E0001B3005 /* my_resumeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA090FB29E5C2E0001B3005 /* my_resumeApp.swift */; };
+		EBA090FC29E5C2E0001B3005 /* myResumeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA090FB29E5C2E0001B3005 /* myResumeApp.swift */; };
 		EBA090FE29E5C2E0001B3005 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA090FD29E5C2E0001B3005 /* ContentView.swift */; };
 		EBA0910029E5C2E2001B3005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBA090FF29E5C2E2001B3005 /* Assets.xcassets */; };
 		EBA0910429E5C2E2001B3005 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBA0910329E5C2E2001B3005 /* Preview Assets.xcassets */; };
-		EBA0910E29E5C2E2001B3005 /* my_resumeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA0910D29E5C2E2001B3005 /* my_resumeTests.swift */; };
-		EBA0911829E5C2E2001B3005 /* my_resumeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA0911729E5C2E2001B3005 /* my_resumeUITests.swift */; };
-		EBA0911A29E5C2E2001B3005 /* my_resumeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA0911929E5C2E2001B3005 /* my_resumeUITestsLaunchTests.swift */; };
+		EBA0910E29E5C2E2001B3005 /* myResumeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA0910D29E5C2E2001B3005 /* myResumeTests.swift */; };
+		EBA0911829E5C2E2001B3005 /* myResumeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA0911729E5C2E2001B3005 /* myResumeUITests.swift */; };
+		EBA0911A29E5C2E2001B3005 /* myResumeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA0911929E5C2E2001B3005 /* myResumeUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,17 +34,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		EBA090F829E5C2E0001B3005 /* my-resume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "my-resume.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EBA090FB29E5C2E0001B3005 /* my_resumeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = my_resumeApp.swift; sourceTree = "<group>"; };
+		EBA090F829E5C2E0001B3005 /* myResume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myResume.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBA090FB29E5C2E0001B3005 /* myResumeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myResumeApp.swift; sourceTree = "<group>"; };
 		EBA090FD29E5C2E0001B3005 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EBA090FF29E5C2E2001B3005 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EBA0910129E5C2E2001B3005 /* my_resume.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = my_resume.entitlements; sourceTree = "<group>"; };
+		EBA0910129E5C2E2001B3005 /* myResume.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = myResume.entitlements; sourceTree = "<group>"; };
 		EBA0910329E5C2E2001B3005 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		EBA0910929E5C2E2001B3005 /* my-resumeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "my-resumeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EBA0910D29E5C2E2001B3005 /* my_resumeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = my_resumeTests.swift; sourceTree = "<group>"; };
-		EBA0911329E5C2E2001B3005 /* my-resumeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "my-resumeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EBA0911729E5C2E2001B3005 /* my_resumeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = my_resumeUITests.swift; sourceTree = "<group>"; };
-		EBA0911929E5C2E2001B3005 /* my_resumeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = my_resumeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EBA0910929E5C2E2001B3005 /* myResumeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myResumeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBA0910D29E5C2E2001B3005 /* myResumeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myResumeTests.swift; sourceTree = "<group>"; };
+		EBA0911329E5C2E2001B3005 /* myResumeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myResumeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBA0911729E5C2E2001B3005 /* myResumeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myResumeUITests.swift; sourceTree = "<group>"; };
+		EBA0911929E5C2E2001B3005 /* myResumeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myResumeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,12 +72,85 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB86A5FC29E89B2300373ED1 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				EB86A5FF29E89B4F00373ED1 /* dataSources */,
+				EB86A60029E89B5B00373ED1 /* repositories */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		EB86A5FD29E89B2C00373ED1 /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				EB86A60229E89D7600373ED1 /* useCases */,
+			);
+			path = domain;
+			sourceTree = "<group>";
+		};
+		EB86A5FE29E89B3300373ED1 /* presentation */ = {
+			isa = PBXGroup;
+			children = (
+				EBA090FB29E5C2E0001B3005 /* myResumeApp.swift */,
+				EBA090FD29E5C2E0001B3005 /* ContentView.swift */,
+				EB86A60329E89D8200373ED1 /* features */,
+				EB86A60429E89D8800373ED1 /* resources */,
+			);
+			path = presentation;
+			sourceTree = "<group>";
+		};
+		EB86A5FF29E89B4F00373ED1 /* dataSources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = dataSources;
+			sourceTree = "<group>";
+		};
+		EB86A60029E89B5B00373ED1 /* repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = repositories;
+			sourceTree = "<group>";
+		};
+		EB86A60129E89D5A00373ED1 /* config */ = {
+			isa = PBXGroup;
+			children = (
+				EBA0910129E5C2E2001B3005 /* myResume.entitlements */,
+			);
+			path = config;
+			sourceTree = "<group>";
+		};
+		EB86A60229E89D7600373ED1 /* useCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = useCases;
+			sourceTree = "<group>";
+		};
+		EB86A60329E89D8200373ED1 /* features */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = features;
+			sourceTree = "<group>";
+		};
+		EB86A60429E89D8800373ED1 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				EBA090FF29E5C2E2001B3005 /* Assets.xcassets */,
+				EBA0910329E5C2E2001B3005 /* Preview Assets.xcassets */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
 		EBA090EF29E5C2E0001B3005 = {
 			isa = PBXGroup;
 			children = (
-				EBA090FA29E5C2E0001B3005 /* my-resume */,
-				EBA0910C29E5C2E2001B3005 /* my-resumeTests */,
-				EBA0911629E5C2E2001B3005 /* my-resumeUITests */,
+				EBA090FA29E5C2E0001B3005 /* myResume */,
+				EBA0910C29E5C2E2001B3005 /* myResumeTests */,
+				EBA0911629E5C2E2001B3005 /* myResumeUITests */,
 				EBA090F929E5C2E0001B3005 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,56 +158,47 @@
 		EBA090F929E5C2E0001B3005 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EBA090F829E5C2E0001B3005 /* my-resume.app */,
-				EBA0910929E5C2E2001B3005 /* my-resumeTests.xctest */,
-				EBA0911329E5C2E2001B3005 /* my-resumeUITests.xctest */,
+				EBA090F829E5C2E0001B3005 /* myResume.app */,
+				EBA0910929E5C2E2001B3005 /* myResumeTests.xctest */,
+				EBA0911329E5C2E2001B3005 /* myResumeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EBA090FA29E5C2E0001B3005 /* my-resume */ = {
+		EBA090FA29E5C2E0001B3005 /* myResume */ = {
 			isa = PBXGroup;
 			children = (
-				EBA090FB29E5C2E0001B3005 /* my_resumeApp.swift */,
-				EBA090FD29E5C2E0001B3005 /* ContentView.swift */,
-				EBA090FF29E5C2E2001B3005 /* Assets.xcassets */,
-				EBA0910129E5C2E2001B3005 /* my_resume.entitlements */,
-				EBA0910229E5C2E2001B3005 /* Preview Content */,
+				EB86A60129E89D5A00373ED1 /* config */,
+				EB86A5FC29E89B2300373ED1 /* data */,
+				EB86A5FD29E89B2C00373ED1 /* domain */,
+				EB86A5FE29E89B3300373ED1 /* presentation */,
 			);
-			path = "my-resume";
+			path = myResume;
 			sourceTree = "<group>";
 		};
-		EBA0910229E5C2E2001B3005 /* Preview Content */ = {
+		EBA0910C29E5C2E2001B3005 /* myResumeTests */ = {
 			isa = PBXGroup;
 			children = (
-				EBA0910329E5C2E2001B3005 /* Preview Assets.xcassets */,
+				EBA0910D29E5C2E2001B3005 /* myResumeTests.swift */,
 			);
-			path = "Preview Content";
+			path = myResumeTests;
 			sourceTree = "<group>";
 		};
-		EBA0910C29E5C2E2001B3005 /* my-resumeTests */ = {
+		EBA0911629E5C2E2001B3005 /* myResumeUITests */ = {
 			isa = PBXGroup;
 			children = (
-				EBA0910D29E5C2E2001B3005 /* my_resumeTests.swift */,
+				EBA0911729E5C2E2001B3005 /* myResumeUITests.swift */,
+				EBA0911929E5C2E2001B3005 /* myResumeUITestsLaunchTests.swift */,
 			);
-			path = "my-resumeTests";
-			sourceTree = "<group>";
-		};
-		EBA0911629E5C2E2001B3005 /* my-resumeUITests */ = {
-			isa = PBXGroup;
-			children = (
-				EBA0911729E5C2E2001B3005 /* my_resumeUITests.swift */,
-				EBA0911929E5C2E2001B3005 /* my_resumeUITestsLaunchTests.swift */,
-			);
-			path = "my-resumeUITests";
+			path = myResumeUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EBA090F729E5C2E0001B3005 /* my-resume */ = {
+		EBA090F729E5C2E0001B3005 /* myResume */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EBA0911D29E5C2E2001B3005 /* Build configuration list for PBXNativeTarget "my-resume" */;
+			buildConfigurationList = EBA0911D29E5C2E2001B3005 /* Build configuration list for PBXNativeTarget "myResume" */;
 			buildPhases = (
 				EBA090F429E5C2E0001B3005 /* Sources */,
 				EBA090F529E5C2E0001B3005 /* Frameworks */,
@@ -144,14 +208,14 @@
 			);
 			dependencies = (
 			);
-			name = "my-resume";
+			name = myResume;
 			productName = "my-resume";
-			productReference = EBA090F829E5C2E0001B3005 /* my-resume.app */;
+			productReference = EBA090F829E5C2E0001B3005 /* myResume.app */;
 			productType = "com.apple.product-type.application";
 		};
-		EBA0910829E5C2E2001B3005 /* my-resumeTests */ = {
+		EBA0910829E5C2E2001B3005 /* myResumeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EBA0912029E5C2E2001B3005 /* Build configuration list for PBXNativeTarget "my-resumeTests" */;
+			buildConfigurationList = EBA0912029E5C2E2001B3005 /* Build configuration list for PBXNativeTarget "myResumeTests" */;
 			buildPhases = (
 				EBA0910529E5C2E2001B3005 /* Sources */,
 				EBA0910629E5C2E2001B3005 /* Frameworks */,
@@ -162,14 +226,14 @@
 			dependencies = (
 				EBA0910B29E5C2E2001B3005 /* PBXTargetDependency */,
 			);
-			name = "my-resumeTests";
+			name = myResumeTests;
 			productName = "my-resumeTests";
-			productReference = EBA0910929E5C2E2001B3005 /* my-resumeTests.xctest */;
+			productReference = EBA0910929E5C2E2001B3005 /* myResumeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		EBA0911229E5C2E2001B3005 /* my-resumeUITests */ = {
+		EBA0911229E5C2E2001B3005 /* myResumeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EBA0912329E5C2E2001B3005 /* Build configuration list for PBXNativeTarget "my-resumeUITests" */;
+			buildConfigurationList = EBA0912329E5C2E2001B3005 /* Build configuration list for PBXNativeTarget "myResumeUITests" */;
 			buildPhases = (
 				EBA0910F29E5C2E2001B3005 /* Sources */,
 				EBA0911029E5C2E2001B3005 /* Frameworks */,
@@ -180,9 +244,9 @@
 			dependencies = (
 				EBA0911529E5C2E2001B3005 /* PBXTargetDependency */,
 			);
-			name = "my-resumeUITests";
+			name = myResumeUITests;
 			productName = "my-resumeUITests";
-			productReference = EBA0911329E5C2E2001B3005 /* my-resumeUITests.xctest */;
+			productReference = EBA0911329E5C2E2001B3005 /* myResumeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -208,7 +272,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EBA090F329E5C2E0001B3005 /* Build configuration list for PBXProject "my-resume" */;
+			buildConfigurationList = EBA090F329E5C2E0001B3005 /* Build configuration list for PBXProject "myResume" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -221,9 +285,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EBA090F729E5C2E0001B3005 /* my-resume */,
-				EBA0910829E5C2E2001B3005 /* my-resumeTests */,
-				EBA0911229E5C2E2001B3005 /* my-resumeUITests */,
+				EBA090F729E5C2E0001B3005 /* myResume */,
+				EBA0910829E5C2E2001B3005 /* myResumeTests */,
+				EBA0911229E5C2E2001B3005 /* myResumeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -260,7 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBA090FE29E5C2E0001B3005 /* ContentView.swift in Sources */,
-				EBA090FC29E5C2E0001B3005 /* my_resumeApp.swift in Sources */,
+				EBA090FC29E5C2E0001B3005 /* myResumeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBA0910E29E5C2E2001B3005 /* my_resumeTests.swift in Sources */,
+				EBA0910E29E5C2E2001B3005 /* myResumeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,8 +340,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBA0911829E5C2E2001B3005 /* my_resumeUITests.swift in Sources */,
-				EBA0911A29E5C2E2001B3005 /* my_resumeUITestsLaunchTests.swift in Sources */,
+				EBA0911829E5C2E2001B3005 /* myResumeUITests.swift in Sources */,
+				EBA0911A29E5C2E2001B3005 /* myResumeUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,12 +350,12 @@
 /* Begin PBXTargetDependency section */
 		EBA0910B29E5C2E2001B3005 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EBA090F729E5C2E0001B3005 /* my-resume */;
+			target = EBA090F729E5C2E0001B3005 /* myResume */;
 			targetProxy = EBA0910A29E5C2E2001B3005 /* PBXContainerItemProxy */;
 		};
 		EBA0911529E5C2E2001B3005 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EBA090F729E5C2E0001B3005 /* my-resume */;
+			target = EBA090F729E5C2E0001B3005 /* myResume */;
 			targetProxy = EBA0911429E5C2E2001B3005 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -411,14 +475,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "my-resume/my_resume.entitlements";
+				CODE_SIGN_ENTITLEMENTS = myResume/config/myResume.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"my-resume/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"myResume/presentation/resources\"";
 				DEVELOPMENT_TEAM = SPW25XDBMS;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "My Resume";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -433,8 +498,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "info.danielmartinez.app.my-resume";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = info.danielmartinez.app.myResume;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -449,14 +514,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "my-resume/my_resume.entitlements";
+				CODE_SIGN_ENTITLEMENTS = myResume/config/myResume.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"my-resume/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"myResume/presentation/resources\"";
 				DEVELOPMENT_TEAM = SPW25XDBMS;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "My Resume";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -471,8 +537,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "info.danielmartinez.app.my-resume";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = info.danielmartinez.app.myResume;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -494,14 +560,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "info.danielmartinez.app.my-resumeTests";
+				PRODUCT_BUNDLE_IDENTIFIER = info.danielmartinez.app.myResumeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/my-resume.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/my-resume";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/myResume.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/myResume";
 			};
 			name = Debug;
 		};
@@ -517,14 +583,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "info.danielmartinez.app.my-resumeTests";
+				PRODUCT_BUNDLE_IDENTIFIER = info.danielmartinez.app.myResumeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/my-resume.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/my-resume";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/myResume.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/myResume";
 			};
 			name = Release;
 		};
@@ -539,14 +605,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "info.danielmartinez.app.my-resumeUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = info.danielmartinez.app.myResumeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "my-resume";
+				TEST_TARGET_NAME = myResume;
 			};
 			name = Debug;
 		};
@@ -561,21 +627,21 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "info.danielmartinez.app.my-resumeUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = info.danielmartinez.app.myResumeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "my-resume";
+				TEST_TARGET_NAME = myResume;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EBA090F329E5C2E0001B3005 /* Build configuration list for PBXProject "my-resume" */ = {
+		EBA090F329E5C2E0001B3005 /* Build configuration list for PBXProject "myResume" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EBA0911B29E5C2E2001B3005 /* Debug */,
@@ -584,7 +650,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EBA0911D29E5C2E2001B3005 /* Build configuration list for PBXNativeTarget "my-resume" */ = {
+		EBA0911D29E5C2E2001B3005 /* Build configuration list for PBXNativeTarget "myResume" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EBA0911E29E5C2E2001B3005 /* Debug */,
@@ -593,7 +659,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EBA0912029E5C2E2001B3005 /* Build configuration list for PBXNativeTarget "my-resumeTests" */ = {
+		EBA0912029E5C2E2001B3005 /* Build configuration list for PBXNativeTarget "myResumeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EBA0912129E5C2E2001B3005 /* Debug */,
@@ -602,7 +668,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EBA0912329E5C2E2001B3005 /* Build configuration list for PBXNativeTarget "my-resumeUITests" */ = {
+		EBA0912329E5C2E2001B3005 /* Build configuration list for PBXNativeTarget "myResumeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EBA0912429E5C2E2001B3005 /* Debug */,
