@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  myResume
+
+  Created by Daniel Martínez Muñoz on 14/4/23.
+  
+*/
+"tabs.experience.title" = "Works";
+"tabs.skills.title" = "Skills";
+"tabs.aboutMe.title" = "About me";

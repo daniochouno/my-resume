@@ -10,17 +10,17 @@ import SwiftUI
 struct TabsView: View {
     var body: some View {
         TabView {
-            Text("Experiencia")
+            Text("tabs.experience.title")
                 .tabItem {
-                    Label("Experiencia", systemImage: "suitcase")
+                    Label("tabs.experience.title", systemImage: "suitcase")
                 }
-            Text("Formación")
+            Text("tabs.skills.title")
                 .tabItem {
-                    Label("Formación", systemImage: "studentdesk")
+                    Label("tabs.skills.title", systemImage: "studentdesk")
                 }
-            Text("Sobre mí")
+            Text("tabs.aboutMe.title")
                 .tabItem {
-                    Label("Sobre mí", systemImage: "person.circle")
+                    Label("tabs.aboutMe.title", systemImage: "person.circle")
                 }
         }
     }

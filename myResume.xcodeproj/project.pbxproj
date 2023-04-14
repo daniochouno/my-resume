@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EB02FA4029E9CD7100CAA9DC /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB02FA3F29E9CD7100CAA9DC /* TabsView.swift */; };
 		EB02FA4229E9CF9300CAA9DC /* TabsViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB02FA4129E9CF9300CAA9DC /* TabsViewFactory.swift */; };
+		EB02FA4529E9D19D00CAA9DC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB02FA4729E9D19D00CAA9DC /* Localizable.strings */; };
 		EBA090FC29E5C2E0001B3005 /* myResumeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA090FB29E5C2E0001B3005 /* myResumeApp.swift */; };
 		EBA0910029E5C2E2001B3005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBA090FF29E5C2E2001B3005 /* Assets.xcassets */; };
 		EBA0910429E5C2E2001B3005 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBA0910329E5C2E2001B3005 /* Preview Assets.xcassets */; };
@@ -37,6 +38,8 @@
 /* Begin PBXFileReference section */
 		EB02FA3F29E9CD7100CAA9DC /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
 		EB02FA4129E9CF9300CAA9DC /* TabsViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsViewFactory.swift; sourceTree = "<group>"; };
+		EB02FA4629E9D19D00CAA9DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EB02FA4829E9D1B700CAA9DC /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EBA090F829E5C2E0001B3005 /* myResume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myResume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBA090FB29E5C2E0001B3005 /* myResumeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myResumeApp.swift; sourceTree = "<group>"; };
 		EBA090FF29E5C2E2001B3005 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -160,6 +163,7 @@
 			children = (
 				EBA090FF29E5C2E2001B3005 /* Assets.xcassets */,
 				EBA0910329E5C2E2001B3005 /* Preview Assets.xcassets */,
+				EB02FA4729E9D19D00CAA9DC /* Localizable.strings */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -298,6 +302,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = EBA090EF29E5C2E0001B3005;
 			productRefGroup = EBA090F929E5C2E0001B3005 /* Products */;
@@ -317,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBA0910429E5C2E2001B3005 /* Preview Assets.xcassets in Resources */,
+				EB02FA4529E9D19D00CAA9DC /* Localizable.strings in Resources */,
 				EBA0910029E5C2E2001B3005 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,11 +386,24 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		EB02FA4729E9D19D00CAA9DC /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB02FA4629E9D19D00CAA9DC /* en */,
+				EB02FA4829E9D1B700CAA9DC /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		EBA0911B29E5C2E2001B3005 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -443,6 +462,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
