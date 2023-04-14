@@ -11,7 +11,7 @@ import SwiftUI
 struct myResumeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabsViewFactory.makeView()
         }
     }
 }
