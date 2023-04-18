@@ -10,6 +10,8 @@
 		EB02FA4029E9CD7100CAA9DC /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB02FA3F29E9CD7100CAA9DC /* TabsView.swift */; };
 		EB02FA4229E9CF9300CAA9DC /* TabsViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB02FA4129E9CF9300CAA9DC /* TabsViewFactory.swift */; };
 		EB02FA4529E9D19D00CAA9DC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB02FA4729E9D19D00CAA9DC /* Localizable.strings */; };
+		EB7FB7E729EEA35900DEA576 /* CareerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7E629EEA35900DEA576 /* CareerView.swift */; };
+		EB7FB7E929EEA7A200DEA576 /* CareerViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7E829EEA7A200DEA576 /* CareerViewFactory.swift */; };
 		EB7FB7ED29EEAEFD00DEA576 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7EC29EEAEFD00DEA576 /* View.swift */; };
 		EBA090FC29E5C2E0001B3005 /* myResumeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA090FB29E5C2E0001B3005 /* myResumeApp.swift */; };
 		EBA0910029E5C2E2001B3005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBA090FF29E5C2E2001B3005 /* Assets.xcassets */; };
@@ -41,6 +43,8 @@
 		EB02FA4129E9CF9300CAA9DC /* TabsViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsViewFactory.swift; sourceTree = "<group>"; };
 		EB02FA4629E9D19D00CAA9DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EB02FA4829E9D1B700CAA9DC /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EB7FB7E629EEA35900DEA576 /* CareerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerView.swift; sourceTree = "<group>"; };
+		EB7FB7E829EEA7A200DEA576 /* CareerViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerViewFactory.swift; sourceTree = "<group>"; };
 		EB7FB7EC29EEAEFD00DEA576 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		EBA090F829E5C2E0001B3005 /* myResume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myResume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBA090FB29E5C2E0001B3005 /* myResumeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myResumeApp.swift; sourceTree = "<group>"; };
@@ -92,6 +96,23 @@
 			children = (
 				EB02FA3F29E9CD7100CAA9DC /* TabsView.swift */,
 				EB02FA4129E9CF9300CAA9DC /* TabsViewFactory.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		EB7FB7E429EEA33900DEA576 /* career */ = {
+			isa = PBXGroup;
+			children = (
+				EB7FB7E529EEA34000DEA576 /* view */,
+			);
+			path = career;
+			sourceTree = "<group>";
+		};
+		EB7FB7E529EEA34000DEA576 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				EB7FB7E629EEA35900DEA576 /* CareerView.swift */,
+				EB7FB7E829EEA7A200DEA576 /* CareerViewFactory.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -172,6 +193,7 @@
 		EB86A60329E89D8200373ED1 /* features */ = {
 			isa = PBXGroup;
 			children = (
+				EB7FB7E429EEA33900DEA576 /* career */,
 				EB02FA3C29E9CC2600CAA9DC /* tabs */,
 			);
 			path = features;
@@ -367,6 +389,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB7FB7E929EEA7A200DEA576 /* CareerViewFactory.swift in Sources */,
+				EB7FB7E729EEA35900DEA576 /* CareerView.swift in Sources */,
 				EB7FB7ED29EEAEFD00DEA576 /* View.swift in Sources */,
 				EB02FA4029E9CD7100CAA9DC /* TabsView.swift in Sources */,
 				EB02FA4229E9CF9300CAA9DC /* TabsViewFactory.swift in Sources */,
