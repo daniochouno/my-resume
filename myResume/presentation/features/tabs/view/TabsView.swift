@@ -10,7 +10,7 @@ import SwiftUI
 struct TabsView: View {
     var body: some View {
         TabView {
-            Text("tabs.experience.title")
+            CareerViewFactory.makeView()
                 .tabItem {
                     Label("tabs.experience.title", systemImage: "suitcase")
                 }
