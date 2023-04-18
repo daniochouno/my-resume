@@ -5,6 +5,10 @@
   Created by Daniel Martínez Muñoz on 14/4/23.
   
 */
+// Tabs
 "tabs.experience.title" = "Experiencia";
 "tabs.skills.title" = "Habilidades";
 "tabs.aboutMe.title" = "Sobre mí";
+// Career
+"career.tabs.works.title" = "Trabajos";
+"career.tabs.sideProjects.title" = "Mis Proyectos";
