@@ -27,4 +27,18 @@ class FirestoreDataSource {
             completion(result)
         }
     }
+    
+    func fetchWorks(completion: @escaping (Result<WorkDocumentsFirestoreModel, Error>) -> ()) {
+        guard let projectName = Bundle.main.infoDictionary?["FIRESTORE_PROJECT_NAME"] as? String else {
+            completion(.failure(APIResponseError.configuration))
+            return
+        }
+        
+        let url = "https://firestore.googleapis.com/v1/projects/\(projectName)/databases/(default)/documents/works"
+        let request = APIClientRequest(url: url, method: .GET)
+        
+        self.apiClient.fetch(request: request) { result in
+            completion(result)
+        }
+    }
 }
