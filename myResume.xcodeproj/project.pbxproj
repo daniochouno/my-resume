@@ -19,6 +19,7 @@
 		EBA0910429E5C2E2001B3005 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBA0910329E5C2E2001B3005 /* Preview Assets.xcassets */; };
 		EBA0911829E5C2E2001B3005 /* myResumeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA0911729E5C2E2001B3005 /* myResumeUITests.swift */; };
 		EBA0911A29E5C2E2001B3005 /* myResumeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA0911929E5C2E2001B3005 /* myResumeUITestsLaunchTests.swift */; };
+		EBA53C2C29FA8C7F00D7095F /* FirestoreDataSourceSignInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA53C2B29FA8C7F00D7095F /* FirestoreDataSourceSignInTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		EBA0911329E5C2E2001B3005 /* myResumeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myResumeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBA0911729E5C2E2001B3005 /* myResumeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myResumeUITests.swift; sourceTree = "<group>"; };
 		EBA0911929E5C2E2001B3005 /* myResumeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myResumeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EBA53C2B29FA8C7F00D7095F /* FirestoreDataSourceSignInTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDataSourceSignInTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +253,7 @@
 		EBA0910C29E5C2E2001B3005 /* myResumeTests */ = {
 			isa = PBXGroup;
 			children = (
+				EBA53C2929FA8C3700D7095F /* data */,
 				EB3C830629F96FBD00742C21 /* networking */,
 			);
 			path = myResumeTests;
@@ -263,6 +266,30 @@
 				EBA0911929E5C2E2001B3005 /* myResumeUITestsLaunchTests.swift */,
 			);
 			path = myResumeUITests;
+			sourceTree = "<group>";
+		};
+		EBA53C2929FA8C3700D7095F /* data */ = {
+			isa = PBXGroup;
+			children = (
+				EBA53C2A29FA8C3E00D7095F /* dataSources */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		EBA53C2A29FA8C3E00D7095F /* dataSources */ = {
+			isa = PBXGroup;
+			children = (
+				EBA53C2D29FA8CEC00D7095F /* firestore */,
+			);
+			path = dataSources;
+			sourceTree = "<group>";
+		};
+		EBA53C2D29FA8CEC00D7095F /* firestore */ = {
+			isa = PBXGroup;
+			children = (
+				EBA53C2B29FA8C7F00D7095F /* FirestoreDataSourceSignInTests.swift */,
+			);
+			path = firestore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,6 +438,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB3C830829F9806100742C21 /* MockURLProtocol.swift in Sources */,
+				EBA53C2C29FA8C7F00D7095F /* FirestoreDataSourceSignInTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
