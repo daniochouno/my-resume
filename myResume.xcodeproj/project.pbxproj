@@ -14,6 +14,7 @@
 		EB3C831129F9ADB900742C21 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C831029F9ADB800742C21 /* APIClient.swift */; };
 		EB3C831329F9AF2E00742C21 /* APIResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C831229F9AF2E00742C21 /* APIResponseError.swift */; };
 		EB3C831929F9B52D00742C21 /* APIClientFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C831829F9B52D00742C21 /* APIClientFactory.swift */; };
+		EB3C831B29F9BAC100742C21 /* SessionFirestoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C831A29F9BAC100742C21 /* SessionFirestoreModel.swift */; };
 		EB7FB7E729EEA35900DEA576 /* CareerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7E629EEA35900DEA576 /* CareerView.swift */; };
 		EB7FB7E929EEA7A200DEA576 /* CareerViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7E829EEA7A200DEA576 /* CareerViewFactory.swift */; };
 		EB7FB7ED29EEAEFD00DEA576 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7EC29EEAEFD00DEA576 /* View.swift */; };
@@ -52,6 +53,7 @@
 		EB3C831029F9ADB800742C21 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		EB3C831229F9AF2E00742C21 /* APIResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseError.swift; sourceTree = "<group>"; };
 		EB3C831829F9B52D00742C21 /* APIClientFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientFactory.swift; sourceTree = "<group>"; };
+		EB3C831A29F9BAC100742C21 /* SessionFirestoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionFirestoreModel.swift; sourceTree = "<group>"; };
 		EB7FB7E629EEA35900DEA576 /* CareerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerView.swift; sourceTree = "<group>"; };
 		EB7FB7E829EEA7A200DEA576 /* CareerViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerViewFactory.swift; sourceTree = "<group>"; };
 		EB7FB7EC29EEAEFD00DEA576 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 		EBA0911929E5C2E2001B3005 /* myResumeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myResumeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EBA53C2B29FA8C7F00D7095F /* FirestoreDataSourceSignInTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDataSourceSignInTests.swift; sourceTree = "<group>"; };
 		EBA53C3029FA9F0500D7095F /* APIClientRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientRequest.swift; sourceTree = "<group>"; };
+		EBA53C3229FAA61C00D7095F /* Configuration.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Configuration.xcconfig; sourceTree = "<group>"; };
 		EBA53C3329FAA84900D7095F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +133,22 @@
 			path = networking;
 			sourceTree = "<group>";
 		};
+		EB3C831429F9B05800742C21 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				EB3C831529F9B06400742C21 /* firestore */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		EB3C831529F9B06400742C21 /* firestore */ = {
+			isa = PBXGroup;
+			children = (
+				EB3C831A29F9BAC100742C21 /* SessionFirestoreModel.swift */,
+			);
+			path = firestore;
+			sourceTree = "<group>";
+		};
 		EB7FB7E429EEA33900DEA576 /* career */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +185,7 @@
 		EB86A5FC29E89B2300373ED1 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				EB3C831429F9B05800742C21 /* models */,
 				EB86A5FF29E89B4F00373ED1 /* dataSources */,
 				EB86A60029E89B5B00373ED1 /* repositories */,
 			);
@@ -457,6 +477,7 @@
 				EB3C831929F9B52D00742C21 /* APIClientFactory.swift in Sources */,
 				EB02FA4229E9CF9300CAA9DC /* TabsViewFactory.swift in Sources */,
 				EBA090FC29E5C2E0001B3005 /* myResumeApp.swift in Sources */,
+				EB3C831B29F9BAC100742C21 /* SessionFirestoreModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
