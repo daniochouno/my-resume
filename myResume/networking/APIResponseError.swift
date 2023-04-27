@@ -8,6 +8,7 @@
 import Foundation
 
 enum APIResponseError: Error {
+    case configuration
     case url
     case network
     case request
