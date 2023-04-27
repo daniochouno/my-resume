@@ -15,6 +15,7 @@
 		EB3C830D29F9A9CA00742C21 /* FirestoreDataSourceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C830C29F9A9CA00742C21 /* FirestoreDataSourceFactory.swift */; };
 		EB3C831129F9ADB900742C21 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C831029F9ADB800742C21 /* APIClient.swift */; };
 		EB3C831329F9AF2E00742C21 /* APIResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C831229F9AF2E00742C21 /* APIResponseError.swift */; };
+		EB3C831729F9B07C00742C21 /* WorkFirestoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C831629F9B07C00742C21 /* WorkFirestoreModel.swift */; };
 		EB3C831929F9B52D00742C21 /* APIClientFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C831829F9B52D00742C21 /* APIClientFactory.swift */; };
 		EB3C831B29F9BAC100742C21 /* SessionFirestoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C831A29F9BAC100742C21 /* SessionFirestoreModel.swift */; };
 		EB7FB7E729EEA35900DEA576 /* CareerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7E629EEA35900DEA576 /* CareerView.swift */; };
@@ -57,6 +58,7 @@
 		EB3C830C29F9A9CA00742C21 /* FirestoreDataSourceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDataSourceFactory.swift; sourceTree = "<group>"; };
 		EB3C831029F9ADB800742C21 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		EB3C831229F9AF2E00742C21 /* APIResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseError.swift; sourceTree = "<group>"; };
+		EB3C831629F9B07C00742C21 /* WorkFirestoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkFirestoreModel.swift; sourceTree = "<group>"; };
 		EB3C831829F9B52D00742C21 /* APIClientFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientFactory.swift; sourceTree = "<group>"; };
 		EB3C831A29F9BAC100742C21 /* SessionFirestoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionFirestoreModel.swift; sourceTree = "<group>"; };
 		EB7FB7E629EEA35900DEA576 /* CareerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerView.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				EB3C831A29F9BAC100742C21 /* SessionFirestoreModel.swift */,
+				EB3C831629F9B07C00742C21 /* WorkFirestoreModel.swift */,
 			);
 			path = firestore;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				EB3C830A29F9A96A00742C21 /* FirestoreDataSource.swift in Sources */,
 				EB3C830D29F9A9CA00742C21 /* FirestoreDataSourceFactory.swift in Sources */,
 				EB3C831129F9ADB900742C21 /* APIClient.swift in Sources */,
+				EB3C831729F9B07C00742C21 /* WorkFirestoreModel.swift in Sources */,
 				EB7FB7E729EEA35900DEA576 /* CareerView.swift in Sources */,
 				EB7FB7ED29EEAEFD00DEA576 /* View.swift in Sources */,
 				EBA53C3129FA9F0500D7095F /* APIClientRequest.swift in Sources */,
