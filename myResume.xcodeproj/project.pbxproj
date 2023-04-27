@@ -11,6 +11,7 @@
 		EB02FA4229E9CF9300CAA9DC /* TabsViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB02FA4129E9CF9300CAA9DC /* TabsViewFactory.swift */; };
 		EB02FA4529E9D19D00CAA9DC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB02FA4729E9D19D00CAA9DC /* Localizable.strings */; };
 		EB3C830829F9806100742C21 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C830729F9806100742C21 /* MockURLProtocol.swift */; };
+		EB3C831329F9AF2E00742C21 /* APIResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C831229F9AF2E00742C21 /* APIResponseError.swift */; };
 		EB7FB7E729EEA35900DEA576 /* CareerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7E629EEA35900DEA576 /* CareerView.swift */; };
 		EB7FB7E929EEA7A200DEA576 /* CareerViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7E829EEA7A200DEA576 /* CareerViewFactory.swift */; };
 		EB7FB7ED29EEAEFD00DEA576 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7EC29EEAEFD00DEA576 /* View.swift */; };
@@ -20,6 +21,7 @@
 		EBA0911829E5C2E2001B3005 /* myResumeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA0911729E5C2E2001B3005 /* myResumeUITests.swift */; };
 		EBA0911A29E5C2E2001B3005 /* myResumeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA0911929E5C2E2001B3005 /* myResumeUITestsLaunchTests.swift */; };
 		EBA53C2C29FA8C7F00D7095F /* FirestoreDataSourceSignInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA53C2B29FA8C7F00D7095F /* FirestoreDataSourceSignInTests.swift */; };
+		EBA53C3129FA9F0500D7095F /* APIClientRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA53C3029FA9F0500D7095F /* APIClientRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,7 @@
 		EB02FA4629E9D19D00CAA9DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EB02FA4829E9D1B700CAA9DC /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EB3C830729F9806100742C21 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		EB3C831229F9AF2E00742C21 /* APIResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseError.swift; sourceTree = "<group>"; };
 		EB7FB7E629EEA35900DEA576 /* CareerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerView.swift; sourceTree = "<group>"; };
 		EB7FB7E829EEA7A200DEA576 /* CareerViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerViewFactory.swift; sourceTree = "<group>"; };
 		EB7FB7EC29EEAEFD00DEA576 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
@@ -58,6 +61,7 @@
 		EBA0911729E5C2E2001B3005 /* myResumeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myResumeUITests.swift; sourceTree = "<group>"; };
 		EBA0911929E5C2E2001B3005 /* myResumeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myResumeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EBA53C2B29FA8C7F00D7095F /* FirestoreDataSourceSignInTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDataSourceSignInTests.swift; sourceTree = "<group>"; };
+		EBA53C3029FA9F0500D7095F /* APIClientRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,15 @@
 				EB02FA4129E9CF9300CAA9DC /* TabsViewFactory.swift */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		EB3C830529F96EDB00742C21 /* networking */ = {
+			isa = PBXGroup;
+			children = (
+				EBA53C3029FA9F0500D7095F /* APIClientRequest.swift */,
+				EB3C831229F9AF2E00742C21 /* APIResponseError.swift */,
+			);
+			path = networking;
 			sourceTree = "<group>";
 		};
 		EB3C830629F96FBD00742C21 /* networking */ = {
@@ -242,6 +255,7 @@
 		EBA090FA29E5C2E0001B3005 /* myResume */ = {
 			isa = PBXGroup;
 			children = (
+				EB3C830529F96EDB00742C21 /* networking */,
 				EB86A60129E89D5A00373ED1 /* config */,
 				EB86A5FC29E89B2300373ED1 /* data */,
 				EB86A5FD29E89B2C00373ED1 /* domain */,
@@ -424,9 +438,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB3C831329F9AF2E00742C21 /* APIResponseError.swift in Sources */,
 				EB7FB7E929EEA7A200DEA576 /* CareerViewFactory.swift in Sources */,
 				EB7FB7E729EEA35900DEA576 /* CareerView.swift in Sources */,
 				EB7FB7ED29EEAEFD00DEA576 /* View.swift in Sources */,
+				EBA53C3129FA9F0500D7095F /* APIClientRequest.swift in Sources */,
 				EB02FA4029E9CD7100CAA9DC /* TabsView.swift in Sources */,
 				EB02FA4229E9CF9300CAA9DC /* TabsViewFactory.swift in Sources */,
 				EBA090FC29E5C2E0001B3005 /* myResumeApp.swift in Sources */,
