@@ -11,6 +11,8 @@
 		EB02FA4229E9CF9300CAA9DC /* TabsViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB02FA4129E9CF9300CAA9DC /* TabsViewFactory.swift */; };
 		EB02FA4529E9D19D00CAA9DC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB02FA4729E9D19D00CAA9DC /* Localizable.strings */; };
 		EB3C830829F9806100742C21 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C830729F9806100742C21 /* MockURLProtocol.swift */; };
+		EB3C830A29F9A96A00742C21 /* FirestoreDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C830929F9A96A00742C21 /* FirestoreDataSource.swift */; };
+		EB3C830D29F9A9CA00742C21 /* FirestoreDataSourceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C830C29F9A9CA00742C21 /* FirestoreDataSourceFactory.swift */; };
 		EB3C831129F9ADB900742C21 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C831029F9ADB800742C21 /* APIClient.swift */; };
 		EB3C831329F9AF2E00742C21 /* APIResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C831229F9AF2E00742C21 /* APIResponseError.swift */; };
 		EB3C831929F9B52D00742C21 /* APIClientFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C831829F9B52D00742C21 /* APIClientFactory.swift */; };
@@ -50,6 +52,8 @@
 		EB02FA4629E9D19D00CAA9DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EB02FA4829E9D1B700CAA9DC /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EB3C830729F9806100742C21 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		EB3C830929F9A96A00742C21 /* FirestoreDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDataSource.swift; sourceTree = "<group>"; };
+		EB3C830C29F9A9CA00742C21 /* FirestoreDataSourceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDataSourceFactory.swift; sourceTree = "<group>"; };
 		EB3C831029F9ADB800742C21 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		EB3C831229F9AF2E00742C21 /* APIResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseError.swift; sourceTree = "<group>"; };
 		EB3C831829F9B52D00742C21 /* APIClientFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientFactory.swift; sourceTree = "<group>"; };
@@ -133,6 +137,15 @@
 			path = networking;
 			sourceTree = "<group>";
 		};
+		EB3C830B29F9A9B500742C21 /* firestore */ = {
+			isa = PBXGroup;
+			children = (
+				EB3C830929F9A96A00742C21 /* FirestoreDataSource.swift */,
+				EB3C830C29F9A9CA00742C21 /* FirestoreDataSourceFactory.swift */,
+			);
+			path = firestore;
+			sourceTree = "<group>";
+		};
 		EB3C831429F9B05800742C21 /* models */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +227,7 @@
 		EB86A5FF29E89B4F00373ED1 /* dataSources */ = {
 			isa = PBXGroup;
 			children = (
+				EB3C830B29F9A9B500742C21 /* firestore */,
 			);
 			path = dataSources;
 			sourceTree = "<group>";
@@ -469,6 +483,8 @@
 			files = (
 				EB3C831329F9AF2E00742C21 /* APIResponseError.swift in Sources */,
 				EB7FB7E929EEA7A200DEA576 /* CareerViewFactory.swift in Sources */,
+				EB3C830A29F9A96A00742C21 /* FirestoreDataSource.swift in Sources */,
+				EB3C830D29F9A9CA00742C21 /* FirestoreDataSourceFactory.swift in Sources */,
 				EB3C831129F9ADB900742C21 /* APIClient.swift in Sources */,
 				EB7FB7E729EEA35900DEA576 /* CareerView.swift in Sources */,
 				EB7FB7ED29EEAEFD00DEA576 /* View.swift in Sources */,
