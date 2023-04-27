@@ -66,6 +66,7 @@
 		EBA0911929E5C2E2001B3005 /* myResumeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myResumeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EBA53C2B29FA8C7F00D7095F /* FirestoreDataSourceSignInTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDataSourceSignInTests.swift; sourceTree = "<group>"; };
 		EBA53C3029FA9F0500D7095F /* APIClientRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientRequest.swift; sourceTree = "<group>"; };
+		EBA53C3329FAA84900D7095F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				EBA0910129E5C2E2001B3005 /* myResume.entitlements */,
+				EBA53C3229FAA61C00D7095F /* Configuration.xcconfig */,
 			);
 			path = config;
 			sourceTree = "<group>";
@@ -261,6 +263,7 @@
 		EBA090FA29E5C2E0001B3005 /* myResume */ = {
 			isa = PBXGroup;
 			children = (
+				EBA53C3329FAA84900D7095F /* Info.plist */,
 				EB3C830529F96EDB00742C21 /* networking */,
 				EB86A60129E89D5A00373ED1 /* config */,
 				EB86A5FC29E89B2300373ED1 /* data */,
@@ -505,6 +508,7 @@
 /* Begin XCBuildConfiguration section */
 		EBA0911B29E5C2E2001B3005 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBA53C3229FAA61C00D7095F /* Configuration.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -564,6 +568,7 @@
 		};
 		EBA0911C29E5C2E2001B3005 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBA53C3229FAA61C00D7095F /* Configuration.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -627,6 +632,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = myResume/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "My Resume";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -666,6 +672,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = myResume/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "My Resume";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
