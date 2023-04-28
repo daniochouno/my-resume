@@ -10,22 +10,23 @@ import XCTest
 
 final class FirestoreDataSourceFetchWorksTests: XCTestCase {
     var dataSource: FirestoreDataSource?
-    let expectation = XCTestExpectation(description: "Firestore expectation")
-
+    
     override func setUpWithError() throws {
         let configuration = URLSessionConfiguration.default
         configuration.protocolClasses = [MockURLProtocol.self]
         let urlSession = URLSession.init(configuration: configuration)
         
-        let apiClient = APIClient(urlSession: urlSession)
-        self.dataSource = FirestoreDataSource(apiClient: apiClient)
+        let userDefaults = MockUserDefaults()
+        
+        let apiClient = APIClientImpl(urlSession: urlSession, userDefaults: userDefaults)
+        self.dataSource = FirestoreDataSourceImpl(apiClient: apiClient)
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testSuccess() throws {
+    func testSuccess() async throws {
         let jsonString = """
         {
         "documents": [{
@@ -96,21 +97,19 @@ final class FirestoreDataSourceFetchWorksTests: XCTestCase {
             return (data, response, nil)
         }
         
-        self.dataSource?.fetchWorks(completion: { result in
-            switch result {
-            case .success(let documents):
-                let works = documents.documents
-                XCTAssertEqual(works.count, 3, "Found \(works.count) expected works")
-            case .failure(let error):
-                XCTFail("Unexpected error: \(error)")
-            }
-            
-            self.expectation.fulfill()
-        })
-        wait(for: [expectation], timeout: 2)
+        let result = await self.dataSource?.fetchWorks()
+        switch result {
+        case .success(let documents):
+            let works = documents.documents
+            XCTAssertEqual(works.count, 3, "Found \(works.count) expected works")
+        case .failure(let error):
+            XCTFail("Unexpected error: \(error)")
+        default:
+            XCTFail("Unexpected case")
+        }
     }
 
-    func testFailureParser() {
+    func testFailureParser() async {
         let data = Data()
         
         MockURLProtocol.requestHandler = { request in
@@ -122,22 +121,19 @@ final class FirestoreDataSourceFetchWorksTests: XCTestCase {
             return (data, response, nil)
         }
         
-        self.dataSource?.fetchWorks(completion: { result in
-            switch result {
-            case .success:
-                XCTFail("Unexpected success response")
-            case .failure(let error):
-                guard let error = error as? APIResponseError else {
-                    XCTFail("Unexpected error received")
-                    self.expectation.fulfill()
-                    return
-                }
-                
-                XCTAssertEqual(error, APIResponseError.parser, "Parser error was expected")
+        let result = await self.dataSource?.fetchWorks()
+        switch result {
+        case .success:
+            XCTFail("Unexpected success response")
+        case .failure(let error):
+            guard let error = error as? APIResponseError else {
+                XCTFail("Unexpected error received")
+                return
             }
             
-            self.expectation.fulfill()
-        })
-        wait(for: [expectation], timeout: 2)
+            XCTAssertEqual(error, APIResponseError.parser, "Parser error was expected")
+        default:
+            XCTFail("Unexpected case")
+        }
     }
 }
