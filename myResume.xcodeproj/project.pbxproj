@@ -29,6 +29,9 @@
 		EBA53C2C29FA8C7F00D7095F /* FirestoreDataSourceSignInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA53C2B29FA8C7F00D7095F /* FirestoreDataSourceSignInTests.swift */; };
 		EBA53C2F29FA947300D7095F /* FirestoreDataSourceFetchWorksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA53C2E29FA947300D7095F /* FirestoreDataSourceFetchWorksTests.swift */; };
 		EBA53C3129FA9F0500D7095F /* APIClientRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA53C3029FA9F0500D7095F /* APIClientRequest.swift */; };
+		EBA53C3629FADFF300D7095F /* WorksRepositoryFetchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA53C3529FADFF300D7095F /* WorksRepositoryFetchTests.swift */; };
+		EBA53C5129FB03E700D7095F /* MockUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA53C5029FB03E700D7095F /* MockUserDefaults.swift */; };
+		EBA53C5329FBC40400D7095F /* MockFirestoreDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA53C5229FBC40400D7095F /* MockFirestoreDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,9 @@
 		EBA53C3029FA9F0500D7095F /* APIClientRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientRequest.swift; sourceTree = "<group>"; };
 		EBA53C3229FAA61C00D7095F /* Configuration.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Configuration.xcconfig; sourceTree = "<group>"; };
 		EBA53C3329FAA84900D7095F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EBA53C3529FADFF300D7095F /* WorksRepositoryFetchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksRepositoryFetchTests.swift; sourceTree = "<group>"; };
+		EBA53C5029FB03E700D7095F /* MockUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDefaults.swift; sourceTree = "<group>"; };
+		EBA53C5229FBC40400D7095F /* MockFirestoreDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFirestoreDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,8 +309,8 @@
 			isa = PBXGroup;
 			children = (
 				EBA53C3329FAA84900D7095F /* Info.plist */,
-				EB3C830529F96EDB00742C21 /* networking */,
 				EB86A60129E89D5A00373ED1 /* config */,
+				EB3C830529F96EDB00742C21 /* networking */,
 				EB86A5FC29E89B2300373ED1 /* data */,
 				EB86A5FD29E89B2C00373ED1 /* domain */,
 				EB86A5FE29E89B3300373ED1 /* presentation */,
@@ -333,6 +339,8 @@
 		EBA53C2929FA8C3700D7095F /* data */ = {
 			isa = PBXGroup;
 			children = (
+				EBA53C4F29FB03D600D7095F /* storage */,
+				EBA53C3429FADFB800D7095F /* repositories */,
 				EBA53C2A29FA8C3E00D7095F /* dataSources */,
 			);
 			path = data;
@@ -351,8 +359,25 @@
 			children = (
 				EBA53C2B29FA8C7F00D7095F /* FirestoreDataSourceSignInTests.swift */,
 				EBA53C2E29FA947300D7095F /* FirestoreDataSourceFetchWorksTests.swift */,
+				EBA53C5229FBC40400D7095F /* MockFirestoreDataSource.swift */,
 			);
 			path = firestore;
+			sourceTree = "<group>";
+		};
+		EBA53C4F29FB03D600D7095F /* storage */ = {
+			isa = PBXGroup;
+			children = (
+				EBA53C5029FB03E700D7095F /* MockUserDefaults.swift */,
+			);
+			path = storage;
+			sourceTree = "<group>";
+		};
+		EBA53C5E29FBE0D400D7095F /* works */ = {
+			isa = PBXGroup;
+			children = (
+				EBA53C3529FADFF300D7095F /* WorksRepositoryFetchTests.swift */,
+			);
+			path = works;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -508,8 +533,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBA53C5329FBC40400D7095F /* MockFirestoreDataSource.swift in Sources */,
 				EB3C830829F9806100742C21 /* MockURLProtocol.swift in Sources */,
+				EBA53C5129FB03E700D7095F /* MockUserDefaults.swift in Sources */,
 				EBA53C2F29FA947300D7095F /* FirestoreDataSourceFetchWorksTests.swift in Sources */,
+				EBA53C3629FADFF300D7095F /* WorksRepositoryFetchTests.swift in Sources */,
 				EBA53C2C29FA8C7F00D7095F /* FirestoreDataSourceSignInTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
