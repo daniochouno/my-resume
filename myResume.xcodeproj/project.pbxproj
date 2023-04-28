@@ -36,6 +36,8 @@
 		EBA53C3E29FAE84A00D7095F /* FetchWorksUseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA53C3D29FAE84A00D7095F /* FetchWorksUseCaseFactory.swift */; };
 		EBA53C4029FAE87B00D7095F /* WorksRepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA53C3F29FAE87B00D7095F /* WorksRepositoryFactory.swift */; };
 		EBA53C4529FAEAE800D7095F /* WorksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA53C4429FAEAE800D7095F /* WorksViewModel.swift */; };
+		EBA53C4729FAEB1D00D7095F /* WorksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA53C4629FAEB1D00D7095F /* WorksView.swift */; };
+		EBA53C4929FAEB5800D7095F /* WorksViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA53C4829FAEB5800D7095F /* WorksViewFactory.swift */; };
 		EBA53C4B29FAEC7700D7095F /* WorksViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA53C4A29FAEC7700D7095F /* WorksViewModelFactory.swift */; };
 		EBA53C4E29FAED2000D7095F /* WorkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA53C4D29FAED2000D7095F /* WorkModel.swift */; };
 		EBA53C5129FB03E700D7095F /* MockUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA53C5029FB03E700D7095F /* MockUserDefaults.swift */; };
@@ -100,6 +102,8 @@
 		EBA53C3D29FAE84A00D7095F /* FetchWorksUseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchWorksUseCaseFactory.swift; sourceTree = "<group>"; };
 		EBA53C3F29FAE87B00D7095F /* WorksRepositoryFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksRepositoryFactory.swift; sourceTree = "<group>"; };
 		EBA53C4429FAEAE800D7095F /* WorksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksViewModel.swift; sourceTree = "<group>"; };
+		EBA53C4629FAEB1D00D7095F /* WorksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksView.swift; sourceTree = "<group>"; };
+		EBA53C4829FAEB5800D7095F /* WorksViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksViewFactory.swift; sourceTree = "<group>"; };
 		EBA53C4A29FAEC7700D7095F /* WorksViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksViewModelFactory.swift; sourceTree = "<group>"; };
 		EBA53C4D29FAED2000D7095F /* WorkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkModel.swift; sourceTree = "<group>"; };
 		EBA53C5029FB03E700D7095F /* MockUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDefaults.swift; sourceTree = "<group>"; };
@@ -438,6 +442,15 @@
 			path = works;
 			sourceTree = "<group>";
 		};
+		EBA53C4229FAE9AD00D7095F /* view */ = {
+			isa = PBXGroup;
+			children = (
+				EBA53C4629FAEB1D00D7095F /* WorksView.swift */,
+				EBA53C4829FAEB5800D7095F /* WorksViewFactory.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		EBA53C4329FAE9B500D7095F /* viewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -671,8 +684,10 @@
 				EBA53C3129FA9F0500D7095F /* APIClientRequest.swift in Sources */,
 				EB02FA4029E9CD7100CAA9DC /* TabsView.swift in Sources */,
 				EBA53C3929FAE3FC00D7095F /* FetchWorksUseCase.swift in Sources */,
+				EBA53C4929FAEB5800D7095F /* WorksViewFactory.swift in Sources */,
 				EB3C831929F9B52D00742C21 /* APIClientFactory.swift in Sources */,
 				EB02FA4229E9CF9300CAA9DC /* TabsViewFactory.swift in Sources */,
+				EBA53C4729FAEB1D00D7095F /* WorksView.swift in Sources */,
 				EBA090FC29E5C2E0001B3005 /* myResumeApp.swift in Sources */,
 				EB3C831B29F9BAC100742C21 /* SessionFirestoreModel.swift in Sources */,
 			);
