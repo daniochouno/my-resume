@@ -10,6 +10,6 @@ import Foundation
 enum FirestoreDataSourceFactory {
     static func make() -> FirestoreDataSource {
         let apiClient = APIClientFactory.make()
-        return FirestoreDataSource(apiClient: apiClient)
+        return FirestoreDataSourceImpl(apiClient: apiClient)
     }
 }

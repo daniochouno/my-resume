@@ -10,5 +10,5 @@ import Foundation
 struct SessionFirestoreModel: Decodable {
     let idToken: String
     let refreshToken: String
-    let expiresIn: Int
+    let expiresIn: String
 }
