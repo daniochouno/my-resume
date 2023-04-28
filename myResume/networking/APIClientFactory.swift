@@ -9,6 +9,8 @@ import Foundation
 
 enum APIClientFactory {
     static func make() -> APIClient {
-        return APIClient(urlSession: URLSession.shared)
+        let urlSession = URLSession.shared
+        let userDefaults = UserDefaults.standard
+        return APIClientImpl(urlSession: urlSession, userDefaults: userDefaults)
     }
 }

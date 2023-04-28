@@ -7,46 +7,50 @@
 
 import Foundation
 
-protocol APIClientProtocol {
-    func fetch<T: Decodable>(request: APIClientRequest, completion: @escaping (Result<T, Error>) -> ())
+protocol APIClient {
+    func fetch<T: Decodable>(request: APIClientRequest) async -> Result<T, Error>
 }
 
-class APIClient: APIClientProtocol {
+class APIClientImpl: APIClient {
     let urlSession: URLSession
+    let userDefaults: UserDefaults
       
-    init(urlSession: URLSession = URLSession.shared) {
+    init(urlSession: URLSession, userDefaults: UserDefaults) {
         self.urlSession = urlSession
+        self.userDefaults = userDefaults
     }
     
-    func fetch<T: Decodable>(request: APIClientRequest, completion: @escaping (Result<T, Error>) -> ()) {
+    func fetch<T: Decodable>(request: APIClientRequest) async -> Result<T, Error> {
         guard let url = URL(string: request.url) else {
-            completion(Result.failure(APIResponseError.url))
-            return
+            return .failure(APIResponseError.url)
         }
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = request.method.rawValue
-        
-        let dataTask = urlSession.dataTask(with:url) { (data, urlResponse, error) in
-            // Check if any error occured.
-            if let error = error {
-                completion(Result.failure(error))
-                return
+        if request.needsAuthentication {
+            if let accessToken = userDefaults.string(forKey: "access_token") {
+                urlRequest.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
             }
-
+        }
+        if let httpBody = request.body {
+            urlRequest.httpBody = httpBody
+        }
+        
+        do {
+            let (data, urlResponse) = try await urlSession.data(for: urlRequest)
+            
             // Check response code.
             guard let httpResponse = urlResponse as? HTTPURLResponse, 200..<300 ~= httpResponse.statusCode else {
-                completion(Result.failure(APIResponseError.network))
-                return
+                return .failure(APIResponseError.network)
             }
             
             // Parse data
-            if let responseData = data, let object = try? JSONDecoder().decode(T.self, from: responseData) {
-                completion(Result.success(object))
+            if let object = try? JSONDecoder().decode(T.self, from: data) {
+                return .success(object)
             } else {
-                completion(Result.failure(APIResponseError.parser))
+                return .failure(APIResponseError.parser)
             }
+        } catch {
+            return .failure(APIResponseError.request)
         }
-        
-        dataTask.resume()
     }
 }
