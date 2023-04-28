@@ -15,7 +15,7 @@ struct CareerView: View {
             TopTabBar(tabIndex: $tabIndex)
                 .padding(.bottom)
             if tabIndex == 0 {
-                Text("career.tabs.works.title")
+                WorksViewFactory.makeView()
             }
             else {
                 Text("career.tabs.sideProjects.title")
