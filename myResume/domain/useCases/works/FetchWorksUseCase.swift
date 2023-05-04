@@ -25,7 +25,10 @@ class FetchWorksUseCaseImpl: FetchWorksUseCase {
             let models = works.map { workFirestoreModel in
                 return WorkUseCaseModel(from: workFirestoreModel)
             }
-            return .success(models)
+            let sorted = models.sorted { modelA, modelB in
+                return modelA.startDate > modelB.startDate
+            }
+            return .success(sorted)
         case .failure(let error):
             return .failure(error)
         }
