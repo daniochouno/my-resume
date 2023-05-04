@@ -50,6 +50,7 @@
 		EBD9876C2A04396400495DF3 /* PetProjectFirestoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9876B2A04396400495DF3 /* PetProjectFirestoreModel.swift */; };
 		EBD9876F2A043BC400495DF3 /* PetProjectsRepositoryFetchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9876E2A043BC400495DF3 /* PetProjectsRepositoryFetchTests.swift */; };
 		EBD987712A043C9600495DF3 /* PetProjectsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD987702A043C9600495DF3 /* PetProjectsRepository.swift */; };
+		EBD987752A043E8700495DF3 /* FetchPetProjectsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD987742A043E8700495DF3 /* FetchPetProjectsUseCaseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +121,7 @@
 		EBD9876B2A04396400495DF3 /* PetProjectFirestoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectFirestoreModel.swift; sourceTree = "<group>"; };
 		EBD9876E2A043BC400495DF3 /* PetProjectsRepositoryFetchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectsRepositoryFetchTests.swift; sourceTree = "<group>"; };
 		EBD987702A043C9600495DF3 /* PetProjectsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectsRepository.swift; sourceTree = "<group>"; };
+		EBD987742A043E8700495DF3 /* FetchPetProjectsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPetProjectsUseCaseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -499,6 +501,7 @@
 		EBA53C5529FBDDDC00D7095F /* useCases */ = {
 			isa = PBXGroup;
 			children = (
+				EBD987732A043E6E00495DF3 /* petProjects */,
 				EBA53C5629FBDDE800D7095F /* works */,
 			);
 			path = useCases;
@@ -558,6 +561,14 @@
 			isa = PBXGroup;
 			children = (
 				EBD9876E2A043BC400495DF3 /* PetProjectsRepositoryFetchTests.swift */,
+		EBD987732A043E6E00495DF3 /* petProjects */ = {
+			isa = PBXGroup;
+			children = (
+				EBD987742A043E8700495DF3 /* FetchPetProjectsUseCaseTests.swift */,
+			);
+			path = petProjects;
+			sourceTree = "<group>";
+		};
 			);
 			path = petProjects;
 			sourceTree = "<group>";
@@ -738,6 +749,7 @@
 				EBA53C3629FADFF300D7095F /* WorksRepositoryFetchTests.swift in Sources */,
 				EBA53C5829FBDE0500D7095F /* FetchWorksUseCaseTests.swift in Sources */,
 				EBA53C2C29FA8C7F00D7095F /* FirestoreDataSourceSignInTests.swift in Sources */,
+				EBD987752A043E8700495DF3 /* FetchPetProjectsUseCaseTests.swift in Sources */,
 				EBD9876A2A04247A00495DF3 /* FirestoreDataSourceFetchPetProjectsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
