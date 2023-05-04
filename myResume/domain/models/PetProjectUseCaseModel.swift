@@ -16,3 +16,15 @@ struct PetProjectUseCaseModel: Decodable {
     let linkWeb: String?
     let downloads: String?
 }
+
+extension PetProjectUseCaseModel {
+    init(from firestoreModel: PetProjectFirestoreModel) {
+        self.titleKey = firestoreModel.fields.titleKey.stringValue
+        self.subtitleKey = firestoreModel.fields.subtitleKey.stringValue
+        self.iconUrl = firestoreModel.fields.iconUrl.stringValue
+        self.linkAppStore = firestoreModel.fields.linkAppStore?.stringValue
+        self.linkPlayStore = firestoreModel.fields.linkPlayStore?.stringValue
+        self.linkWeb = firestoreModel.fields.linkWeb?.stringValue
+        self.downloads = firestoreModel.fields.downloads?.stringValue
+    }
+}
