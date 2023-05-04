@@ -10,6 +10,7 @@ import Foundation
 final class WorksViewModel: ObservableObject {
     private let fetchWorksUseCase: FetchWorksUseCase
     
+    @Published var isLoading = true
     @Published var works: [WorkModel] = []
     @Published var errorMessage: String?
     
@@ -19,6 +20,7 @@ final class WorksViewModel: ObservableObject {
     
     @MainActor
     func load() async {
+        self.isLoading = true
         let result = await fetchWorksUseCase.fetch()
         switch result {
         case .success(let workUseCaseModels):
@@ -29,5 +31,6 @@ final class WorksViewModel: ObservableObject {
         case .failure(let error):
             self.errorMessage = "\(error)"
         }
+        self.isLoading = false
     }
 }

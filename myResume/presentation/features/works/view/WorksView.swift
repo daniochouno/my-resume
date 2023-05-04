@@ -14,14 +14,19 @@ struct WorksView: View {
         ZStack {
             ScrollView(.vertical, showsIndicators: false) {
                 LazyVStack(spacing: 18) {
-                    ForEach(viewModel.works) { work in
-                        workCardView(work: work)
+                    if self.viewModel.isLoading {
+                        ProgressView()
+                    } else {
+                        ForEach(viewModel.works) { work in
+                            workCardView(work: work)
+                        }
                     }
                 }
                 .padding(4)
                 .padding(.top, 4)
             }
             .padding()
+            
             toastMessage
         }
         .onAppear {
