@@ -51,6 +51,9 @@
 		EBD9876F2A043BC400495DF3 /* PetProjectsRepositoryFetchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9876E2A043BC400495DF3 /* PetProjectsRepositoryFetchTests.swift */; };
 		EBD987712A043C9600495DF3 /* PetProjectsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD987702A043C9600495DF3 /* PetProjectsRepository.swift */; };
 		EBD987752A043E8700495DF3 /* FetchPetProjectsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD987742A043E8700495DF3 /* FetchPetProjectsUseCaseTests.swift */; };
+		EBD987772A043F0A00495DF3 /* MockPetProjectsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD987762A043F0A00495DF3 /* MockPetProjectsRepository.swift */; };
+		EBD9877A2A043F5400495DF3 /* FetchPetProjectsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD987792A043F5400495DF3 /* FetchPetProjectsUseCase.swift */; };
+		EBD9877C2A043FA000495DF3 /* PetProjectUseCaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9877B2A043FA000495DF3 /* PetProjectUseCaseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +125,9 @@
 		EBD9876E2A043BC400495DF3 /* PetProjectsRepositoryFetchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectsRepositoryFetchTests.swift; sourceTree = "<group>"; };
 		EBD987702A043C9600495DF3 /* PetProjectsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectsRepository.swift; sourceTree = "<group>"; };
 		EBD987742A043E8700495DF3 /* FetchPetProjectsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPetProjectsUseCaseTests.swift; sourceTree = "<group>"; };
+		EBD987762A043F0A00495DF3 /* MockPetProjectsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPetProjectsRepository.swift; sourceTree = "<group>"; };
+		EBD987792A043F5400495DF3 /* FetchPetProjectsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPetProjectsUseCase.swift; sourceTree = "<group>"; };
+		EBD9877B2A043FA000495DF3 /* PetProjectUseCaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectUseCaseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,6 +319,7 @@
 		EB86A60229E89D7600373ED1 /* useCases */ = {
 			isa = PBXGroup;
 			children = (
+				EBD987782A043F3D00495DF3 /* petProjects */,
 				EBA53C3729FAE3E900D7095F /* works */,
 			);
 			path = useCases;
@@ -441,6 +448,7 @@
 		EBA53C3A29FAE79100D7095F /* models */ = {
 			isa = PBXGroup;
 			children = (
+				EBD9877B2A043FA000495DF3 /* PetProjectUseCaseModel.swift */,
 				EBA53C3B29FAE7A000D7095F /* WorkUseCaseModel.swift */,
 			);
 			path = models;
@@ -561,6 +569,11 @@
 			isa = PBXGroup;
 			children = (
 				EBD9876E2A043BC400495DF3 /* PetProjectsRepositoryFetchTests.swift */,
+				EBD987762A043F0A00495DF3 /* MockPetProjectsRepository.swift */,
+			);
+			path = petProjects;
+			sourceTree = "<group>";
+		};
 		EBD987732A043E6E00495DF3 /* petProjects */ = {
 			isa = PBXGroup;
 			children = (
@@ -569,6 +582,10 @@
 			path = petProjects;
 			sourceTree = "<group>";
 		};
+		EBD987782A043F3D00495DF3 /* petProjects */ = {
+			isa = PBXGroup;
+			children = (
+				EBD987792A043F5400495DF3 /* FetchPetProjectsUseCase.swift */,
 			);
 			path = petProjects;
 			sourceTree = "<group>";
@@ -708,11 +725,13 @@
 				EB3C831329F9AF2E00742C21 /* APIResponseError.swift in Sources */,
 				EB7FB7E929EEA7A200DEA576 /* CareerViewFactory.swift in Sources */,
 				EB3C830A29F9A96A00742C21 /* FirestoreDataSource.swift in Sources */,
+				EBD9877A2A043F5400495DF3 /* FetchPetProjectsUseCase.swift in Sources */,
 				EBA53C3C29FAE7A000D7095F /* WorkUseCaseModel.swift in Sources */,
 				EBA53C3E29FAE84A00D7095F /* FetchWorksUseCaseFactory.swift in Sources */,
 				EBD987712A043C9600495DF3 /* PetProjectsRepository.swift in Sources */,
 				EBA53C4B29FAEC7700D7095F /* WorksViewModelFactory.swift in Sources */,
 				EBA53C4529FAEAE800D7095F /* WorksViewModel.swift in Sources */,
+				EBD9877C2A043FA000495DF3 /* PetProjectUseCaseModel.swift in Sources */,
 				EB3C830D29F9A9CA00742C21 /* FirestoreDataSourceFactory.swift in Sources */,
 				EB3C831E29F9BB4900742C21 /* WorksRepository.swift in Sources */,
 				EBA53C4029FAE87B00D7095F /* WorksRepositoryFactory.swift in Sources */,
@@ -739,6 +758,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBA53C5329FBC40400D7095F /* MockFirestoreDataSource.swift in Sources */,
+				EBD987772A043F0A00495DF3 /* MockPetProjectsRepository.swift in Sources */,
 				EB3C830829F9806100742C21 /* MockURLProtocol.swift in Sources */,
 				EBA53C6029FBE11800D7095F /* WorksViewModelLoadTests.swift in Sources */,
 				EBA53C6229FBE26E00D7095F /* MockFetchWorksUseCase.swift in Sources */,
