@@ -47,6 +47,14 @@ class FirestoreDataSourceImpl: FirestoreDataSource {
     }
     
     func fetchPetProjects() async -> Result<PetProjectDocumentsFirestoreModel, Error> {
-        return .failure(APIResponseError.configuration)
+        guard let projectName = Bundle.main.infoDictionary?["FIRESTORE_PROJECT_NAME"] as? String else {
+            return .failure(APIResponseError.configuration)
+        }
+        
+        let url = "https://firestore.googleapis.com/v1/projects/\(projectName)/databases/(default)/documents/petProjects"
+        let request = APIClientRequest(url: url, method: .GET)
+        
+        let result: Result<PetProjectDocumentsFirestoreModel, Error> = await apiClient.fetch(request: request)
+        return result
     }
 }
