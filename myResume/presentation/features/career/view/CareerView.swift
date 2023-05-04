@@ -52,6 +52,7 @@ struct TabBarButton: View {
     
     var body: some View {
         Text(LocalizedStringKey(text))
+            .font(.title3)
             .fontWeight(isSelected ? .heavy : .regular)
             .padding(.bottom, 10)
             .border(width: isSelected ? 4 : 1, edges: [.bottom], color: .black)

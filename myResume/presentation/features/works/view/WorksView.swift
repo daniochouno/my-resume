@@ -12,9 +12,16 @@ struct WorksView: View {
     
     var body: some View {
         ZStack {
-            List(viewModel.works) { work in
-                Text(work.title)
+            ScrollView(.vertical, showsIndicators: false) {
+                LazyVStack(spacing: 18) {
+                    ForEach(viewModel.works) { work in
+                        workCardView(work: work)
+                    }
+                }
+                .padding(4)
+                .padding(.top, 4)
             }
+            .padding()
             toastMessage
         }
         .onAppear {
@@ -22,6 +29,51 @@ struct WorksView: View {
                 await self.viewModel.load()
             }
         }
+    }
+    
+    private func workCardView(work: WorkModel) -> some View {
+        HStack(alignment: .top, spacing: 30) {
+            VStack(spacing: 10) {
+                Circle()
+                    .fill(.black)
+                    .frame(width: 15, height: 15)
+                    .background(
+                        Circle()
+                            .stroke(.black, lineWidth: 1)
+                            .padding(-3)
+                    )
+                Rectangle()
+                    .fill(.black)
+                    .frame(width: 3)
+            }
+            .padding(.top, 6)
+            
+            VStack {
+                HStack(alignment: .top, spacing: 10) {
+                    VStack(alignment: .leading, spacing: 12) {
+                        Text(work.title)
+                            .font(.title2.bold())
+                        Text(work.company)
+                            .font(.callout)
+                            .foregroundStyle(.secondary)
+                        HStack(spacing: 4) {
+                            Text(work.startDate.formatted(.dateTime.month().year()))
+                                .font(.callout)
+                                .foregroundStyle(.secondary)
+                            Text("-")
+                                .foregroundStyle(.secondary)
+                            Text(work.endDate?.formatted(.dateTime.month().year()) ?? String(localized: "works.timelapse.current"))
+                                .font(.callout)
+                                .foregroundStyle(.secondary)
+                        }
+                    }
+                    .hLeading()
+                }
+            }
+            .padding(0)
+            .hLeading()
+        }
+        .hLeading()
     }
     
     private var toastMessage: some View {
