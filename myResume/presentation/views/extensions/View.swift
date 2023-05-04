@@ -11,6 +11,10 @@ extension View {
     func border(width: CGFloat, edges: [Edge], color: SwiftUI.Color) -> some View {
         overlay(EdgeBorder(width: width, edges: edges).foregroundColor(color))
     }
+    
+    func hLeading() -> some View {
+        frame(maxWidth: .infinity, alignment: .leading)
+    }
 }
 
 struct EdgeBorder: Shape {
