@@ -12,3 +12,5 @@
 // Career
 "career.tabs.works.title" = "Trabajos";
 "career.tabs.sideProjects.title" = "Mis Proyectos";
+// Works
+"works.timelapse.current" = "ahora";
