@@ -46,6 +46,7 @@
 		EBA53C5A29FBDE5700D7095F /* MockWorksRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA53C5929FBDE5700D7095F /* MockWorksRepository.swift */; };
 		EBA53C6029FBE11800D7095F /* WorksViewModelLoadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA53C5F29FBE11800D7095F /* WorksViewModelLoadTests.swift */; };
 		EBA53C6229FBE26E00D7095F /* MockFetchWorksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA53C6129FBE26E00D7095F /* MockFetchWorksUseCase.swift */; };
+		EBD9876C2A04396400495DF3 /* PetProjectFirestoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9876B2A04396400495DF3 /* PetProjectFirestoreModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,7 @@
 		EBA53C5929FBDE5700D7095F /* MockWorksRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWorksRepository.swift; sourceTree = "<group>"; };
 		EBA53C5F29FBE11800D7095F /* WorksViewModelLoadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksViewModelLoadTests.swift; sourceTree = "<group>"; };
 		EBA53C6129FBE26E00D7095F /* MockFetchWorksUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFetchWorksUseCase.swift; sourceTree = "<group>"; };
+		EBD9876B2A04396400495DF3 /* PetProjectFirestoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectFirestoreModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				EB3C831A29F9BAC100742C21 /* SessionFirestoreModel.swift */,
+				EBD9876B2A04396400495DF3 /* PetProjectFirestoreModel.swift */,
 				EB3C831629F9B07C00742C21 /* WorkFirestoreModel.swift */,
 			);
 			path = firestore;
@@ -362,10 +365,10 @@
 		EBA0910C29E5C2E2001B3005 /* myResumeTests */ = {
 			isa = PBXGroup;
 			children = (
-				EBA53C5B29FBE0A700D7095F /* presentation */,
+				EB3C830629F96FBD00742C21 /* networking */,
 				EBA53C2929FA8C3700D7095F /* data */,
 				EBA53C5429FBDDD100D7095F /* domain */,
-				EB3C830629F96FBD00742C21 /* networking */,
+				EBA53C5B29FBE0A700D7095F /* presentation */,
 			);
 			path = myResumeTests;
 			sourceTree = "<group>";
@@ -678,6 +681,7 @@
 				EBA53C4029FAE87B00D7095F /* WorksRepositoryFactory.swift in Sources */,
 				EB3C831129F9ADB900742C21 /* APIClient.swift in Sources */,
 				EB3C831729F9B07C00742C21 /* WorkFirestoreModel.swift in Sources */,
+				EBD9876C2A04396400495DF3 /* PetProjectFirestoreModel.swift in Sources */,
 				EB7FB7E729EEA35900DEA576 /* CareerView.swift in Sources */,
 				EB7FB7ED29EEAEFD00DEA576 /* View.swift in Sources */,
 				EBA53C4E29FAED2000D7095F /* WorkModel.swift in Sources */,
