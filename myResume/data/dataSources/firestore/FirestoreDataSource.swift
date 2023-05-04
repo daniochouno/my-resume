@@ -10,6 +10,7 @@ import Foundation
 protocol FirestoreDataSource {
     func signIn() async -> Result<SessionFirestoreModel, Error>
     func fetchWorks() async -> Result<WorkDocumentsFirestoreModel, Error>
+    func fetchPetProjects() async -> Result<PetProjectDocumentsFirestoreModel, Error>
 }
 
 class FirestoreDataSourceImpl: FirestoreDataSource {
@@ -43,5 +44,9 @@ class FirestoreDataSourceImpl: FirestoreDataSource {
         
         let result: Result<WorkDocumentsFirestoreModel, Error> = await apiClient.fetch(request: request)
         return result
+    }
+    
+    func fetchPetProjects() async -> Result<PetProjectDocumentsFirestoreModel, Error> {
+        return .failure(APIResponseError.configuration)
     }
 }
