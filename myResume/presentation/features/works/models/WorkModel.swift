@@ -12,6 +12,8 @@ struct WorkModel: Identifiable, Equatable {
     let title: String
     let company: String
     let location: String
+    let startDate: Date
+    let endDate: Date?
 }
 
 extension WorkModel {
@@ -20,5 +22,7 @@ extension WorkModel {
         self.title = useCaseModel.title
         self.company = useCaseModel.company
         self.location = useCaseModel.location
+        self.startDate = useCaseModel.startDate
+        self.endDate = useCaseModel.endDate
     }
 }
