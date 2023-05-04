@@ -46,6 +46,7 @@
 		EBA53C5A29FBDE5700D7095F /* MockWorksRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA53C5929FBDE5700D7095F /* MockWorksRepository.swift */; };
 		EBA53C6029FBE11800D7095F /* WorksViewModelLoadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA53C5F29FBE11800D7095F /* WorksViewModelLoadTests.swift */; };
 		EBA53C6229FBE26E00D7095F /* MockFetchWorksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA53C6129FBE26E00D7095F /* MockFetchWorksUseCase.swift */; };
+		EBD9876A2A04247A00495DF3 /* FirestoreDataSourceFetchPetProjectsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD987692A04247A00495DF3 /* FirestoreDataSourceFetchPetProjectsTests.swift */; };
 		EBD9876C2A04396400495DF3 /* PetProjectFirestoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9876B2A04396400495DF3 /* PetProjectFirestoreModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +114,7 @@
 		EBA53C5929FBDE5700D7095F /* MockWorksRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWorksRepository.swift; sourceTree = "<group>"; };
 		EBA53C5F29FBE11800D7095F /* WorksViewModelLoadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksViewModelLoadTests.swift; sourceTree = "<group>"; };
 		EBA53C6129FBE26E00D7095F /* MockFetchWorksUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFetchWorksUseCase.swift; sourceTree = "<group>"; };
+		EBD987692A04247A00495DF3 /* FirestoreDataSourceFetchPetProjectsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDataSourceFetchPetProjectsTests.swift; sourceTree = "<group>"; };
 		EBD9876B2A04396400495DF3 /* PetProjectFirestoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectFirestoreModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -406,6 +408,7 @@
 				EBA53C2B29FA8C7F00D7095F /* FirestoreDataSourceSignInTests.swift */,
 				EBA53C2E29FA947300D7095F /* FirestoreDataSourceFetchWorksTests.swift */,
 				EBA53C5229FBC40400D7095F /* MockFirestoreDataSource.swift */,
+				EBD987692A04247A00495DF3 /* FirestoreDataSourceFetchPetProjectsTests.swift */,
 			);
 			path = firestore;
 			sourceTree = "<group>";
@@ -711,6 +714,7 @@
 				EBA53C3629FADFF300D7095F /* WorksRepositoryFetchTests.swift in Sources */,
 				EBA53C5829FBDE0500D7095F /* FetchWorksUseCaseTests.swift in Sources */,
 				EBA53C2C29FA8C7F00D7095F /* FirestoreDataSourceSignInTests.swift in Sources */,
+				EBD9876A2A04247A00495DF3 /* FirestoreDataSourceFetchPetProjectsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
