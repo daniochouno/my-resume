@@ -15,6 +15,15 @@ class PetProjectsInteractor {
     }
     
     func getListOfPetProjects() async -> [PetProjectEntity]? {
-        return nil
+        let result = await fetchPetProjectsUseCase.fetch()
+        switch result {
+        case .success(let petProjectUseCaseModels):
+            let petProjects = petProjectUseCaseModels.map { petProjectUseCaseModel in
+                return PetProjectEntity(from: petProjectUseCaseModel)
+            }
+            return petProjects
+        case .failure:
+            return nil
+        }
     }
 }
