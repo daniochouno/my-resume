@@ -20,6 +20,7 @@ struct PetProjectFieldFirestoreModel: Decodable {
     let titleKey: PetProjectFieldStringValueFirestoreModel
     let subtitleKey: PetProjectFieldStringValueFirestoreModel
     let iconUrl: PetProjectFieldStringValueFirestoreModel
+    let headerColor: PetProjectFieldStringValueFirestoreModel
     let linkAppStore: PetProjectFieldStringValueFirestoreModel?
     let linkPlayStore: PetProjectFieldStringValueFirestoreModel?
     let linkWeb: PetProjectFieldStringValueFirestoreModel?

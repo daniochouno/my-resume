@@ -15,7 +15,7 @@ struct PetProjectsCardView: View {
     var body: some View {
         VStack {
             ZStack {
-                Color(hex: "#5E9C98")
+                Color(hex: petProject.headerColor)
                     .frame(height: 96)
                 
                 AsyncImage(url: URL(string: petProject.iconUrl)) { phase in
@@ -111,6 +111,7 @@ struct PetProjectsCardView_Previews: PreviewProvider {
             titleKey: "petProjects.myWardrobe.title",
             subtitleKey: "petProjects.myWardrobe.subtitle",
             iconUrl: "https://play-lh.googleusercontent.com/TJxlM5eKv-g0_lo7emIZb9FrWkgrk0EejfVsObOC97Z2hpbgOV4Fkp1b6Lu-HOPXf_k=w240-h480",
+            headerColor: "#5E9C98",
             linkAppStore: "petProjects.myWardrobe.link.appStore",
             linkPlayStore: "petProjects.myWardrobe.link.playStore",
             linkWeb: "http://www.miarmarioapp.com",

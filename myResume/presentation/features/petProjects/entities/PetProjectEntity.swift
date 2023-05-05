@@ -12,6 +12,7 @@ struct PetProjectEntity: Identifiable, Equatable {
     let titleKey: String
     let subtitleKey: String
     let iconUrl: String
+    let headerColor: String
     let linkAppStore: String?
     let linkPlayStore: String?
     let linkWeb: String?
@@ -24,6 +25,7 @@ extension PetProjectEntity {
         self.titleKey = useCaseModel.titleKey
         self.subtitleKey = useCaseModel.subtitleKey
         self.iconUrl = useCaseModel.iconUrl
+        self.headerColor = useCaseModel.headerColor
         self.linkAppStore = useCaseModel.linkAppStore
         self.linkPlayStore = useCaseModel.linkPlayStore
         self.linkWeb = useCaseModel.linkWeb

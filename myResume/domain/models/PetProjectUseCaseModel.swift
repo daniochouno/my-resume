@@ -11,6 +11,7 @@ struct PetProjectUseCaseModel: Decodable {
     let titleKey: String
     let subtitleKey: String
     let iconUrl: String
+    let headerColor: String
     let linkAppStore: String?
     let linkPlayStore: String?
     let linkWeb: String?
@@ -22,6 +23,7 @@ extension PetProjectUseCaseModel {
         self.titleKey = firestoreModel.fields.titleKey.stringValue
         self.subtitleKey = firestoreModel.fields.subtitleKey.stringValue
         self.iconUrl = firestoreModel.fields.iconUrl.stringValue
+        self.headerColor = firestoreModel.fields.headerColor.stringValue
         self.linkAppStore = firestoreModel.fields.linkAppStore?.stringValue
         self.linkPlayStore = firestoreModel.fields.linkPlayStore?.stringValue
         self.linkWeb = firestoreModel.fields.linkWeb?.stringValue
