@@ -54,6 +54,8 @@
 		EBD987772A043F0A00495DF3 /* MockPetProjectsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD987762A043F0A00495DF3 /* MockPetProjectsRepository.swift */; };
 		EBD9877A2A043F5400495DF3 /* FetchPetProjectsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD987792A043F5400495DF3 /* FetchPetProjectsUseCase.swift */; };
 		EBD9877C2A043FA000495DF3 /* PetProjectUseCaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9877B2A043FA000495DF3 /* PetProjectUseCaseModel.swift */; };
+		EBD987802A04FD3900495DF3 /* PetProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9877F2A04FD3900495DF3 /* PetProjectsView.swift */; };
+		EBD987822A04FD5900495DF3 /* PetProjectsViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD987812A04FD5900495DF3 /* PetProjectsViewFactory.swift */; };
 		EBD987852A04FE4600495DF3 /* PetProjectEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD987842A04FE4600495DF3 /* PetProjectEntity.swift */; };
 		EBD987882A04FF2200495DF3 /* PetProjectsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD987872A04FF2200495DF3 /* PetProjectsInteractor.swift */; };
 		EBD9878B2A05018600495DF3 /* PetProjectsInteractorListOfPetProjectsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9878A2A05018600495DF3 /* PetProjectsInteractorListOfPetProjectsTests.swift */; };
@@ -141,6 +143,8 @@
 		EBD987762A043F0A00495DF3 /* MockPetProjectsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPetProjectsRepository.swift; sourceTree = "<group>"; };
 		EBD987792A043F5400495DF3 /* FetchPetProjectsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPetProjectsUseCase.swift; sourceTree = "<group>"; };
 		EBD9877B2A043FA000495DF3 /* PetProjectUseCaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectUseCaseModel.swift; sourceTree = "<group>"; };
+		EBD9877F2A04FD3900495DF3 /* PetProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectsView.swift; sourceTree = "<group>"; };
+		EBD987812A04FD5900495DF3 /* PetProjectsViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectsViewFactory.swift; sourceTree = "<group>"; };
 		EBD987842A04FE4600495DF3 /* PetProjectEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectEntity.swift; sourceTree = "<group>"; };
 		EBD987872A04FF2200495DF3 /* PetProjectsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectsInteractor.swift; sourceTree = "<group>"; };
 		EBD9878A2A05018600495DF3 /* PetProjectsInteractorListOfPetProjectsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectsInteractorListOfPetProjectsTests.swift; sourceTree = "<group>"; };
@@ -636,6 +640,8 @@
 		EBD9877E2A04FD2600495DF3 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				EBD9877F2A04FD3900495DF3 /* PetProjectsView.swift */,
+				EBD987812A04FD5900495DF3 /* PetProjectsViewFactory.swift */,
 				EBD987A42A052FD100495DF3 /* PetProjectsCardView.swift */,
 			);
 			path = view;
@@ -835,6 +841,7 @@
 				EBA53C3E29FAE84A00D7095F /* FetchWorksUseCaseFactory.swift in Sources */,
 				EBD987712A043C9600495DF3 /* PetProjectsRepository.swift in Sources */,
 				EBA53C4B29FAEC7700D7095F /* WorksViewModelFactory.swift in Sources */,
+				EBD987802A04FD3900495DF3 /* PetProjectsView.swift in Sources */,
 				EBD9879A2A05181800495DF3 /* PetProjectsInteractorFactory.swift in Sources */,
 				EBD987852A04FE4600495DF3 /* PetProjectEntity.swift in Sources */,
 				EBA53C4529FAEAE800D7095F /* WorksViewModel.swift in Sources */,
@@ -850,6 +857,7 @@
 				EBD9876C2A04396400495DF3 /* PetProjectFirestoreModel.swift in Sources */,
 				EB7FB7E729EEA35900DEA576 /* CareerView.swift in Sources */,
 				EB7FB7ED29EEAEFD00DEA576 /* View.swift in Sources */,
+				EBD987822A04FD5900495DF3 /* PetProjectsViewFactory.swift in Sources */,
 				EBD987902A050ACB00495DF3 /* PetProjectsPresenter.swift in Sources */,
 				EBA53C4E29FAED2000D7095F /* WorkModel.swift in Sources */,
 				EBD9879E2A05188F00495DF3 /* PetProjectsRepositoryFactory.swift in Sources */,
