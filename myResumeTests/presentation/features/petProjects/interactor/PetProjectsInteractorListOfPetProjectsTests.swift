@@ -16,7 +16,7 @@ final class PetProjectsInteractorListOfPetProjectsTests: XCTestCase {
     override func setUpWithError() throws {
         self.fetchPetProjectsUseCase = MockFetchPetProjectsUseCase()
         
-        self.interactor = PetProjectsInteractor(fetchPetProjectsUseCase: self.fetchPetProjectsUseCase!)
+        self.interactor = PetProjectsInteractorImpl(fetchPetProjectsUseCase: self.fetchPetProjectsUseCase!)
     }
 
     override func tearDownWithError() throws {
@@ -28,13 +28,12 @@ final class PetProjectsInteractorListOfPetProjectsTests: XCTestCase {
         let arrayModels = [model, model, model, model]
         self.fetchPetProjectsUseCase?.fetchResult = .success(arrayModels)
         
-        let listOfPetProjects = await self.interactor?.getListOfPetProjects()
-        
-        guard let listOfPetProjects else {
+        let result = await self.interactor?.getListOfPetProjects()
+        switch result {
+        case .success(let petProjects):
+            XCTAssertEqual(petProjects.count, arrayModels.count)
+        default:
             XCTFail("Pet Projects not loaded")
-            return
         }
-        
-        XCTAssertEqual(listOfPetProjects.count, arrayModels.count)
     }
 }
