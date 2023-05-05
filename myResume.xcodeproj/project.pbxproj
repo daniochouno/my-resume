@@ -54,6 +54,10 @@
 		EBD987772A043F0A00495DF3 /* MockPetProjectsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD987762A043F0A00495DF3 /* MockPetProjectsRepository.swift */; };
 		EBD9877A2A043F5400495DF3 /* FetchPetProjectsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD987792A043F5400495DF3 /* FetchPetProjectsUseCase.swift */; };
 		EBD9877C2A043FA000495DF3 /* PetProjectUseCaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9877B2A043FA000495DF3 /* PetProjectUseCaseModel.swift */; };
+		EBD987852A04FE4600495DF3 /* PetProjectEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD987842A04FE4600495DF3 /* PetProjectEntity.swift */; };
+		EBD987882A04FF2200495DF3 /* PetProjectsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD987872A04FF2200495DF3 /* PetProjectsInteractor.swift */; };
+		EBD9878B2A05018600495DF3 /* PetProjectsInteractorListOfPetProjectsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9878A2A05018600495DF3 /* PetProjectsInteractorListOfPetProjectsTests.swift */; };
+		EBD9878D2A0502B100495DF3 /* MockFetchPetProjectsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9878C2A0502B100495DF3 /* MockFetchPetProjectsUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +132,10 @@
 		EBD987762A043F0A00495DF3 /* MockPetProjectsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPetProjectsRepository.swift; sourceTree = "<group>"; };
 		EBD987792A043F5400495DF3 /* FetchPetProjectsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPetProjectsUseCase.swift; sourceTree = "<group>"; };
 		EBD9877B2A043FA000495DF3 /* PetProjectUseCaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectUseCaseModel.swift; sourceTree = "<group>"; };
+		EBD987842A04FE4600495DF3 /* PetProjectEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectEntity.swift; sourceTree = "<group>"; };
+		EBD987872A04FF2200495DF3 /* PetProjectsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectsInteractor.swift; sourceTree = "<group>"; };
+		EBD9878A2A05018600495DF3 /* PetProjectsInteractorListOfPetProjectsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectsInteractorListOfPetProjectsTests.swift; sourceTree = "<group>"; };
+		EBD9878C2A0502B100495DF3 /* MockFetchPetProjectsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFetchPetProjectsUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,6 +336,7 @@
 		EB86A60329E89D8200373ED1 /* features */ = {
 			isa = PBXGroup;
 			children = (
+				EBD9877D2A04F98500495DF3 /* petProjects */,
 				EBA53C4129FAE9A400D7095F /* works */,
 				EB7FB7E429EEA33900DEA576 /* career */,
 				EB02FA3C29E9CC2600CAA9DC /* tabs */,
@@ -458,8 +467,8 @@
 			isa = PBXGroup;
 			children = (
 				EBA53C4C29FAED1300D7095F /* models */,
-				EBA53C4329FAE9B500D7095F /* viewModel */,
 				EBA53C4229FAE9AD00D7095F /* view */,
+				EBA53C4329FAE9B500D7095F /* viewModel */,
 			);
 			path = works;
 			sourceTree = "<group>";
@@ -535,6 +544,7 @@
 		EBA53C5C29FBE0B000D7095F /* features */ = {
 			isa = PBXGroup;
 			children = (
+				EBD987892A05012E00495DF3 /* petProjects */,
 				EBA53C5D29FBE0B900D7095F /* works */,
 			);
 			path = features;
@@ -578,6 +588,7 @@
 			isa = PBXGroup;
 			children = (
 				EBD987742A043E8700495DF3 /* FetchPetProjectsUseCaseTests.swift */,
+				EBD9878C2A0502B100495DF3 /* MockFetchPetProjectsUseCase.swift */,
 			);
 			path = petProjects;
 			sourceTree = "<group>";
@@ -586,6 +597,40 @@
 			isa = PBXGroup;
 			children = (
 				EBD987792A043F5400495DF3 /* FetchPetProjectsUseCase.swift */,
+			);
+			path = petProjects;
+			sourceTree = "<group>";
+		};
+		EBD9877D2A04F98500495DF3 /* petProjects */ = {
+			isa = PBXGroup;
+			children = (
+				EBD9877E2A04FD2600495DF3 /* view */,
+				EBD987862A04FEED00495DF3 /* interactor */,
+				EBD987832A04FE3100495DF3 /* entities */,
+			);
+			path = petProjects;
+			sourceTree = "<group>";
+		};
+		EBD987832A04FE3100495DF3 /* entities */ = {
+			isa = PBXGroup;
+			children = (
+				EBD987842A04FE4600495DF3 /* PetProjectEntity.swift */,
+			);
+			path = entities;
+			sourceTree = "<group>";
+		};
+		EBD987862A04FEED00495DF3 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EBD987872A04FF2200495DF3 /* PetProjectsInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		EBD987892A05012E00495DF3 /* petProjects */ = {
+			isa = PBXGroup;
+			children = (
+				EBD9878A2A05018600495DF3 /* PetProjectsInteractorListOfPetProjectsTests.swift */,
 			);
 			path = petProjects;
 			sourceTree = "<group>";
@@ -726,10 +771,12 @@
 				EB7FB7E929EEA7A200DEA576 /* CareerViewFactory.swift in Sources */,
 				EB3C830A29F9A96A00742C21 /* FirestoreDataSource.swift in Sources */,
 				EBD9877A2A043F5400495DF3 /* FetchPetProjectsUseCase.swift in Sources */,
+				EBD987882A04FF2200495DF3 /* PetProjectsInteractor.swift in Sources */,
 				EBA53C3C29FAE7A000D7095F /* WorkUseCaseModel.swift in Sources */,
 				EBA53C3E29FAE84A00D7095F /* FetchWorksUseCaseFactory.swift in Sources */,
 				EBD987712A043C9600495DF3 /* PetProjectsRepository.swift in Sources */,
 				EBA53C4B29FAEC7700D7095F /* WorksViewModelFactory.swift in Sources */,
+				EBD987852A04FE4600495DF3 /* PetProjectEntity.swift in Sources */,
 				EBA53C4529FAEAE800D7095F /* WorksViewModel.swift in Sources */,
 				EBD9877C2A043FA000495DF3 /* PetProjectUseCaseModel.swift in Sources */,
 				EB3C830D29F9A9CA00742C21 /* FirestoreDataSourceFactory.swift in Sources */,
@@ -761,11 +808,13 @@
 				EBD987772A043F0A00495DF3 /* MockPetProjectsRepository.swift in Sources */,
 				EB3C830829F9806100742C21 /* MockURLProtocol.swift in Sources */,
 				EBA53C6029FBE11800D7095F /* WorksViewModelLoadTests.swift in Sources */,
+				EBD9878D2A0502B100495DF3 /* MockFetchPetProjectsUseCase.swift in Sources */,
 				EBA53C6229FBE26E00D7095F /* MockFetchWorksUseCase.swift in Sources */,
 				EBD9876F2A043BC400495DF3 /* PetProjectsRepositoryFetchTests.swift in Sources */,
 				EBA53C5129FB03E700D7095F /* MockUserDefaults.swift in Sources */,
 				EBA53C2F29FA947300D7095F /* FirestoreDataSourceFetchWorksTests.swift in Sources */,
 				EBA53C5A29FBDE5700D7095F /* MockWorksRepository.swift in Sources */,
+				EBD9878B2A05018600495DF3 /* PetProjectsInteractorListOfPetProjectsTests.swift in Sources */,
 				EBA53C3629FADFF300D7095F /* WorksRepositoryFetchTests.swift in Sources */,
 				EBA53C5829FBDE0500D7095F /* FetchWorksUseCaseTests.swift in Sources */,
 				EBA53C2C29FA8C7F00D7095F /* FirestoreDataSourceSignInTests.swift in Sources */,
