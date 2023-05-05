@@ -20,7 +20,14 @@ final class PetProjectsPresenter: ObservableObject {
     
     @MainActor
     func onViewAppear() async {
-        self.petProjects = []
+        self.isLoading = true
+        let result = await interactor.getListOfPetProjects()
+        switch result {
+        case .success(let petProjects):
+            self.petProjects = petProjects
+        case .failure(let error):
+            self.errorMessage = "\(error)"
+        }
         self.isLoading = false
     }
 }
