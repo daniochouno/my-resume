@@ -18,7 +18,7 @@ struct CareerView: View {
                 WorksViewFactory.makeView()
             }
             else {
-                Text("career.tabs.sideProjects.title")
+                PetProjectsViewFactory.makeView()
             }
             Spacer()
         }
