@@ -65,6 +65,8 @@
 		EBD9879A2A05181800495DF3 /* PetProjectsInteractorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD987992A05181800495DF3 /* PetProjectsInteractorFactory.swift */; };
 		EBD9879C2A05185900495DF3 /* FetchPetProjectsUseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9879B2A05185900495DF3 /* FetchPetProjectsUseCaseFactory.swift */; };
 		EBD9879E2A05188F00495DF3 /* PetProjectsRepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9879D2A05188F00495DF3 /* PetProjectsRepositoryFactory.swift */; };
+		EBD987A52A052FD100495DF3 /* PetProjectsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD987A42A052FD100495DF3 /* PetProjectsCardView.swift */; };
+		EBD987A72A056EA400495DF3 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD987A62A056EA400495DF3 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +152,8 @@
 		EBD987992A05181800495DF3 /* PetProjectsInteractorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectsInteractorFactory.swift; sourceTree = "<group>"; };
 		EBD9879B2A05185900495DF3 /* FetchPetProjectsUseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPetProjectsUseCaseFactory.swift; sourceTree = "<group>"; };
 		EBD9879D2A05188F00495DF3 /* PetProjectsRepositoryFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectsRepositoryFactory.swift; sourceTree = "<group>"; };
+		EBD987A42A052FD100495DF3 /* PetProjectsCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectsCardView.swift; sourceTree = "<group>"; };
+		EBD987A62A056EA400495DF3 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +281,7 @@
 		EB7FB7EB29EEAEEB00DEA576 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
+				EBD987A62A056EA400495DF3 /* Color.swift */,
 				EB7FB7EC29EEAEFD00DEA576 /* View.swift */,
 			);
 			path = extensions;
@@ -628,6 +633,14 @@
 			path = petProjects;
 			sourceTree = "<group>";
 		};
+		EBD9877E2A04FD2600495DF3 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				EBD987A42A052FD100495DF3 /* PetProjectsCardView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		EBD987832A04FE3100495DF3 /* entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -828,9 +841,11 @@
 				EBD9877C2A043FA000495DF3 /* PetProjectUseCaseModel.swift in Sources */,
 				EB3C830D29F9A9CA00742C21 /* FirestoreDataSourceFactory.swift in Sources */,
 				EB3C831E29F9BB4900742C21 /* WorksRepository.swift in Sources */,
+				EBD987A72A056EA400495DF3 /* Color.swift in Sources */,
 				EBD9879C2A05185900495DF3 /* FetchPetProjectsUseCaseFactory.swift in Sources */,
 				EBA53C4029FAE87B00D7095F /* WorksRepositoryFactory.swift in Sources */,
 				EB3C831129F9ADB900742C21 /* APIClient.swift in Sources */,
+				EBD987A52A052FD100495DF3 /* PetProjectsCardView.swift in Sources */,
 				EB3C831729F9B07C00742C21 /* WorkFirestoreModel.swift in Sources */,
 				EBD9876C2A04396400495DF3 /* PetProjectFirestoreModel.swift in Sources */,
 				EB7FB7E729EEA35900DEA576 /* CareerView.swift in Sources */,
