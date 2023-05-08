@@ -15,6 +15,7 @@
 // Works
 "works.timelapse.current" = "current";
 // Pet projects
+"petProjects.title" = "These applications have been completely developed by me, from their concept and design to their publication in the various app stores.";
 "petProjects.downloads.%@" = "+%@ downloads";
 "petProjects.stores.appStore" = "App Store";
 "petProjects.stores.googlePlay" = "Play Store";
