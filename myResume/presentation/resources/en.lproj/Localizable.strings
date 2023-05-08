@@ -15,7 +15,7 @@
 // Works
 "works.timelapse.current" = "current";
 // Pet projects
-"petProjects.downloads.%@" = "%@ downloads";
+"petProjects.downloads.%@" = "+%@ downloads";
 "petProjects.stores.appStore" = "App Store";
 "petProjects.stores.googlePlay" = "Play Store";
 // MyWardrobe

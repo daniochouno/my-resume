@@ -24,9 +24,13 @@ struct PetProjectFieldFirestoreModel: Decodable {
     let linkAppStore: PetProjectFieldStringValueFirestoreModel?
     let linkPlayStore: PetProjectFieldStringValueFirestoreModel?
     let linkWeb: PetProjectFieldStringValueFirestoreModel?
-    let downloads: PetProjectFieldStringValueFirestoreModel?
+    let downloads: PetProjectFieldIntegerValueFirestoreModel?
 }
 
 struct PetProjectFieldStringValueFirestoreModel: Decodable {
     let stringValue: String
+}
+
+struct PetProjectFieldIntegerValueFirestoreModel: Decodable {
+    let integerValue: String
 }

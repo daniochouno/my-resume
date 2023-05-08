@@ -115,7 +115,7 @@ struct PetProjectsCardView_Previews: PreviewProvider {
             linkAppStore: "petProjects.myWardrobe.link.appStore",
             linkPlayStore: "petProjects.myWardrobe.link.playStore",
             linkWeb: "http://www.miarmarioapp.com",
-            downloads: "> 100k"
+            downloads: "100k"
         )
         PetProjectsCardView(petProject: petProject)
     }

@@ -29,6 +29,19 @@ extension PetProjectEntity {
         self.linkAppStore = useCaseModel.linkAppStore
         self.linkPlayStore = useCaseModel.linkPlayStore
         self.linkWeb = useCaseModel.linkWeb
-        self.downloads = useCaseModel.downloads
+        
+        if let downloads = useCaseModel.downloads {
+            if downloads >= 0 && downloads < 1000 {
+                self.downloads = String(downloads)
+            } else if downloads >= 1000 && downloads < 1000000 {
+                let kDownloads = downloads/1000
+                self.downloads = String(kDownloads) + "k"
+            } else {
+                let mDownloads = downloads/1000000
+                self.downloads = String(mDownloads) + "M"
+            }
+        } else {
+            self.downloads = nil
+        }
     }
 }
