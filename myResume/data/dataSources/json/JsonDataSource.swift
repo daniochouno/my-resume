@@ -19,6 +19,11 @@ class JsonDataSourceImpl: JsonDataSource {
     }
     
     func fetchSkills() async -> Result<[SkillSectionJsonModel], Error> {
-        return .failure(APIResponseError.configuration)
+        do {
+            let skills: [SkillSectionJsonModel] = try JSONDecoder().decode([SkillSectionJsonModel].self, from: self.data)
+            return .success(skills)
+        } catch {
+            return .failure(APIResponseError.parser)
+        }
     }
 }
