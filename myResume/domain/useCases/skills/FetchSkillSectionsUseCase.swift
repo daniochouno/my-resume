@@ -1,5 +1,5 @@
 //
-//  FetchSkillsUseCase.swift
+//  FetchSkillSectionsUseCase.swift
 //  myResume
 //
 //  Created by Daniel Martínez Muñoz on 8/5/23.
@@ -7,11 +7,11 @@
 
 import Foundation
 
-protocol FetchSkillsUseCase {
+protocol FetchSkillSectionsUseCase {
     func fetch() async -> Result<[SkillSectionUseCaseModel], Error>
 }
 
-class FetchSkillsUseCaseImpl: FetchSkillsUseCase {
+class FetchSkillSectionsUseCaseImpl: FetchSkillSectionsUseCase {
     private let repository: SkillsRepository
     
     init(repository: SkillsRepository) {

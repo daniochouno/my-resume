@@ -1,5 +1,5 @@
 //
-//  FetchSkillsUseCaseTests.swift
+//  FetchSkillSectionsUseCaseTests.swift
 //  myResumeTests
 //
 //  Created by Daniel Martínez Muñoz on 8/5/23.
@@ -8,16 +8,16 @@
 import XCTest
 @testable import myResume
 
-final class FetchSkillsUseCaseTests: XCTestCase {
+final class FetchSkillSectionsUseCaseTests: XCTestCase {
     var repository: MockSkillsRepository?
     
-    var useCase: FetchSkillsUseCase?
+    var useCase: FetchSkillSectionsUseCase?
     let expectation = XCTestExpectation(description: "UseCase expectation")
     
     override func setUpWithError() throws {
         self.repository = MockSkillsRepository()
         
-        self.useCase = FetchSkillsUseCaseImpl(repository: self.repository!)
+        self.useCase = FetchSkillSectionsUseCaseImpl(repository: self.repository!)
     }
 
     override func tearDownWithError() throws {
