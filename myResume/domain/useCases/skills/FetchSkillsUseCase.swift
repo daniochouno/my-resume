@@ -19,6 +19,15 @@ class FetchSkillsUseCaseImpl: FetchSkillsUseCase {
     }
     
     func fetch() async -> Result<[SkillSectionUseCaseModel], Error> {
-        return .failure(APIResponseError.configuration)
+        let result = await repository.fetch()
+        switch result {
+        case .success(let sections):
+            let models = sections.map { skillSectionJsonModel in
+                return SkillSectionUseCaseModel(from: skillSectionJsonModel)
+            }
+            return .success(models)
+        case .failure(let error):
+            return .failure(error)
+        }
     }
 }
