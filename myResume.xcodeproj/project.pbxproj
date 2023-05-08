@@ -24,6 +24,8 @@
 		EB513F992A093B5400CA5FF0 /* SkillSectionJsonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513F982A093B5400CA5FF0 /* SkillSectionJsonModel.swift */; };
 		EB513F9C2A093D2F00CA5FF0 /* JsonDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513F9B2A093D2F00CA5FF0 /* JsonDataSource.swift */; };
 		EB513F9F2A0956C800CA5FF0 /* JsonDataSourceFetchSkillsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513F9E2A0956C800CA5FF0 /* JsonDataSourceFetchSkillsTests.swift */; };
+		EB513FA22A0978D900CA5FF0 /* SkillsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FA12A0978D900CA5FF0 /* SkillsRepository.swift */; };
+		EB513FA52A0979A800CA5FF0 /* SkillsRepositoryFetchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FA42A0979A800CA5FF0 /* SkillsRepositoryFetchTests.swift */; };
 		EB513FA72A097A0200CA5FF0 /* MockJsonDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FA62A097A0200CA5FF0 /* MockJsonDataSource.swift */; };
 		EB7FB7E729EEA35900DEA576 /* CareerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7E629EEA35900DEA576 /* CareerView.swift */; };
 		EB7FB7E929EEA7A200DEA576 /* CareerViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7E829EEA7A200DEA576 /* CareerViewFactory.swift */; };
@@ -113,6 +115,8 @@
 		EB513F982A093B5400CA5FF0 /* SkillSectionJsonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillSectionJsonModel.swift; sourceTree = "<group>"; };
 		EB513F9B2A093D2F00CA5FF0 /* JsonDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDataSource.swift; sourceTree = "<group>"; };
 		EB513F9E2A0956C800CA5FF0 /* JsonDataSourceFetchSkillsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDataSourceFetchSkillsTests.swift; sourceTree = "<group>"; };
+		EB513FA12A0978D900CA5FF0 /* SkillsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsRepository.swift; sourceTree = "<group>"; };
+		EB513FA42A0979A800CA5FF0 /* SkillsRepositoryFetchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsRepositoryFetchTests.swift; sourceTree = "<group>"; };
 		EB513FA62A097A0200CA5FF0 /* MockJsonDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockJsonDataSource.swift; sourceTree = "<group>"; };
 		EB7FB7E629EEA35900DEA576 /* CareerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerView.swift; sourceTree = "<group>"; };
 		EB7FB7E829EEA7A200DEA576 /* CareerViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerViewFactory.swift; sourceTree = "<group>"; };
@@ -304,6 +308,22 @@
 			path = json;
 			sourceTree = "<group>";
 		};
+		EB513FA02A0978C600CA5FF0 /* skills */ = {
+			isa = PBXGroup;
+			children = (
+				EB513FA12A0978D900CA5FF0 /* SkillsRepository.swift */,
+			);
+			path = skills;
+			sourceTree = "<group>";
+		};
+		EB513FA32A09797F00CA5FF0 /* skills */ = {
+			isa = PBXGroup;
+			children = (
+				EB513FA42A0979A800CA5FF0 /* SkillsRepositoryFetchTests.swift */,
+			);
+			path = skills;
+			sourceTree = "<group>";
+		};
 		EB7FB7E429EEA33900DEA576 /* career */ = {
 			isa = PBXGroup;
 			children = (
@@ -383,6 +403,7 @@
 			children = (
 				EBD9876D2A043B9C00495DF3 /* petProjects */,
 				EB3C831C29F9BB3900742C21 /* works */,
+				EB513FA02A0978C600CA5FF0 /* skills */,
 			);
 			path = repositories;
 			sourceTree = "<group>";
@@ -514,6 +535,7 @@
 			children = (
 				EBD987722A043D4200495DF3 /* petProjects */,
 				EBA53C5E29FBE0D400D7095F /* works */,
+				EB513FA32A09797F00CA5FF0 /* skills */,
 			);
 			path = repositories;
 			sourceTree = "<group>";
@@ -914,6 +936,7 @@
 				EBD987822A04FD5900495DF3 /* PetProjectsViewFactory.swift in Sources */,
 				EBD987902A050ACB00495DF3 /* PetProjectsPresenter.swift in Sources */,
 				EBA53C4E29FAED2000D7095F /* WorkModel.swift in Sources */,
+				EB513FA22A0978D900CA5FF0 /* SkillsRepository.swift in Sources */,
 				EBD9879E2A05188F00495DF3 /* PetProjectsRepositoryFactory.swift in Sources */,
 				EBA53C3129FA9F0500D7095F /* APIClientRequest.swift in Sources */,
 				EB02FA4029E9CD7100CAA9DC /* TabsView.swift in Sources */,
@@ -931,6 +954,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB513FA52A0979A800CA5FF0 /* SkillsRepositoryFetchTests.swift in Sources */,
 				EB513F9F2A0956C800CA5FF0 /* JsonDataSourceFetchSkillsTests.swift in Sources */,
 				EBA53C5329FBC40400D7095F /* MockFirestoreDataSource.swift in Sources */,
 				EBD987772A043F0A00495DF3 /* MockPetProjectsRepository.swift in Sources */,
