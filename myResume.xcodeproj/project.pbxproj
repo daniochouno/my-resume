@@ -19,6 +19,7 @@
 		EB3C831929F9B52D00742C21 /* APIClientFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C831829F9B52D00742C21 /* APIClientFactory.swift */; };
 		EB3C831B29F9BAC100742C21 /* SessionFirestoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C831A29F9BAC100742C21 /* SessionFirestoreModel.swift */; };
 		EB3C831E29F9BB4900742C21 /* WorksRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C831D29F9BB4900742C21 /* WorksRepository.swift */; };
+		EB513F942A093AF200CA5FF0 /* skills.json in Resources */ = {isa = PBXBuildFile; fileRef = EB513F932A093AF200CA5FF0 /* skills.json */; };
 		EB513F972A093B2500CA5FF0 /* SkillJsonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513F962A093B2500CA5FF0 /* SkillJsonModel.swift */; };
 		EB513F992A093B5400CA5FF0 /* SkillSectionJsonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513F982A093B5400CA5FF0 /* SkillSectionJsonModel.swift */; };
 		EB7FB7E729EEA35900DEA576 /* CareerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7E629EEA35900DEA576 /* CareerView.swift */; };
@@ -104,6 +105,7 @@
 		EB3C831829F9B52D00742C21 /* APIClientFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientFactory.swift; sourceTree = "<group>"; };
 		EB3C831A29F9BAC100742C21 /* SessionFirestoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionFirestoreModel.swift; sourceTree = "<group>"; };
 		EB3C831D29F9BB4900742C21 /* WorksRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksRepository.swift; sourceTree = "<group>"; };
+		EB513F932A093AF200CA5FF0 /* skills.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = skills.json; sourceTree = "<group>"; };
 		EB513F962A093B2500CA5FF0 /* SkillJsonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillJsonModel.swift; sourceTree = "<group>"; };
 		EB513F982A093B5400CA5FF0 /* SkillSectionJsonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillSectionJsonModel.swift; sourceTree = "<group>"; };
 		EB7FB7E629EEA35900DEA576 /* CareerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerView.swift; sourceTree = "<group>"; };
@@ -262,6 +264,14 @@
 			path = works;
 			sourceTree = "<group>";
 		};
+		EB513F922A093ABF00CA5FF0 /* databases */ = {
+			isa = PBXGroup;
+			children = (
+				EB513F932A093AF200CA5FF0 /* skills.json */,
+			);
+			path = databases;
+			sourceTree = "<group>";
+		};
 		EB513F952A093B0900CA5FF0 /* json */ = {
 			isa = PBXGroup;
 			children = (
@@ -308,6 +318,7 @@
 		EB86A5FC29E89B2300373ED1 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				EB513F922A093ABF00CA5FF0 /* databases */,
 				EB3C831429F9B05800742C21 /* models */,
 				EB86A5FF29E89B4F00373ED1 /* dataSources */,
 				EB86A60029E89B5B00373ED1 /* repositories */,
@@ -448,8 +459,8 @@
 			isa = PBXGroup;
 			children = (
 				EBA53C4F29FB03D600D7095F /* storage */,
-				EBA53C3429FADFB800D7095F /* repositories */,
 				EBA53C2A29FA8C3E00D7095F /* dataSources */,
+				EBA53C3429FADFB800D7095F /* repositories */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -819,6 +830,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBA0910429E5C2E2001B3005 /* Preview Assets.xcassets in Resources */,
+				EB513F942A093AF200CA5FF0 /* skills.json in Resources */,
 				EB02FA4529E9D19D00CAA9DC /* Localizable.strings in Resources */,
 				EBA0910029E5C2E2001B3005 /* Assets.xcassets in Resources */,
 			);

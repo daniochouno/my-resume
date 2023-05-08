@@ -1,0 +1,89 @@
+[{
+	"title": "Programming Languages",
+	"order": 0,
+	"items": [{
+		"title": "Swift",
+		"experienceInYears": 8,
+		"iconAsset": "",
+		"foregroundColor": "",
+		"backgroundColor": ""
+	},{
+		"title": "SwiftUI",
+		"experienceInYears": 2,
+		"iconAsset": "",
+		"foregroundColor": "",
+		"backgroundColor": ""
+	},{
+		"title": "Flutter",
+		"experienceInYears": 8,
+		"iconAsset": "",
+		"foregroundColor": "",
+		"backgroundColor": ""
+	},{
+		"title": "Kotlin",
+		"experienceInYears": 8,
+		"iconAsset": "",
+		"foregroundColor": "",
+		"backgroundColor": ""
+	}]
+},{
+	"title": "Platforms",
+	"order": 1,
+	"items": [{
+		"title": "iOS",
+		"experienceInYears": 12,
+		"iconAsset": "",
+		"foregroundColor": "",
+		"backgroundColor": ""
+	},{
+		"title": "Android",
+		"experienceInYears": 6,
+		"iconAsset": "",
+		"foregroundColor": "",
+		"backgroundColor": ""
+	},{
+		"title": "watchOS",
+		"experienceInYears": 4,
+		"iconAsset": "",
+		"foregroundColor": "",
+		"backgroundColor": ""
+	}]
+},{
+	"title": "Testing",
+	"order": 2,
+	"items": [{
+		"title": "Unit Testing",
+		"experienceInYears": 8,
+		"iconAsset": "",
+		"foregroundColor": "",
+		"backgroundColor": ""
+	},{
+		"title": "UI Testing",
+		"experienceInYears": 4,
+		"iconAsset": "",
+		"foregroundColor": "",
+		"backgroundColor": ""
+	},{
+		"title": "TDD",
+		"experienceInYears": 4,
+		"iconAsset": "",
+		"foregroundColor": "",
+		"backgroundColor": ""
+	}]
+},{
+	"title": "Architectures",
+	"order": 3,
+	"items": [{
+		"title": "MVVM",
+		"experienceInYears": 6,
+		"iconAsset": "",
+		"foregroundColor": "",
+		"backgroundColor": ""
+	},{
+		"title": "VIPER",
+		"experienceInYears": 6,
+		"iconAsset": "",
+		"foregroundColor": "",
+		"backgroundColor": ""
+	}]
+}]
