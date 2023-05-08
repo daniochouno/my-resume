@@ -19,6 +19,6 @@ class SkillsRepositoryImpl: SkillsRepository {
     }
     
     func fetch() async -> Result<[SkillSectionJsonModel], Error> {
-        return .failure(APIResponseError.configuration)
+        return await dataSource.fetchSkills()
     }
 }
