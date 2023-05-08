@@ -24,7 +24,7 @@ final class PetProjectsPresenterOnViewAppearTests: XCTestCase {
     }
 
     func testSuccess() async throws {
-        let model = PetProjectEntity(id: UUID(), titleKey: "abc", subtitleKey: "def", iconUrl: "abc", linkAppStore: "abc", linkPlayStore: "abc", linkWeb: "abc", downloads: "abc")
+        let model = PetProjectEntity(id: UUID(), titleKey: "abc", subtitleKey: "def", iconUrl: "abc", headerColor: "#ffffff", linkAppStore: "abc", linkPlayStore: "abc", linkWeb: "abc", downloads: "abc")
         let arrayModels = [model, model, model, model]
         self.interactor?.getListOfPetProjectsResult = .success(arrayModels)
         

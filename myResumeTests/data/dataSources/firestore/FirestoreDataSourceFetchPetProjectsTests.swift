@@ -38,6 +38,9 @@ final class FirestoreDataSourceFetchPetProjectsTests: XCTestCase {
                 "subtitleKey": {
                     "stringValue": "Headline A"
                 },
+                "headerColor": {
+                    "stringValue": "#FFFFFF"
+                },
                 "iconUrl": {
                     "stringValue": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
                 },
@@ -51,7 +54,7 @@ final class FirestoreDataSourceFetchPetProjectsTests: XCTestCase {
                     "stringValue": "https://www.google.com"
                 },
                 "downloads": {
-                    "stringValue": "> 10"
+                    "integerValue": "10"
                 }
             }
         }, {
@@ -63,6 +66,9 @@ final class FirestoreDataSourceFetchPetProjectsTests: XCTestCase {
                 "subtitleKey": {
                     "stringValue": "Headline B"
                 },
+                "headerColor": {
+                    "stringValue": "#FFFFFF"
+                },
                 "iconUrl": {
                     "stringValue": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
                 },
@@ -76,7 +82,7 @@ final class FirestoreDataSourceFetchPetProjectsTests: XCTestCase {
                     "stringValue": "https://www.google.com"
                 },
                 "downloads": {
-                    "stringValue": "> 10"
+                    "integerValue": "10"
                 }
             }
         }, {
@@ -88,6 +94,9 @@ final class FirestoreDataSourceFetchPetProjectsTests: XCTestCase {
                 "subtitleKey": {
                     "stringValue": "Headline C"
                 },
+                "headerColor": {
+                    "stringValue": "#FFFFFF"
+                },
                 "iconUrl": {
                     "stringValue": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
                 },
@@ -101,7 +110,7 @@ final class FirestoreDataSourceFetchPetProjectsTests: XCTestCase {
                     "stringValue": "https://www.google.com"
                 },
                 "downloads": {
-                    "stringValue": "> 10"
+                    "integerValue": "10"
                 }
             }
         }, {
@@ -113,6 +122,9 @@ final class FirestoreDataSourceFetchPetProjectsTests: XCTestCase {
                 "subtitleKey": {
                     "stringValue": "Headline D"
                 },
+                "headerColor": {
+                    "stringValue": "#FFFFFF"
+                },
                 "iconUrl": {
                     "stringValue": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
                 },
@@ -126,7 +138,7 @@ final class FirestoreDataSourceFetchPetProjectsTests: XCTestCase {
                     "stringValue": "https://www.google.com"
                 },
                 "downloads": {
-                    "stringValue": "> 10"
+                    "integerValue": "10"
                 }
             }
         }]

@@ -24,7 +24,7 @@ final class PetProjectsInteractorListOfPetProjectsTests: XCTestCase {
     }
 
     func testSuccess() async throws {
-        let model = PetProjectUseCaseModel(titleKey: "abc", subtitleKey: "def", iconUrl: "abc", linkAppStore: "abc", linkPlayStore: "abc", linkWeb: "abc", downloads: "abc")
+        let model = PetProjectUseCaseModel(titleKey: "abc", subtitleKey: "def", iconUrl: "abc", headerColor: "#ffffff", linkAppStore: "abc", linkPlayStore: "abc", linkWeb: "abc", downloads: 10)
         let arrayModels = [model, model, model, model]
         self.fetchPetProjectsUseCase?.fetchResult = .success(arrayModels)
         
