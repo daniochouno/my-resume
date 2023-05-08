@@ -25,7 +25,12 @@ class FetchPetProjectsUseCaseImpl: FetchPetProjectsUseCase {
             let models = petProjects.map { petProjectFirestoreModel in
                 return PetProjectUseCaseModel(from: petProjectFirestoreModel)
             }
-            return .success(models)
+            let sorted = models.sorted { modelA, modelB in
+                guard let downloadsA = modelA.downloads else { return false }
+                guard let downloadsB = modelB.downloads else { return true }
+                return downloadsA > downloadsB
+            }
+            return .success(sorted)
         case .failure(let error):
             return .failure(error)
         }
