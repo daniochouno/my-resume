@@ -8,8 +8,8 @@
 import Foundation
 
 protocol LocalCacheDataSource {
-    func fetchWorks() -> Result<WorkDocumentsFirestoreModel, Error>
-    func fetchPetProjects() -> Result<PetProjectDocumentsFirestoreModel, Error>
+    func fetchWorks() -> Result<WorksLocalCacheModel, Error>
+    func fetchPetProjects() -> Result<PetProjectsLocalCacheModel, Error>
     func storeWorks(documents: WorkDocumentsFirestoreModel) -> Bool
     func storePetProjects(documents: PetProjectDocumentsFirestoreModel) -> Bool
 }
@@ -21,19 +21,55 @@ class LocalCacheDataSourceImpl: LocalCacheDataSource {
         self.userDefaults = userDefaults
     }
     
-    func fetchWorks() -> Result<WorkDocumentsFirestoreModel, Error> {
-        return .failure(APIResponseError.configuration)
+    func fetchWorks() -> Result<WorksLocalCacheModel, Error> {
+        guard let data = self.userDefaults.data(forKey: "works") else {
+            return .failure(APIResponseError.parser)
+        }
+        do {
+            let localCacheModel: WorksLocalCacheModel = try JSONDecoder().decode(WorksLocalCacheModel.self, from: data)
+            return .success(localCacheModel)
+        } catch {
+            return .failure(APIResponseError.parser)
+        }
     }
     
-    func fetchPetProjects() -> Result<PetProjectDocumentsFirestoreModel, Error> {
-        return .failure(APIResponseError.configuration)
+    func fetchPetProjects() -> Result<PetProjectsLocalCacheModel, Error> {
+        guard let data = self.userDefaults.data(forKey: "petProjects") else {
+            return .failure(APIResponseError.parser)
+        }
+        do {
+            let localCacheModel: PetProjectsLocalCacheModel = try JSONDecoder().decode(PetProjectsLocalCacheModel.self, from: data)
+            return .success(localCacheModel)
+        } catch {
+            return .failure(APIResponseError.parser)
+        }
     }
     
     func storeWorks(documents: WorkDocumentsFirestoreModel) -> Bool {
-        return false
+        let now = Date().timeIntervalSince1970
+        let localCacheModel = WorksLocalCacheModel(createdAt: now, documents: documents)
+        
+        do {
+            let data = try JSONEncoder().encode(localCacheModel)
+            
+            self.userDefaults.set(data, forKey: "works")
+            return true
+        } catch {
+            return false
+        }
     }
     
     func storePetProjects(documents: PetProjectDocumentsFirestoreModel) -> Bool {
-        return false
+        let now = Date().timeIntervalSince1970
+        let localCacheModel = PetProjectsLocalCacheModel(createdAt: now, documents: documents)
+        
+        do {
+            let data = try JSONEncoder().encode(localCacheModel)
+            
+            self.userDefaults.set(data, forKey: "petProjects")
+            return true
+        } catch {
+            return false
+        }
     }
 }

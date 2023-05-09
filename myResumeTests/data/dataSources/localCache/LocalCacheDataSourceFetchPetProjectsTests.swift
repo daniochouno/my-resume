@@ -41,7 +41,7 @@ final class LocalCacheDataSourceFetchPetProjectsTests: XCTestCase {
         let result = self.dataSource?.fetchPetProjects()
         switch result {
         case .success(let documents):
-            let petProjects = documents.documents
+            let petProjects = documents.documents.documents
             XCTAssertEqual(petProjects.count, 2, "Found \(petProjects.count) expected pet projects")
         case .failure(let error):
             XCTFail("Unexpected error: \(error)")
