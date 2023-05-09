@@ -39,8 +39,8 @@ final class WorksRepositoryFetchTests: XCTestCase {
         
         let result = await self.repository?.fetch()
         switch result {
-        case .success(let works):
-            XCTAssertEqual(works.count, arrayWorks.count)
+        case .success(let repositoryModel):
+            XCTAssertEqual(repositoryModel.items.count, arrayWorks.count)
         case .failure(let error):
             XCTFail("Unexpected error: \(error)")
         default:

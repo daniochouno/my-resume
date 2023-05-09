@@ -8,7 +8,7 @@
 import Foundation
 
 protocol PetProjectsRepository {
-    func fetch() async -> Result<[PetProjectFirestoreModel], Error>
+    func fetch() async -> Result<PetProjectRepositoryModel, Error>
 }
 
 class PetProjectsRepositoryImpl: PetProjectsRepository {
@@ -24,12 +24,20 @@ class PetProjectsRepositoryImpl: PetProjectsRepository {
         self.userDefaults = userDefaults
     }
     
-    func fetch() async -> Result<[PetProjectFirestoreModel], Error> {
+    func fetch() async -> Result<PetProjectRepositoryModel, Error> {
         if let cacheResult = cacheFetch() {
-            return .success(cacheResult)
+            let repositoryModel = PetProjectRepositoryModel(type: .localCache, items: cacheResult)
+            return .success(repositoryModel)
         }
         
-        return await remoteFetch()
+        let remoteResult = await remoteFetch()
+        switch remoteResult {
+        case .success(let items):
+            let repositoryModel = PetProjectRepositoryModel(type: .remote, items: items)
+            return .success(repositoryModel)
+        case .failure(let error):
+            return .failure(error)
+        }
     }
     
     private func cacheFetch() -> [PetProjectFirestoreModel]? {

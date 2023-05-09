@@ -30,7 +30,8 @@ final class FetchWorksUseCaseTests: XCTestCase {
         let fields = WorkFieldFirestoreModel(company: stringField, title: stringField, location: stringField, startDate: timestampField, endDate: timestampField)
         let workFirestoreModel = WorkFirestoreModel(name: "abc123", fields: fields)
         let arrayWorks = [workFirestoreModel, workFirestoreModel]
-        self.repository?.fetchResult = .success(arrayWorks)
+        let repositoryModel = WorkRepositoryModel(type: .localCache, items: arrayWorks)
+        self.repository?.fetchResult = .success(repositoryModel)
         
         let result = await self.useCase?.fetch()
         switch result {

@@ -29,13 +29,14 @@ final class FetchPetProjectsUseCaseTests: XCTestCase {
         let integerField = PetProjectFieldIntegerValueFirestoreModel(integerValue: "123")
         let fields = PetProjectFieldFirestoreModel(titleKey: stringField, subtitleKey: stringField, iconUrl: stringField, headerColor: stringField, linkAppStore: stringField, linkPlayStore: stringField, linkWeb: stringField, downloads: integerField)
         let firestoreModel = PetProjectFirestoreModel(name: "abc123", fields: fields)
-        let array = [firestoreModel, firestoreModel]
-        self.repository?.fetchResult = .success(array)
+        let arrayPetProjects = [firestoreModel, firestoreModel]
+        let repositoryModel = PetProjectRepositoryModel(type: .localCache, items: arrayPetProjects)
+        self.repository?.fetchResult = .success(repositoryModel)
         
         let result = await self.useCase?.fetch()
         switch result {
         case .success(let petProjects):
-            XCTAssertEqual(petProjects.count, array.count)
+            XCTAssertEqual(petProjects.count, arrayPetProjects.count)
         case .failure(let error):
             XCTFail("Unexpected error: \(error)")
         default:

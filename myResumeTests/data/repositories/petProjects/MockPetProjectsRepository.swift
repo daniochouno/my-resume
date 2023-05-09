@@ -9,9 +9,9 @@ import Foundation
 @testable import myResume
 
 class MockPetProjectsRepository: PetProjectsRepository {
-    var fetchResult: Result<[PetProjectFirestoreModel], Error>?
+    var fetchResult: Result<PetProjectRepositoryModel, Error>?
     
-    func fetch() async -> Result<[PetProjectFirestoreModel], Error> {
+    func fetch() async -> Result<PetProjectRepositoryModel, Error> {
         guard let result = self.fetchResult else {
             return .failure(APIResponseError.configuration)
         }

@@ -59,6 +59,9 @@
 		EB513FEF2A0AAA5200CA5FF0 /* MockLocalCacheDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FEE2A0AAA5200CA5FF0 /* MockLocalCacheDataSource.swift */; };
 		EB513FF12A0AB4E500CA5FF0 /* LocalCacheDataSourceStoreWorksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FF02A0AB4E500CA5FF0 /* LocalCacheDataSourceStoreWorksTests.swift */; };
 		EB513FF32A0AB66200CA5FF0 /* LocalCacheDataSourceStorePetProjectsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FF22A0AB66200CA5FF0 /* LocalCacheDataSourceStorePetProjectsTests.swift */; };
+		EB513FF62A0AF77C00CA5FF0 /* WorkRepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FF52A0AF77C00CA5FF0 /* WorkRepositoryModel.swift */; };
+		EB513FF82A0AF79300CA5FF0 /* PetProjectRepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FF72A0AF79300CA5FF0 /* PetProjectRepositoryModel.swift */; };
+		EB513FFA2A0AF80E00CA5FF0 /* RepositoryDataSourceTypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FF92A0AF80E00CA5FF0 /* RepositoryDataSourceTypeModel.swift */; };
 		EB7FB7E729EEA35900DEA576 /* CareerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7E629EEA35900DEA576 /* CareerView.swift */; };
 		EB7FB7E929EEA7A200DEA576 /* CareerViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7E829EEA7A200DEA576 /* CareerViewFactory.swift */; };
 		EB7FB7ED29EEAEFD00DEA576 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7EC29EEAEFD00DEA576 /* View.swift */; };
@@ -182,6 +185,9 @@
 		EB513FEE2A0AAA5200CA5FF0 /* MockLocalCacheDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocalCacheDataSource.swift; sourceTree = "<group>"; };
 		EB513FF02A0AB4E500CA5FF0 /* LocalCacheDataSourceStoreWorksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSourceStoreWorksTests.swift; sourceTree = "<group>"; };
 		EB513FF22A0AB66200CA5FF0 /* LocalCacheDataSourceStorePetProjectsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSourceStorePetProjectsTests.swift; sourceTree = "<group>"; };
+		EB513FF52A0AF77C00CA5FF0 /* WorkRepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkRepositoryModel.swift; sourceTree = "<group>"; };
+		EB513FF72A0AF79300CA5FF0 /* PetProjectRepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectRepositoryModel.swift; sourceTree = "<group>"; };
+		EB513FF92A0AF80E00CA5FF0 /* RepositoryDataSourceTypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDataSourceTypeModel.swift; sourceTree = "<group>"; };
 		EB7FB7E629EEA35900DEA576 /* CareerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerView.swift; sourceTree = "<group>"; };
 		EB7FB7E829EEA7A200DEA576 /* CareerViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerViewFactory.swift; sourceTree = "<group>"; };
 		EB7FB7EC29EEAEFD00DEA576 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
@@ -313,6 +319,7 @@
 		EB3C831429F9B05800742C21 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				EB513FF42A0AF76700CA5FF0 /* repositories */,
 				EB513FE22A0A9C5E00CA5FF0 /* localCache */,
 				EB513F952A093B0900CA5FF0 /* json */,
 				EB3C831529F9B06400742C21 /* firestore */,
@@ -505,6 +512,16 @@
 				EB513FEE2A0AAA5200CA5FF0 /* MockLocalCacheDataSource.swift */,
 			);
 			path = localCache;
+			sourceTree = "<group>";
+		};
+		EB513FF42A0AF76700CA5FF0 /* repositories */ = {
+			isa = PBXGroup;
+			children = (
+				EB513FF52A0AF77C00CA5FF0 /* WorkRepositoryModel.swift */,
+				EB513FF72A0AF79300CA5FF0 /* PetProjectRepositoryModel.swift */,
+				EB513FF92A0AF80E00CA5FF0 /* RepositoryDataSourceTypeModel.swift */,
+			);
+			path = repositories;
 			sourceTree = "<group>";
 		};
 		EB7FB7E429EEA33900DEA576 /* career */ = {
@@ -1111,10 +1128,13 @@
 				EBA53C3E29FAE84A00D7095F /* FetchWorksUseCaseFactory.swift in Sources */,
 				EB513FD22A09DDC200CA5FF0 /* JsonDataSourceFactory.swift in Sources */,
 				EB513FE42A0A9C8000CA5FF0 /* WorksLocalCacheModel.swift in Sources */,
+				EB513FF62A0AF77C00CA5FF0 /* WorkRepositoryModel.swift in Sources */,
 				EBD987712A043C9600495DF3 /* PetProjectsRepository.swift in Sources */,
+				EB513FF82A0AF79300CA5FF0 /* PetProjectRepositoryModel.swift in Sources */,
 				EB513FE82A0AA43200CA5FF0 /* LocalCacheDataSourceFactory.swift in Sources */,
 				EB513FCA2A09DB5700CA5FF0 /* SkillsViewControllerFactory.swift in Sources */,
 				EBA53C4B29FAEC7700D7095F /* WorksViewModelFactory.swift in Sources */,
+				EB513FFA2A0AF80E00CA5FF0 /* RepositoryDataSourceTypeModel.swift in Sources */,
 				EB513F9C2A093D2F00CA5FF0 /* JsonDataSource.swift in Sources */,
 				EBD987802A04FD3900495DF3 /* PetProjectsView.swift in Sources */,
 				EB513FAA2A097C6800CA5FF0 /* FetchSkillSectionsUseCase.swift in Sources */,

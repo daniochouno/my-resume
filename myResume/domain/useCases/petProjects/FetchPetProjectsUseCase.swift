@@ -21,8 +21,8 @@ class FetchPetProjectsUseCaseImpl: FetchPetProjectsUseCase {
     func fetch() async -> Result<[PetProjectUseCaseModel], Error> {
         let result = await repository.fetch()
         switch result {
-        case .success(let petProjects):
-            let models = petProjects.map { petProjectFirestoreModel in
+        case .success(let repositoryModel):
+            let models = repositoryModel.items.map { petProjectFirestoreModel in
                 return PetProjectUseCaseModel(from: petProjectFirestoreModel)
             }
             let sorted = models.sorted { modelA, modelB in

@@ -9,9 +9,9 @@ import Foundation
 @testable import myResume
 
 class MockWorksRepository: WorksRepository {
-    var fetchResult: Result<[WorkFirestoreModel], Error>?
+    var fetchResult: Result<WorkRepositoryModel, Error>?
     
-    func fetch() async -> Result<[WorkFirestoreModel], Error> {
+    func fetch() async -> Result<WorkRepositoryModel, Error> {
         guard let result = self.fetchResult else {
             return .failure(APIResponseError.configuration)
         }

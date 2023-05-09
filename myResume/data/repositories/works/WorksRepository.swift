@@ -8,7 +8,7 @@
 import Foundation
 
 protocol WorksRepository {
-    func fetch() async -> Result<[WorkFirestoreModel], Error>
+    func fetch() async -> Result<WorkRepositoryModel, Error>
 }
 
 class WorksRepositoryImpl: WorksRepository {
@@ -24,12 +24,20 @@ class WorksRepositoryImpl: WorksRepository {
         self.userDefaults = userDefaults
     }
     
-    func fetch() async -> Result<[WorkFirestoreModel], Error> {
+    func fetch() async -> Result<WorkRepositoryModel, Error> {
         if let cacheResult = cacheFetch() {
-            return .success(cacheResult)
+            let repositoryModel = WorkRepositoryModel(type: .localCache, items: cacheResult)
+            return .success(repositoryModel)
         }
         
-        return await remoteFetch()
+        let remoteResult = await remoteFetch()
+        switch remoteResult {
+        case .success(let items):
+            let repositoryModel = WorkRepositoryModel(type: .remote, items: items)
+            return .success(repositoryModel)
+        case .failure(let error):
+            return .failure(error)
+        }
     }
     
     private func cacheFetch() -> [WorkFirestoreModel]? {

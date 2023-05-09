@@ -21,8 +21,8 @@ class FetchWorksUseCaseImpl: FetchWorksUseCase {
     func fetch() async -> Result<[WorkUseCaseModel], Error> {
         let result = await repository.fetch()
         switch result {
-        case .success(let works):
-            let models = works.map { workFirestoreModel in
+        case .success(let repositoryModel):
+            let models = repositoryModel.items.map { workFirestoreModel in
                 return WorkUseCaseModel(from: workFirestoreModel)
             }
             let sorted = models.sorted { modelA, modelB in
