@@ -10,7 +10,6 @@ import Foundation
 protocol SkillsViewModelOutput {
     func isLoading()
     func didLoad()
-    func didLoadWithError()
 }
 
 final class SkillsViewModel {
@@ -18,7 +17,7 @@ final class SkillsViewModel {
     
     var output: SkillsViewModelOutput?
     
-    private(set) var sections: [SkillSectionModel] = []
+    private(set) var sections: [SkillSectionModel]?
     private(set) var errorMessage: String?
     
     init(fetchSkillSectionsUseCase: FetchSkillSectionsUseCase) {
@@ -34,10 +33,12 @@ final class SkillsViewModel {
                 return SkillSectionModel(from: skillUseCaseModel)
             }
             self.sections = sections
-            self.output?.didLoad()
+            self.errorMessage = nil
         case .failure(let error):
+            self.sections = nil
             self.errorMessage = "\(error)"
-            self.output?.didLoadWithError()
         }
+        
+        self.output?.didLoad()
     }
 }
