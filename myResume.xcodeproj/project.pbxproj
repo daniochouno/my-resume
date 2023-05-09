@@ -45,6 +45,8 @@
 		EB513FCE2A09DD4400CA5FF0 /* FetchSkillSectionsUseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FCD2A09DD4400CA5FF0 /* FetchSkillSectionsUseCaseFactory.swift */; };
 		EB513FD02A09DD8500CA5FF0 /* SkillsRepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FCF2A09DD8500CA5FF0 /* SkillsRepositoryFactory.swift */; };
 		EB513FD22A09DDC200CA5FF0 /* JsonDataSourceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FD12A09DDC200CA5FF0 /* JsonDataSourceFactory.swift */; };
+		EB513FD42A09E00200CA5FF0 /* SkillsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FD32A09E00200CA5FF0 /* SkillsView.swift */; };
+		EB513FD62A09E11D00CA5FF0 /* SkillsViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FD52A09E11D00CA5FF0 /* SkillsViewFactory.swift */; };
 		EB513FD82A09E50A00CA5FF0 /* SkillsCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FD72A09E50A00CA5FF0 /* SkillsCollectionViewHeader.swift */; };
 		EB7FB7E729EEA35900DEA576 /* CareerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7E629EEA35900DEA576 /* CareerView.swift */; };
 		EB7FB7E929EEA7A200DEA576 /* CareerViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7E829EEA7A200DEA576 /* CareerViewFactory.swift */; };
@@ -155,6 +157,8 @@
 		EB513FCD2A09DD4400CA5FF0 /* FetchSkillSectionsUseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchSkillSectionsUseCaseFactory.swift; sourceTree = "<group>"; };
 		EB513FCF2A09DD8500CA5FF0 /* SkillsRepositoryFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsRepositoryFactory.swift; sourceTree = "<group>"; };
 		EB513FD12A09DDC200CA5FF0 /* JsonDataSourceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDataSourceFactory.swift; sourceTree = "<group>"; };
+		EB513FD32A09E00200CA5FF0 /* SkillsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsView.swift; sourceTree = "<group>"; };
+		EB513FD52A09E11D00CA5FF0 /* SkillsViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewFactory.swift; sourceTree = "<group>"; };
 		EB513FD72A09E50A00CA5FF0 /* SkillsCollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsCollectionViewHeader.swift; sourceTree = "<group>"; };
 		EB7FB7E629EEA35900DEA576 /* CareerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerView.swift; sourceTree = "<group>"; };
 		EB7FB7E829EEA7A200DEA576 /* CareerViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerViewFactory.swift; sourceTree = "<group>"; };
@@ -427,6 +431,8 @@
 				EB513FC32A098A3D00CA5FF0 /* SkillsViewController.swift */,
 				EB513FC52A098A6000CA5FF0 /* SkillsViewController.storyboard */,
 				EB513FC92A09DB5700CA5FF0 /* SkillsViewControllerFactory.swift */,
+				EB513FD32A09E00200CA5FF0 /* SkillsView.swift */,
+				EB513FD52A09E11D00CA5FF0 /* SkillsViewFactory.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -1037,6 +1043,7 @@
 				EB513F9C2A093D2F00CA5FF0 /* JsonDataSource.swift in Sources */,
 				EBD987802A04FD3900495DF3 /* PetProjectsView.swift in Sources */,
 				EB513FAA2A097C6800CA5FF0 /* FetchSkillSectionsUseCase.swift in Sources */,
+				EB513FD42A09E00200CA5FF0 /* SkillsView.swift in Sources */,
 				EB513F992A093B5400CA5FF0 /* SkillSectionJsonModel.swift in Sources */,
 				EBD9879A2A05181800495DF3 /* PetProjectsInteractorFactory.swift in Sources */,
 				EBD987852A04FE4600495DF3 /* PetProjectEntity.swift in Sources */,
@@ -1059,6 +1066,7 @@
 				EB7FB7E729EEA35900DEA576 /* CareerView.swift in Sources */,
 				EB7FB7ED29EEAEFD00DEA576 /* View.swift in Sources */,
 				EBD987822A04FD5900495DF3 /* PetProjectsViewFactory.swift in Sources */,
+				EB513FD62A09E11D00CA5FF0 /* SkillsViewFactory.swift in Sources */,
 				EB513FC42A098A3D00CA5FF0 /* SkillsViewController.swift in Sources */,
 				EBD987902A050ACB00495DF3 /* PetProjectsPresenter.swift in Sources */,
 				EBA53C4E29FAED2000D7095F /* WorkModel.swift in Sources */,
