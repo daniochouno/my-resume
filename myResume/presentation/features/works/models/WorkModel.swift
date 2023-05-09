@@ -17,12 +17,12 @@ struct WorkModel: Identifiable, Equatable {
 }
 
 extension WorkModel {
-    init(from useCaseModel: WorkUseCaseModel) {
+    init(from itemUseCaseModel: WorkItemUseCaseModel) {
         self.id = UUID()
-        self.title = useCaseModel.title
-        self.company = useCaseModel.company
-        self.location = useCaseModel.location
-        self.startDate = useCaseModel.startDate
-        self.endDate = useCaseModel.endDate
+        self.title = itemUseCaseModel.title
+        self.company = itemUseCaseModel.company
+        self.location = itemUseCaseModel.location
+        self.startDate = itemUseCaseModel.startDate
+        self.endDate = itemUseCaseModel.endDate
     }
 }

@@ -35,8 +35,8 @@ final class FetchWorksUseCaseTests: XCTestCase {
         
         let result = await self.useCase?.fetch()
         switch result {
-        case .success(let works):
-            XCTAssertEqual(works.count, arrayWorks.count)
+        case .success(let workUseCaseModel):
+            XCTAssertEqual(workUseCaseModel.items.count, arrayWorks.count)
         case .failure(let error):
             XCTFail("Unexpected error: \(error)")
         default:

@@ -23,6 +23,10 @@ struct PetProjectsView: View {
                         ForEach(presenter.petProjects) { petProject in
                             PetProjectsCardView(petProject: petProject)
                         }
+                        
+                        Text(LocalizedStringKey(presenter.dataLoadedOrigin ?? ""))
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding()
                     }
                 }
                 .padding(4)

@@ -24,9 +24,10 @@ final class WorksViewModelLoadTests: XCTestCase {
     }
 
     func testSuccess() async throws {
-        let model = WorkUseCaseModel(company: "abc", title: "def", location: "ghi", startDate: Date(), endDate: nil)
-        let arrayModels = [model, model, model, model]
-        self.fetchWorksUseCase?.fetchResult = .success(arrayModels)
+        let item = WorkItemUseCaseModel(company: "abc", title: "def", location: "ghi", startDate: Date(), endDate: nil)
+        let items = [item, item, item, item]
+        let model = WorkUseCaseModel(type: .localCache, items: items)
+        self.fetchWorksUseCase?.fetchResult = .success(model)
         
         await self.viewModel?.load()
         
@@ -35,6 +36,6 @@ final class WorksViewModelLoadTests: XCTestCase {
             return
         }
         
-        XCTAssertEqual(worksLoaded.count, arrayModels.count)
+        XCTAssertEqual(worksLoaded.count, items.count)
     }
 }

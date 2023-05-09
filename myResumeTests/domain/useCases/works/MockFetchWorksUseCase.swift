@@ -9,9 +9,9 @@ import Foundation
 @testable import myResume
 
 class MockFetchWorksUseCase: FetchWorksUseCase {
-    var fetchResult: Result<[WorkUseCaseModel], Error>?
+    var fetchResult: Result<WorkUseCaseModel, Error>?
     
-    func fetch() async -> Result<[WorkUseCaseModel], Error> {
+    func fetch() async -> Result<WorkUseCaseModel, Error> {
         guard let result = self.fetchResult else {
             return .failure(APIResponseError.configuration)
         }

@@ -19,6 +19,8 @@
 "petProjects.downloads.%@" = "+%@ downloads";
 "petProjects.stores.appStore" = "App Store";
 "petProjects.stores.googlePlay" = "Play Store";
+"petProjects.origin.localCache" = "This data has been loaded from the local cache.";
+"petProjects.origin.remote" = "This data has been loaded from the remote API.";
 // MyWardrobe
 "petProjects.myWardrobe.title" = "My Wardrobe - All your clothes";
 "petProjects.myWardrobe.subtitle" = "All your clothes classified, create combinations and plan them in your schedule";

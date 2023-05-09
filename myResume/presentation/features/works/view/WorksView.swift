@@ -20,6 +20,10 @@ struct WorksView: View {
                         ForEach(viewModel.works) { work in
                             workCardView(work: work)
                         }
+                        
+                        Text(LocalizedStringKey(viewModel.dataLoadedOrigin ?? ""))
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding()
                     }
                 }
                 .padding(4)

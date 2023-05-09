@@ -8,7 +8,7 @@
 import Foundation
 
 protocol FetchPetProjectsUseCase {
-    func fetch() async -> Result<[PetProjectUseCaseModel], Error>
+    func fetch() async -> Result<PetProjectUseCaseModel, Error>
 }
 
 class FetchPetProjectsUseCaseImpl: FetchPetProjectsUseCase {
@@ -18,19 +18,20 @@ class FetchPetProjectsUseCaseImpl: FetchPetProjectsUseCase {
         self.repository = repository
     }
     
-    func fetch() async -> Result<[PetProjectUseCaseModel], Error> {
+    func fetch() async -> Result<PetProjectUseCaseModel, Error> {
         let result = await repository.fetch()
         switch result {
         case .success(let repositoryModel):
-            let models = repositoryModel.items.map { petProjectFirestoreModel in
-                return PetProjectUseCaseModel(from: petProjectFirestoreModel)
+            let items = repositoryModel.items.map { petProjectFirestoreModel in
+                return PetProjectItemUseCaseModel(from: petProjectFirestoreModel)
             }
-            let sorted = models.sorted { modelA, modelB in
+            let sorted = items.sorted { modelA, modelB in
                 guard let downloadsA = modelA.downloads else { return false }
                 guard let downloadsB = modelB.downloads else { return true }
                 return downloadsA > downloadsB
             }
-            return .success(sorted)
+            let useCaseModel = PetProjectUseCaseModel(type: repositoryModel.type, items: sorted)
+            return .success(useCaseModel)
         case .failure(let error):
             return .failure(error)
         }

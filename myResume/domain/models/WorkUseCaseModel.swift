@@ -8,6 +8,11 @@
 import Foundation
 
 struct WorkUseCaseModel: Decodable {
+    let type: RepositoryDataSourceTypeModel
+    let items: [WorkItemUseCaseModel]
+}
+
+struct WorkItemUseCaseModel: Decodable {
     let company: String
     let title: String
     let location: String
@@ -15,7 +20,7 @@ struct WorkUseCaseModel: Decodable {
     let endDate: Date?
 }
 
-extension WorkUseCaseModel {
+extension WorkItemUseCaseModel {
     init(from firestoreModel: WorkFirestoreModel) {
         self.company = firestoreModel.fields.company.stringValue
         self.title = firestoreModel.fields.title.stringValue

@@ -19,6 +19,8 @@
 "petProjects.downloads.%@" = "+%@ descargas";
 "petProjects.stores.appStore" = "App Store";
 "petProjects.stores.googlePlay" = "Play Store";
+"petProjects.origin.localCache" = "Estos datos se han cargado de la caché local.";
+"petProjects.origin.remote" = "Estos datos se han cargado de la API remota.";
 // MyWardrobe
 "petProjects.myWardrobe.title" = "Mi Armario - Organiza tu ropa";
 "petProjects.myWardrobe.subtitle" = "Ten toda tu ropa clasificada, crea combinaciones y planifícalas en tu agenda";

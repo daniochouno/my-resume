@@ -8,7 +8,7 @@
 import Foundation
 
 protocol FetchWorksUseCase {
-    func fetch() async -> Result<[WorkUseCaseModel], Error>
+    func fetch() async -> Result<WorkUseCaseModel, Error>
 }
 
 class FetchWorksUseCaseImpl: FetchWorksUseCase {
@@ -18,17 +18,18 @@ class FetchWorksUseCaseImpl: FetchWorksUseCase {
         self.repository = repository
     }
     
-    func fetch() async -> Result<[WorkUseCaseModel], Error> {
+    func fetch() async -> Result<WorkUseCaseModel, Error> {
         let result = await repository.fetch()
         switch result {
         case .success(let repositoryModel):
-            let models = repositoryModel.items.map { workFirestoreModel in
-                return WorkUseCaseModel(from: workFirestoreModel)
+            let items = repositoryModel.items.map { workFirestoreModel in
+                return WorkItemUseCaseModel(from: workFirestoreModel)
             }
-            let sorted = models.sorted { modelA, modelB in
+            let sorted = items.sorted { modelA, modelB in
                 return modelA.startDate > modelB.startDate
             }
-            return .success(sorted)
+            let useCaseModel = WorkUseCaseModel(type: repositoryModel.type, items: sorted)
+            return .success(useCaseModel)
         case .failure(let error):
             return .failure(error)
         }

@@ -35,8 +35,8 @@ final class FetchPetProjectsUseCaseTests: XCTestCase {
         
         let result = await self.useCase?.fetch()
         switch result {
-        case .success(let petProjects):
-            XCTAssertEqual(petProjects.count, arrayPetProjects.count)
+        case .success(let petProjectUseCaseModel):
+            XCTAssertEqual(petProjectUseCaseModel.items.count, arrayPetProjects.count)
         case .failure(let error):
             XCTFail("Unexpected error: \(error)")
         default:

@@ -24,14 +24,15 @@ final class PetProjectsInteractorListOfPetProjectsTests: XCTestCase {
     }
 
     func testSuccess() async throws {
-        let model = PetProjectUseCaseModel(titleKey: "abc", subtitleKey: "def", iconUrl: "abc", headerColor: "#ffffff", linkAppStore: "abc", linkPlayStore: "abc", linkWeb: "abc", downloads: 10)
-        let arrayModels = [model, model, model, model]
-        self.fetchPetProjectsUseCase?.fetchResult = .success(arrayModels)
+        let item = PetProjectItemUseCaseModel(titleKey: "abc", subtitleKey: "def", iconUrl: "abc", headerColor: "#ffffff", linkAppStore: "abc", linkPlayStore: "abc", linkWeb: "abc", downloads: 10)
+        let items = [item, item, item, item]
+        let model = PetProjectUseCaseModel(type: .localCache, items: items)
+        self.fetchPetProjectsUseCase?.fetchResult = .success(model)
         
         let result = await self.interactor?.getListOfPetProjects()
         switch result {
-        case .success(let petProjects):
-            XCTAssertEqual(petProjects.count, arrayModels.count)
+        case .success(let petProjectEntity):
+            XCTAssertEqual(petProjectEntity.items.count, items.count)
         default:
             XCTFail("Pet Projects not loaded")
         }

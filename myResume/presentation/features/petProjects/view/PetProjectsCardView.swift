@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PetProjectsCardView: View {
-    let petProject: PetProjectEntity
+    let petProject: PetProjectItemEntity
     
     @Environment(\.openURL) var openURL
     
@@ -106,7 +106,7 @@ struct PetProjectsCardView: View {
 
 struct PetProjectsCardView_Previews: PreviewProvider {
     static var previews: some View {
-        let petProject = PetProjectEntity(
+        let petProject = PetProjectItemEntity(
             id: UUID(),
             titleKey: "petProjects.myWardrobe.title",
             subtitleKey: "petProjects.myWardrobe.subtitle",

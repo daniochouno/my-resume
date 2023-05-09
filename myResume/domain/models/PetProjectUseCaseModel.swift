@@ -8,6 +8,11 @@
 import Foundation
 
 struct PetProjectUseCaseModel: Decodable {
+    let type: RepositoryDataSourceTypeModel
+    let items: [PetProjectItemUseCaseModel]
+}
+
+struct PetProjectItemUseCaseModel: Decodable {
     let titleKey: String
     let subtitleKey: String
     let iconUrl: String
@@ -18,7 +23,7 @@ struct PetProjectUseCaseModel: Decodable {
     let downloads: Int?
 }
 
-extension PetProjectUseCaseModel {
+extension PetProjectItemUseCaseModel {
     init(from firestoreModel: PetProjectFirestoreModel) {
         self.titleKey = firestoreModel.fields.titleKey.stringValue
         self.subtitleKey = firestoreModel.fields.subtitleKey.stringValue

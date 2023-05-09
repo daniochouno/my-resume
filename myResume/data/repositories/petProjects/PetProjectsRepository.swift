@@ -33,6 +33,9 @@ class PetProjectsRepositoryImpl: PetProjectsRepository {
         let remoteResult = await remoteFetch()
         switch remoteResult {
         case .success(let items):
+            let petProjectDocumentsFirestoreModel = PetProjectDocumentsFirestoreModel(documents: items)
+            _ = self.cacheDataSource.storePetProjects(documents: petProjectDocumentsFirestoreModel)
+            
             let repositoryModel = PetProjectRepositoryModel(type: .remote, items: items)
             return .success(repositoryModel)
         case .failure(let error):

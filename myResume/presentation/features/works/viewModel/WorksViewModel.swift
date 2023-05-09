@@ -12,6 +12,7 @@ final class WorksViewModel: ObservableObject {
     
     @Published var isLoading = true
     @Published var works: [WorkModel] = []
+    @Published var dataLoadedOrigin: String?
     @Published var errorMessage: String?
     
     init(fetchWorksUseCase: FetchWorksUseCase) {
@@ -23,9 +24,10 @@ final class WorksViewModel: ObservableObject {
         self.isLoading = true
         let result = await fetchWorksUseCase.fetch()
         switch result {
-        case .success(let workUseCaseModels):
-            let works = workUseCaseModels.map { workUseCaseModel in
-                return WorkModel(from: workUseCaseModel)
+        case .success(let workUseCaseModel):
+            self.dataLoadedOrigin = "petProjects.origin.\(workUseCaseModel.type.rawValue)"
+            let works = workUseCaseModel.items.map { workItemUseCaseModel in
+                return WorkModel(from: workItemUseCaseModel)
             }
             self.works = works
         case .failure(let error):

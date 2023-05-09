@@ -9,9 +9,9 @@ import Foundation
 @testable import myResume
 
 class MockPetProjectsInteractor: PetProjectsInteractor {
-    var getListOfPetProjectsResult: Result<[PetProjectEntity], Error>?
+    var getListOfPetProjectsResult: Result<PetProjectEntity, Error>?
     
-    func getListOfPetProjects() async -> Result<[myResume.PetProjectEntity], Error> {
+    func getListOfPetProjects() async -> Result<PetProjectEntity, Error> {
         guard let result = self.getListOfPetProjectsResult else {
             return .failure(APIResponseError.configuration)
         }

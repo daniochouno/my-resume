@@ -8,7 +8,7 @@
 import Foundation
 
 protocol PetProjectsInteractor {
-    func getListOfPetProjects() async -> Result<[PetProjectEntity], Error>
+    func getListOfPetProjects() async -> Result<PetProjectEntity, Error>
 }
 
 class PetProjectsInteractorImpl: PetProjectsInteractor {
@@ -18,14 +18,15 @@ class PetProjectsInteractorImpl: PetProjectsInteractor {
         self.fetchPetProjectsUseCase = fetchPetProjectsUseCase
     }
     
-    func getListOfPetProjects() async -> Result<[PetProjectEntity], Error> {
+    func getListOfPetProjects() async -> Result<PetProjectEntity, Error> {
         let result = await fetchPetProjectsUseCase.fetch()
         switch result {
-        case .success(let petProjectUseCaseModels):
-            let petProjects = petProjectUseCaseModels.map { petProjectUseCaseModel in
-                return PetProjectEntity(from: petProjectUseCaseModel)
+        case .success(let petProjectUseCaseModel):
+            let items = petProjectUseCaseModel.items.map { petProjectItemUseCaseModel in
+                return PetProjectItemEntity(from: petProjectItemUseCaseModel)
             }
-            return .success(petProjects)
+            let petProjectEntity = PetProjectEntity(type: petProjectUseCaseModel.type, items: items)
+            return .success(petProjectEntity)
         case .failure(let error):
             return .failure(error)
         }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum RepositoryDataSourceTypeModel: Encodable, Decodable {
+enum RepositoryDataSourceTypeModel: String, Encodable, Decodable {
     case localCache
     case remote
 }

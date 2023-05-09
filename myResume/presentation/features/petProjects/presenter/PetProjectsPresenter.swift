@@ -11,7 +11,8 @@ final class PetProjectsPresenter: ObservableObject {
     private let interactor: PetProjectsInteractor
     
     @Published var isLoading = true
-    @Published var petProjects: [PetProjectEntity] = []
+    @Published var petProjects: [PetProjectItemEntity] = []
+    @Published var dataLoadedOrigin: String?
     @Published var errorMessage: String?
     
     init(interactor: PetProjectsInteractor) {
@@ -23,8 +24,9 @@ final class PetProjectsPresenter: ObservableObject {
         self.isLoading = true
         let result = await interactor.getListOfPetProjects()
         switch result {
-        case .success(let petProjects):
-            self.petProjects = petProjects
+        case .success(let petProjectEntity):
+            self.dataLoadedOrigin = "petProjects.origin.\(petProjectEntity.type.rawValue)"
+            self.petProjects = petProjectEntity.items
         case .failure(let error):
             self.errorMessage = "\(error)"
         }

@@ -24,13 +24,14 @@ final class PetProjectsPresenterOnViewAppearTests: XCTestCase {
     }
 
     func testSuccess() async throws {
-        let model = PetProjectEntity(id: UUID(), titleKey: "abc", subtitleKey: "def", iconUrl: "abc", headerColor: "#ffffff", linkAppStore: "abc", linkPlayStore: "abc", linkWeb: "abc", downloads: "abc")
-        let arrayModels = [model, model, model, model]
-        self.interactor?.getListOfPetProjectsResult = .success(arrayModels)
+        let item = PetProjectItemEntity(id: UUID(), titleKey: "abc", subtitleKey: "def", iconUrl: "abc", headerColor: "#ffffff", linkAppStore: "abc", linkPlayStore: "abc", linkWeb: "abc", downloads: "abc")
+        let items = [item, item, item, item]
+        let model = PetProjectEntity(type: .localCache, items: items)
+        self.interactor?.getListOfPetProjectsResult = .success(model)
         
         await self.presenter?.onViewAppear()
         
         let petProjects = try XCTUnwrap(self.presenter?.petProjects)
-        XCTAssertEqual(petProjects.count, arrayModels.count)
+        XCTAssertEqual(petProjects.count, items.count)
     }
 }

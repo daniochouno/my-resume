@@ -33,6 +33,9 @@ class WorksRepositoryImpl: WorksRepository {
         let remoteResult = await remoteFetch()
         switch remoteResult {
         case .success(let items):
+            let workDocumentsFirestoreModel = WorkDocumentsFirestoreModel(documents: items)
+            _ = self.cacheDataSource.storeWorks(documents: workDocumentsFirestoreModel)
+            
             let repositoryModel = WorkRepositoryModel(type: .remote, items: items)
             return .success(repositoryModel)
         case .failure(let error):
