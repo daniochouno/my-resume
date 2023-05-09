@@ -12,18 +12,48 @@ protocol PetProjectsRepository {
 }
 
 class PetProjectsRepositoryImpl: PetProjectsRepository {
-    let dataSource: FirestoreDataSource
+    let remoteDataSource: FirestoreDataSource
+    let cacheDataSource: LocalCacheDataSource
     let userDefaults: UserDefaults
     
-    init(dataSource: FirestoreDataSource, userDefaults: UserDefaults) {
-        self.dataSource = dataSource
+    private let expirationTimeInSeconds: Double = 3600
+    
+    init(remoteDataSource: FirestoreDataSource, cacheDataSource: LocalCacheDataSource, userDefaults: UserDefaults) {
+        self.remoteDataSource = remoteDataSource
+        self.cacheDataSource = cacheDataSource
         self.userDefaults = userDefaults
     }
     
     func fetch() async -> Result<[PetProjectFirestoreModel], Error> {
+        if let cacheResult = cacheFetch() {
+            return .success(cacheResult)
+        }
+        
+        return await remoteFetch()
+    }
+    
+    private func cacheFetch() -> [PetProjectFirestoreModel]? {
+        let cacheResult = cacheDataSource.fetchPetProjects()
+        switch cacheResult {
+        case .success(let model):
+            let now = Date().timeIntervalSince1970
+            let cacheStoredAt = model.createdAt
+            guard ((cacheStoredAt + expirationTimeInSeconds) <= now) else {
+                // Expired cache
+                return nil
+            }
+            
+            let petProjects = model.documents.documents
+            return petProjects
+        case .failure:
+            return nil
+        }
+    }
+    
+    func remoteFetch() async -> Result<[PetProjectFirestoreModel], Error> {
         await authenticateIfNeeded()
         
-        let result = await dataSource.fetchPetProjects()
+        let result = await remoteDataSource.fetchPetProjects()
         switch result {
         case .success(let documents):
             let petProjects = documents.documents
@@ -49,7 +79,7 @@ class PetProjectsRepositoryImpl: PetProjectsRepository {
     }
     
     private func authenticate() async {
-        let result = await dataSource.signIn()
+        let result = await remoteDataSource.signIn()
         switch result {
         case .success(let session):
             let idToken = session.idToken

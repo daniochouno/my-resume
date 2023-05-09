@@ -9,17 +9,19 @@ import XCTest
 @testable import myResume
 
 final class WorksRepositoryFetchTests: XCTestCase {
-    var dataSource: MockFirestoreDataSource?
+    var remoteDataSource: MockFirestoreDataSource?
+    var cacheDataSource: MockLocalCacheDataSource?
     var userDefaults: MockUserDefaults?
     
     var repository: WorksRepository?
     let expectation = XCTestExpectation(description: "Repository expectation")
     
     override func setUpWithError() throws {
-        self.dataSource = MockFirestoreDataSource()
+        self.remoteDataSource = MockFirestoreDataSource()
+        self.cacheDataSource = MockLocalCacheDataSource()
         self.userDefaults = MockUserDefaults()
         
-        self.repository = WorksRepositoryImpl(dataSource: self.dataSource!, userDefaults: self.userDefaults!)
+        self.repository = WorksRepositoryImpl(remoteDataSource: self.remoteDataSource!, cacheDataSource: self.cacheDataSource!, userDefaults: self.userDefaults!)
     }
 
     override func tearDownWithError() throws {
@@ -33,7 +35,7 @@ final class WorksRepositoryFetchTests: XCTestCase {
         let workFirestoreModel = WorkFirestoreModel(name: "abc123", fields: fields)
         let arrayWorks = [workFirestoreModel, workFirestoreModel]
         let documents = WorkDocumentsFirestoreModel(documents: arrayWorks)
-        self.dataSource?.fetchWorksResult = .success(documents)
+        self.remoteDataSource?.fetchWorksResult = .success(documents)
         
         let result = await self.repository?.fetch()
         switch result {

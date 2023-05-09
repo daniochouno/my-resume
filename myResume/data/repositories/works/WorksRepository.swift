@@ -12,18 +12,48 @@ protocol WorksRepository {
 }
 
 class WorksRepositoryImpl: WorksRepository {
-    let dataSource: FirestoreDataSource
+    let remoteDataSource: FirestoreDataSource
+    let cacheDataSource: LocalCacheDataSource
     let userDefaults: UserDefaults
     
-    init(dataSource: FirestoreDataSource, userDefaults: UserDefaults) {
-        self.dataSource = dataSource
+    private let expirationTimeInSeconds: Double = 3600
+    
+    init(remoteDataSource: FirestoreDataSource, cacheDataSource: LocalCacheDataSource, userDefaults: UserDefaults) {
+        self.remoteDataSource = remoteDataSource
+        self.cacheDataSource = cacheDataSource
         self.userDefaults = userDefaults
     }
     
     func fetch() async -> Result<[WorkFirestoreModel], Error> {
+        if let cacheResult = cacheFetch() {
+            return .success(cacheResult)
+        }
+        
+        return await remoteFetch()
+    }
+    
+    private func cacheFetch() -> [WorkFirestoreModel]? {
+        let cacheResult = cacheDataSource.fetchWorks()
+        switch cacheResult {
+        case .success(let model):
+            let now = Date().timeIntervalSince1970
+            let cacheStoredAt = model.createdAt
+            guard ((cacheStoredAt + expirationTimeInSeconds) <= now) else {
+                // Expired cache
+                return nil
+            }
+            
+            let works = model.documents.documents
+            return works
+        case .failure:
+            return nil
+        }
+    }
+    
+    private func remoteFetch() async -> Result<[WorkFirestoreModel], Error> {
         await authenticateIfNeeded()
         
-        let result = await dataSource.fetchWorks()
+        let result = await remoteDataSource.fetchWorks()
         switch result {
         case .success(let documents):
             let works = documents.documents
@@ -49,7 +79,7 @@ class WorksRepositoryImpl: WorksRepository {
     }
     
     private func authenticate() async {
-        let result = await dataSource.signIn()
+        let result = await remoteDataSource.signIn()
         switch result {
         case .success(let session):
             let idToken = session.idToken

@@ -56,6 +56,7 @@
 		EB513FE82A0AA43200CA5FF0 /* LocalCacheDataSourceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FE72A0AA43200CA5FF0 /* LocalCacheDataSourceFactory.swift */; };
 		EB513FEB2A0AA68000CA5FF0 /* LocalCacheDataSourceFetchWorksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FEA2A0AA68000CA5FF0 /* LocalCacheDataSourceFetchWorksTests.swift */; };
 		EB513FED2A0AA95900CA5FF0 /* LocalCacheDataSourceFetchPetProjectsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FEC2A0AA95900CA5FF0 /* LocalCacheDataSourceFetchPetProjectsTests.swift */; };
+		EB513FEF2A0AAA5200CA5FF0 /* MockLocalCacheDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FEE2A0AAA5200CA5FF0 /* MockLocalCacheDataSource.swift */; };
 		EB513FF12A0AB4E500CA5FF0 /* LocalCacheDataSourceStoreWorksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FF02A0AB4E500CA5FF0 /* LocalCacheDataSourceStoreWorksTests.swift */; };
 		EB513FF32A0AB66200CA5FF0 /* LocalCacheDataSourceStorePetProjectsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FF22A0AB66200CA5FF0 /* LocalCacheDataSourceStorePetProjectsTests.swift */; };
 		EB7FB7E729EEA35900DEA576 /* CareerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7E629EEA35900DEA576 /* CareerView.swift */; };
@@ -178,6 +179,7 @@
 		EB513FE72A0AA43200CA5FF0 /* LocalCacheDataSourceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSourceFactory.swift; sourceTree = "<group>"; };
 		EB513FEA2A0AA68000CA5FF0 /* LocalCacheDataSourceFetchWorksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSourceFetchWorksTests.swift; sourceTree = "<group>"; };
 		EB513FEC2A0AA95900CA5FF0 /* LocalCacheDataSourceFetchPetProjectsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSourceFetchPetProjectsTests.swift; sourceTree = "<group>"; };
+		EB513FEE2A0AAA5200CA5FF0 /* MockLocalCacheDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocalCacheDataSource.swift; sourceTree = "<group>"; };
 		EB513FF02A0AB4E500CA5FF0 /* LocalCacheDataSourceStoreWorksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSourceStoreWorksTests.swift; sourceTree = "<group>"; };
 		EB513FF22A0AB66200CA5FF0 /* LocalCacheDataSourceStorePetProjectsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSourceStorePetProjectsTests.swift; sourceTree = "<group>"; };
 		EB7FB7E629EEA35900DEA576 /* CareerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerView.swift; sourceTree = "<group>"; };
@@ -500,6 +502,7 @@
 				EB513FEC2A0AA95900CA5FF0 /* LocalCacheDataSourceFetchPetProjectsTests.swift */,
 				EB513FF02A0AB4E500CA5FF0 /* LocalCacheDataSourceStoreWorksTests.swift */,
 				EB513FF22A0AB66200CA5FF0 /* LocalCacheDataSourceStorePetProjectsTests.swift */,
+				EB513FEE2A0AAA5200CA5FF0 /* MockLocalCacheDataSource.swift */,
 			);
 			path = localCache;
 			sourceTree = "<group>";
@@ -1172,6 +1175,7 @@
 				EBA53C5329FBC40400D7095F /* MockFirestoreDataSource.swift in Sources */,
 				EB513FF12A0AB4E500CA5FF0 /* LocalCacheDataSourceStoreWorksTests.swift in Sources */,
 				EBD987772A043F0A00495DF3 /* MockPetProjectsRepository.swift in Sources */,
+				EB513FEF2A0AAA5200CA5FF0 /* MockLocalCacheDataSource.swift in Sources */,
 				EB513FA72A097A0200CA5FF0 /* MockJsonDataSource.swift in Sources */,
 				EB3C830829F9806100742C21 /* MockURLProtocol.swift in Sources */,
 				EB513FB12A097FF000CA5FF0 /* FetchSkillSectionsUseCaseTests.swift in Sources */,

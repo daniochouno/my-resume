@@ -9,8 +9,9 @@ import Foundation
 
 enum WorksRepositoryFactory {
     static func make() -> WorksRepository {
-        let dataSource = FirestoreDataSourceFactory.make()
+        let remoteDataSource = FirestoreDataSourceFactory.make()
+        let cacheDataSource = LocalCacheDataSourceFactory.make()
         let userDefaults = UserDefaults.standard
-        return WorksRepositoryImpl(dataSource: dataSource, userDefaults: userDefaults)
+        return WorksRepositoryImpl(remoteDataSource: remoteDataSource, cacheDataSource: cacheDataSource, userDefaults: userDefaults)
     }
 }

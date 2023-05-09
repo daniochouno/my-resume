@@ -9,8 +9,9 @@ import Foundation
 
 enum PetProjectsRepositoryFactory {
     static func make() -> PetProjectsRepository {
-        let dataSource = FirestoreDataSourceFactory.make()
+        let remoteDataSource = FirestoreDataSourceFactory.make()
+        let cacheDataSource = LocalCacheDataSourceFactory.make()
         let userDefaults = UserDefaults.standard
-        return PetProjectsRepositoryImpl(dataSource: dataSource, userDefaults: userDefaults)
+        return PetProjectsRepositoryImpl(remoteDataSource: remoteDataSource, cacheDataSource: cacheDataSource, userDefaults: userDefaults)
     }
 }

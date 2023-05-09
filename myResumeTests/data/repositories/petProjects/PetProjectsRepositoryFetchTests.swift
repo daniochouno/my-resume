@@ -9,17 +9,19 @@ import XCTest
 @testable import myResume
 
 final class PetProjectsRepositoryFetchTests: XCTestCase {
-    var dataSource: MockFirestoreDataSource?
+    var remoteDataSource: MockFirestoreDataSource?
+    var cacheDataSource: MockLocalCacheDataSource?
     var userDefaults: MockUserDefaults?
     
     var repository: PetProjectsRepository?
     let expectation = XCTestExpectation(description: "Repository expectation")
     
     override func setUpWithError() throws {
-        self.dataSource = MockFirestoreDataSource()
+        self.remoteDataSource = MockFirestoreDataSource()
+        self.cacheDataSource = MockLocalCacheDataSource()
         self.userDefaults = MockUserDefaults()
         
-        self.repository = PetProjectsRepositoryImpl(dataSource: self.dataSource!, userDefaults: self.userDefaults!)
+        self.repository = PetProjectsRepositoryImpl(remoteDataSource: self.remoteDataSource!, cacheDataSource: self.cacheDataSource!, userDefaults: self.userDefaults!)
     }
 
     override func tearDownWithError() throws {
@@ -33,7 +35,7 @@ final class PetProjectsRepositoryFetchTests: XCTestCase {
         let firestoreModel = PetProjectFirestoreModel(name: "abc123", fields: fields)
         let array = [firestoreModel, firestoreModel]
         let documents = PetProjectDocumentsFirestoreModel(documents: array)
-        self.dataSource?.fetchPetProjectsResult = .success(documents)
+        self.remoteDataSource?.fetchPetProjectsResult = .success(documents)
         
         let result = await self.repository?.fetch()
         switch result {
