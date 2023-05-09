@@ -7,20 +7,26 @@
 
 import Foundation
 
-final class SkillsViewModel: ObservableObject {
+protocol SkillsViewModelOutput {
+    func isLoading()
+    func didLoad()
+    func didLoadWithError()
+}
+
+final class SkillsViewModel {
     private let fetchSkillSectionsUseCase: FetchSkillSectionsUseCase
     
-    @Published var isLoading = true
-    @Published var sections: [SkillSectionModel] = []
-    @Published var errorMessage: String?
+    var output: SkillsViewModelOutput?
+    
+    private(set) var sections: [SkillSectionModel] = []
+    private(set) var errorMessage: String?
     
     init(fetchSkillSectionsUseCase: FetchSkillSectionsUseCase) {
         self.fetchSkillSectionsUseCase = fetchSkillSectionsUseCase
     }
     
-    @MainActor
     func load() async {
-        self.isLoading = true
+        self.output?.isLoading()
         let result = await fetchSkillSectionsUseCase.fetch()
         switch result {
         case .success(let skillUseCaseModels):
@@ -28,9 +34,10 @@ final class SkillsViewModel: ObservableObject {
                 return SkillSectionModel(from: skillUseCaseModel)
             }
             self.sections = sections
+            self.output?.didLoad()
         case .failure(let error):
             self.errorMessage = "\(error)"
+            self.output?.didLoadWithError()
         }
-        self.isLoading = false
     }
 }
