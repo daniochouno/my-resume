@@ -15,7 +15,7 @@ struct PetProjectsView: View {
             ScrollView(.vertical, showsIndicators: false) {
                 LazyVStack(spacing: 18) {
                     Text("petProjects.title")
-                        .frame(width: .infinity, alignment: .leading)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                     
                     if self.presenter.isLoading {
                         ProgressView()
