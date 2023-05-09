@@ -18,7 +18,7 @@ struct TabsView: View {
                 .tabItem {
                     Label("tabs.skills.title", systemImage: "studentdesk")
                 }
-            Text("tabs.aboutMe.title")
+            AboutMeViewFactory.makeView()
                 .tabItem {
                     Label("tabs.aboutMe.title", systemImage: "person.circle")
                 }

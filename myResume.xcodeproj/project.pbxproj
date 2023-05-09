@@ -48,6 +48,8 @@
 		EB513FD42A09E00200CA5FF0 /* SkillsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FD32A09E00200CA5FF0 /* SkillsView.swift */; };
 		EB513FD62A09E11D00CA5FF0 /* SkillsViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FD52A09E11D00CA5FF0 /* SkillsViewFactory.swift */; };
 		EB513FD82A09E50A00CA5FF0 /* SkillsCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FD72A09E50A00CA5FF0 /* SkillsCollectionViewHeader.swift */; };
+		EB513FDC2A0A4AA700CA5FF0 /* AboutMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FDB2A0A4AA700CA5FF0 /* AboutMeView.swift */; };
+		EB513FDE2A0A4AB600CA5FF0 /* AboutMeViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FDD2A0A4AB600CA5FF0 /* AboutMeViewFactory.swift */; };
 		EB7FB7E729EEA35900DEA576 /* CareerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7E629EEA35900DEA576 /* CareerView.swift */; };
 		EB7FB7E929EEA7A200DEA576 /* CareerViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7E829EEA7A200DEA576 /* CareerViewFactory.swift */; };
 		EB7FB7ED29EEAEFD00DEA576 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7EC29EEAEFD00DEA576 /* View.swift */; };
@@ -160,6 +162,8 @@
 		EB513FD32A09E00200CA5FF0 /* SkillsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsView.swift; sourceTree = "<group>"; };
 		EB513FD52A09E11D00CA5FF0 /* SkillsViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewFactory.swift; sourceTree = "<group>"; };
 		EB513FD72A09E50A00CA5FF0 /* SkillsCollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsCollectionViewHeader.swift; sourceTree = "<group>"; };
+		EB513FDB2A0A4AA700CA5FF0 /* AboutMeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeView.swift; sourceTree = "<group>"; };
+		EB513FDD2A0A4AB600CA5FF0 /* AboutMeViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewFactory.swift; sourceTree = "<group>"; };
 		EB7FB7E629EEA35900DEA576 /* CareerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerView.swift; sourceTree = "<group>"; };
 		EB7FB7E829EEA7A200DEA576 /* CareerViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerViewFactory.swift; sourceTree = "<group>"; };
 		EB7FB7EC29EEAEFD00DEA576 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
@@ -437,6 +441,23 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		EB513FD92A0A4A7500CA5FF0 /* aboutMe */ = {
+			isa = PBXGroup;
+			children = (
+				EB513FDA2A0A4A8700CA5FF0 /* view */,
+			);
+			path = aboutMe;
+			sourceTree = "<group>";
+		};
+		EB513FDA2A0A4A8700CA5FF0 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				EB513FDB2A0A4AA700CA5FF0 /* AboutMeView.swift */,
+				EB513FDD2A0A4AB600CA5FF0 /* AboutMeViewFactory.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		EB7FB7E429EEA33900DEA576 /* career */ = {
 			isa = PBXGroup;
 			children = (
@@ -543,11 +564,12 @@
 		EB86A60329E89D8200373ED1 /* features */ = {
 			isa = PBXGroup;
 			children = (
-				EBD9877D2A04F98500495DF3 /* petProjects */,
-				EBA53C4129FAE9A400D7095F /* works */,
-				EB7FB7E429EEA33900DEA576 /* career */,
-				EB513FB42A09822800CA5FF0 /* skills */,
 				EB02FA3C29E9CC2600CAA9DC /* tabs */,
+				EB7FB7E429EEA33900DEA576 /* career */,
+				EBA53C4129FAE9A400D7095F /* works */,
+				EBD9877D2A04F98500495DF3 /* petProjects */,
+				EB513FB42A09822800CA5FF0 /* skills */,
+				EB513FD92A0A4A7500CA5FF0 /* aboutMe */,
 			);
 			path = features;
 			sourceTree = "<group>";
@@ -1062,6 +1084,7 @@
 				EB3C831729F9B07C00742C21 /* WorkFirestoreModel.swift in Sources */,
 				EBD9876C2A04396400495DF3 /* PetProjectFirestoreModel.swift in Sources */,
 				EB513FBC2A0984F800CA5FF0 /* SkillModel.swift in Sources */,
+				EB513FDE2A0A4AB600CA5FF0 /* AboutMeViewFactory.swift in Sources */,
 				EB513FB72A09824F00CA5FF0 /* SkillsViewModel.swift in Sources */,
 				EB7FB7E729EEA35900DEA576 /* CareerView.swift in Sources */,
 				EB7FB7ED29EEAEFD00DEA576 /* View.swift in Sources */,
@@ -1072,6 +1095,7 @@
 				EBA53C4E29FAED2000D7095F /* WorkModel.swift in Sources */,
 				EB513FA22A0978D900CA5FF0 /* SkillsRepository.swift in Sources */,
 				EBD9879E2A05188F00495DF3 /* PetProjectsRepositoryFactory.swift in Sources */,
+				EB513FDC2A0A4AA700CA5FF0 /* AboutMeView.swift in Sources */,
 				EB513FCE2A09DD4400CA5FF0 /* FetchSkillSectionsUseCaseFactory.swift in Sources */,
 				EBA53C3129FA9F0500D7095F /* APIClientRequest.swift in Sources */,
 				EB02FA4029E9CD7100CAA9DC /* TabsView.swift in Sources */,
