@@ -34,6 +34,13 @@ class MockUserDefaults: UserDefaults {
         return value
     }
     
+    override func data(forKey defaultName: String) -> Data? {
+        guard let value = self.dictionary[defaultName] as? Data else {
+            return nil
+        }
+        return value
+    }
+    
     override func set(_ value: Any?, forKey defaultName: String) {
         if let value {
             self.dictionary[defaultName] = value

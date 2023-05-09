@@ -7,16 +7,16 @@
 
 import Foundation
 
-struct PetProjectDocumentsFirestoreModel: Decodable {
+struct PetProjectDocumentsFirestoreModel: Encodable, Decodable {
     let documents: [PetProjectFirestoreModel]
 }
 
-struct PetProjectFirestoreModel: Decodable {
+struct PetProjectFirestoreModel: Encodable, Decodable {
     let name: String
     let fields: PetProjectFieldFirestoreModel
 }
 
-struct PetProjectFieldFirestoreModel: Decodable {
+struct PetProjectFieldFirestoreModel: Encodable, Decodable {
     let titleKey: PetProjectFieldStringValueFirestoreModel
     let subtitleKey: PetProjectFieldStringValueFirestoreModel
     let iconUrl: PetProjectFieldStringValueFirestoreModel
@@ -27,10 +27,10 @@ struct PetProjectFieldFirestoreModel: Decodable {
     let downloads: PetProjectFieldIntegerValueFirestoreModel?
 }
 
-struct PetProjectFieldStringValueFirestoreModel: Decodable {
+struct PetProjectFieldStringValueFirestoreModel: Encodable, Decodable {
     let stringValue: String
 }
 
-struct PetProjectFieldIntegerValueFirestoreModel: Decodable {
+struct PetProjectFieldIntegerValueFirestoreModel: Encodable, Decodable {
     let integerValue: String
 }

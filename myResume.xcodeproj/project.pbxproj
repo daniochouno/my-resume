@@ -50,6 +50,14 @@
 		EB513FD82A09E50A00CA5FF0 /* SkillsCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FD72A09E50A00CA5FF0 /* SkillsCollectionViewHeader.swift */; };
 		EB513FDC2A0A4AA700CA5FF0 /* AboutMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FDB2A0A4AA700CA5FF0 /* AboutMeView.swift */; };
 		EB513FDE2A0A4AB600CA5FF0 /* AboutMeViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FDD2A0A4AB600CA5FF0 /* AboutMeViewFactory.swift */; };
+		EB513FE12A0A97ED00CA5FF0 /* LocalCacheDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FE02A0A97ED00CA5FF0 /* LocalCacheDataSource.swift */; };
+		EB513FE42A0A9C8000CA5FF0 /* WorksLocalCacheModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FE32A0A9C8000CA5FF0 /* WorksLocalCacheModel.swift */; };
+		EB513FE62A0A9D5D00CA5FF0 /* PetProjectsLocalCacheModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FE52A0A9D5D00CA5FF0 /* PetProjectsLocalCacheModel.swift */; };
+		EB513FE82A0AA43200CA5FF0 /* LocalCacheDataSourceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FE72A0AA43200CA5FF0 /* LocalCacheDataSourceFactory.swift */; };
+		EB513FEB2A0AA68000CA5FF0 /* LocalCacheDataSourceFetchWorksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FEA2A0AA68000CA5FF0 /* LocalCacheDataSourceFetchWorksTests.swift */; };
+		EB513FED2A0AA95900CA5FF0 /* LocalCacheDataSourceFetchPetProjectsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FEC2A0AA95900CA5FF0 /* LocalCacheDataSourceFetchPetProjectsTests.swift */; };
+		EB513FF12A0AB4E500CA5FF0 /* LocalCacheDataSourceStoreWorksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FF02A0AB4E500CA5FF0 /* LocalCacheDataSourceStoreWorksTests.swift */; };
+		EB513FF32A0AB66200CA5FF0 /* LocalCacheDataSourceStorePetProjectsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FF22A0AB66200CA5FF0 /* LocalCacheDataSourceStorePetProjectsTests.swift */; };
 		EB7FB7E729EEA35900DEA576 /* CareerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7E629EEA35900DEA576 /* CareerView.swift */; };
 		EB7FB7E929EEA7A200DEA576 /* CareerViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7E829EEA7A200DEA576 /* CareerViewFactory.swift */; };
 		EB7FB7ED29EEAEFD00DEA576 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7EC29EEAEFD00DEA576 /* View.swift */; };
@@ -164,6 +172,14 @@
 		EB513FD72A09E50A00CA5FF0 /* SkillsCollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsCollectionViewHeader.swift; sourceTree = "<group>"; };
 		EB513FDB2A0A4AA700CA5FF0 /* AboutMeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeView.swift; sourceTree = "<group>"; };
 		EB513FDD2A0A4AB600CA5FF0 /* AboutMeViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewFactory.swift; sourceTree = "<group>"; };
+		EB513FE02A0A97ED00CA5FF0 /* LocalCacheDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSource.swift; sourceTree = "<group>"; };
+		EB513FE32A0A9C8000CA5FF0 /* WorksLocalCacheModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksLocalCacheModel.swift; sourceTree = "<group>"; };
+		EB513FE52A0A9D5D00CA5FF0 /* PetProjectsLocalCacheModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectsLocalCacheModel.swift; sourceTree = "<group>"; };
+		EB513FE72A0AA43200CA5FF0 /* LocalCacheDataSourceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSourceFactory.swift; sourceTree = "<group>"; };
+		EB513FEA2A0AA68000CA5FF0 /* LocalCacheDataSourceFetchWorksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSourceFetchWorksTests.swift; sourceTree = "<group>"; };
+		EB513FEC2A0AA95900CA5FF0 /* LocalCacheDataSourceFetchPetProjectsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSourceFetchPetProjectsTests.swift; sourceTree = "<group>"; };
+		EB513FF02A0AB4E500CA5FF0 /* LocalCacheDataSourceStoreWorksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSourceStoreWorksTests.swift; sourceTree = "<group>"; };
+		EB513FF22A0AB66200CA5FF0 /* LocalCacheDataSourceStorePetProjectsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSourceStorePetProjectsTests.swift; sourceTree = "<group>"; };
 		EB7FB7E629EEA35900DEA576 /* CareerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerView.swift; sourceTree = "<group>"; };
 		EB7FB7E829EEA7A200DEA576 /* CareerViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerViewFactory.swift; sourceTree = "<group>"; };
 		EB7FB7EC29EEAEFD00DEA576 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
@@ -295,6 +311,7 @@
 		EB3C831429F9B05800742C21 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				EB513FE22A0A9C5E00CA5FF0 /* localCache */,
 				EB513F952A093B0900CA5FF0 /* json */,
 				EB3C831529F9B06400742C21 /* firestore */,
 			);
@@ -458,6 +475,35 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		EB513FDF2A0A97D200CA5FF0 /* localCache */ = {
+			isa = PBXGroup;
+			children = (
+				EB513FE02A0A97ED00CA5FF0 /* LocalCacheDataSource.swift */,
+				EB513FE72A0AA43200CA5FF0 /* LocalCacheDataSourceFactory.swift */,
+			);
+			path = localCache;
+			sourceTree = "<group>";
+		};
+		EB513FE22A0A9C5E00CA5FF0 /* localCache */ = {
+			isa = PBXGroup;
+			children = (
+				EB513FE32A0A9C8000CA5FF0 /* WorksLocalCacheModel.swift */,
+				EB513FE52A0A9D5D00CA5FF0 /* PetProjectsLocalCacheModel.swift */,
+			);
+			path = localCache;
+			sourceTree = "<group>";
+		};
+		EB513FE92A0AA66000CA5FF0 /* localCache */ = {
+			isa = PBXGroup;
+			children = (
+				EB513FEA2A0AA68000CA5FF0 /* LocalCacheDataSourceFetchWorksTests.swift */,
+				EB513FEC2A0AA95900CA5FF0 /* LocalCacheDataSourceFetchPetProjectsTests.swift */,
+				EB513FF02A0AB4E500CA5FF0 /* LocalCacheDataSourceStoreWorksTests.swift */,
+				EB513FF22A0AB66200CA5FF0 /* LocalCacheDataSourceStorePetProjectsTests.swift */,
+			);
+			path = localCache;
+			sourceTree = "<group>";
+		};
 		EB7FB7E429EEA33900DEA576 /* career */ = {
 			isa = PBXGroup;
 			children = (
@@ -526,6 +572,7 @@
 		EB86A5FF29E89B4F00373ED1 /* dataSources */ = {
 			isa = PBXGroup;
 			children = (
+				EB513FDF2A0A97D200CA5FF0 /* localCache */,
 				EB513F9A2A093D2000CA5FF0 /* json */,
 				EB3C830B29F9A9B500742C21 /* firestore */,
 			);
@@ -650,6 +697,7 @@
 		EBA53C2A29FA8C3E00D7095F /* dataSources */ = {
 			isa = PBXGroup;
 			children = (
+				EB513FE92A0AA66000CA5FF0 /* localCache */,
 				EB513F9D2A09564200CA5FF0 /* json */,
 				EBA53C2D29FA8CEC00D7095F /* firestore */,
 			);
@@ -1059,7 +1107,9 @@
 				EB513FCC2A09DCE900CA5FF0 /* SkillsViewModelFactory.swift in Sources */,
 				EBA53C3E29FAE84A00D7095F /* FetchWorksUseCaseFactory.swift in Sources */,
 				EB513FD22A09DDC200CA5FF0 /* JsonDataSourceFactory.swift in Sources */,
+				EB513FE42A0A9C8000CA5FF0 /* WorksLocalCacheModel.swift in Sources */,
 				EBD987712A043C9600495DF3 /* PetProjectsRepository.swift in Sources */,
+				EB513FE82A0AA43200CA5FF0 /* LocalCacheDataSourceFactory.swift in Sources */,
 				EB513FCA2A09DB5700CA5FF0 /* SkillsViewControllerFactory.swift in Sources */,
 				EBA53C4B29FAEC7700D7095F /* WorksViewModelFactory.swift in Sources */,
 				EB513F9C2A093D2F00CA5FF0 /* JsonDataSource.swift in Sources */,
@@ -1075,6 +1125,7 @@
 				EB3C830D29F9A9CA00742C21 /* FirestoreDataSourceFactory.swift in Sources */,
 				EB3C831E29F9BB4900742C21 /* WorksRepository.swift in Sources */,
 				EB513F972A093B2500CA5FF0 /* SkillJsonModel.swift in Sources */,
+				EB513FE12A0A97ED00CA5FF0 /* LocalCacheDataSource.swift in Sources */,
 				EB513FD02A09DD8500CA5FF0 /* SkillsRepositoryFactory.swift in Sources */,
 				EBD987A72A056EA400495DF3 /* Color.swift in Sources */,
 				EBD9879C2A05185900495DF3 /* FetchPetProjectsUseCaseFactory.swift in Sources */,
@@ -1104,6 +1155,7 @@
 				EB513FC82A09DA6C00CA5FF0 /* SkillsCollectionViewCell.swift in Sources */,
 				EB3C831929F9B52D00742C21 /* APIClientFactory.swift in Sources */,
 				EB02FA4229E9CF9300CAA9DC /* TabsViewFactory.swift in Sources */,
+				EB513FE62A0A9D5D00CA5FF0 /* PetProjectsLocalCacheModel.swift in Sources */,
 				EBA53C4729FAEB1D00D7095F /* WorksView.swift in Sources */,
 				EBA090FC29E5C2E0001B3005 /* myResumeApp.swift in Sources */,
 				EB3C831B29F9BAC100742C21 /* SessionFirestoreModel.swift in Sources */,
@@ -1118,15 +1170,18 @@
 				EB513F9F2A0956C800CA5FF0 /* JsonDataSourceFetchSkillsTests.swift in Sources */,
 				EB513FBF2A09864E00CA5FF0 /* SkillsViewModelLoadTests.swift in Sources */,
 				EBA53C5329FBC40400D7095F /* MockFirestoreDataSource.swift in Sources */,
+				EB513FF12A0AB4E500CA5FF0 /* LocalCacheDataSourceStoreWorksTests.swift in Sources */,
 				EBD987772A043F0A00495DF3 /* MockPetProjectsRepository.swift in Sources */,
 				EB513FA72A097A0200CA5FF0 /* MockJsonDataSource.swift in Sources */,
 				EB3C830829F9806100742C21 /* MockURLProtocol.swift in Sources */,
 				EB513FB12A097FF000CA5FF0 /* FetchSkillSectionsUseCaseTests.swift in Sources */,
 				EBA53C6029FBE11800D7095F /* WorksViewModelLoadTests.swift in Sources */,
+				EB513FED2A0AA95900CA5FF0 /* LocalCacheDataSourceFetchPetProjectsTests.swift in Sources */,
 				EBD987962A05131500495DF3 /* MockPetProjectsInteractor.swift in Sources */,
 				EBD9878D2A0502B100495DF3 /* MockFetchPetProjectsUseCase.swift in Sources */,
 				EBA53C6229FBE26E00D7095F /* MockFetchWorksUseCase.swift in Sources */,
 				EBD9876F2A043BC400495DF3 /* PetProjectsRepositoryFetchTests.swift in Sources */,
+				EB513FF32A0AB66200CA5FF0 /* LocalCacheDataSourceStorePetProjectsTests.swift in Sources */,
 				EBA53C5129FB03E700D7095F /* MockUserDefaults.swift in Sources */,
 				EBD987942A050F4A00495DF3 /* PetProjectsPresenterOnViewAppearTests.swift in Sources */,
 				EBA53C2F29FA947300D7095F /* FirestoreDataSourceFetchWorksTests.swift in Sources */,
@@ -1135,6 +1190,7 @@
 				EB513FC12A0986A400CA5FF0 /* MockFetchSkillSectionsUseCase.swift in Sources */,
 				EBA53C3629FADFF300D7095F /* WorksRepositoryFetchTests.swift in Sources */,
 				EB513FB32A09803600CA5FF0 /* MockSkillsRepository.swift in Sources */,
+				EB513FEB2A0AA68000CA5FF0 /* LocalCacheDataSourceFetchWorksTests.swift in Sources */,
 				EBA53C5829FBDE0500D7095F /* FetchWorksUseCaseTests.swift in Sources */,
 				EBA53C2C29FA8C7F00D7095F /* FirestoreDataSourceSignInTests.swift in Sources */,
 				EBD987752A043E8700495DF3 /* FetchPetProjectsUseCaseTests.swift in Sources */,
