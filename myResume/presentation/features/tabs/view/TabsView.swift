@@ -14,7 +14,7 @@ struct TabsView: View {
                 .tabItem {
                     Label("tabs.experience.title", systemImage: "suitcase")
                 }
-            Text("tabs.skills.title")
+            SkillsViewFactory.makeView()
                 .tabItem {
                     Label("tabs.skills.title", systemImage: "studentdesk")
                 }
