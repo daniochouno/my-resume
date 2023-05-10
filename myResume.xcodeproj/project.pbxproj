@@ -63,6 +63,7 @@
 		EB513FF82A0AF79300CA5FF0 /* PetProjectRepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FF72A0AF79300CA5FF0 /* PetProjectRepositoryModel.swift */; };
 		EB513FFA2A0AF80E00CA5FF0 /* RepositoryDataSourceTypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FF92A0AF80E00CA5FF0 /* RepositoryDataSourceTypeModel.swift */; };
 		EB513FFC2A0AFDDE00CA5FF0 /* PetProjectEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FFB2A0AFDDE00CA5FF0 /* PetProjectEntity.swift */; };
+		EB513FFE2A0C041B00CA5FF0 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EB513FFD2A0C041B00CA5FF0 /* Settings.bundle */; };
 		EB7FB7E729EEA35900DEA576 /* CareerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7E629EEA35900DEA576 /* CareerView.swift */; };
 		EB7FB7E929EEA7A200DEA576 /* CareerViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7E829EEA7A200DEA576 /* CareerViewFactory.swift */; };
 		EB7FB7ED29EEAEFD00DEA576 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7EC29EEAEFD00DEA576 /* View.swift */; };
@@ -190,6 +191,7 @@
 		EB513FF72A0AF79300CA5FF0 /* PetProjectRepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectRepositoryModel.swift; sourceTree = "<group>"; };
 		EB513FF92A0AF80E00CA5FF0 /* RepositoryDataSourceTypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDataSourceTypeModel.swift; sourceTree = "<group>"; };
 		EB513FFB2A0AFDDE00CA5FF0 /* PetProjectEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectEntity.swift; sourceTree = "<group>"; };
+		EB513FFD2A0C041B00CA5FF0 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		EB7FB7E629EEA35900DEA576 /* CareerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerView.swift; sourceTree = "<group>"; };
 		EB7FB7E829EEA7A200DEA576 /* CareerViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerViewFactory.swift; sourceTree = "<group>"; };
 		EB7FB7EC29EEAEFD00DEA576 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
@@ -616,6 +618,7 @@
 			children = (
 				EBA0910129E5C2E2001B3005 /* myResume.entitlements */,
 				EBA53C3229FAA61C00D7095F /* Configuration.xcconfig */,
+				EB513FFD2A0C041B00CA5FF0 /* Settings.bundle */,
 			);
 			path = config;
 			sourceTree = "<group>";
@@ -1092,6 +1095,7 @@
 				EB513F942A093AF200CA5FF0 /* skills.json in Resources */,
 				EB02FA4529E9D19D00CAA9DC /* Localizable.strings in Resources */,
 				EBA0910029E5C2E2001B3005 /* Assets.xcassets in Resources */,
+				EB513FFE2A0C041B00CA5FF0 /* Settings.bundle in Resources */,
 				EB513FC62A098A6000CA5FF0 /* SkillsViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
