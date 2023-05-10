@@ -64,6 +64,12 @@
 		EB513FFA2A0AF80E00CA5FF0 /* RepositoryDataSourceTypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FF92A0AF80E00CA5FF0 /* RepositoryDataSourceTypeModel.swift */; };
 		EB513FFC2A0AFDDE00CA5FF0 /* PetProjectEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB513FFB2A0AFDDE00CA5FF0 /* PetProjectEntity.swift */; };
 		EB513FFE2A0C041B00CA5FF0 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EB513FFD2A0C041B00CA5FF0 /* Settings.bundle */; };
+		EB5140012A0C0DF200CA5FF0 /* TabsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5140002A0C0DF200CA5FF0 /* TabsViewModel.swift */; };
+		EB5140032A0C0DFC00CA5FF0 /* TabsViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5140022A0C0DFC00CA5FF0 /* TabsViewModelFactory.swift */; };
+		EB5140062A0C0F2800CA5FF0 /* SetSettingsBundleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5140052A0C0F2800CA5FF0 /* SetSettingsBundleUseCase.swift */; };
+		EB5140082A0C0F3200CA5FF0 /* SetSettingsBundleUseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5140072A0C0F3200CA5FF0 /* SetSettingsBundleUseCaseFactory.swift */; };
+		EB51400B2A0C101B00CA5FF0 /* SettingsBundleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB51400A2A0C101B00CA5FF0 /* SettingsBundleRepository.swift */; };
+		EB51400D2A0C102B00CA5FF0 /* SettingsBundleRepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB51400C2A0C102B00CA5FF0 /* SettingsBundleRepositoryFactory.swift */; };
 		EB7FB7E729EEA35900DEA576 /* CareerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7E629EEA35900DEA576 /* CareerView.swift */; };
 		EB7FB7E929EEA7A200DEA576 /* CareerViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7E829EEA7A200DEA576 /* CareerViewFactory.swift */; };
 		EB7FB7ED29EEAEFD00DEA576 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7EC29EEAEFD00DEA576 /* View.swift */; };
@@ -192,6 +198,12 @@
 		EB513FF92A0AF80E00CA5FF0 /* RepositoryDataSourceTypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDataSourceTypeModel.swift; sourceTree = "<group>"; };
 		EB513FFB2A0AFDDE00CA5FF0 /* PetProjectEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectEntity.swift; sourceTree = "<group>"; };
 		EB513FFD2A0C041B00CA5FF0 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		EB5140002A0C0DF200CA5FF0 /* TabsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsViewModel.swift; sourceTree = "<group>"; };
+		EB5140022A0C0DFC00CA5FF0 /* TabsViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsViewModelFactory.swift; sourceTree = "<group>"; };
+		EB5140052A0C0F2800CA5FF0 /* SetSettingsBundleUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetSettingsBundleUseCase.swift; sourceTree = "<group>"; };
+		EB5140072A0C0F3200CA5FF0 /* SetSettingsBundleUseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetSettingsBundleUseCaseFactory.swift; sourceTree = "<group>"; };
+		EB51400A2A0C101B00CA5FF0 /* SettingsBundleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBundleRepository.swift; sourceTree = "<group>"; };
+		EB51400C2A0C102B00CA5FF0 /* SettingsBundleRepositoryFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBundleRepositoryFactory.swift; sourceTree = "<group>"; };
 		EB7FB7E629EEA35900DEA576 /* CareerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerView.swift; sourceTree = "<group>"; };
 		EB7FB7E829EEA7A200DEA576 /* CareerViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerViewFactory.swift; sourceTree = "<group>"; };
 		EB7FB7EC29EEAEFD00DEA576 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
@@ -278,6 +290,7 @@
 		EB02FA3C29E9CC2600CAA9DC /* tabs */ = {
 			isa = PBXGroup;
 			children = (
+				EB513FFF2A0C0DE400CA5FF0 /* viewModel */,
 				EB02FA3D29E9CC3C00CAA9DC /* view */,
 			);
 			path = tabs;
@@ -528,6 +541,33 @@
 			path = repositories;
 			sourceTree = "<group>";
 		};
+		EB513FFF2A0C0DE400CA5FF0 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EB5140002A0C0DF200CA5FF0 /* TabsViewModel.swift */,
+				EB5140022A0C0DFC00CA5FF0 /* TabsViewModelFactory.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		EB5140042A0C0F0E00CA5FF0 /* settingsBundle */ = {
+			isa = PBXGroup;
+			children = (
+				EB5140052A0C0F2800CA5FF0 /* SetSettingsBundleUseCase.swift */,
+				EB5140072A0C0F3200CA5FF0 /* SetSettingsBundleUseCaseFactory.swift */,
+			);
+			path = settingsBundle;
+			sourceTree = "<group>";
+		};
+		EB5140092A0C0FFD00CA5FF0 /* settingsBundle */ = {
+			isa = PBXGroup;
+			children = (
+				EB51400A2A0C101B00CA5FF0 /* SettingsBundleRepository.swift */,
+				EB51400C2A0C102B00CA5FF0 /* SettingsBundleRepositoryFactory.swift */,
+			);
+			path = settingsBundle;
+			sourceTree = "<group>";
+		};
 		EB7FB7E429EEA33900DEA576 /* career */ = {
 			isa = PBXGroup;
 			children = (
@@ -606,6 +646,7 @@
 		EB86A60029E89B5B00373ED1 /* repositories */ = {
 			isa = PBXGroup;
 			children = (
+				EB5140092A0C0FFD00CA5FF0 /* settingsBundle */,
 				EBD9876D2A043B9C00495DF3 /* petProjects */,
 				EB3C831C29F9BB3900742C21 /* works */,
 				EB513FA02A0978C600CA5FF0 /* skills */,
@@ -626,6 +667,7 @@
 		EB86A60229E89D7600373ED1 /* useCases */ = {
 			isa = PBXGroup;
 			children = (
+				EB5140042A0C0F0E00CA5FF0 /* settingsBundle */,
 				EB513FA82A097C3B00CA5FF0 /* skills */,
 				EBD987782A043F3D00495DF3 /* petProjects */,
 				EBA53C3729FAE3E900D7095F /* works */,
@@ -1130,6 +1172,7 @@
 				EBD987882A04FF2200495DF3 /* PetProjectsInteractor.swift in Sources */,
 				EB513FBA2A0984A700CA5FF0 /* SkillSectionModel.swift in Sources */,
 				EB513FD82A09E50A00CA5FF0 /* SkillsCollectionViewHeader.swift in Sources */,
+				EB5140062A0C0F2800CA5FF0 /* SetSettingsBundleUseCase.swift in Sources */,
 				EBA53C3C29FAE7A000D7095F /* WorkUseCaseModel.swift in Sources */,
 				EB513FCC2A09DCE900CA5FF0 /* SkillsViewModelFactory.swift in Sources */,
 				EBA53C3E29FAE84A00D7095F /* FetchWorksUseCaseFactory.swift in Sources */,
@@ -1139,6 +1182,7 @@
 				EBD987712A043C9600495DF3 /* PetProjectsRepository.swift in Sources */,
 				EB513FF82A0AF79300CA5FF0 /* PetProjectRepositoryModel.swift in Sources */,
 				EB513FE82A0AA43200CA5FF0 /* LocalCacheDataSourceFactory.swift in Sources */,
+				EB51400D2A0C102B00CA5FF0 /* SettingsBundleRepositoryFactory.swift in Sources */,
 				EB513FCA2A09DB5700CA5FF0 /* SkillsViewControllerFactory.swift in Sources */,
 				EBA53C4B29FAEC7700D7095F /* WorksViewModelFactory.swift in Sources */,
 				EB513FFA2A0AF80E00CA5FF0 /* RepositoryDataSourceTypeModel.swift in Sources */,
@@ -1154,17 +1198,20 @@
 				EBD9877C2A043FA000495DF3 /* PetProjectUseCaseModel.swift in Sources */,
 				EB3C830D29F9A9CA00742C21 /* FirestoreDataSourceFactory.swift in Sources */,
 				EB3C831E29F9BB4900742C21 /* WorksRepository.swift in Sources */,
+				EB51400B2A0C101B00CA5FF0 /* SettingsBundleRepository.swift in Sources */,
 				EB513F972A093B2500CA5FF0 /* SkillJsonModel.swift in Sources */,
 				EB513FE12A0A97ED00CA5FF0 /* LocalCacheDataSource.swift in Sources */,
 				EB513FD02A09DD8500CA5FF0 /* SkillsRepositoryFactory.swift in Sources */,
 				EBD987A72A056EA400495DF3 /* Color.swift in Sources */,
 				EBD9879C2A05185900495DF3 /* FetchPetProjectsUseCaseFactory.swift in Sources */,
 				EBA53C4029FAE87B00D7095F /* WorksRepositoryFactory.swift in Sources */,
+				EB5140082A0C0F3200CA5FF0 /* SetSettingsBundleUseCaseFactory.swift in Sources */,
 				EB3C831129F9ADB900742C21 /* APIClient.swift in Sources */,
 				EBD987A52A052FD100495DF3 /* PetProjectsCardView.swift in Sources */,
 				EB3C831729F9B07C00742C21 /* WorkFirestoreModel.swift in Sources */,
 				EBD9876C2A04396400495DF3 /* PetProjectFirestoreModel.swift in Sources */,
 				EB513FBC2A0984F800CA5FF0 /* SkillModel.swift in Sources */,
+				EB5140012A0C0DF200CA5FF0 /* TabsViewModel.swift in Sources */,
 				EB513FDE2A0A4AB600CA5FF0 /* AboutMeViewFactory.swift in Sources */,
 				EB513FB72A09824F00CA5FF0 /* SkillsViewModel.swift in Sources */,
 				EB7FB7E729EEA35900DEA576 /* CareerView.swift in Sources */,
@@ -1176,6 +1223,7 @@
 				EBA53C4E29FAED2000D7095F /* WorkModel.swift in Sources */,
 				EB513FA22A0978D900CA5FF0 /* SkillsRepository.swift in Sources */,
 				EBD9879E2A05188F00495DF3 /* PetProjectsRepositoryFactory.swift in Sources */,
+				EB5140032A0C0DFC00CA5FF0 /* TabsViewModelFactory.swift in Sources */,
 				EB513FDC2A0A4AA700CA5FF0 /* AboutMeView.swift in Sources */,
 				EB513FCE2A09DD4400CA5FF0 /* FetchSkillSectionsUseCaseFactory.swift in Sources */,
 				EBA53C3129FA9F0500D7095F /* APIClientRequest.swift in Sources */,

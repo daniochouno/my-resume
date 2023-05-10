@@ -12,6 +12,8 @@ protocol LocalCacheDataSource {
     func fetchPetProjects() -> Result<PetProjectsLocalCacheModel, Error>
     func storeWorks(documents: WorkDocumentsFirestoreModel) -> Bool
     func storePetProjects(documents: PetProjectDocumentsFirestoreModel) -> Bool
+    func removeWorks()
+    func removePetProjects()
 }
 
 class LocalCacheDataSourceImpl: LocalCacheDataSource {
@@ -71,5 +73,13 @@ class LocalCacheDataSourceImpl: LocalCacheDataSource {
         } catch {
             return false
         }
+    }
+    
+    func removeWorks() {
+        self.userDefaults.removeObject(forKey: "works")
+    }
+    
+    func removePetProjects() {
+        self.userDefaults.removeObject(forKey: "petProjects")
     }
 }

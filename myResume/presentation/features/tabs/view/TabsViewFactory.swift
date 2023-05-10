@@ -9,6 +9,7 @@ import SwiftUI
 
 enum TabsViewFactory {
     static func makeView() -> some View {
-        return TabsView()
+        let viewModel = TabsViewModelFactory.make()
+        return TabsView(viewModel: viewModel)
     }
 }

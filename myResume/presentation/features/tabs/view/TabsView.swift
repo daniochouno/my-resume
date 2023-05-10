@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct TabsView: View {
+    @ObservedObject var viewModel: TabsViewModel
+    
     var body: some View {
         TabView {
             CareerViewFactory.makeView()
@@ -23,11 +25,17 @@ struct TabsView: View {
                     Label("tabs.aboutMe.title", systemImage: "person.circle")
                 }
         }
+        .onAppear {
+            Task {
+                self.viewModel.setSettingsBundle()
+            }
+        }
     }
 }
 
 struct TabsView_Previews: PreviewProvider {
     static var previews: some View {
-        TabsView()
+        let viewModel = TabsViewModelFactory.make()
+        TabsView(viewModel: viewModel)
     }
 }

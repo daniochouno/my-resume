@@ -49,7 +49,7 @@ class PetProjectsRepositoryImpl: PetProjectsRepository {
         case .success(let model):
             let now = Date().timeIntervalSince1970
             let cacheStoredAt = model.createdAt
-            guard ((cacheStoredAt + expirationTimeInSeconds) <= now) else {
+            guard ((cacheStoredAt + expirationTimeInSeconds) >= now) else {
                 // Expired cache
                 return nil
             }
