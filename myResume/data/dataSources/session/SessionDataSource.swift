@@ -13,6 +13,7 @@ enum SessionKey: String {
 }
 
 protocol SessionDataSource {
+    func fetchCurrentAccessToken() -> String?
     func fetchCurrentSession() -> SessionFirestoreModel?
     func storeCurrentSession(model: SessionFirestoreModel)
 }
@@ -22,6 +23,11 @@ class SessionDataSourceImpl: SessionDataSource {
     
     init(userDefaults: UserDefaults) {
         self.userDefaults = userDefaults
+    }
+    
+    func fetchCurrentAccessToken() -> String? {
+        let accessToken = userDefaults.string(forKey: SessionKey.sessionAccessToken.rawValue)
+        return accessToken
     }
     
     func fetchCurrentSession() -> SessionFirestoreModel? {

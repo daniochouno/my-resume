@@ -13,11 +13,11 @@ protocol APIClient {
 
 class APIClientImpl: APIClient {
     let urlSession: URLSession
-    let userDefaults: UserDefaults
+    let sessionDataSource: SessionDataSource
       
-    init(urlSession: URLSession, userDefaults: UserDefaults) {
+    init(urlSession: URLSession, sessionDataSource: SessionDataSource) {
         self.urlSession = urlSession
-        self.userDefaults = userDefaults
+        self.sessionDataSource = sessionDataSource
     }
     
     func fetch<T: Decodable>(request: APIClientRequest) async -> Result<T, Error> {
@@ -27,7 +27,7 @@ class APIClientImpl: APIClient {
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = request.method.rawValue
         if request.needsAuthentication {
-            if let accessToken = userDefaults.string(forKey: "access_token") {
+            if let accessToken = sessionDataSource.fetchCurrentAccessToken() {
                 urlRequest.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
             }
         }

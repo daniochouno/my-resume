@@ -7,6 +7,11 @@
 
 import Foundation
 
+enum LocalCacheKey: String {
+    case cacheWorks
+    case cachePetProjects
+}
+
 protocol LocalCacheDataSource {
     func fetchWorks() -> Result<WorksLocalCacheModel, Error>
     func fetchPetProjects() -> Result<PetProjectsLocalCacheModel, Error>
@@ -24,7 +29,7 @@ class LocalCacheDataSourceImpl: LocalCacheDataSource {
     }
     
     func fetchWorks() -> Result<WorksLocalCacheModel, Error> {
-        guard let data = self.userDefaults.data(forKey: "works") else {
+        guard let data = self.userDefaults.data(forKey: LocalCacheKey.cacheWorks.rawValue) else {
             return .failure(APIResponseError.parser)
         }
         do {
@@ -36,7 +41,7 @@ class LocalCacheDataSourceImpl: LocalCacheDataSource {
     }
     
     func fetchPetProjects() -> Result<PetProjectsLocalCacheModel, Error> {
-        guard let data = self.userDefaults.data(forKey: "petProjects") else {
+        guard let data = self.userDefaults.data(forKey: LocalCacheKey.cachePetProjects.rawValue) else {
             return .failure(APIResponseError.parser)
         }
         do {
@@ -54,7 +59,7 @@ class LocalCacheDataSourceImpl: LocalCacheDataSource {
         do {
             let data = try JSONEncoder().encode(localCacheModel)
             
-            self.userDefaults.set(data, forKey: "works")
+            self.userDefaults.set(data, forKey: LocalCacheKey.cacheWorks.rawValue)
             return true
         } catch {
             return false
@@ -68,7 +73,7 @@ class LocalCacheDataSourceImpl: LocalCacheDataSource {
         do {
             let data = try JSONEncoder().encode(localCacheModel)
             
-            self.userDefaults.set(data, forKey: "petProjects")
+            self.userDefaults.set(data, forKey: LocalCacheKey.cachePetProjects.rawValue)
             return true
         } catch {
             return false
@@ -76,10 +81,10 @@ class LocalCacheDataSourceImpl: LocalCacheDataSource {
     }
     
     func removeWorks() {
-        self.userDefaults.removeObject(forKey: "works")
+        self.userDefaults.removeObject(forKey: LocalCacheKey.cacheWorks.rawValue)
     }
     
     func removePetProjects() {
-        self.userDefaults.removeObject(forKey: "petProjects")
+        self.userDefaults.removeObject(forKey: LocalCacheKey.cachePetProjects.rawValue)
     }
 }
