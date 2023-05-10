@@ -12,7 +12,7 @@ enum WorksRepositoryFactory {
         let remoteDataSource = FirestoreDataSourceFactory.make()
         let cacheDataSource = LocalCacheDataSourceFactory.make()
         let settingsBundleDataSource = SettingsBundleDataSourceFactory.make()
-        let userDefaults = UserDefaults.standard
-        return WorksRepositoryImpl(remoteDataSource: remoteDataSource, cacheDataSource: cacheDataSource, settingsBundleDataSource: settingsBundleDataSource, userDefaults: userDefaults)
+        let sessionDataSource = SessionDataSourceFactory.make()
+        return WorksRepositoryImpl(remoteDataSource: remoteDataSource, cacheDataSource: cacheDataSource, settingsBundleDataSource: settingsBundleDataSource, sessionDataSource: sessionDataSource)
     }
 }

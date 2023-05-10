@@ -9,7 +9,7 @@ import Foundation
 
 enum TabsViewModelFactory {
     static func make() -> TabsViewModel {
-        let setSettingsBundleUseCase = SetSettingsBundleUseCaseFactory.make()
-        return TabsViewModel(setSettingsBundleUseCase: setSettingsBundleUseCase)
+        let initializeSettingsBundleUseCase = InitializeSettingsBundleUseCaseFactory.make()
+        return TabsViewModel(initializeSettingsBundleUseCase: initializeSettingsBundleUseCase)
     }
 }

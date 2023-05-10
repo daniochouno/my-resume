@@ -14,10 +14,12 @@ enum SettingsBundleKey: String {
 }
 
 protocol SettingsBundleDataSource {
-    func fetchLocalCacheExpirationTimeValue() -> Int
+    func fetchLocalCacheExpirationTimeValue() -> Double
     func fetchLocalCacheClearValue() -> Bool
     func disableLocalCacheClearValue()
     func storeVersionApp(version: String, build: String)
+    func storeDefaultLocalCacheExpirationTime()
+    func storeDefaultLocalCacheClear()
 }
 
 class SettingsBundleDataSourceImpl: SettingsBundleDataSource {
@@ -27,8 +29,8 @@ class SettingsBundleDataSourceImpl: SettingsBundleDataSource {
         self.userDefaults = userDefaults
     }
     
-    func fetchLocalCacheExpirationTimeValue() -> Int {
-        let localCacheExpirationTime = userDefaults.integer(forKey: SettingsBundleKey.localCacheExpirationTime.rawValue)
+    func fetchLocalCacheExpirationTimeValue() -> Double {
+        let localCacheExpirationTime = userDefaults.double(forKey: SettingsBundleKey.localCacheExpirationTime.rawValue)
         return localCacheExpirationTime
     }
     
@@ -43,5 +45,14 @@ class SettingsBundleDataSourceImpl: SettingsBundleDataSource {
     
     func storeVersionApp(version: String, build: String) {
         userDefaults.set("\(version) b\(build)", forKey: SettingsBundleKey.appVersion.rawValue)
+    }
+    
+    func storeDefaultLocalCacheExpirationTime() {
+        let value: Double = 3600
+        userDefaults.set(value, forKey: SettingsBundleKey.localCacheExpirationTime.rawValue)
+    }
+    
+    func storeDefaultLocalCacheClear() {
+        userDefaults.set(false, forKey: SettingsBundleKey.localCacheClear.rawValue)
     }
 }

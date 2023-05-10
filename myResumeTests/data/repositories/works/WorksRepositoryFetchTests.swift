@@ -12,7 +12,7 @@ final class WorksRepositoryFetchTests: XCTestCase {
     var remoteDataSource: MockFirestoreDataSource?
     var cacheDataSource: MockLocalCacheDataSource?
     var settingsBundleDataSource: MockSettingsBundleDataSource?
-    var userDefaults: MockUserDefaults?
+    var sessionDataSource: MockSessionDataSource?
     
     var repository: WorksRepository?
     let expectation = XCTestExpectation(description: "Repository expectation")
@@ -21,9 +21,9 @@ final class WorksRepositoryFetchTests: XCTestCase {
         self.remoteDataSource = MockFirestoreDataSource()
         self.cacheDataSource = MockLocalCacheDataSource()
         self.settingsBundleDataSource = MockSettingsBundleDataSource()
-        self.userDefaults = MockUserDefaults()
+        self.sessionDataSource = MockSessionDataSource()
         
-        self.repository = WorksRepositoryImpl(remoteDataSource: self.remoteDataSource!, cacheDataSource: self.cacheDataSource!, settingsBundleDataSource: self.settingsBundleDataSource!, userDefaults: self.userDefaults!)
+        self.repository = WorksRepositoryImpl(remoteDataSource: self.remoteDataSource!, cacheDataSource: self.cacheDataSource!, settingsBundleDataSource: self.settingsBundleDataSource!, sessionDataSource: self.sessionDataSource!)
     }
 
     override func tearDownWithError() throws {

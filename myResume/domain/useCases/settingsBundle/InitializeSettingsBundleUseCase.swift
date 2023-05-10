@@ -7,19 +7,19 @@
 
 import Foundation
 
-protocol SetSettingsBundleUseCase {
-    func set()
+protocol InitializeSettingsBundleUseCase {
+    func initialize()
 }
 
-class SetSettingsBundleUseCaseImpl: SetSettingsBundleUseCase {
+class InitializeSettingsBundleUseCaseImpl: InitializeSettingsBundleUseCase {
     private let repository: SettingsBundleRepository
     
     init(repository: SettingsBundleRepository) {
         self.repository = repository
     }
     
-    func set() {
+    func initialize() {
         repository.clearLocalCacheIfNeeded()
-        repository.setVersionApp()
+        repository.setDefaultValues()
     }
 }

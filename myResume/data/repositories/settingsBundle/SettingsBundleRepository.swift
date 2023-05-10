@@ -9,7 +9,7 @@ import Foundation
 
 protocol SettingsBundleRepository {
     func clearLocalCacheIfNeeded()
-    func setVersionApp()
+    func setDefaultValues()
 }
 
 class SettingsBundleRepositoryImpl: SettingsBundleRepository {
@@ -30,7 +30,7 @@ class SettingsBundleRepositoryImpl: SettingsBundleRepository {
         cacheDataSource.removePetProjects()
     }
     
-    func setVersionApp() {
+    func setDefaultValues() {
         guard let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String else {
             return
         }
@@ -38,5 +38,8 @@ class SettingsBundleRepositoryImpl: SettingsBundleRepository {
             return
         }
         settingsBundleDataSource.storeVersionApp(version: version, build: build)
+        
+        settingsBundleDataSource.storeDefaultLocalCacheExpirationTime()
+        settingsBundleDataSource.storeDefaultLocalCacheClear()
     }
 }

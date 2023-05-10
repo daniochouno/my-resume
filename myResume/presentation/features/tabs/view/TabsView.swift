@@ -27,7 +27,7 @@ struct TabsView: View {
         }
         .onAppear {
             Task {
-                self.viewModel.setSettingsBundle()
+                self.viewModel.initializeSettingsBundle()
             }
         }
     }

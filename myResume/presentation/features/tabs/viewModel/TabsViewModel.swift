@@ -8,13 +8,13 @@
 import Foundation
 
 final class TabsViewModel: ObservableObject {
-    private let setSettingsBundleUseCase: SetSettingsBundleUseCase
+    private let initializeSettingsBundleUseCase: InitializeSettingsBundleUseCase
     
-    init(setSettingsBundleUseCase: SetSettingsBundleUseCase) {
-        self.setSettingsBundleUseCase = setSettingsBundleUseCase
+    init(initializeSettingsBundleUseCase: InitializeSettingsBundleUseCase) {
+        self.initializeSettingsBundleUseCase = initializeSettingsBundleUseCase
     }
     
-    func setSettingsBundle() {
-        setSettingsBundleUseCase.set()
+    func initializeSettingsBundle() {
+        initializeSettingsBundleUseCase.initialize()
     }
 }

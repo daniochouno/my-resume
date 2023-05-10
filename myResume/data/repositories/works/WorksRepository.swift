@@ -15,13 +15,13 @@ class WorksRepositoryImpl: WorksRepository {
     let remoteDataSource: FirestoreDataSource
     let cacheDataSource: LocalCacheDataSource
     let settingsBundleDataSource: SettingsBundleDataSource
-    let userDefaults: UserDefaults
+    let sessionDataSource: SessionDataSource
     
-    init(remoteDataSource: FirestoreDataSource, cacheDataSource: LocalCacheDataSource, settingsBundleDataSource: SettingsBundleDataSource, userDefaults: UserDefaults) {
+    init(remoteDataSource: FirestoreDataSource, cacheDataSource: LocalCacheDataSource, settingsBundleDataSource: SettingsBundleDataSource, sessionDataSource: SessionDataSource) {
         self.remoteDataSource = remoteDataSource
         self.cacheDataSource = cacheDataSource
         self.settingsBundleDataSource = settingsBundleDataSource
-        self.userDefaults = userDefaults
+        self.sessionDataSource = sessionDataSource
     }
     
     func fetch() async -> Result<WorkRepositoryModel, Error> {
@@ -47,7 +47,7 @@ class WorksRepositoryImpl: WorksRepository {
         let cacheResult = cacheDataSource.fetchWorks()
         switch cacheResult {
         case .success(let model):
-            let expirationTimeInSeconds = Double(settingsBundleDataSource.fetchLocalCacheExpirationTimeValue())
+            let expirationTimeInSeconds = settingsBundleDataSource.fetchLocalCacheExpirationTimeValue()
             
             let now = Date().timeIntervalSince1970
             let cacheStoredAt = model.createdAt
@@ -77,32 +77,18 @@ class WorksRepositoryImpl: WorksRepository {
     }
     
     private func authenticateIfNeeded() async {
-        guard let _ = userDefaults.string(forKey: "access_token"),
-                let _ = userDefaults.string(forKey: "refresh_token") else {
-            await authenticate()
+        if let _ = sessionDataSource.fetchCurrentSession() {
             return
         }
         
-        let expiresAt = userDefaults.double(forKey: "expires_at")
-        let currentTimestamp = Date().timeIntervalSince1970
-        guard expiresAt >= currentTimestamp else {
-            await authenticate()
-            return
-        }
+        await authenticate()
     }
     
     private func authenticate() async {
         let result = await remoteDataSource.signIn()
         switch result {
-        case .success(let session):
-            let idToken = session.idToken
-            let refreshToken = session.refreshToken
-            let expiresIn = session.expiresIn
-            let expiresAt = Date().addingTimeInterval(Double(expiresIn) ?? 0)
-            
-            self.userDefaults.set(idToken, forKey: "access_token")
-            self.userDefaults.set(refreshToken, forKey: "refresh_token")
-            self.userDefaults.set(expiresAt.timeIntervalSince1970, forKey: "expires_at")
+        case .success(let model):
+            sessionDataSource.storeCurrentSession(model: model)
         case .failure:
             break
         }

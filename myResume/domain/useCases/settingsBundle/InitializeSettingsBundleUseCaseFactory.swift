@@ -7,9 +7,9 @@
 
 import Foundation
 
-enum SetSettingsBundleUseCaseFactory {
-    static func make() -> SetSettingsBundleUseCase {
+enum InitializeSettingsBundleUseCaseFactory {
+    static func make() -> InitializeSettingsBundleUseCase {
         let repository = SettingsBundleRepositoryFactory.make()
-        return SetSettingsBundleUseCaseImpl(repository: repository)
+        return InitializeSettingsBundleUseCaseImpl(repository: repository)
     }
 }

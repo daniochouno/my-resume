@@ -9,10 +9,10 @@ import Foundation
 @testable import myResume
 
 class MockSettingsBundleDataSource: SettingsBundleDataSource {
-    var fetchLocalCacheExpirationTimeValueResult: Int?
+    var fetchLocalCacheExpirationTimeValueResult: Double?
     var fetchLocalCacheClearValueResult: Bool?
     
-    func fetchLocalCacheExpirationTimeValue() -> Int {
+    func fetchLocalCacheExpirationTimeValue() -> Double {
         guard let result = self.fetchLocalCacheExpirationTimeValueResult else {
             return 0
         }
@@ -31,6 +31,14 @@ class MockSettingsBundleDataSource: SettingsBundleDataSource {
     }
     
     func storeVersionApp(version: String, build: String) {
+        
+    }
+    
+    func storeDefaultLocalCacheExpirationTime() {
+        
+    }
+    
+    func storeDefaultLocalCacheClear() {
         
     }
 }
