@@ -14,13 +14,13 @@ protocol WorksRepository {
 class WorksRepositoryImpl: WorksRepository {
     let remoteDataSource: FirestoreDataSource
     let cacheDataSource: LocalCacheDataSource
+    let settingsBundleDataSource: SettingsBundleDataSource
     let userDefaults: UserDefaults
     
-    private let expirationTimeInSeconds: Double = 3600
-    
-    init(remoteDataSource: FirestoreDataSource, cacheDataSource: LocalCacheDataSource, userDefaults: UserDefaults) {
+    init(remoteDataSource: FirestoreDataSource, cacheDataSource: LocalCacheDataSource, settingsBundleDataSource: SettingsBundleDataSource, userDefaults: UserDefaults) {
         self.remoteDataSource = remoteDataSource
         self.cacheDataSource = cacheDataSource
+        self.settingsBundleDataSource = settingsBundleDataSource
         self.userDefaults = userDefaults
     }
     
@@ -47,6 +47,8 @@ class WorksRepositoryImpl: WorksRepository {
         let cacheResult = cacheDataSource.fetchWorks()
         switch cacheResult {
         case .success(let model):
+            let expirationTimeInSeconds = Double(settingsBundleDataSource.fetchLocalCacheExpirationTimeValue())
+            
             let now = Date().timeIntervalSince1970
             let cacheStoredAt = model.createdAt
             guard ((cacheStoredAt + expirationTimeInSeconds) >= now) else {

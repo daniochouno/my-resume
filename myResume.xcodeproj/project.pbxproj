@@ -70,6 +70,9 @@
 		EB5140082A0C0F3200CA5FF0 /* SetSettingsBundleUseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5140072A0C0F3200CA5FF0 /* SetSettingsBundleUseCaseFactory.swift */; };
 		EB51400B2A0C101B00CA5FF0 /* SettingsBundleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB51400A2A0C101B00CA5FF0 /* SettingsBundleRepository.swift */; };
 		EB51400D2A0C102B00CA5FF0 /* SettingsBundleRepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB51400C2A0C102B00CA5FF0 /* SettingsBundleRepositoryFactory.swift */; };
+		EB5140102A0C176700CA5FF0 /* SettingsBundleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB51400F2A0C176700CA5FF0 /* SettingsBundleDataSource.swift */; };
+		EB5140122A0C178100CA5FF0 /* SettingsBundleDataSourceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5140112A0C178100CA5FF0 /* SettingsBundleDataSourceFactory.swift */; };
+		EB5140152A0C288000CA5FF0 /* MockSettingsBundleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5140142A0C288000CA5FF0 /* MockSettingsBundleDataSource.swift */; };
 		EB7FB7E729EEA35900DEA576 /* CareerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7E629EEA35900DEA576 /* CareerView.swift */; };
 		EB7FB7E929EEA7A200DEA576 /* CareerViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7E829EEA7A200DEA576 /* CareerViewFactory.swift */; };
 		EB7FB7ED29EEAEFD00DEA576 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7EC29EEAEFD00DEA576 /* View.swift */; };
@@ -204,6 +207,9 @@
 		EB5140072A0C0F3200CA5FF0 /* SetSettingsBundleUseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetSettingsBundleUseCaseFactory.swift; sourceTree = "<group>"; };
 		EB51400A2A0C101B00CA5FF0 /* SettingsBundleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBundleRepository.swift; sourceTree = "<group>"; };
 		EB51400C2A0C102B00CA5FF0 /* SettingsBundleRepositoryFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBundleRepositoryFactory.swift; sourceTree = "<group>"; };
+		EB51400F2A0C176700CA5FF0 /* SettingsBundleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBundleDataSource.swift; sourceTree = "<group>"; };
+		EB5140112A0C178100CA5FF0 /* SettingsBundleDataSourceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBundleDataSourceFactory.swift; sourceTree = "<group>"; };
+		EB5140142A0C288000CA5FF0 /* MockSettingsBundleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSettingsBundleDataSource.swift; sourceTree = "<group>"; };
 		EB7FB7E629EEA35900DEA576 /* CareerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerView.swift; sourceTree = "<group>"; };
 		EB7FB7E829EEA7A200DEA576 /* CareerViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerViewFactory.swift; sourceTree = "<group>"; };
 		EB7FB7EC29EEAEFD00DEA576 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
@@ -568,6 +574,23 @@
 			path = settingsBundle;
 			sourceTree = "<group>";
 		};
+		EB51400E2A0C174600CA5FF0 /* settingsBundle */ = {
+			isa = PBXGroup;
+			children = (
+				EB51400F2A0C176700CA5FF0 /* SettingsBundleDataSource.swift */,
+				EB5140112A0C178100CA5FF0 /* SettingsBundleDataSourceFactory.swift */,
+			);
+			path = settingsBundle;
+			sourceTree = "<group>";
+		};
+		EB5140132A0C286900CA5FF0 /* settingsBundle */ = {
+			isa = PBXGroup;
+			children = (
+				EB5140142A0C288000CA5FF0 /* MockSettingsBundleDataSource.swift */,
+			);
+			path = settingsBundle;
+			sourceTree = "<group>";
+		};
 		EB7FB7E429EEA33900DEA576 /* career */ = {
 			isa = PBXGroup;
 			children = (
@@ -636,6 +659,7 @@
 		EB86A5FF29E89B4F00373ED1 /* dataSources */ = {
 			isa = PBXGroup;
 			children = (
+				EB51400E2A0C174600CA5FF0 /* settingsBundle */,
 				EB513FDF2A0A97D200CA5FF0 /* localCache */,
 				EB513F9A2A093D2000CA5FF0 /* json */,
 				EB3C830B29F9A9B500742C21 /* firestore */,
@@ -764,6 +788,7 @@
 		EBA53C2A29FA8C3E00D7095F /* dataSources */ = {
 			isa = PBXGroup;
 			children = (
+				EB5140132A0C286900CA5FF0 /* settingsBundle */,
 				EB513FE92A0AA66000CA5FF0 /* localCache */,
 				EB513F9D2A09564200CA5FF0 /* json */,
 				EBA53C2D29FA8CEC00D7095F /* firestore */,
@@ -1208,6 +1233,7 @@
 				EB5140082A0C0F3200CA5FF0 /* SetSettingsBundleUseCaseFactory.swift in Sources */,
 				EB3C831129F9ADB900742C21 /* APIClient.swift in Sources */,
 				EBD987A52A052FD100495DF3 /* PetProjectsCardView.swift in Sources */,
+				EB5140122A0C178100CA5FF0 /* SettingsBundleDataSourceFactory.swift in Sources */,
 				EB3C831729F9B07C00742C21 /* WorkFirestoreModel.swift in Sources */,
 				EBD9876C2A04396400495DF3 /* PetProjectFirestoreModel.swift in Sources */,
 				EB513FBC2A0984F800CA5FF0 /* SkillModel.swift in Sources */,
@@ -1218,6 +1244,7 @@
 				EB7FB7ED29EEAEFD00DEA576 /* View.swift in Sources */,
 				EBD987822A04FD5900495DF3 /* PetProjectsViewFactory.swift in Sources */,
 				EB513FD62A09E11D00CA5FF0 /* SkillsViewFactory.swift in Sources */,
+				EB5140102A0C176700CA5FF0 /* SettingsBundleDataSource.swift in Sources */,
 				EB513FC42A098A3D00CA5FF0 /* SkillsViewController.swift in Sources */,
 				EBD987902A050ACB00495DF3 /* PetProjectsPresenter.swift in Sources */,
 				EBA53C4E29FAED2000D7095F /* WorkModel.swift in Sources */,
@@ -1255,6 +1282,7 @@
 				EB513FA72A097A0200CA5FF0 /* MockJsonDataSource.swift in Sources */,
 				EB3C830829F9806100742C21 /* MockURLProtocol.swift in Sources */,
 				EB513FB12A097FF000CA5FF0 /* FetchSkillSectionsUseCaseTests.swift in Sources */,
+				EB5140152A0C288000CA5FF0 /* MockSettingsBundleDataSource.swift in Sources */,
 				EBA53C6029FBE11800D7095F /* WorksViewModelLoadTests.swift in Sources */,
 				EB513FED2A0AA95900CA5FF0 /* LocalCacheDataSourceFetchPetProjectsTests.swift in Sources */,
 				EBD987962A05131500495DF3 /* MockPetProjectsInteractor.swift in Sources */,

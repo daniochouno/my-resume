@@ -33,4 +33,12 @@ class MockLocalCacheDataSource: LocalCacheDataSource {
     func storePetProjects(documents: myResume.PetProjectDocumentsFirestoreModel) -> Bool {
         return true
     }
+    
+    func removeWorks() {
+        
+    }
+    
+    func removePetProjects() {
+        
+    }
 }

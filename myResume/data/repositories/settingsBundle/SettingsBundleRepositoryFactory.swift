@@ -9,8 +9,8 @@ import Foundation
 
 enum SettingsBundleRepositoryFactory {
     static func make() -> SettingsBundleRepository {
+        let settingsBundleDataSource = SettingsBundleDataSourceFactory.make()
         let cacheDataSource = LocalCacheDataSourceFactory.make()
-        let userDefaults = UserDefaults.standard
-        return SettingsBundleRepositoryImpl(cacheDataSource: cacheDataSource, userDefaults: userDefaults)
+        return SettingsBundleRepositoryImpl(settingsBundleDataSource: settingsBundleDataSource, cacheDataSource: cacheDataSource)
     }
 }

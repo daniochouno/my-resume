@@ -30,7 +30,7 @@
 			<key>Key</key>
 			<string>localCacheExpirationTime</string>
 			<key>DefaultValue</key>
-			<string>3000</string>
+			<string>3600</string>
 			<key>IsSecure</key>
 			<false/>
 			<key>KeyboardType</key>

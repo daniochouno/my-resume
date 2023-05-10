@@ -7,31 +7,25 @@
 
 import Foundation
 
-enum SettingsBundleKey: String {
-    case appVersion
-    case localCacheExpirationTime
-    case localCacheClear
-}
-
 protocol SettingsBundleRepository {
     func clearLocalCacheIfNeeded()
     func setVersionApp()
 }
 
 class SettingsBundleRepositoryImpl: SettingsBundleRepository {
+    let settingsBundleDataSource: SettingsBundleDataSource
     let cacheDataSource: LocalCacheDataSource
-    let userDefaults: UserDefaults
     
-    init(cacheDataSource: LocalCacheDataSource, userDefaults: UserDefaults) {
+    init(settingsBundleDataSource: SettingsBundleDataSource, cacheDataSource: LocalCacheDataSource) {
+        self.settingsBundleDataSource = settingsBundleDataSource
         self.cacheDataSource = cacheDataSource
-        self.userDefaults = userDefaults
     }
     
     func clearLocalCacheIfNeeded() {
-        let localCacheClear = userDefaults.bool(forKey: SettingsBundleKey.localCacheClear.rawValue)
-        guard localCacheClear else { return }
+        let needsClearLocalCache = settingsBundleDataSource.fetchLocalCacheClearValue()
+        guard needsClearLocalCache else { return }
         
-        userDefaults.set(false, forKey: SettingsBundleKey.localCacheClear.rawValue)
+        settingsBundleDataSource.disableLocalCacheClearValue()
         cacheDataSource.removeWorks()
         cacheDataSource.removePetProjects()
     }
@@ -43,6 +37,6 @@ class SettingsBundleRepositoryImpl: SettingsBundleRepository {
         guard let build = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String else {
             return
         }
-        userDefaults.set("\(version) b\(build)", forKey: SettingsBundleKey.appVersion.rawValue)
+        settingsBundleDataSource.storeVersionApp(version: version, build: build)
     }
 }

@@ -11,7 +11,8 @@ enum PetProjectsRepositoryFactory {
     static func make() -> PetProjectsRepository {
         let remoteDataSource = FirestoreDataSourceFactory.make()
         let cacheDataSource = LocalCacheDataSourceFactory.make()
+        let settingsBundleDataSource = SettingsBundleDataSourceFactory.make()
         let userDefaults = UserDefaults.standard
-        return PetProjectsRepositoryImpl(remoteDataSource: remoteDataSource, cacheDataSource: cacheDataSource, userDefaults: userDefaults)
+        return PetProjectsRepositoryImpl(remoteDataSource: remoteDataSource, cacheDataSource: cacheDataSource, settingsBundleDataSource: settingsBundleDataSource, userDefaults: userDefaults)
     }
 }

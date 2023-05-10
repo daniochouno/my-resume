@@ -11,6 +11,7 @@ import XCTest
 final class WorksRepositoryFetchTests: XCTestCase {
     var remoteDataSource: MockFirestoreDataSource?
     var cacheDataSource: MockLocalCacheDataSource?
+    var settingsBundleDataSource: MockSettingsBundleDataSource?
     var userDefaults: MockUserDefaults?
     
     var repository: WorksRepository?
@@ -19,9 +20,10 @@ final class WorksRepositoryFetchTests: XCTestCase {
     override func setUpWithError() throws {
         self.remoteDataSource = MockFirestoreDataSource()
         self.cacheDataSource = MockLocalCacheDataSource()
+        self.settingsBundleDataSource = MockSettingsBundleDataSource()
         self.userDefaults = MockUserDefaults()
         
-        self.repository = WorksRepositoryImpl(remoteDataSource: self.remoteDataSource!, cacheDataSource: self.cacheDataSource!, userDefaults: self.userDefaults!)
+        self.repository = WorksRepositoryImpl(remoteDataSource: self.remoteDataSource!, cacheDataSource: self.cacheDataSource!, settingsBundleDataSource: self.settingsBundleDataSource!, userDefaults: self.userDefaults!)
     }
 
     override func tearDownWithError() throws {
