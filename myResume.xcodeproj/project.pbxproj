@@ -146,6 +146,7 @@
 		EBD9879E2A05188F00495DF3 /* PetProjectsRepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9879D2A05188F00495DF3 /* PetProjectsRepositoryFactory.swift */; };
 		EBD987A52A052FD100495DF3 /* PetProjectsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD987A42A052FD100495DF3 /* PetProjectsCardView.swift */; };
 		EBD987A72A056EA400495DF3 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD987A62A056EA400495DF3 /* Color.swift */; };
+		EBDAB88C2A1BCD020046C570 /* FirestoreDataSourceFetchWorkDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB88B2A1BCD020046C570 /* FirestoreDataSourceFetchWorkDetailsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -312,6 +313,7 @@
 		EBD9879D2A05188F00495DF3 /* PetProjectsRepositoryFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectsRepositoryFactory.swift; sourceTree = "<group>"; };
 		EBD987A42A052FD100495DF3 /* PetProjectsCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectsCardView.swift; sourceTree = "<group>"; };
 		EBD987A62A056EA400495DF3 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		EBDAB88B2A1BCD020046C570 /* FirestoreDataSourceFetchWorkDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDataSourceFetchWorkDetailsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -941,6 +943,7 @@
 			children = (
 				EBA53C2B29FA8C7F00D7095F /* FirestoreDataSourceSignInTests.swift */,
 				EBA53C2E29FA947300D7095F /* FirestoreDataSourceFetchWorksTests.swift */,
+				EBDAB88B2A1BCD020046C570 /* FirestoreDataSourceFetchWorkDetailsTests.swift */,
 				EBD987692A04247A00495DF3 /* FirestoreDataSourceFetchPetProjectsTests.swift */,
 				EBA53C5229FBC40400D7095F /* MockFirestoreDataSource.swift */,
 			);
@@ -1458,6 +1461,7 @@
 				EBA53C2F29FA947300D7095F /* FirestoreDataSourceFetchWorksTests.swift in Sources */,
 				EBA53C5A29FBDE5700D7095F /* MockWorksRepository.swift in Sources */,
 				EBD9878B2A05018600495DF3 /* PetProjectsInteractorListOfPetProjectsTests.swift in Sources */,
+				EBDAB88C2A1BCD020046C570 /* FirestoreDataSourceFetchWorkDetailsTests.swift in Sources */,
 				EB513FC12A0986A400CA5FF0 /* MockFetchSkillSectionsUseCase.swift in Sources */,
 				EBA53C3629FADFF300D7095F /* WorksRepositoryFetchTests.swift in Sources */,
 				EB75A85D2A16B841002BD628 /* LocalCacheDataSourceStoreWorkDetailsTests.swift in Sources */,
