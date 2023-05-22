@@ -146,9 +146,11 @@
 		EBD9879E2A05188F00495DF3 /* PetProjectsRepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9879D2A05188F00495DF3 /* PetProjectsRepositoryFactory.swift */; };
 		EBD987A52A052FD100495DF3 /* PetProjectsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD987A42A052FD100495DF3 /* PetProjectsCardView.swift */; };
 		EBD987A72A056EA400495DF3 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD987A62A056EA400495DF3 /* Color.swift */; };
+		EBDAB8872A1BCBF40046C570 /* WorkDetailsViewModelLoadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB8862A1BCBF40046C570 /* WorkDetailsViewModelLoadTests.swift */; };
 		EBDAB88A2A1BCC550046C570 /* FetchWorkDetailsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB8892A1BCC550046C570 /* FetchWorkDetailsUseCaseTests.swift */; };
 		EBDAB88C2A1BCD020046C570 /* FirestoreDataSourceFetchWorkDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB88B2A1BCD020046C570 /* FirestoreDataSourceFetchWorkDetailsTests.swift */; };
 		EBDAB88F2A1BCF130046C570 /* WorksRepositoryFetchDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB88E2A1BCF130046C570 /* WorksRepositoryFetchDetailsTests.swift */; };
+		EBDAB8912A1BD1210046C570 /* MockFetchWorkDetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB8902A1BD1210046C570 /* MockFetchWorkDetailsUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -315,9 +317,11 @@
 		EBD9879D2A05188F00495DF3 /* PetProjectsRepositoryFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectsRepositoryFactory.swift; sourceTree = "<group>"; };
 		EBD987A42A052FD100495DF3 /* PetProjectsCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectsCardView.swift; sourceTree = "<group>"; };
 		EBD987A62A056EA400495DF3 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		EBDAB8862A1BCBF40046C570 /* WorkDetailsViewModelLoadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailsViewModelLoadTests.swift; sourceTree = "<group>"; };
 		EBDAB8892A1BCC550046C570 /* FetchWorkDetailsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchWorkDetailsUseCaseTests.swift; sourceTree = "<group>"; };
 		EBDAB88B2A1BCD020046C570 /* FirestoreDataSourceFetchWorkDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDataSourceFetchWorkDetailsTests.swift; sourceTree = "<group>"; };
 		EBDAB88E2A1BCF130046C570 /* WorksRepositoryFetchDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksRepositoryFetchDetailsTests.swift; sourceTree = "<group>"; };
+		EBDAB8902A1BD1210046C570 /* MockFetchWorkDetailsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFetchWorkDetailsUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1068,8 +1072,9 @@
 		EBA53C5C29FBE0B000D7095F /* features */ = {
 			isa = PBXGroup;
 			children = (
-				EBD987892A05012E00495DF3 /* petProjects */,
 				EBA53C5D29FBE0B900D7095F /* works */,
+				EBDAB8852A1BCBBD0046C570 /* workDetails */,
+				EBD987892A05012E00495DF3 /* petProjects */,
 				EB513FBD2A09863200CA5FF0 /* skills */,
 			);
 			path = features;
@@ -1203,10 +1208,19 @@
 			path = presenter;
 			sourceTree = "<group>";
 		};
+		EBDAB8852A1BCBBD0046C570 /* workDetails */ = {
+			isa = PBXGroup;
+			children = (
+				EBDAB8862A1BCBF40046C570 /* WorkDetailsViewModelLoadTests.swift */,
+			);
+			path = workDetails;
+			sourceTree = "<group>";
+		};
 		EBDAB8882A1BCC370046C570 /* workDetails */ = {
 			isa = PBXGroup;
 			children = (
 				EBDAB8892A1BCC550046C570 /* FetchWorkDetailsUseCaseTests.swift */,
+				EBDAB8902A1BD1210046C570 /* MockFetchWorkDetailsUseCase.swift */,
 			);
 			path = workDetails;
 			sourceTree = "<group>";
@@ -1449,6 +1463,7 @@
 			files = (
 				EB513FA52A0979A800CA5FF0 /* SkillsRepositoryFetchTests.swift in Sources */,
 				EB513F9F2A0956C800CA5FF0 /* JsonDataSourceFetchSkillsTests.swift in Sources */,
+				EBDAB8872A1BCBF40046C570 /* WorkDetailsViewModelLoadTests.swift in Sources */,
 				EB513FBF2A09864E00CA5FF0 /* SkillsViewModelLoadTests.swift in Sources */,
 				EB75A85F2A16B92D002BD628 /* LocalCacheDataSourceRemoveWorksTests.swift in Sources */,
 				EBA53C5329FBC40400D7095F /* MockFirestoreDataSource.swift in Sources */,
@@ -1470,6 +1485,7 @@
 				EBDAB88F2A1BCF130046C570 /* WorksRepositoryFetchDetailsTests.swift in Sources */,
 				EBD9876F2A043BC400495DF3 /* PetProjectsRepositoryFetchTests.swift in Sources */,
 				EB513FF32A0AB66200CA5FF0 /* LocalCacheDataSourceStorePetProjectsTests.swift in Sources */,
+				EBDAB8912A1BD1210046C570 /* MockFetchWorkDetailsUseCase.swift in Sources */,
 				EBA53C5129FB03E700D7095F /* MockUserDefaults.swift in Sources */,
 				EBD987942A050F4A00495DF3 /* PetProjectsPresenterOnViewAppearTests.swift in Sources */,
 				EBA641922A168D48008B7408 /* LocalCacheDataSourceFetchWorkDetailsTests.swift in Sources */,
