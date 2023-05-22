@@ -146,6 +146,7 @@
 		EBD9879E2A05188F00495DF3 /* PetProjectsRepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9879D2A05188F00495DF3 /* PetProjectsRepositoryFactory.swift */; };
 		EBD987A52A052FD100495DF3 /* PetProjectsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD987A42A052FD100495DF3 /* PetProjectsCardView.swift */; };
 		EBD987A72A056EA400495DF3 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD987A62A056EA400495DF3 /* Color.swift */; };
+		EBDAB88A2A1BCC550046C570 /* FetchWorkDetailsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB8892A1BCC550046C570 /* FetchWorkDetailsUseCaseTests.swift */; };
 		EBDAB88C2A1BCD020046C570 /* FirestoreDataSourceFetchWorkDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB88B2A1BCD020046C570 /* FirestoreDataSourceFetchWorkDetailsTests.swift */; };
 		EBDAB88F2A1BCF130046C570 /* WorksRepositoryFetchDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB88E2A1BCF130046C570 /* WorksRepositoryFetchDetailsTests.swift */; };
 /* End PBXBuildFile section */
@@ -314,6 +315,7 @@
 		EBD9879D2A05188F00495DF3 /* PetProjectsRepositoryFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectsRepositoryFactory.swift; sourceTree = "<group>"; };
 		EBD987A42A052FD100495DF3 /* PetProjectsCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectsCardView.swift; sourceTree = "<group>"; };
 		EBD987A62A056EA400495DF3 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		EBDAB8892A1BCC550046C570 /* FetchWorkDetailsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchWorkDetailsUseCaseTests.swift; sourceTree = "<group>"; };
 		EBDAB88B2A1BCD020046C570 /* FirestoreDataSourceFetchWorkDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDataSourceFetchWorkDetailsTests.swift; sourceTree = "<group>"; };
 		EBDAB88E2A1BCF130046C570 /* WorksRepositoryFetchDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksRepositoryFetchDetailsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1038,8 +1040,9 @@
 		EBA53C5529FBDDDC00D7095F /* useCases */ = {
 			isa = PBXGroup;
 			children = (
-				EBD987732A043E6E00495DF3 /* petProjects */,
 				EBA53C5629FBDDE800D7095F /* works */,
+				EBDAB8882A1BCC370046C570 /* workDetails */,
+				EBD987732A043E6E00495DF3 /* petProjects */,
 				EB513FAF2A097FC800CA5FF0 /* skills */,
 			);
 			path = useCases;
@@ -1198,6 +1201,14 @@
 				EBD987932A050F4A00495DF3 /* PetProjectsPresenterOnViewAppearTests.swift */,
 			);
 			path = presenter;
+			sourceTree = "<group>";
+		};
+		EBDAB8882A1BCC370046C570 /* workDetails */ = {
+			isa = PBXGroup;
+			children = (
+				EBDAB8892A1BCC550046C570 /* FetchWorkDetailsUseCaseTests.swift */,
+			);
+			path = workDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1472,6 +1483,7 @@
 				EB513FB32A09803600CA5FF0 /* MockSkillsRepository.swift in Sources */,
 				EB513FEB2A0AA68000CA5FF0 /* LocalCacheDataSourceFetchWorksTests.swift in Sources */,
 				EBA53C5829FBDE0500D7095F /* FetchWorksUseCaseTests.swift in Sources */,
+				EBDAB88A2A1BCC550046C570 /* FetchWorkDetailsUseCaseTests.swift in Sources */,
 				EBA53C2C29FA8C7F00D7095F /* FirestoreDataSourceSignInTests.swift in Sources */,
 				EBD987752A043E8700495DF3 /* FetchPetProjectsUseCaseTests.swift in Sources */,
 				EBD9876A2A04247A00495DF3 /* FirestoreDataSourceFetchPetProjectsTests.swift in Sources */,
