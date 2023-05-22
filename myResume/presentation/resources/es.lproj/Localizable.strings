@@ -9,33 +9,75 @@
 "tabs.experience.title" = "Experiencia";
 "tabs.skills.title" = "Habilidades";
 "tabs.aboutMe.title" = "Sobre mí";
+// Navigation
+"navigation.back" = "Volver atrás";
+// Data
+"data.origin.localCache" = "Estos datos se han cargado de la caché local.";
+"data.origin.remote" = "Estos datos se han cargado de la API remota.";
 // Career
 "career.tabs.works.title" = "Trabajos";
 "career.tabs.sideProjects.title" = "Mis Proyectos";
 // Works
 "works.timelapse.current" = "ahora";
+// Work Details
+"workDetails.timelapse %@ %@" = "desde %@ hasta %@";
+"workDetails.timelapse.total %@ %@" = "%@ año(s) y %@ mes(es)";
+"workDetails.timelapse.current" = "ahora";
+"workDetails.summary" = "Resumen";
+"workDetails.goalsAchieved" = "Objetivos alcanzados";
+// Work - Loycus - Mobile
+"works.loycus.mobile.title" = "Mobile Teach Lead";
+"works.loycus.mobile.summary" = "";
+"works.loycus.mobile.goalsAchieved.0" = "";
+"works.loycus.mobile.goalsAchieved.1" = "";
+"works.loycus.mobile.goalsAchieved.2" = "";
+// Work - Loycus - iOS
+"works.loycus.ios.title" = "Senior iOS Engineer";
+"works.loycus.ios.summary" = "";
+"works.loycus.ios.goalsAchieved.0" = "Desarrollo de la aplicación para iOS.";
+"works.loycus.ios.goalsAchieved.1" = "";
+"works.loycus.ios.goalsAchieved.2" = "";
+// Work - Infinia - Mobile
+"works.infinia.mobile.title" = "Mobile Teach Lead";
+"works.infinia.mobile.summary" = "";
+"works.infinia.mobile.goalsAchieved.0" = "Liderazgo del desarrollo de un SDK propio en Swift (iOS) y Kotlin (Android).";
+"works.infinia.mobile.goalsAchieved.1" = "Soporte de la integración del SDK en empresas líderes en su sector.";
+"works.infinia.mobile.goalsAchieved.2" = "Desarrollo de aplicaciones para iOS y Android.";
+// Work - Infinia - iOS
+"works.infinia.ios.title" = "iOS Tech Lead";
+"works.infinia.ios.summary" = "Responsable del desarrollo de un SDK propio";
+"works.infinia.ios.goalsAchieved.0" = "Liderazgo del desarrollo de un SDK propio desde cero en Swift (iOS).";
+"works.infinia.ios.goalsAchieved.1" = "Soporte de la integración del SDK en empresas líderes en su sector.";
+"works.infinia.ios.goalsAchieved.2" = "Desarrollo de aplicaciones para iOS y Android.";
+// Work - Intelygenz - iOS
+"works.intelygenz.ios.title" = "Senior iOS Engineer";
+"works.intelygenz.ios.summary" = "";
+"works.intelygenz.ios.goalsAchieved.0" = "Liderazgo del desarrollo de la aplicación iOS para una empresa líder del sector eléctrico.";
+"works.intelygenz.ios.goalsAchieved.1" = "Desarrollo de una aplicación para iOS y watchOS para una empresa líder del sector de seguridad.";
+"works.intelygenz.ios.goalsAchieved.2" = "Desarrollo en equipo de varias aplicaciones para iOS.";
 // Pet projects
 "petProjects.title" = "Estas aplicaciones han sido desarrolladas por completo por mí, desde su concepto y diseño hasta su publicación en las distintas tiendas de aplicaciones.";
 "petProjects.downloads.%@" = "+%@ descargas";
 "petProjects.stores.appStore" = "App Store";
 "petProjects.stores.googlePlay" = "Play Store";
-"petProjects.origin.localCache" = "Estos datos se han cargado de la caché local.";
-"petProjects.origin.remote" = "Estos datos se han cargado de la API remota.";
-// MyWardrobe
+// Pet projects - MyWardrobe
 "petProjects.myWardrobe.title" = "Mi Armario - Organiza tu ropa";
 "petProjects.myWardrobe.subtitle" = "Ten toda tu ropa clasificada, crea combinaciones y planifícalas en tu agenda";
 "petProjects.myWardrobe.link.appStore" = "https://apps.apple.com/es/app/mi-armario-organiza-tu-ropa/id1531657287";
 "petProjects.myWardrobe.link.playStore" = "https://play.google.com/store/apps/details?id=info.danielmartinez.wardrobe&hl=es_419&gl=ES";
-// FoodCalendar
+// Pet projects - FoodCalendar
 "petProjects.foodCalendar.title" = "Calendario de Alimentos";
 "petProjects.foodCalendar.subtitle" = "Descubre cuál es la mejor época para disfrutar de tus alimentos favoritos. Incluye frutas, verduras, pescados y mariscos.";
 "petProjects.foodCalendar.link.appStore" = "https://apps.apple.com/es/app/calendario-de-alimentos/id1532078962";
-// Gifts
+// Pet projects - Gifts
 "petProjects.gifts.title" = "Regalos - Mi amigo invisible";
 "petProjects.gifts.subtitle" = "Todos tus sorteos de amigo invisible";
 "petProjects.gifts.link.appStore" = "https://apps.apple.com/es/app/regalos-mi-amigo-invisible/id1615811628";
 "petProjects.gifts.link.playStore" = "https://play.google.com/store/apps/details?id=info.danielmartinez.app.gifts&hl=es_419&gl=ES";
 // About me
-"aboutMe.hello" = "Hola 👋!\n\nSoy un desarrollador de aplicaciones para iOS con más de 15 años de experiencia laboral, los 7 últimos de ellos especializados en iOS, y que he trabajado en el desarrollo de más de 10 aplicaciones de iOS, la mayoría de ellas en entornos de despliegue continuo en la AppStore (fast-paced environment), normalmente con un ciclo de publicación de 2 semanas.\n\nComo proyectos adicionales a mi trabajo, he creado desde cero 3 aplicaciones que se encuentran disponibles en las tiendas de iOS y Android. Una de ellas ha sido descargada más de 100.000 veces desde que se publicó.\n\nMis puntos fuertes son la organización de tareas, mi alto nivel de autonomía y el compromiso al máximo con la fidelidad en la implementación de las funcionalidades.\n\nLo que más me motiva y la razón principal por la que me apasiona mi trabajo es poder llegar y ayudar con mis apps a cualquier persona que posea un teléfono móvil, un iPhone.\n\nMe considero un buen trabajador en equipo, abierto a dialogar sobre la mejor forma de desarrollar una feature y a colaborar para mejorarla.";
+"aboutMe.hello.title" = "Hola 👋!";
+"aboutMe.hello.text" = "Soy Daniel Martínez, un desarrollador de aplicaciones para iOS con más de 15 años de experiencia laboral, los 7 últimos de ellos especializados en iOS, y que he trabajado en el desarrollo de más de 10 aplicaciones de iOS, la mayoría de ellas en entornos de despliegue continuo en la AppStore (fast-paced environment), normalmente con un ciclo de publicación de 2 semanas.\n\nComo proyectos adicionales a mi trabajo, he creado desde cero 3 aplicaciones que se encuentran disponibles en las tiendas de iOS y Android. Una de ellas ha sido descargada más de 100.000 veces desde que se publicó.\n\nMis puntos fuertes son la organización de tareas, mi alto nivel de autonomía y el compromiso al máximo con la fidelidad en la implementación de las funcionalidades.\n\nLo que más me motiva y la razón principal por la que me apasiona mi trabajo es poder llegar y ayudar con mis apps a cualquier persona que posea un teléfono móvil, un iPhone.\n\nMe considero un buen trabajador en equipo, abierto a dialogar sobre la mejor forma de desarrollar una feature y a colaborar para mejorarla.";
 "aboutMe.aboutThisProject.title" = "Sobre este proyecto";
 "aboutMe.aboutThisProject.text" = "Este proyecto nace para poder mostrar parte de mis capacidades como desarrollador en iOS.\n\nHe usado SwiftUI, UIKit, arquitecturas como MVVM y VIPER, conexiones de red a una API REST, etc... en un proyecto real, dejando disponible el código para que cualquier persona interesada pueda verlo.\n\nTienes mucha más información de cómo he creado todo esto en el README del proyecto en GitHub.";
+// Errors
+"parser" = "An error occurred while getting the data";
