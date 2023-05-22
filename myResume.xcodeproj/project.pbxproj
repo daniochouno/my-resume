@@ -76,6 +76,9 @@
 		EB5140182A0C2D5500CA5FF0 /* SessionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5140172A0C2D5500CA5FF0 /* SessionDataSource.swift */; };
 		EB51401A2A0C2D6100CA5FF0 /* SessionDataSourceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5140192A0C2D6100CA5FF0 /* SessionDataSourceFactory.swift */; };
 		EB51401E2A0C318F00CA5FF0 /* MockSessionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB51401D2A0C318F00CA5FF0 /* MockSessionDataSource.swift */; };
+		EB5140242A14122C00CA5FF0 /* WorkDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5140232A14122C00CA5FF0 /* WorkDetailsModel.swift */; };
+		EB5140262A1413BF00CA5FF0 /* WorkDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5140252A1413BF00CA5FF0 /* WorkDetailsViewModel.swift */; };
+		EB5140282A1413D200CA5FF0 /* WorkDetailsViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5140272A1413D200CA5FF0 /* WorkDetailsViewModelFactory.swift */; };
 		EB51402A2A14152700CA5FF0 /* WorkDetailsUseCaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5140292A14152700CA5FF0 /* WorkDetailsUseCaseModel.swift */; };
 		EB51402D2A14173E00CA5FF0 /* FetchWorkDetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB51402C2A14173E00CA5FF0 /* FetchWorkDetailsUseCase.swift */; };
 		EB51402F2A14174E00CA5FF0 /* FetchWorkDetailsUseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB51402E2A14174E00CA5FF0 /* FetchWorkDetailsUseCaseFactory.swift */; };
@@ -84,6 +87,8 @@
 		EB5140362A1419B800CA5FF0 /* WorkDetailsFirestoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5140352A1419B800CA5FF0 /* WorkDetailsFirestoreModel.swift */; };
 		EB5140382A153F2300CA5FF0 /* FirestoreValueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5140372A153F2300CA5FF0 /* FirestoreValueModel.swift */; };
 		EB51403A2A15435400CA5FF0 /* WorkDetailsLocalCacheModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5140392A15435400CA5FF0 /* WorkDetailsLocalCacheModel.swift */; };
+		EB51403C2A1545E800CA5FF0 /* WorkDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB51403B2A1545E800CA5FF0 /* WorkDetailsView.swift */; };
+		EB51403E2A15468500CA5FF0 /* WorkDetailsViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB51403D2A15468500CA5FF0 /* WorkDetailsViewFactory.swift */; };
 		EB5140412A15577100CA5FF0 /* ErrorMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5140402A15577100CA5FF0 /* ErrorMessageView.swift */; };
 		EB75A85B2A169BA7002BD628 /* DataOriginMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB75A85A2A169BA7002BD628 /* DataOriginMessageView.swift */; };
 		EB75A85D2A16B841002BD628 /* LocalCacheDataSourceStoreWorkDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB75A85C2A16B841002BD628 /* LocalCacheDataSourceStoreWorkDetailsTests.swift */; };
@@ -231,6 +236,9 @@
 		EB5140172A0C2D5500CA5FF0 /* SessionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDataSource.swift; sourceTree = "<group>"; };
 		EB5140192A0C2D6100CA5FF0 /* SessionDataSourceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDataSourceFactory.swift; sourceTree = "<group>"; };
 		EB51401D2A0C318F00CA5FF0 /* MockSessionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSessionDataSource.swift; sourceTree = "<group>"; };
+		EB5140232A14122C00CA5FF0 /* WorkDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailsModel.swift; sourceTree = "<group>"; };
+		EB5140252A1413BF00CA5FF0 /* WorkDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailsViewModel.swift; sourceTree = "<group>"; };
+		EB5140272A1413D200CA5FF0 /* WorkDetailsViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailsViewModelFactory.swift; sourceTree = "<group>"; };
 		EB5140292A14152700CA5FF0 /* WorkDetailsUseCaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailsUseCaseModel.swift; sourceTree = "<group>"; };
 		EB51402C2A14173E00CA5FF0 /* FetchWorkDetailsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchWorkDetailsUseCase.swift; sourceTree = "<group>"; };
 		EB51402E2A14174E00CA5FF0 /* FetchWorkDetailsUseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchWorkDetailsUseCaseFactory.swift; sourceTree = "<group>"; };
@@ -239,6 +247,8 @@
 		EB5140352A1419B800CA5FF0 /* WorkDetailsFirestoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailsFirestoreModel.swift; sourceTree = "<group>"; };
 		EB5140372A153F2300CA5FF0 /* FirestoreValueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreValueModel.swift; sourceTree = "<group>"; };
 		EB5140392A15435400CA5FF0 /* WorkDetailsLocalCacheModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailsLocalCacheModel.swift; sourceTree = "<group>"; };
+		EB51403B2A1545E800CA5FF0 /* WorkDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailsView.swift; sourceTree = "<group>"; };
+		EB51403D2A15468500CA5FF0 /* WorkDetailsViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailsViewFactory.swift; sourceTree = "<group>"; };
 		EB5140402A15577100CA5FF0 /* ErrorMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessageView.swift; sourceTree = "<group>"; };
 		EB75A85A2A169BA7002BD628 /* DataOriginMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataOriginMessageView.swift; sourceTree = "<group>"; };
 		EB75A85C2A16B841002BD628 /* LocalCacheDataSourceStoreWorkDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSourceStoreWorkDetailsTests.swift; sourceTree = "<group>"; };
@@ -653,6 +663,42 @@
 			path = session;
 			sourceTree = "<group>";
 		};
+		EB51401F2A1411D000CA5FF0 /* workDetails */ = {
+			isa = PBXGroup;
+			children = (
+				EB5140202A1411F600CA5FF0 /* models */,
+				EB5140212A14120800CA5FF0 /* view */,
+				EB5140222A14120E00CA5FF0 /* viewModel */,
+			);
+			path = workDetails;
+			sourceTree = "<group>";
+		};
+		EB5140202A1411F600CA5FF0 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				EB5140232A14122C00CA5FF0 /* WorkDetailsModel.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		EB5140212A14120800CA5FF0 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				EB51403B2A1545E800CA5FF0 /* WorkDetailsView.swift */,
+				EB51403D2A15468500CA5FF0 /* WorkDetailsViewFactory.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		EB5140222A14120E00CA5FF0 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EB5140252A1413BF00CA5FF0 /* WorkDetailsViewModel.swift */,
+				EB5140272A1413D200CA5FF0 /* WorkDetailsViewModelFactory.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
 		EB51402B2A14167300CA5FF0 /* workDetails */ = {
 			isa = PBXGroup;
 			children = (
@@ -797,6 +843,7 @@
 				EB02FA3C29E9CC2600CAA9DC /* tabs */,
 				EB7FB7E429EEA33900DEA576 /* career */,
 				EBA53C4129FAE9A400D7095F /* works */,
+				EB51401F2A1411D000CA5FF0 /* workDetails */,
 				EBD9877D2A04F98500495DF3 /* petProjects */,
 				EB513FB42A09822800CA5FF0 /* skills */,
 				EB513FD92A0A4A7500CA5FF0 /* aboutMe */,
@@ -1291,6 +1338,7 @@
 				EBD9877A2A043F5400495DF3 /* FetchPetProjectsUseCase.swift in Sources */,
 				EB5140362A1419B800CA5FF0 /* WorkDetailsFirestoreModel.swift in Sources */,
 				EBD987882A04FF2200495DF3 /* PetProjectsInteractor.swift in Sources */,
+				EB5140262A1413BF00CA5FF0 /* WorkDetailsViewModel.swift in Sources */,
 				EB513FBA2A0984A700CA5FF0 /* SkillSectionModel.swift in Sources */,
 				EB513FD82A09E50A00CA5FF0 /* SkillsCollectionViewHeader.swift in Sources */,
 				EB5140062A0C0F2800CA5FF0 /* InitializeSettingsBundleUseCase.swift in Sources */,
@@ -1317,6 +1365,7 @@
 				EB513FD42A09E00200CA5FF0 /* SkillsView.swift in Sources */,
 				EB513F992A093B5400CA5FF0 /* SkillSectionJsonModel.swift in Sources */,
 				EBD9879A2A05181800495DF3 /* PetProjectsInteractorFactory.swift in Sources */,
+				EB51403E2A15468500CA5FF0 /* WorkDetailsViewFactory.swift in Sources */,
 				EB51402D2A14173E00CA5FF0 /* FetchWorkDetailsUseCase.swift in Sources */,
 				EB75A85B2A169BA7002BD628 /* DataOriginMessageView.swift in Sources */,
 				EBD987852A04FE4600495DF3 /* PetProjectItemEntity.swift in Sources */,
@@ -1338,6 +1387,7 @@
 				EB3C831129F9ADB900742C21 /* APIClient.swift in Sources */,
 				EBD987A52A052FD100495DF3 /* PetProjectsCardView.swift in Sources */,
 				EB5140122A0C178100CA5FF0 /* SettingsBundleDataSourceFactory.swift in Sources */,
+				EB5140282A1413D200CA5FF0 /* WorkDetailsViewModelFactory.swift in Sources */,
 				EB3C831729F9B07C00742C21 /* WorkFirestoreModel.swift in Sources */,
 				EBD9876C2A04396400495DF3 /* PetProjectFirestoreModel.swift in Sources */,
 				EB513FBC2A0984F800CA5FF0 /* SkillModel.swift in Sources */,
@@ -1353,6 +1403,7 @@
 				EBD987902A050ACB00495DF3 /* PetProjectsPresenter.swift in Sources */,
 				EBA53C4E29FAED2000D7095F /* WorkModel.swift in Sources */,
 				EB513FA22A0978D900CA5FF0 /* SkillsRepository.swift in Sources */,
+				EB51403C2A1545E800CA5FF0 /* WorkDetailsView.swift in Sources */,
 				EBD9879E2A05188F00495DF3 /* PetProjectsRepositoryFactory.swift in Sources */,
 				EB5140032A0C0DFC00CA5FF0 /* TabsViewModelFactory.swift in Sources */,
 				EB513FDC2A0A4AA700CA5FF0 /* AboutMeView.swift in Sources */,
@@ -1367,6 +1418,7 @@
 				EB3C831929F9B52D00742C21 /* APIClientFactory.swift in Sources */,
 				EB02FA4229E9CF9300CAA9DC /* TabsViewFactory.swift in Sources */,
 				EB5140342A14197700CA5FF0 /* WorkDetailsRepositoryModel.swift in Sources */,
+				EB5140242A14122C00CA5FF0 /* WorkDetailsModel.swift in Sources */,
 				EB513FE62A0A9D5D00CA5FF0 /* PetProjectsLocalCacheModel.swift in Sources */,
 				EBA53C4729FAEB1D00D7095F /* WorksView.swift in Sources */,
 				EBA090FC29E5C2E0001B3005 /* myResumeApp.swift in Sources */,
