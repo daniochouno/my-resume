@@ -151,6 +151,9 @@
 		EBDAB88C2A1BCD020046C570 /* FirestoreDataSourceFetchWorkDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB88B2A1BCD020046C570 /* FirestoreDataSourceFetchWorkDetailsTests.swift */; };
 		EBDAB88F2A1BCF130046C570 /* WorksRepositoryFetchDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB88E2A1BCF130046C570 /* WorksRepositoryFetchDetailsTests.swift */; };
 		EBDAB8912A1BD1210046C570 /* MockFetchWorkDetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB8902A1BD1210046C570 /* MockFetchWorkDetailsUseCase.swift */; };
+		EBDAB8972A1BD8A40046C570 /* PetProjectDetailsFirestoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB8962A1BD8A40046C570 /* PetProjectDetailsFirestoreModel.swift */; };
+		EBDAB8992A1BD97E0046C570 /* PetProjectDetailsLocalCacheModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB8982A1BD97E0046C570 /* PetProjectDetailsLocalCacheModel.swift */; };
+		EBDAB89B2A1BD9B60046C570 /* PetProjectDetailsRepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB89A2A1BD9B60046C570 /* PetProjectDetailsRepositoryModel.swift */; };
 		EBDAB89D2A1BDB8D0046C570 /* FirestoreDataSourceFetchPetProjectDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB89C2A1BDB8D0046C570 /* FirestoreDataSourceFetchPetProjectDetailsTests.swift */; };
 		EBDAB89F2A1BDCE90046C570 /* LocalCacheDataSourceFetchPetProjectDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB89E2A1BDCE90046C570 /* LocalCacheDataSourceFetchPetProjectDetailsTests.swift */; };
 		EBDAB8A12A1BDE4D0046C570 /* LocalCacheDataSourceStorePetProjectDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB8A02A1BDE4D0046C570 /* LocalCacheDataSourceStorePetProjectDetailsTests.swift */; };
@@ -326,6 +329,9 @@
 		EBDAB88B2A1BCD020046C570 /* FirestoreDataSourceFetchWorkDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDataSourceFetchWorkDetailsTests.swift; sourceTree = "<group>"; };
 		EBDAB88E2A1BCF130046C570 /* WorksRepositoryFetchDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksRepositoryFetchDetailsTests.swift; sourceTree = "<group>"; };
 		EBDAB8902A1BD1210046C570 /* MockFetchWorkDetailsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFetchWorkDetailsUseCase.swift; sourceTree = "<group>"; };
+		EBDAB8962A1BD8A40046C570 /* PetProjectDetailsFirestoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectDetailsFirestoreModel.swift; sourceTree = "<group>"; };
+		EBDAB8982A1BD97E0046C570 /* PetProjectDetailsLocalCacheModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectDetailsLocalCacheModel.swift; sourceTree = "<group>"; };
+		EBDAB89A2A1BD9B60046C570 /* PetProjectDetailsRepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectDetailsRepositoryModel.swift; sourceTree = "<group>"; };
 		EBDAB89C2A1BDB8D0046C570 /* FirestoreDataSourceFetchPetProjectDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDataSourceFetchPetProjectDetailsTests.swift; sourceTree = "<group>"; };
 		EBDAB89E2A1BDCE90046C570 /* LocalCacheDataSourceFetchPetProjectDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSourceFetchPetProjectDetailsTests.swift; sourceTree = "<group>"; };
 		EBDAB8A02A1BDE4D0046C570 /* LocalCacheDataSourceStorePetProjectDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSourceStorePetProjectDetailsTests.swift; sourceTree = "<group>"; };
@@ -422,6 +428,7 @@
 				EB3C831629F9B07C00742C21 /* WorkFirestoreModel.swift */,
 				EB5140352A1419B800CA5FF0 /* WorkDetailsFirestoreModel.swift */,
 				EBD9876B2A04396400495DF3 /* PetProjectFirestoreModel.swift */,
+				EBDAB8962A1BD8A40046C570 /* PetProjectDetailsFirestoreModel.swift */,
 			);
 			path = firestore;
 			sourceTree = "<group>";
@@ -588,6 +595,7 @@
 				EB513FE32A0A9C8000CA5FF0 /* WorksLocalCacheModel.swift */,
 				EB5140392A15435400CA5FF0 /* WorkDetailsLocalCacheModel.swift */,
 				EB513FE52A0A9D5D00CA5FF0 /* PetProjectsLocalCacheModel.swift */,
+				EBDAB8982A1BD97E0046C570 /* PetProjectDetailsLocalCacheModel.swift */,
 			);
 			path = localCache;
 			sourceTree = "<group>";
@@ -618,6 +626,7 @@
 				EB513FF52A0AF77C00CA5FF0 /* WorkRepositoryModel.swift */,
 				EB5140332A14197700CA5FF0 /* WorkDetailsRepositoryModel.swift */,
 				EB513FF72A0AF79300CA5FF0 /* PetProjectRepositoryModel.swift */,
+				EBDAB89A2A1BD9B60046C570 /* PetProjectDetailsRepositoryModel.swift */,
 				EB513FF92A0AF80E00CA5FF0 /* RepositoryDataSourceTypeModel.swift */,
 			);
 			path = repositories;
@@ -866,6 +875,7 @@
 				EBA53C4129FAE9A400D7095F /* works */,
 				EB51401F2A1411D000CA5FF0 /* workDetails */,
 				EBD9877D2A04F98500495DF3 /* petProjects */,
+				EBDAB8922A1BD79A0046C570 /* petProjectDetails */,
 				EB513FB42A09822800CA5FF0 /* skills */,
 				EB513FD92A0A4A7500CA5FF0 /* aboutMe */,
 			);
@@ -1237,6 +1247,37 @@
 			path = workDetails;
 			sourceTree = "<group>";
 		};
+		EBDAB8922A1BD79A0046C570 /* petProjectDetails */ = {
+			isa = PBXGroup;
+			children = (
+				EBDAB8932A1BD7AC0046C570 /* models */,
+				EBDAB8942A1BD7B10046C570 /* view */,
+				EBDAB8952A1BD7B60046C570 /* viewModel */,
+			);
+			path = petProjectDetails;
+			sourceTree = "<group>";
+		};
+		EBDAB8932A1BD7AC0046C570 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		EBDAB8942A1BD7B10046C570 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		EBDAB8952A1BD7B60046C570 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1391,6 +1432,7 @@
 				EBA53C3E29FAE84A00D7095F /* FetchWorksUseCaseFactory.swift in Sources */,
 				EB513FD22A09DDC200CA5FF0 /* JsonDataSourceFactory.swift in Sources */,
 				EB513FE42A0A9C8000CA5FF0 /* WorksLocalCacheModel.swift in Sources */,
+				EBDAB89B2A1BD9B60046C570 /* PetProjectDetailsRepositoryModel.swift in Sources */,
 				EB51401A2A0C2D6100CA5FF0 /* SessionDataSourceFactory.swift in Sources */,
 				EB513FF62A0AF77C00CA5FF0 /* WorkRepositoryModel.swift in Sources */,
 				EBD987712A043C9600495DF3 /* PetProjectsRepository.swift in Sources */,
@@ -1412,6 +1454,7 @@
 				EB51402D2A14173E00CA5FF0 /* FetchWorkDetailsUseCase.swift in Sources */,
 				EB75A85B2A169BA7002BD628 /* DataOriginMessageView.swift in Sources */,
 				EBD987852A04FE4600495DF3 /* PetProjectItemEntity.swift in Sources */,
+				EBDAB8972A1BD8A40046C570 /* PetProjectDetailsFirestoreModel.swift in Sources */,
 				EBA53C4529FAEAE800D7095F /* WorksViewModel.swift in Sources */,
 				EB513FAC2A097CE100CA5FF0 /* SkillUseCaseModel.swift in Sources */,
 				EBD9877C2A043FA000495DF3 /* PetProjectUseCaseModel.swift in Sources */,
@@ -1426,6 +1469,7 @@
 				EBD987A72A056EA400495DF3 /* Color.swift in Sources */,
 				EBD9879C2A05185900495DF3 /* FetchPetProjectsUseCaseFactory.swift in Sources */,
 				EBA53C4029FAE87B00D7095F /* WorksRepositoryFactory.swift in Sources */,
+				EBDAB8992A1BD97E0046C570 /* PetProjectDetailsLocalCacheModel.swift in Sources */,
 				EB5140082A0C0F3200CA5FF0 /* InitializeSettingsBundleUseCaseFactory.swift in Sources */,
 				EB3C831129F9ADB900742C21 /* APIClient.swift in Sources */,
 				EBD987A52A052FD100495DF3 /* PetProjectsCardView.swift in Sources */,
