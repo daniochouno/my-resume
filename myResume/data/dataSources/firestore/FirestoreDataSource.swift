@@ -12,6 +12,7 @@ protocol FirestoreDataSource {
     func fetchWorks() async -> Result<WorkDocumentsFirestoreModel, Error>
     func fetchWorkDetails(id: String) async -> Result<WorkDetailsFirestoreModel, Error>
     func fetchPetProjects() async -> Result<PetProjectDocumentsFirestoreModel, Error>
+    func fetchPetProjectDetails(id: String) async -> Result<PetProjectDetailsFirestoreModel, Error>
 }
 
 class FirestoreDataSourceImpl: FirestoreDataSource {
@@ -68,6 +69,18 @@ class FirestoreDataSourceImpl: FirestoreDataSource {
         let request = APIClientRequest(url: url, method: .GET)
         
         let result: Result<PetProjectDocumentsFirestoreModel, Error> = await apiClient.fetch(request: request)
+        return result
+    }
+    
+    func fetchPetProjectDetails(id: String) async -> Result<PetProjectDetailsFirestoreModel, Error> {
+        guard let projectName = Bundle.main.infoDictionary?["FIRESTORE_PROJECT_NAME"] as? String else {
+            return .failure(APIResponseError.configuration)
+        }
+        
+        let url = "https://firestore.googleapis.com/v1/projects/\(projectName)/databases/(default)/documents/petProjects/\(id)"
+        let request = APIClientRequest(url: url, method: .GET)
+        
+        let result: Result<PetProjectDetailsFirestoreModel, Error> = await apiClient.fetch(request: request)
         return result
     }
 }
