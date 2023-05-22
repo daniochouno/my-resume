@@ -24,7 +24,7 @@ final class WorksViewModelLoadTests: XCTestCase {
     }
 
     func testSuccess() async throws {
-        let item = WorkItemUseCaseModel(company: "abc", title: "def", location: "ghi", startDate: Date(), endDate: nil)
+        let item = WorkItemUseCaseModel(documentId: "abc", company: "abc", companyLogoUrl: "abc", title: "abc", location: "abc", startDate: Date(), endDate: Date())
         let items = [item, item, item, item]
         let model = WorkUseCaseModel(type: .localCache, items: items)
         self.fetchWorksUseCase?.fetchResult = .success(model)

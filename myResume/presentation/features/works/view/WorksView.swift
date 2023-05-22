@@ -21,9 +21,7 @@ struct WorksView: View {
                             workCardView(work: work)
                         }
                         
-                        Text(LocalizedStringKey(viewModel.dataLoadedOrigin ?? ""))
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding()
+                        DataOriginMessageView(message: viewModel.dataLoadedOrigin)
                     }
                 }
                 .padding(4)
@@ -31,7 +29,9 @@ struct WorksView: View {
             }
             .padding()
             
-            toastMessage
+            ErrorMessageView(message: viewModel.errorMessage) {
+                self.viewModel.errorMessage = nil
+            }
         }
         .onAppear {
             Task {
@@ -43,14 +43,16 @@ struct WorksView: View {
     private func workCardView(work: WorkModel) -> some View {
         HStack(alignment: .top, spacing: 30) {
             VStack(spacing: 10) {
-                Circle()
-                    .fill(.black)
-                    .frame(width: 15, height: 15)
-                    .background(
-                        Circle()
-                            .stroke(.black, lineWidth: 1)
-                            .padding(-3)
-                    )
+                AsyncImage(url: URL(string: work.companyLogoUrl)) { image in
+                    image
+                        .resizable()
+                        .cornerRadius(18)
+                        .aspectRatio(contentMode: .fill)
+                } placeholder: {
+                    ProgressView()
+                }
+                .frame(width: 36, height: 36)
+                
                 Rectangle()
                     .fill(.black)
                     .frame(width: 3)
@@ -59,12 +61,13 @@ struct WorksView: View {
             
             VStack {
                 HStack(alignment: .top, spacing: 10) {
-                    VStack(alignment: .leading, spacing: 12) {
-                        Text(work.title)
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text(LocalizedStringKey(work.title))
                             .font(.title2.bold())
+                        
                         Text(work.company)
                             .font(.callout)
-                            .foregroundStyle(.secondary)
+                        
                         HStack(spacing: 4) {
                             Text(work.startDate.formatted(.dateTime.month().year()))
                                 .font(.callout)
@@ -78,39 +81,12 @@ struct WorksView: View {
                     }
                     .hLeading()
                 }
+                .padding(.top, 8)
             }
             .padding(0)
             .hLeading()
         }
         .hLeading()
-    }
-    
-    private var toastMessage: some View {
-        VStack {
-            Spacer()
-            if let errorMessage = viewModel.errorMessage {
-                Group {
-                    Text(errorMessage)
-                        .multilineTextAlignment(.leading)
-                        .foregroundColor(Color.black)
-                        .padding()
-                }
-                .frame(maxWidth: .infinity)
-                .background(Color.white)
-                .cornerRadius(4)
-                .onTapGesture {
-                    self.viewModel.errorMessage = nil
-                }
-                .onAppear {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                        self.viewModel.errorMessage = nil
-                    }
-                }
-            }
-        }
-        .padding(EdgeInsets(top: 0, leading: 16, bottom: 16, trailing: 16))
-        .animation(.easeIn, value: (viewModel.errorMessage != nil))
-        .transition(.slide)
     }
 }
 

@@ -25,7 +25,7 @@ final class WorksViewModel: ObservableObject {
         let result = await fetchWorksUseCase.fetch()
         switch result {
         case .success(let workUseCaseModel):
-            self.dataLoadedOrigin = "petProjects.origin.\(workUseCaseModel.type.rawValue)"
+            self.dataLoadedOrigin = "data.origin.\(workUseCaseModel.type.rawValue)"
             let works = workUseCaseModel.items.map { workItemUseCaseModel in
                 return WorkModel(from: workItemUseCaseModel)
             }
