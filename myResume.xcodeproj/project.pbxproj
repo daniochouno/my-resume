@@ -76,6 +76,9 @@
 		EB5140182A0C2D5500CA5FF0 /* SessionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5140172A0C2D5500CA5FF0 /* SessionDataSource.swift */; };
 		EB51401A2A0C2D6100CA5FF0 /* SessionDataSourceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5140192A0C2D6100CA5FF0 /* SessionDataSourceFactory.swift */; };
 		EB51401E2A0C318F00CA5FF0 /* MockSessionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB51401D2A0C318F00CA5FF0 /* MockSessionDataSource.swift */; };
+		EB51402A2A14152700CA5FF0 /* WorkDetailsUseCaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5140292A14152700CA5FF0 /* WorkDetailsUseCaseModel.swift */; };
+		EB51402D2A14173E00CA5FF0 /* FetchWorkDetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB51402C2A14173E00CA5FF0 /* FetchWorkDetailsUseCase.swift */; };
+		EB51402F2A14174E00CA5FF0 /* FetchWorkDetailsUseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB51402E2A14174E00CA5FF0 /* FetchWorkDetailsUseCaseFactory.swift */; };
 		EB5140322A14184000CA5FF0 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5140312A14184000CA5FF0 /* String.swift */; };
 		EB5140342A14197700CA5FF0 /* WorkDetailsRepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5140332A14197700CA5FF0 /* WorkDetailsRepositoryModel.swift */; };
 		EB5140362A1419B800CA5FF0 /* WorkDetailsFirestoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5140352A1419B800CA5FF0 /* WorkDetailsFirestoreModel.swift */; };
@@ -226,6 +229,9 @@
 		EB5140172A0C2D5500CA5FF0 /* SessionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDataSource.swift; sourceTree = "<group>"; };
 		EB5140192A0C2D6100CA5FF0 /* SessionDataSourceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDataSourceFactory.swift; sourceTree = "<group>"; };
 		EB51401D2A0C318F00CA5FF0 /* MockSessionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSessionDataSource.swift; sourceTree = "<group>"; };
+		EB5140292A14152700CA5FF0 /* WorkDetailsUseCaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailsUseCaseModel.swift; sourceTree = "<group>"; };
+		EB51402C2A14173E00CA5FF0 /* FetchWorkDetailsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchWorkDetailsUseCase.swift; sourceTree = "<group>"; };
+		EB51402E2A14174E00CA5FF0 /* FetchWorkDetailsUseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchWorkDetailsUseCaseFactory.swift; sourceTree = "<group>"; };
 		EB5140312A14184000CA5FF0 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		EB5140332A14197700CA5FF0 /* WorkDetailsRepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailsRepositoryModel.swift; sourceTree = "<group>"; };
 		EB5140352A1419B800CA5FF0 /* WorkDetailsFirestoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailsFirestoreModel.swift; sourceTree = "<group>"; };
@@ -643,6 +649,15 @@
 			path = session;
 			sourceTree = "<group>";
 		};
+		EB51402B2A14167300CA5FF0 /* workDetails */ = {
+			isa = PBXGroup;
+			children = (
+				EB51402C2A14173E00CA5FF0 /* FetchWorkDetailsUseCase.swift */,
+				EB51402E2A14174E00CA5FF0 /* FetchWorkDetailsUseCaseFactory.swift */,
+			);
+			path = workDetails;
+			sourceTree = "<group>";
+		};
 		EB5140302A14183000CA5FF0 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -754,9 +769,10 @@
 			isa = PBXGroup;
 			children = (
 				EB5140042A0C0F0E00CA5FF0 /* settingsBundle */,
-				EB513FA82A097C3B00CA5FF0 /* skills */,
-				EBD987782A043F3D00495DF3 /* petProjects */,
 				EBA53C3729FAE3E900D7095F /* works */,
+				EB51402B2A14167300CA5FF0 /* workDetails */,
+				EBD987782A043F3D00495DF3 /* petProjects */,
+				EB513FA82A097C3B00CA5FF0 /* skills */,
 			);
 			path = useCases;
 			sourceTree = "<group>";
@@ -893,6 +909,7 @@
 			isa = PBXGroup;
 			children = (
 				EBA53C3B29FAE7A000D7095F /* WorkUseCaseModel.swift */,
+				EB5140292A14152700CA5FF0 /* WorkDetailsUseCaseModel.swift */,
 				EBD9877B2A043FA000495DF3 /* PetProjectUseCaseModel.swift */,
 				EB513FAD2A097DF400CA5FF0 /* SkillSectionUseCaseModel.swift */,
 				EB513FAB2A097CE100CA5FF0 /* SkillUseCaseModel.swift */,
@@ -1273,6 +1290,7 @@
 				EB513FF62A0AF77C00CA5FF0 /* WorkRepositoryModel.swift in Sources */,
 				EBD987712A043C9600495DF3 /* PetProjectsRepository.swift in Sources */,
 				EB513FF82A0AF79300CA5FF0 /* PetProjectRepositoryModel.swift in Sources */,
+				EB51402A2A14152700CA5FF0 /* WorkDetailsUseCaseModel.swift in Sources */,
 				EB513FE82A0AA43200CA5FF0 /* LocalCacheDataSourceFactory.swift in Sources */,
 				EB51400D2A0C102B00CA5FF0 /* SettingsBundleRepositoryFactory.swift in Sources */,
 				EB513FCA2A09DB5700CA5FF0 /* SkillsViewControllerFactory.swift in Sources */,
@@ -1284,12 +1302,14 @@
 				EB513FD42A09E00200CA5FF0 /* SkillsView.swift in Sources */,
 				EB513F992A093B5400CA5FF0 /* SkillSectionJsonModel.swift in Sources */,
 				EBD9879A2A05181800495DF3 /* PetProjectsInteractorFactory.swift in Sources */,
+				EB51402D2A14173E00CA5FF0 /* FetchWorkDetailsUseCase.swift in Sources */,
 				EBD987852A04FE4600495DF3 /* PetProjectItemEntity.swift in Sources */,
 				EBA53C4529FAEAE800D7095F /* WorksViewModel.swift in Sources */,
 				EB513FAC2A097CE100CA5FF0 /* SkillUseCaseModel.swift in Sources */,
 				EBD9877C2A043FA000495DF3 /* PetProjectUseCaseModel.swift in Sources */,
 				EB5140182A0C2D5500CA5FF0 /* SessionDataSource.swift in Sources */,
 				EB3C830D29F9A9CA00742C21 /* FirestoreDataSourceFactory.swift in Sources */,
+				EB51402F2A14174E00CA5FF0 /* FetchWorkDetailsUseCaseFactory.swift in Sources */,
 				EB3C831E29F9BB4900742C21 /* WorksRepository.swift in Sources */,
 				EB51400B2A0C101B00CA5FF0 /* SettingsBundleRepository.swift in Sources */,
 				EB513F972A093B2500CA5FF0 /* SkillJsonModel.swift in Sources */,
@@ -1322,6 +1342,7 @@
 				EB513FDC2A0A4AA700CA5FF0 /* AboutMeView.swift in Sources */,
 				EB513FCE2A09DD4400CA5FF0 /* FetchSkillSectionsUseCaseFactory.swift in Sources */,
 				EBA53C3129FA9F0500D7095F /* APIClientRequest.swift in Sources */,
+				EB51403A2A15435400CA5FF0 /* WorkDetailsLocalCacheModel.swift in Sources */,
 				EB02FA4029E9CD7100CAA9DC /* TabsView.swift in Sources */,
 				EBA53C3929FAE3FC00D7095F /* FetchWorksUseCase.swift in Sources */,
 				EBA53C4929FAEB5800D7095F /* WorksViewFactory.swift in Sources */,

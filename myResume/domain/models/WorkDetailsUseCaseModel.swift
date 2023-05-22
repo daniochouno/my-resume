@@ -1,31 +1,30 @@
 //
-//  WorkModel.swift
+//  WorkDetailsUseCaseModel.swift
 //  myResume
 //
-//  Created by Daniel Martínez Muñoz on 27/4/23.
+//  Created by Daniel Martínez Muñoz on 16/5/23.
 //
 
 import Foundation
 
-struct WorkUseCaseModel: Decodable {
+struct WorkDetailsUseCaseModel: Decodable {
     let type: RepositoryDataSourceTypeModel
-    let items: [WorkItemUseCaseModel]
+    let item: WorkDetailsItemUseCaseModel
 }
 
-struct WorkItemUseCaseModel: Decodable {
-    let documentId: String
+struct WorkDetailsItemUseCaseModel: Decodable {
     let company: String
     let companyLogoUrl: String
     let title: String
     let location: String
     let startDate: Date
     let endDate: Date?
+    let summary: String?
+    let goalsAchieved: [String]?
 }
 
-extension WorkItemUseCaseModel {
-    init(from firestoreModel: WorkFirestoreModel) {
-        let documentIdUrl = URL(string: firestoreModel.name)!
-        self.documentId = documentIdUrl.lastPathComponent
+extension WorkDetailsItemUseCaseModel {
+    init(from firestoreModel: WorkDetailsFirestoreModel) {
         self.company = firestoreModel.fields.company.stringValue
         self.companyLogoUrl = firestoreModel.fields.companyLogoUrl.stringValue
         self.title = firestoreModel.fields.titleKey.stringValue
@@ -44,6 +43,16 @@ extension WorkItemUseCaseModel {
             }
         } else {
             self.endDate = nil
+        }
+        if let summaryString = firestoreModel.fields.summaryKey?.stringValue {
+            self.summary = summaryString
+        } else {
+            self.summary = nil
+        }
+        if let array = firestoreModel.fields.goalsAchievedKeys?.arrayValue {
+            self.goalsAchieved = array.values.map({ $0.stringValue })
+        } else {
+            self.goalsAchieved = nil
         }
     }
 }
