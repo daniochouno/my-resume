@@ -25,7 +25,7 @@ final class PetProjectsPresenter: ObservableObject {
         let result = await interactor.getListOfPetProjects()
         switch result {
         case .success(let petProjectEntity):
-            self.dataLoadedOrigin = "petProjects.origin.\(petProjectEntity.type.rawValue)"
+            self.dataLoadedOrigin = "data.origin.\(petProjectEntity.type.rawValue)"
             self.petProjects = petProjectEntity.items
         case .failure(let error):
             self.errorMessage = "\(error)"
