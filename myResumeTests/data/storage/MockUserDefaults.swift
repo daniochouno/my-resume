@@ -48,4 +48,8 @@ class MockUserDefaults: UserDefaults {
             self.dictionary.removeValue(forKey: defaultName)
         }
     }
+    
+    override func dictionaryRepresentation() -> [String : Any] {
+        return self.dictionary
+    }
 }

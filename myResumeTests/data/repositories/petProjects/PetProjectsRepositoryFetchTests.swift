@@ -31,8 +31,8 @@ final class PetProjectsRepositoryFetchTests: XCTestCase {
     }
 
     func testSuccess() async throws {
-        let stringField = PetProjectFieldStringValueFirestoreModel(stringValue: "abc")
-        let integerField = PetProjectFieldIntegerValueFirestoreModel(integerValue: "123")
+        let stringField = FieldStringFirestoreModel(stringValue: "abc")
+        let integerField = FieldIntegerFirestoreModel(integerValue: "123")
         let fields = PetProjectFieldFirestoreModel(titleKey: stringField, subtitleKey: stringField, iconUrl: stringField, headerColor: stringField, linkAppStore: stringField, linkPlayStore: stringField, linkWeb: stringField, downloads: integerField)
         let firestoreModel = PetProjectFirestoreModel(name: "abc123", fields: fields)
         let array = [firestoreModel, firestoreModel]
