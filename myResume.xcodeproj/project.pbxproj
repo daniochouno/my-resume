@@ -158,6 +158,7 @@
 		EBDAB89F2A1BDCE90046C570 /* LocalCacheDataSourceFetchPetProjectDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB89E2A1BDCE90046C570 /* LocalCacheDataSourceFetchPetProjectDetailsTests.swift */; };
 		EBDAB8A12A1BDE4D0046C570 /* LocalCacheDataSourceStorePetProjectDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB8A02A1BDE4D0046C570 /* LocalCacheDataSourceStorePetProjectDetailsTests.swift */; };
 		EBDAB8A32A1BDF290046C570 /* LocalCacheDataSourceRemovePetProjectDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB8A22A1BDF290046C570 /* LocalCacheDataSourceRemovePetProjectDetailsTests.swift */; };
+		EBDAB8AC2A1BEFB50046C570 /* PetProjectsRepositoryFetchDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB8AB2A1BEFB50046C570 /* PetProjectsRepositoryFetchDetailsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -336,6 +337,7 @@
 		EBDAB89E2A1BDCE90046C570 /* LocalCacheDataSourceFetchPetProjectDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSourceFetchPetProjectDetailsTests.swift; sourceTree = "<group>"; };
 		EBDAB8A02A1BDE4D0046C570 /* LocalCacheDataSourceStorePetProjectDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSourceStorePetProjectDetailsTests.swift; sourceTree = "<group>"; };
 		EBDAB8A22A1BDF290046C570 /* LocalCacheDataSourceRemovePetProjectDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSourceRemovePetProjectDetailsTests.swift; sourceTree = "<group>"; };
+		EBDAB8AB2A1BEFB50046C570 /* PetProjectsRepositoryFetchDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectsRepositoryFetchDetailsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -862,6 +864,7 @@
 				EBA53C3729FAE3E900D7095F /* works */,
 				EB51402B2A14167300CA5FF0 /* workDetails */,
 				EBD987782A043F3D00495DF3 /* petProjects */,
+				EBDAB8A42A1BED810046C570 /* petProjectDetails */,
 				EB513FA82A097C3B00CA5FF0 /* skills */,
 			);
 			path = useCases;
@@ -1133,6 +1136,7 @@
 			isa = PBXGroup;
 			children = (
 				EBD9876E2A043BC400495DF3 /* PetProjectsRepositoryFetchTests.swift */,
+				EBDAB8AB2A1BEFB50046C570 /* PetProjectsRepositoryFetchDetailsTests.swift */,
 				EBD987762A043F0A00495DF3 /* MockPetProjectsRepository.swift */,
 			);
 			path = petProjects;
@@ -1526,6 +1530,7 @@
 				EBA53C5329FBC40400D7095F /* MockFirestoreDataSource.swift in Sources */,
 				EB513FF12A0AB4E500CA5FF0 /* LocalCacheDataSourceStoreWorksTests.swift in Sources */,
 				EBD987772A043F0A00495DF3 /* MockPetProjectsRepository.swift in Sources */,
+				EBDAB8AC2A1BEFB50046C570 /* PetProjectsRepositoryFetchDetailsTests.swift in Sources */,
 				EBDAB89F2A1BDCE90046C570 /* LocalCacheDataSourceFetchPetProjectDetailsTests.swift in Sources */,
 				EBDAB8A32A1BDF290046C570 /* LocalCacheDataSourceRemovePetProjectDetailsTests.swift in Sources */,
 				EB513FEF2A0AAA5200CA5FF0 /* MockLocalCacheDataSource.swift in Sources */,

@@ -9,6 +9,7 @@ import Foundation
 
 protocol PetProjectsRepository {
     func fetch() async -> Result<PetProjectRepositoryModel, Error>
+    func fetchDetails(id: String) async -> Result<PetProjectDetailsRepositoryModel, Error>
 }
 
 class PetProjectsRepositoryImpl: PetProjectsRepository {

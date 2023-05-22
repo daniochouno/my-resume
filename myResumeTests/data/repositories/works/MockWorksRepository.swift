@@ -10,7 +10,7 @@ import Foundation
 
 class MockWorksRepository: WorksRepository {
     var fetchResult: Result<WorkRepositoryModel, Error>?
-    var fetchDetailsResult: Result<WorkDetailsRepositoryModel, Error>?
+    var fetchDetailsResult: [String: Result<WorkDetailsRepositoryModel, Error>]?
     
     func fetch() async -> Result<WorkRepositoryModel, Error> {
         guard let result = self.fetchResult else {
@@ -23,6 +23,9 @@ class MockWorksRepository: WorksRepository {
         guard let result = self.fetchDetailsResult else {
             return .failure(APIResponseError.configuration)
         }
-        return result
+        guard let resultDetails = result[id] else {
+            return .failure(APIResponseError.configuration)
+        }
+        return resultDetails
     }
 }
