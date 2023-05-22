@@ -25,9 +25,9 @@ final class FetchWorksUseCaseTests: XCTestCase {
     }
 
     func testSuccess() async throws {
-        let stringField = WorkFieldStringValueFirestoreModel(stringValue: "abc")
-        let timestampField = WorkFieldTimestampValueFirestoreModel(timestampValue: "2023-04-28T00:00:00.000Z")
-        let fields = WorkFieldFirestoreModel(company: stringField, title: stringField, location: stringField, startDate: timestampField, endDate: timestampField)
+        let stringField = FieldStringFirestoreModel(stringValue: "abc")
+        let timestampField = FieldTimestampFirestoreModel(timestampValue: "2023-04-28T00:00:00.000Z")
+        let fields = WorkFieldFirestoreModel(company: stringField, companyLogoUrl: stringField, titleKey: stringField, location: stringField, startDate: timestampField, endDate: timestampField)
         let workFirestoreModel = WorkFirestoreModel(name: "abc123", fields: fields)
         let arrayWorks = [workFirestoreModel, workFirestoreModel]
         let repositoryModel = WorkRepositoryModel(type: .localCache, items: arrayWorks)
