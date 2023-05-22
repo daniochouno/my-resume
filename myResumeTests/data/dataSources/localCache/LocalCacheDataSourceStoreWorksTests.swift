@@ -24,7 +24,7 @@ final class LocalCacheDataSourceStoreWorksTests: XCTestCase {
 
     func testSuccess() throws {
         let stringField = FieldStringFirestoreModel(stringValue: "abc")
-        let timestampField = FieldTimestampFirestoreModel(timestampValue: "def")
+        let timestampField = FieldTimestampFirestoreModel(timestampValue: "2023-04-28T00:00:00.000Z")
         let fields = WorkFieldFirestoreModel(company: stringField, companyLogoUrl: stringField, titleKey: stringField, location: stringField, startDate: timestampField, endDate: timestampField)
         let workFirestoreModel = WorkFirestoreModel(name: "abc123", fields: fields)
         let arrayWorks = [workFirestoreModel, workFirestoreModel]
