@@ -13,6 +13,7 @@ class MockFirestoreDataSource: FirestoreDataSource {
     var fetchWorksResult: Result<WorkDocumentsFirestoreModel, Error>?
     var fetchWorkDetailsResult: Result<WorkDetailsFirestoreModel, Error>?
     var fetchPetProjectsResult: Result<PetProjectDocumentsFirestoreModel, Error>?
+    var fetchPetProjectDetailsResult: Result<PetProjectDetailsFirestoreModel, Error>?
     
     func signIn() async -> Result<SessionFirestoreModel, Error> {
         guard let result = self.signInResult else {
@@ -37,6 +38,13 @@ class MockFirestoreDataSource: FirestoreDataSource {
     
     func fetchPetProjects() async -> Result<PetProjectDocumentsFirestoreModel, Error> {
         guard let result = self.fetchPetProjectsResult else {
+            return .failure(APIResponseError.configuration)
+        }
+        return result
+    }
+    
+    func fetchPetProjectDetails(id: String) async -> Result<PetProjectDetailsFirestoreModel, Error> {
+        guard let result = self.fetchPetProjectDetailsResult else {
             return .failure(APIResponseError.configuration)
         }
         return result

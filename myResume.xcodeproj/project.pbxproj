@@ -151,6 +151,7 @@
 		EBDAB88C2A1BCD020046C570 /* FirestoreDataSourceFetchWorkDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB88B2A1BCD020046C570 /* FirestoreDataSourceFetchWorkDetailsTests.swift */; };
 		EBDAB88F2A1BCF130046C570 /* WorksRepositoryFetchDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB88E2A1BCF130046C570 /* WorksRepositoryFetchDetailsTests.swift */; };
 		EBDAB8912A1BD1210046C570 /* MockFetchWorkDetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB8902A1BD1210046C570 /* MockFetchWorkDetailsUseCase.swift */; };
+		EBDAB89D2A1BDB8D0046C570 /* FirestoreDataSourceFetchPetProjectDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB89C2A1BDB8D0046C570 /* FirestoreDataSourceFetchPetProjectDetailsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -322,6 +323,7 @@
 		EBDAB88B2A1BCD020046C570 /* FirestoreDataSourceFetchWorkDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDataSourceFetchWorkDetailsTests.swift; sourceTree = "<group>"; };
 		EBDAB88E2A1BCF130046C570 /* WorksRepositoryFetchDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksRepositoryFetchDetailsTests.swift; sourceTree = "<group>"; };
 		EBDAB8902A1BD1210046C570 /* MockFetchWorkDetailsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFetchWorkDetailsUseCase.swift; sourceTree = "<group>"; };
+		EBDAB89C2A1BDB8D0046C570 /* FirestoreDataSourceFetchPetProjectDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDataSourceFetchPetProjectDetailsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -953,6 +955,7 @@
 				EBA53C2E29FA947300D7095F /* FirestoreDataSourceFetchWorksTests.swift */,
 				EBDAB88B2A1BCD020046C570 /* FirestoreDataSourceFetchWorkDetailsTests.swift */,
 				EBD987692A04247A00495DF3 /* FirestoreDataSourceFetchPetProjectsTests.swift */,
+				EBDAB89C2A1BDB8D0046C570 /* FirestoreDataSourceFetchPetProjectDetailsTests.swift */,
 				EBA53C5229FBC40400D7095F /* MockFirestoreDataSource.swift */,
 			);
 			path = firestore;
@@ -1466,6 +1469,7 @@
 				EBDAB8872A1BCBF40046C570 /* WorkDetailsViewModelLoadTests.swift in Sources */,
 				EB513FBF2A09864E00CA5FF0 /* SkillsViewModelLoadTests.swift in Sources */,
 				EB75A85F2A16B92D002BD628 /* LocalCacheDataSourceRemoveWorksTests.swift in Sources */,
+				EBDAB89D2A1BDB8D0046C570 /* FirestoreDataSourceFetchPetProjectDetailsTests.swift in Sources */,
 				EBA53C5329FBC40400D7095F /* MockFirestoreDataSource.swift in Sources */,
 				EB513FF12A0AB4E500CA5FF0 /* LocalCacheDataSourceStoreWorksTests.swift in Sources */,
 				EBD987772A043F0A00495DF3 /* MockPetProjectsRepository.swift in Sources */,
