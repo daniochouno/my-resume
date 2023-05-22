@@ -28,21 +28,23 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="skillCollectionViewCell" id="DW3-F5-ZZ4" userLabel="skillsCollectionViewCell" customClass="SkillsCollectionViewCell" customModule="myResume" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="53.333333333333343" height="128"/>
+                                        <rect key="frame" x="0.0" y="50" width="55.666666666666657" height="33.666666666666657"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="YFH-7t-cns">
-                                            <rect key="frame" x="0.0" y="0.0" width="53.333333333333343" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="55.666666666666657" height="33.666666666666657"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuo-Yw-OmE">
-                                                    <rect key="frame" x="6" y="101.66666666666667" width="41.333333333333336" height="20.333333333333329"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="6" y="6.0000000000000018" width="43.666666666666664" height="21.666666666666671"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="yuo-Yw-OmE" firstAttribute="centerY" secondItem="YFH-7t-cns" secondAttribute="centerY" id="GfJ-nL-Tem"/>
                                                 <constraint firstAttribute="bottom" secondItem="yuo-Yw-OmE" secondAttribute="bottom" constant="6" id="UK9-SM-1iQ"/>
+                                                <constraint firstItem="yuo-Yw-OmE" firstAttribute="top" secondItem="YFH-7t-cns" secondAttribute="top" constant="6" id="VSW-hU-lPQ"/>
                                                 <constraint firstAttribute="trailing" secondItem="yuo-Yw-OmE" secondAttribute="trailing" constant="6" id="aRN-Tt-XLr"/>
                                                 <constraint firstItem="yuo-Yw-OmE" firstAttribute="leading" secondItem="YFH-7t-cns" secondAttribute="leading" constant="6" id="sDh-uc-xRW"/>
                                             </constraints>
@@ -57,13 +59,12 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETo-rk-HpJ">
-                                            <rect key="frame" x="4" y="14.333333333333334" width="341" height="21.666666666666664"/>
-                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                            <rect key="frame" x="4" y="13" width="341" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
                                     <constraints>
                                         <constraint firstItem="ETo-rk-HpJ" firstAttribute="centerY" secondItem="Rbf-GA-GJp" secondAttribute="centerY" id="DUA-pc-k5n"/>
                                         <constraint firstAttribute="trailing" secondItem="ETo-rk-HpJ" secondAttribute="trailing" constant="16" id="aY0-cK-AMd"/>
@@ -112,9 +113,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
