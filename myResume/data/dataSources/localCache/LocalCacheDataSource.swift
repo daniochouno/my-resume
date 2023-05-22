@@ -9,15 +9,19 @@ import Foundation
 
 enum LocalCacheKey: String {
     case cacheWorks
+    case cacheWorkDetails
     case cachePetProjects
 }
 
 protocol LocalCacheDataSource {
     func fetchWorks() -> Result<WorksLocalCacheModel, Error>
+    func fetchWorkDetails(id: String) -> Result<WorkDetailsLocalCacheModel, Error>
     func fetchPetProjects() -> Result<PetProjectsLocalCacheModel, Error>
     func storeWorks(documents: WorkDocumentsFirestoreModel) -> Bool
+    func storeWorkDetails(id: String, item: WorkDetailsFirestoreModel) -> Bool
     func storePetProjects(documents: PetProjectDocumentsFirestoreModel) -> Bool
     func removeWorks()
+    func removeWorkDetails()
     func removePetProjects()
 }
 
@@ -34,6 +38,19 @@ class LocalCacheDataSourceImpl: LocalCacheDataSource {
         }
         do {
             let localCacheModel: WorksLocalCacheModel = try JSONDecoder().decode(WorksLocalCacheModel.self, from: data)
+            return .success(localCacheModel)
+        } catch {
+            return .failure(APIResponseError.parser)
+        }
+    }
+    
+    func fetchWorkDetails(id: String) -> Result<WorkDetailsLocalCacheModel, Error> {
+        let key = LocalCacheKey.cacheWorkDetails.rawValue + "." + id
+        guard let data = self.userDefaults.data(forKey: key) else {
+            return .failure(APIResponseError.parser)
+        }
+        do {
+            let localCacheModel: WorkDetailsLocalCacheModel = try JSONDecoder().decode(WorkDetailsLocalCacheModel.self, from: data)
             return .success(localCacheModel)
         } catch {
             return .failure(APIResponseError.parser)
@@ -66,6 +83,21 @@ class LocalCacheDataSourceImpl: LocalCacheDataSource {
         }
     }
     
+    func storeWorkDetails(id: String, item: WorkDetailsFirestoreModel) -> Bool {
+        let key = LocalCacheKey.cacheWorkDetails.rawValue + "." + id
+        let now = Date().timeIntervalSince1970
+        let localCacheModel = WorkDetailsLocalCacheModel(createdAt: now, item: item)
+        
+        do {
+            let data = try JSONEncoder().encode(localCacheModel)
+            
+            self.userDefaults.set(data, forKey: key)
+            return true
+        } catch {
+            return false
+        }
+    }
+    
     func storePetProjects(documents: PetProjectDocumentsFirestoreModel) -> Bool {
         let now = Date().timeIntervalSince1970
         let localCacheModel = PetProjectsLocalCacheModel(createdAt: now, documents: documents)
@@ -82,6 +114,15 @@ class LocalCacheDataSourceImpl: LocalCacheDataSource {
     
     func removeWorks() {
         self.userDefaults.removeObject(forKey: LocalCacheKey.cacheWorks.rawValue)
+    }
+    
+    func removeWorkDetails() {
+        let allData = self.userDefaults.dictionaryRepresentation()
+        let prefix = LocalCacheKey.cacheWorkDetails.rawValue + "."
+        let keys = allData.keys.filter { $0.hasPrefix(prefix) }
+        for key in keys {
+            self.userDefaults.removeObject(forKey: key)
+        }
     }
     
     func removePetProjects() {

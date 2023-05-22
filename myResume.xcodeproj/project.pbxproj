@@ -76,8 +76,10 @@
 		EB5140182A0C2D5500CA5FF0 /* SessionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5140172A0C2D5500CA5FF0 /* SessionDataSource.swift */; };
 		EB51401A2A0C2D6100CA5FF0 /* SessionDataSourceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5140192A0C2D6100CA5FF0 /* SessionDataSourceFactory.swift */; };
 		EB51401E2A0C318F00CA5FF0 /* MockSessionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB51401D2A0C318F00CA5FF0 /* MockSessionDataSource.swift */; };
+		EB5140342A14197700CA5FF0 /* WorkDetailsRepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5140332A14197700CA5FF0 /* WorkDetailsRepositoryModel.swift */; };
 		EB5140362A1419B800CA5FF0 /* WorkDetailsFirestoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5140352A1419B800CA5FF0 /* WorkDetailsFirestoreModel.swift */; };
 		EB5140382A153F2300CA5FF0 /* FirestoreValueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5140372A153F2300CA5FF0 /* FirestoreValueModel.swift */; };
+		EB51403A2A15435400CA5FF0 /* WorkDetailsLocalCacheModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5140392A15435400CA5FF0 /* WorkDetailsLocalCacheModel.swift */; };
 		EB7FB7E729EEA35900DEA576 /* CareerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7E629EEA35900DEA576 /* CareerView.swift */; };
 		EB7FB7E929EEA7A200DEA576 /* CareerViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7E829EEA7A200DEA576 /* CareerViewFactory.swift */; };
 		EB7FB7ED29EEAEFD00DEA576 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7EC29EEAEFD00DEA576 /* View.swift */; };
@@ -218,8 +220,10 @@
 		EB5140172A0C2D5500CA5FF0 /* SessionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDataSource.swift; sourceTree = "<group>"; };
 		EB5140192A0C2D6100CA5FF0 /* SessionDataSourceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDataSourceFactory.swift; sourceTree = "<group>"; };
 		EB51401D2A0C318F00CA5FF0 /* MockSessionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSessionDataSource.swift; sourceTree = "<group>"; };
+		EB5140332A14197700CA5FF0 /* WorkDetailsRepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailsRepositoryModel.swift; sourceTree = "<group>"; };
 		EB5140352A1419B800CA5FF0 /* WorkDetailsFirestoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailsFirestoreModel.swift; sourceTree = "<group>"; };
 		EB5140372A153F2300CA5FF0 /* FirestoreValueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreValueModel.swift; sourceTree = "<group>"; };
+		EB5140392A15435400CA5FF0 /* WorkDetailsLocalCacheModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailsLocalCacheModel.swift; sourceTree = "<group>"; };
 		EB7FB7E629EEA35900DEA576 /* CareerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerView.swift; sourceTree = "<group>"; };
 		EB7FB7E829EEA7A200DEA576 /* CareerViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerViewFactory.swift; sourceTree = "<group>"; };
 		EB7FB7EC29EEAEFD00DEA576 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
@@ -532,6 +536,7 @@
 			isa = PBXGroup;
 			children = (
 				EB513FE32A0A9C8000CA5FF0 /* WorksLocalCacheModel.swift */,
+				EB5140392A15435400CA5FF0 /* WorkDetailsLocalCacheModel.swift */,
 				EB513FE52A0A9D5D00CA5FF0 /* PetProjectsLocalCacheModel.swift */,
 			);
 			path = localCache;
@@ -553,6 +558,7 @@
 			isa = PBXGroup;
 			children = (
 				EB513FF52A0AF77C00CA5FF0 /* WorkRepositoryModel.swift */,
+				EB5140332A14197700CA5FF0 /* WorkDetailsRepositoryModel.swift */,
 				EB513FF72A0AF79300CA5FF0 /* PetProjectRepositoryModel.swift */,
 				EB513FF92A0AF80E00CA5FF0 /* RepositoryDataSourceTypeModel.swift */,
 			);
@@ -1296,6 +1302,7 @@
 				EB513FC82A09DA6C00CA5FF0 /* SkillsCollectionViewCell.swift in Sources */,
 				EB3C831929F9B52D00742C21 /* APIClientFactory.swift in Sources */,
 				EB02FA4229E9CF9300CAA9DC /* TabsViewFactory.swift in Sources */,
+				EB5140342A14197700CA5FF0 /* WorkDetailsRepositoryModel.swift in Sources */,
 				EB513FE62A0A9D5D00CA5FF0 /* PetProjectsLocalCacheModel.swift in Sources */,
 				EBA53C4729FAEB1D00D7095F /* WorksView.swift in Sources */,
 				EBA090FC29E5C2E0001B3005 /* myResumeApp.swift in Sources */,
