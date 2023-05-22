@@ -18,7 +18,12 @@ struct WorksView: View {
                         ProgressView()
                     } else {
                         ForEach(viewModel.works) { work in
-                            workCardView(work: work)
+                            NavigationLink {
+                                WorkDetailsViewFactory.makeView(id: work.documentId)
+                            } label: {
+                                workCardView(work: work)
+                            }
+                            .buttonStyle(PlainButtonStyle())
                         }
                         
                         DataOriginMessageView(message: viewModel.dataLoadedOrigin)
