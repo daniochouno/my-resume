@@ -84,6 +84,7 @@
 		EB5140362A1419B800CA5FF0 /* WorkDetailsFirestoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5140352A1419B800CA5FF0 /* WorkDetailsFirestoreModel.swift */; };
 		EB5140382A153F2300CA5FF0 /* FirestoreValueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5140372A153F2300CA5FF0 /* FirestoreValueModel.swift */; };
 		EB51403A2A15435400CA5FF0 /* WorkDetailsLocalCacheModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5140392A15435400CA5FF0 /* WorkDetailsLocalCacheModel.swift */; };
+		EB5140412A15577100CA5FF0 /* ErrorMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5140402A15577100CA5FF0 /* ErrorMessageView.swift */; };
 		EB75A85D2A16B841002BD628 /* LocalCacheDataSourceStoreWorkDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB75A85C2A16B841002BD628 /* LocalCacheDataSourceStoreWorkDetailsTests.swift */; };
 		EB75A85F2A16B92D002BD628 /* LocalCacheDataSourceRemoveWorksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB75A85E2A16B92D002BD628 /* LocalCacheDataSourceRemoveWorksTests.swift */; };
 		EB75A8612A16BAC1002BD628 /* LocalCacheDataSourceRemovePetProjectsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB75A8602A16BAC1002BD628 /* LocalCacheDataSourceRemovePetProjectsTests.swift */; };
@@ -237,6 +238,7 @@
 		EB5140352A1419B800CA5FF0 /* WorkDetailsFirestoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailsFirestoreModel.swift; sourceTree = "<group>"; };
 		EB5140372A153F2300CA5FF0 /* FirestoreValueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreValueModel.swift; sourceTree = "<group>"; };
 		EB5140392A15435400CA5FF0 /* WorkDetailsLocalCacheModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailsLocalCacheModel.swift; sourceTree = "<group>"; };
+		EB5140402A15577100CA5FF0 /* ErrorMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessageView.swift; sourceTree = "<group>"; };
 		EB75A85C2A16B841002BD628 /* LocalCacheDataSourceStoreWorkDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSourceStoreWorkDetailsTests.swift; sourceTree = "<group>"; };
 		EB75A85E2A16B92D002BD628 /* LocalCacheDataSourceRemoveWorksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSourceRemoveWorksTests.swift; sourceTree = "<group>"; };
 		EB75A8602A16BAC1002BD628 /* LocalCacheDataSourceRemovePetProjectsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSourceRemovePetProjectsTests.swift; sourceTree = "<group>"; };
@@ -666,6 +668,14 @@
 			path = extensions;
 			sourceTree = "<group>";
 		};
+		EB51403F2A15575A00CA5FF0 /* shared */ = {
+			isa = PBXGroup;
+			children = (
+				EB5140402A15577100CA5FF0 /* ErrorMessageView.swift */,
+			);
+			path = shared;
+			sourceTree = "<group>";
+		};
 		EB7FB7E429EEA33900DEA576 /* career */ = {
 			isa = PBXGroup;
 			children = (
@@ -686,6 +696,7 @@
 		EB7FB7EA29EEAECA00DEA576 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				EB51403F2A15575A00CA5FF0 /* shared */,
 				EB7FB7EB29EEAEEB00DEA576 /* extensions */,
 			);
 			path = views;
@@ -1294,6 +1305,7 @@
 				EB513FE82A0AA43200CA5FF0 /* LocalCacheDataSourceFactory.swift in Sources */,
 				EB51400D2A0C102B00CA5FF0 /* SettingsBundleRepositoryFactory.swift in Sources */,
 				EB513FCA2A09DB5700CA5FF0 /* SkillsViewControllerFactory.swift in Sources */,
+				EB5140412A15577100CA5FF0 /* ErrorMessageView.swift in Sources */,
 				EBA53C4B29FAEC7700D7095F /* WorksViewModelFactory.swift in Sources */,
 				EB513FFA2A0AF80E00CA5FF0 /* RepositoryDataSourceTypeModel.swift in Sources */,
 				EB513F9C2A093D2F00CA5FF0 /* JsonDataSource.swift in Sources */,
