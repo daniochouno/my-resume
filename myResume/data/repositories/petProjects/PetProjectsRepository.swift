@@ -76,6 +76,56 @@ class PetProjectsRepositoryImpl: PetProjectsRepository {
         }
     }
     
+    func fetchDetails(id: String) async -> Result<PetProjectDetailsRepositoryModel, Error> {
+        if let cacheResult = cacheFetchDetails(id: id) {
+            let repositoryModel = PetProjectDetailsRepositoryModel(type: .localCache, item: cacheResult)
+            return .success(repositoryModel)
+        }
+        
+        let remoteResult = await remoteFetchDetails(id: id)
+        switch remoteResult {
+        case .success(let item):
+            _ = self.cacheDataSource.storePetProjectDetails(id: id, item: item)
+            
+            let repositoryModel = PetProjectDetailsRepositoryModel(type: .remote, item: item)
+            return .success(repositoryModel)
+        case .failure(let error):
+            return .failure(error)
+        }
+    }
+    
+    private func cacheFetchDetails(id: String) -> PetProjectDetailsFirestoreModel? {
+        let cacheResult = cacheDataSource.fetchPetProjectDetails(id: id)
+        switch cacheResult {
+        case .success(let model):
+            let expirationTimeInSeconds = settingsBundleDataSource.fetchLocalCacheExpirationTimeValue()
+            
+            let now = Date().timeIntervalSince1970
+            let cacheStoredAt = model.createdAt
+            guard ((cacheStoredAt + expirationTimeInSeconds) >= now) else {
+                // Expired cache
+                return nil
+            }
+            
+            let petProjectDetails = model.item
+            return petProjectDetails
+        case .failure:
+            return nil
+        }
+    }
+    
+    private func remoteFetchDetails(id: String) async -> Result<PetProjectDetailsFirestoreModel, Error> {
+        await authenticateIfNeeded()
+        
+        let result = await remoteDataSource.fetchPetProjectDetails(id: id)
+        switch result {
+        case .success(let details):
+            return .success(details)
+        case .failure(let error):
+            return .failure(error)
+        }
+    }
+    
     private func authenticateIfNeeded() async {
         if let _ = sessionDataSource.fetchCurrentSession() {
             return
