@@ -27,6 +27,7 @@ class SettingsBundleRepositoryImpl: SettingsBundleRepository {
         
         settingsBundleDataSource.disableLocalCacheClearValue()
         cacheDataSource.removeWorks()
+        cacheDataSource.removeWorkDetails()
         cacheDataSource.removePetProjects()
     }
     
