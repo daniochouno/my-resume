@@ -17,20 +17,12 @@ struct PetProjectFirestoreModel: Encodable, Decodable {
 }
 
 struct PetProjectFieldFirestoreModel: Encodable, Decodable {
-    let titleKey: PetProjectFieldStringValueFirestoreModel
-    let subtitleKey: PetProjectFieldStringValueFirestoreModel
-    let iconUrl: PetProjectFieldStringValueFirestoreModel
-    let headerColor: PetProjectFieldStringValueFirestoreModel
-    let linkAppStore: PetProjectFieldStringValueFirestoreModel?
-    let linkPlayStore: PetProjectFieldStringValueFirestoreModel?
-    let linkWeb: PetProjectFieldStringValueFirestoreModel?
-    let downloads: PetProjectFieldIntegerValueFirestoreModel?
-}
-
-struct PetProjectFieldStringValueFirestoreModel: Encodable, Decodable {
-    let stringValue: String
-}
-
-struct PetProjectFieldIntegerValueFirestoreModel: Encodable, Decodable {
-    let integerValue: String
+    let titleKey: FieldStringFirestoreModel
+    let subtitleKey: FieldStringFirestoreModel
+    let iconUrl: FieldStringFirestoreModel
+    let headerColor: FieldStringFirestoreModel
+    let linkAppStore: FieldStringFirestoreModel?
+    let linkPlayStore: FieldStringFirestoreModel?
+    let linkWeb: FieldStringFirestoreModel?
+    let downloads: FieldIntegerFirestoreModel?
 }
