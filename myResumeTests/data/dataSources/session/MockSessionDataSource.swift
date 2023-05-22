@@ -9,7 +9,15 @@ import Foundation
 @testable import myResume
 
 class MockSessionDataSource: SessionDataSource {
+    var fetchCurrentAccessTokenResult: String?
     var fetchCurrentSessionResult: SessionFirestoreModel?
+    
+    func fetchCurrentAccessToken() -> String? {
+        guard let result = self.fetchCurrentAccessTokenResult else {
+            return nil
+        }
+        return result
+    }
     
     func fetchCurrentSession() -> SessionFirestoreModel? {
         guard let result = self.fetchCurrentSessionResult else {

@@ -1,14 +1,14 @@
 //
-//  LocalCacheDataSourceStoreWorksTests.swift
+//  LocalCacheDataSourceRemoveWorksTests.swift
 //  myResumeTests
 //
-//  Created by Daniel Martínez Muñoz on 9/5/23.
+//  Created by Daniel Martínez Muñoz on 18/5/23.
 //
 
 import XCTest
 @testable import myResume
 
-final class LocalCacheDataSourceStoreWorksTests: XCTestCase {
+final class LocalCacheDataSourceRemoveWorksTests: XCTestCase {
     var userDefaults: MockUserDefaults?
     var dataSource: LocalCacheDataSource?
     
@@ -23,31 +23,26 @@ final class LocalCacheDataSourceStoreWorksTests: XCTestCase {
     }
 
     func testSuccess() throws {
+        let now = Date().timeIntervalSince1970
         let stringField = FieldStringFirestoreModel(stringValue: "abc")
         let timestampField = FieldTimestampFirestoreModel(timestampValue: "def")
         let fields = WorkFieldFirestoreModel(company: stringField, companyLogoUrl: stringField, titleKey: stringField, location: stringField, startDate: timestampField, endDate: timestampField)
         let workFirestoreModel = WorkFirestoreModel(name: "abc123", fields: fields)
         let arrayWorks = [workFirestoreModel, workFirestoreModel]
         let documents = WorkDocumentsFirestoreModel(documents: arrayWorks)
-        
-        guard let result = self.dataSource?.storeWorks(documents: documents) else {
-            XCTFail("Unexpected error storing works")
-            return
-        }
-        if !result {
-            XCTFail("Unexpected error storing works")
-        }
-        
-        guard let data = self.userDefaults?.data(forKey: LocalCacheKey.cacheWorks.rawValue) else {
-            XCTFail("Unexpected error storing works")
-            return
-        }
+        let model = WorksLocalCacheModel(createdAt: now, documents: documents)
         do {
-            let decoded = try JSONDecoder().decode(WorksLocalCacheModel.self, from: data)
-            let works = decoded.documents.documents
-            XCTAssertEqual(works.count, 2, "Found \(works.count) expected works")
+            let data = try JSONEncoder().encode(model)
+            self.userDefaults?.set(data, forKey: LocalCacheKey.cacheWorks.rawValue)
         } catch {
             XCTFail("Unexpected parser error")
+        }
+        
+        self.dataSource?.removeWorks()
+        
+        if let _ = self.userDefaults?.data(forKey: LocalCacheKey.cacheWorks.rawValue) {
+            XCTFail("Unexpected error removing works")
+            return
         }
     }
 }

@@ -1,14 +1,14 @@
 //
-//  LocalCacheDataSourceStorePetOrojectsTests.swift
+//  LocalCacheDataSourceRemovePetProjectsTests.swift
 //  myResumeTests
 //
-//  Created by Daniel Martínez Muñoz on 9/5/23.
+//  Created by Daniel Martínez Muñoz on 18/5/23.
 //
 
 import XCTest
 @testable import myResume
 
-final class LocalCacheDataSourceStorePetProjectsTests: XCTestCase {
+final class LocalCacheDataSourceRemovePetProjectsTests: XCTestCase {
     var userDefaults: MockUserDefaults?
     var dataSource: LocalCacheDataSource?
     
@@ -23,31 +23,26 @@ final class LocalCacheDataSourceStorePetProjectsTests: XCTestCase {
     }
 
     func testSuccess() throws {
+        let now = Date().timeIntervalSince1970
         let stringField = FieldStringFirestoreModel(stringValue: "abc")
         let integerField = FieldIntegerFirestoreModel(integerValue: "123")
         let fields = PetProjectFieldFirestoreModel(titleKey: stringField, subtitleKey: stringField, iconUrl: stringField, headerColor: stringField, linkAppStore: stringField, linkPlayStore: stringField, linkWeb: stringField, downloads: integerField)
         let firestoreModel = PetProjectFirestoreModel(name: "abc123", fields: fields)
         let array = [firestoreModel, firestoreModel]
         let documents = PetProjectDocumentsFirestoreModel(documents: array)
-        
-        guard let result = self.dataSource?.storePetProjects(documents: documents) else {
-            XCTFail("Unexpected error storing pet projects")
-            return
-        }
-        if !result {
-            XCTFail("Unexpected error storing pet projects")
-        }
-        
-        guard let data = self.userDefaults?.data(forKey: LocalCacheKey.cachePetProjects.rawValue) else {
-            XCTFail("Unexpected error storing pet projects")
-            return
-        }
+        let model = PetProjectsLocalCacheModel(createdAt: now, documents: documents)
         do {
-            let decoded = try JSONDecoder().decode(PetProjectsLocalCacheModel.self, from: data)
-            let petProjects = decoded.documents.documents
-            XCTAssertEqual(petProjects.count, 2, "Found \(petProjects.count) expected pet projects")
+            let data = try JSONEncoder().encode(model)
+            self.userDefaults?.set(data, forKey: LocalCacheKey.cachePetProjects.rawValue)
         } catch {
             XCTFail("Unexpected parser error")
+        }
+        
+        self.dataSource?.removePetProjects()
+        
+        if let _ = self.userDefaults?.data(forKey: LocalCacheKey.cachePetProjects.rawValue) {
+            XCTFail("Unexpected error removing pet projects")
+            return
         }
     }
 }

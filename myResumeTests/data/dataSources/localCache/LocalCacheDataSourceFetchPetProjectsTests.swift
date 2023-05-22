@@ -19,13 +19,13 @@ final class LocalCacheDataSourceFetchPetProjectsTests: XCTestCase {
     }
 
     override func tearDownWithError() throws {
-        self.userDefaults?.removeObject(forKey: "petProjects")
+        self.userDefaults?.removeObject(forKey: LocalCacheKey.cachePetProjects.rawValue)
     }
 
     func testSuccess() throws {
         let now = Date().timeIntervalSince1970
-        let stringField = PetProjectFieldStringValueFirestoreModel(stringValue: "abc")
-        let integerField = PetProjectFieldIntegerValueFirestoreModel(integerValue: "123")
+        let stringField = FieldStringFirestoreModel(stringValue: "abc")
+        let integerField = FieldIntegerFirestoreModel(integerValue: "123")
         let fields = PetProjectFieldFirestoreModel(titleKey: stringField, subtitleKey: stringField, iconUrl: stringField, headerColor: stringField, linkAppStore: stringField, linkPlayStore: stringField, linkWeb: stringField, downloads: integerField)
         let firestoreModel = PetProjectFirestoreModel(name: "abc123", fields: fields)
         let array = [firestoreModel, firestoreModel]
@@ -33,7 +33,7 @@ final class LocalCacheDataSourceFetchPetProjectsTests: XCTestCase {
         let model = PetProjectsLocalCacheModel(createdAt: now, documents: documents)
         do {
             let data = try JSONEncoder().encode(model)
-            self.userDefaults?.set(data, forKey: "petProjects")
+            self.userDefaults?.set(data, forKey: LocalCacheKey.cachePetProjects.rawValue)
         } catch {
             XCTFail("Unexpected parser error")
         }
