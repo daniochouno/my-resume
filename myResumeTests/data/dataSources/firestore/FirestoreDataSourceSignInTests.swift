@@ -16,9 +16,9 @@ final class FirestoreDataSourceSignInTests: XCTestCase {
         configuration.protocolClasses = [MockURLProtocol.self]
         let urlSession = URLSession.init(configuration: configuration)
         
-        let userDefaults = MockUserDefaults()
+        let sessionDataSource = MockSessionDataSource()
         
-        let apiClient = APIClientImpl(urlSession: urlSession, userDefaults: userDefaults)
+        let apiClient = APIClientImpl(urlSession: urlSession, sessionDataSource: sessionDataSource)
         self.dataSource = FirestoreDataSourceImpl(apiClient: apiClient)
     }
 

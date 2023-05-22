@@ -11,6 +11,7 @@ import Foundation
 class MockFirestoreDataSource: FirestoreDataSource {
     var signInResult: Result<SessionFirestoreModel, Error>?
     var fetchWorksResult: Result<WorkDocumentsFirestoreModel, Error>?
+    var fetchWorkDetailsResult: Result<WorkDetailsFirestoreModel, Error>?
     var fetchPetProjectsResult: Result<PetProjectDocumentsFirestoreModel, Error>?
     
     func signIn() async -> Result<SessionFirestoreModel, Error> {
@@ -22,6 +23,13 @@ class MockFirestoreDataSource: FirestoreDataSource {
     
     func fetchWorks() async -> Result<WorkDocumentsFirestoreModel, Error> {
         guard let result = self.fetchWorksResult else {
+            return .failure(APIResponseError.configuration)
+        }
+        return result
+    }
+    
+    func fetchWorkDetails(id: String) async -> Result<WorkDetailsFirestoreModel, Error> {
+        guard let result = self.fetchWorkDetailsResult else {
             return .failure(APIResponseError.configuration)
         }
         return result

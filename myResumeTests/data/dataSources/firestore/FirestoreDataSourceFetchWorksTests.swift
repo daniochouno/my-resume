@@ -16,9 +16,9 @@ final class FirestoreDataSourceFetchWorksTests: XCTestCase {
         configuration.protocolClasses = [MockURLProtocol.self]
         let urlSession = URLSession.init(configuration: configuration)
         
-        let userDefaults = MockUserDefaults()
+        let sessionDataSource = MockSessionDataSource()
         
-        let apiClient = APIClientImpl(urlSession: urlSession, userDefaults: userDefaults)
+        let apiClient = APIClientImpl(urlSession: urlSession, sessionDataSource: sessionDataSource)
         self.dataSource = FirestoreDataSourceImpl(apiClient: apiClient)
     }
 
@@ -35,7 +35,10 @@ final class FirestoreDataSourceFetchWorksTests: XCTestCase {
                 "company": {
                     "stringValue": "Company A"
                 },
-                "title": {
+                "companyLogoUrl": {
+                    "stringValue": "https://www.google.com"
+                },
+                "titleKey": {
                     "stringValue": "Title A"
                 },
                 "location": {
@@ -54,7 +57,10 @@ final class FirestoreDataSourceFetchWorksTests: XCTestCase {
                 "company": {
                     "stringValue": "Company B"
                 },
-                "title": {
+                "companyLogoUrl": {
+                    "stringValue": "https://www.google.com"
+                },
+                "titleKey": {
                     "stringValue": "Title B"
                 },
                 "location": {
@@ -73,7 +79,10 @@ final class FirestoreDataSourceFetchWorksTests: XCTestCase {
                 "company": {
                     "stringValue": "Company C"
                 },
-                "title": {
+                "companyLogoUrl": {
+                    "stringValue": "https://www.google.com"
+                },
+                "titleKey": {
                     "stringValue": "Title C"
                 },
                 "location": {
