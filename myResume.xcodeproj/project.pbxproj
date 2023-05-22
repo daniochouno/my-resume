@@ -158,6 +158,9 @@
 		EBDAB89F2A1BDCE90046C570 /* LocalCacheDataSourceFetchPetProjectDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB89E2A1BDCE90046C570 /* LocalCacheDataSourceFetchPetProjectDetailsTests.swift */; };
 		EBDAB8A12A1BDE4D0046C570 /* LocalCacheDataSourceStorePetProjectDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB8A02A1BDE4D0046C570 /* LocalCacheDataSourceStorePetProjectDetailsTests.swift */; };
 		EBDAB8A32A1BDF290046C570 /* LocalCacheDataSourceRemovePetProjectDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB8A22A1BDF290046C570 /* LocalCacheDataSourceRemovePetProjectDetailsTests.swift */; };
+		EBDAB8A62A1BED9F0046C570 /* FetchPetProjectDetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB8A52A1BED9F0046C570 /* FetchPetProjectDetailsUseCase.swift */; };
+		EBDAB8A82A1BEDAA0046C570 /* FetchPetProjectDetailsUseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB8A72A1BEDAA0046C570 /* FetchPetProjectDetailsUseCaseFactory.swift */; };
+		EBDAB8AA2A1BEE220046C570 /* PetProjectDetailsUseCaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB8A92A1BEE220046C570 /* PetProjectDetailsUseCaseModel.swift */; };
 		EBDAB8AC2A1BEFB50046C570 /* PetProjectsRepositoryFetchDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB8AB2A1BEFB50046C570 /* PetProjectsRepositoryFetchDetailsTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -337,6 +340,9 @@
 		EBDAB89E2A1BDCE90046C570 /* LocalCacheDataSourceFetchPetProjectDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSourceFetchPetProjectDetailsTests.swift; sourceTree = "<group>"; };
 		EBDAB8A02A1BDE4D0046C570 /* LocalCacheDataSourceStorePetProjectDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSourceStorePetProjectDetailsTests.swift; sourceTree = "<group>"; };
 		EBDAB8A22A1BDF290046C570 /* LocalCacheDataSourceRemovePetProjectDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSourceRemovePetProjectDetailsTests.swift; sourceTree = "<group>"; };
+		EBDAB8A52A1BED9F0046C570 /* FetchPetProjectDetailsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPetProjectDetailsUseCase.swift; sourceTree = "<group>"; };
+		EBDAB8A72A1BEDAA0046C570 /* FetchPetProjectDetailsUseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPetProjectDetailsUseCaseFactory.swift; sourceTree = "<group>"; };
+		EBDAB8A92A1BEE220046C570 /* PetProjectDetailsUseCaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectDetailsUseCaseModel.swift; sourceTree = "<group>"; };
 		EBDAB8AB2A1BEFB50046C570 /* PetProjectsRepositoryFetchDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectsRepositoryFetchDetailsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1008,6 +1014,7 @@
 				EBA53C3B29FAE7A000D7095F /* WorkUseCaseModel.swift */,
 				EB5140292A14152700CA5FF0 /* WorkDetailsUseCaseModel.swift */,
 				EBD9877B2A043FA000495DF3 /* PetProjectUseCaseModel.swift */,
+				EBDAB8A92A1BEE220046C570 /* PetProjectDetailsUseCaseModel.swift */,
 				EB513FAD2A097DF400CA5FF0 /* SkillSectionUseCaseModel.swift */,
 				EB513FAB2A097CE100CA5FF0 /* SkillUseCaseModel.swift */,
 			);
@@ -1282,6 +1289,15 @@
 			path = viewModel;
 			sourceTree = "<group>";
 		};
+		EBDAB8A42A1BED810046C570 /* petProjectDetails */ = {
+			isa = PBXGroup;
+			children = (
+				EBDAB8A52A1BED9F0046C570 /* FetchPetProjectDetailsUseCase.swift */,
+				EBDAB8A72A1BEDAA0046C570 /* FetchPetProjectDetailsUseCaseFactory.swift */,
+			);
+			path = petProjectDetails;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1455,6 +1471,7 @@
 				EB513F992A093B5400CA5FF0 /* SkillSectionJsonModel.swift in Sources */,
 				EBD9879A2A05181800495DF3 /* PetProjectsInteractorFactory.swift in Sources */,
 				EB51403E2A15468500CA5FF0 /* WorkDetailsViewFactory.swift in Sources */,
+				EBDAB8AA2A1BEE220046C570 /* PetProjectDetailsUseCaseModel.swift in Sources */,
 				EB51402D2A14173E00CA5FF0 /* FetchWorkDetailsUseCase.swift in Sources */,
 				EB75A85B2A169BA7002BD628 /* DataOriginMessageView.swift in Sources */,
 				EBD987852A04FE4600495DF3 /* PetProjectItemEntity.swift in Sources */,
@@ -1493,6 +1510,7 @@
 				EB513FC42A098A3D00CA5FF0 /* SkillsViewController.swift in Sources */,
 				EBD987902A050ACB00495DF3 /* PetProjectsPresenter.swift in Sources */,
 				EBA53C4E29FAED2000D7095F /* WorkModel.swift in Sources */,
+				EBDAB8A82A1BEDAA0046C570 /* FetchPetProjectDetailsUseCaseFactory.swift in Sources */,
 				EB513FA22A0978D900CA5FF0 /* SkillsRepository.swift in Sources */,
 				EB51403C2A1545E800CA5FF0 /* WorkDetailsView.swift in Sources */,
 				EBD9879E2A05188F00495DF3 /* PetProjectsRepositoryFactory.swift in Sources */,
@@ -1510,6 +1528,7 @@
 				EB02FA4229E9CF9300CAA9DC /* TabsViewFactory.swift in Sources */,
 				EB5140342A14197700CA5FF0 /* WorkDetailsRepositoryModel.swift in Sources */,
 				EB5140242A14122C00CA5FF0 /* WorkDetailsModel.swift in Sources */,
+				EBDAB8A62A1BED9F0046C570 /* FetchPetProjectDetailsUseCase.swift in Sources */,
 				EB513FE62A0A9D5D00CA5FF0 /* PetProjectsLocalCacheModel.swift in Sources */,
 				EBA53C4729FAEB1D00D7095F /* WorksView.swift in Sources */,
 				EBA090FC29E5C2E0001B3005 /* myResumeApp.swift in Sources */,

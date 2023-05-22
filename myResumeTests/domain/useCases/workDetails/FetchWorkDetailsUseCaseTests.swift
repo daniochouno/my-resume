@@ -33,7 +33,10 @@ final class FetchWorkDetailsUseCaseTests: XCTestCase {
         let fields = WorkDetailsFieldFirestoreModel(company: stringField, companyLogoUrl: stringField, titleKey: stringField, location: stringField, startDate: timestampField, endDate: timestampField, summaryKey: stringField, goalsAchievedKeys: arrayField)
         let workDetailsFirestoreModel = WorkDetailsFirestoreModel(name: documentId, fields: fields)
         let repositoryModel = WorkDetailsRepositoryModel(type: .localCache, item: workDetailsFirestoreModel)
-        self.repository?.fetchDetailsResult = .success(repositoryModel)
+        let dictionary: [String: Result<WorkDetailsRepositoryModel, Error>] = [
+            documentId: .success(repositoryModel)
+        ]
+        self.repository?.fetchDetailsResult = dictionary
         
         let result = await self.useCase?.fetch(id: documentId)
         switch result {
