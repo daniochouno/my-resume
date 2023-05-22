@@ -12,6 +12,7 @@ class MockLocalCacheDataSource: LocalCacheDataSource {
     var fetchWorksResult: Result<WorksLocalCacheModel, Error>?
     var fetchWorkDetailsResult: Result<WorkDetailsLocalCacheModel, Error>?
     var fetchPetProjectsResult: Result<PetProjectsLocalCacheModel, Error>?
+    var fetchPetProjectDetailsResult: Result<PetProjectDetailsLocalCacheModel, Error>?
     
     func fetchWorks() -> Result<WorksLocalCacheModel, Error> {
         guard let result = self.fetchWorksResult else {
@@ -34,6 +35,13 @@ class MockLocalCacheDataSource: LocalCacheDataSource {
         return result
     }
     
+    func fetchPetProjectDetails(id: String) -> Result<PetProjectDetailsLocalCacheModel, Error> {
+        guard let result = self.fetchPetProjectDetailsResult else {
+            return .failure(APIResponseError.configuration)
+        }
+        return result
+    }
+    
     func storeWorks(documents: WorkDocumentsFirestoreModel) -> Bool {
         return true
     }
@@ -46,6 +54,10 @@ class MockLocalCacheDataSource: LocalCacheDataSource {
         return true
     }
     
+    func storePetProjectDetails(id: String, item: PetProjectDetailsFirestoreModel) -> Bool {
+        return true
+    }
+    
     func removeWorks() {
         
     }
@@ -55,6 +67,10 @@ class MockLocalCacheDataSource: LocalCacheDataSource {
     }
     
     func removePetProjects() {
+        
+    }
+    
+    func removePetProjectDetails() {
         
     }
 }

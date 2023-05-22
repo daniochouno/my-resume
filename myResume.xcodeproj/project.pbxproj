@@ -152,6 +152,9 @@
 		EBDAB88F2A1BCF130046C570 /* WorksRepositoryFetchDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB88E2A1BCF130046C570 /* WorksRepositoryFetchDetailsTests.swift */; };
 		EBDAB8912A1BD1210046C570 /* MockFetchWorkDetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB8902A1BD1210046C570 /* MockFetchWorkDetailsUseCase.swift */; };
 		EBDAB89D2A1BDB8D0046C570 /* FirestoreDataSourceFetchPetProjectDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB89C2A1BDB8D0046C570 /* FirestoreDataSourceFetchPetProjectDetailsTests.swift */; };
+		EBDAB89F2A1BDCE90046C570 /* LocalCacheDataSourceFetchPetProjectDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB89E2A1BDCE90046C570 /* LocalCacheDataSourceFetchPetProjectDetailsTests.swift */; };
+		EBDAB8A12A1BDE4D0046C570 /* LocalCacheDataSourceStorePetProjectDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB8A02A1BDE4D0046C570 /* LocalCacheDataSourceStorePetProjectDetailsTests.swift */; };
+		EBDAB8A32A1BDF290046C570 /* LocalCacheDataSourceRemovePetProjectDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB8A22A1BDF290046C570 /* LocalCacheDataSourceRemovePetProjectDetailsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -324,6 +327,9 @@
 		EBDAB88E2A1BCF130046C570 /* WorksRepositoryFetchDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksRepositoryFetchDetailsTests.swift; sourceTree = "<group>"; };
 		EBDAB8902A1BD1210046C570 /* MockFetchWorkDetailsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFetchWorkDetailsUseCase.swift; sourceTree = "<group>"; };
 		EBDAB89C2A1BDB8D0046C570 /* FirestoreDataSourceFetchPetProjectDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDataSourceFetchPetProjectDetailsTests.swift; sourceTree = "<group>"; };
+		EBDAB89E2A1BDCE90046C570 /* LocalCacheDataSourceFetchPetProjectDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSourceFetchPetProjectDetailsTests.swift; sourceTree = "<group>"; };
+		EBDAB8A02A1BDE4D0046C570 /* LocalCacheDataSourceStorePetProjectDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSourceStorePetProjectDetailsTests.swift; sourceTree = "<group>"; };
+		EBDAB8A22A1BDF290046C570 /* LocalCacheDataSourceRemovePetProjectDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSourceRemovePetProjectDetailsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -592,12 +598,15 @@
 				EB513FEA2A0AA68000CA5FF0 /* LocalCacheDataSourceFetchWorksTests.swift */,
 				EBA641912A168D48008B7408 /* LocalCacheDataSourceFetchWorkDetailsTests.swift */,
 				EB513FEC2A0AA95900CA5FF0 /* LocalCacheDataSourceFetchPetProjectsTests.swift */,
+				EBDAB89E2A1BDCE90046C570 /* LocalCacheDataSourceFetchPetProjectDetailsTests.swift */,
 				EB513FF02A0AB4E500CA5FF0 /* LocalCacheDataSourceStoreWorksTests.swift */,
 				EB75A85C2A16B841002BD628 /* LocalCacheDataSourceStoreWorkDetailsTests.swift */,
 				EB513FF22A0AB66200CA5FF0 /* LocalCacheDataSourceStorePetProjectsTests.swift */,
+				EBDAB8A02A1BDE4D0046C570 /* LocalCacheDataSourceStorePetProjectDetailsTests.swift */,
 				EB75A85E2A16B92D002BD628 /* LocalCacheDataSourceRemoveWorksTests.swift */,
 				EB75A8622A16BB27002BD628 /* LocalCacheDataSourceRemoveWorkDetailsTests.swift */,
 				EB75A8602A16BAC1002BD628 /* LocalCacheDataSourceRemovePetProjectsTests.swift */,
+				EBDAB8A22A1BDF290046C570 /* LocalCacheDataSourceRemovePetProjectDetailsTests.swift */,
 				EB513FEE2A0AAA5200CA5FF0 /* MockLocalCacheDataSource.swift */,
 			);
 			path = localCache;
@@ -1473,6 +1482,8 @@
 				EBA53C5329FBC40400D7095F /* MockFirestoreDataSource.swift in Sources */,
 				EB513FF12A0AB4E500CA5FF0 /* LocalCacheDataSourceStoreWorksTests.swift in Sources */,
 				EBD987772A043F0A00495DF3 /* MockPetProjectsRepository.swift in Sources */,
+				EBDAB89F2A1BDCE90046C570 /* LocalCacheDataSourceFetchPetProjectDetailsTests.swift in Sources */,
+				EBDAB8A32A1BDF290046C570 /* LocalCacheDataSourceRemovePetProjectDetailsTests.swift in Sources */,
 				EB513FEF2A0AAA5200CA5FF0 /* MockLocalCacheDataSource.swift in Sources */,
 				EB513FA72A097A0200CA5FF0 /* MockJsonDataSource.swift in Sources */,
 				EB3C830829F9806100742C21 /* MockURLProtocol.swift in Sources */,
@@ -1504,6 +1515,7 @@
 				EB513FEB2A0AA68000CA5FF0 /* LocalCacheDataSourceFetchWorksTests.swift in Sources */,
 				EBA53C5829FBDE0500D7095F /* FetchWorksUseCaseTests.swift in Sources */,
 				EBDAB88A2A1BCC550046C570 /* FetchWorkDetailsUseCaseTests.swift in Sources */,
+				EBDAB8A12A1BDE4D0046C570 /* LocalCacheDataSourceStorePetProjectDetailsTests.swift in Sources */,
 				EBA53C2C29FA8C7F00D7095F /* FirestoreDataSourceSignInTests.swift in Sources */,
 				EBD987752A043E8700495DF3 /* FetchPetProjectsUseCaseTests.swift in Sources */,
 				EBD9876A2A04247A00495DF3 /* FirestoreDataSourceFetchPetProjectsTests.swift in Sources */,
