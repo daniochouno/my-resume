@@ -11,19 +11,21 @@ struct CareerView: View {
     @State var tabIndex = 0
     
     var body: some View {
-        VStack{
-            TopTabBar(tabIndex: $tabIndex)
-                .padding(.bottom)
-            if tabIndex == 0 {
-                WorksViewFactory.makeView()
+        NavigationView {
+            VStack{
+                TopTabBar(tabIndex: $tabIndex)
+                    .padding(.bottom)
+                if tabIndex == 0 {
+                    WorksViewFactory.makeView()
+                }
+                else {
+                    PetProjectsViewFactory.makeView()
+                }
+                Spacer()
             }
-            else {
-                PetProjectsViewFactory.makeView()
-            }
-            Spacer()
+            .frame(width: UIScreen.main.bounds.width - 24, alignment: .center)
+            .padding([.top, .leading, .trailing])
         }
-        .frame(width: UIScreen.main.bounds.width - 24, alignment: .center)
-        .padding([.top, .leading, .trailing])
     }
 }
 
