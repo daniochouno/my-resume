@@ -10,7 +10,13 @@ import SwiftUI
 struct AboutMeView: View {
     var body: some View {
         ScrollView {
-            Text("aboutMe.hello")
+            Text("aboutMe.hello.title")
+                .font(.title)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            
+            Text("aboutMe.hello.text")
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.vertical)
             
             Text("aboutMe.aboutThisProject.title")
                 .fontWeight(.semibold)
