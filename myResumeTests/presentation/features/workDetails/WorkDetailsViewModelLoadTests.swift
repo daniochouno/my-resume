@@ -9,14 +9,16 @@ import XCTest
 @testable import myResume
 
 final class WorkDetailsViewModelLoadTests: XCTestCase {
-    var fetchWorksUseCase: MockFetchWorksUseCase?
+    let documentId = "abcdef"
     
-    var viewModel: WorksViewModel?
+    var fetchWorkDetailsUseCase: MockFetchWorkDetailsUseCase?
+    
+    var viewModel: WorkDetailsViewModel?
 
     override func setUpWithError() throws {
-        self.fetchWorksUseCase = MockFetchWorksUseCase()
+        self.fetchWorkDetailsUseCase = MockFetchWorkDetailsUseCase()
         
-        self.viewModel = WorksViewModel(fetchWorksUseCase: self.fetchWorksUseCase!)
+        self.viewModel = WorkDetailsViewModel(id: documentId, fetchWorkDetailsUseCase: self.fetchWorkDetailsUseCase!)
     }
 
     override func tearDownWithError() throws {
@@ -24,18 +26,19 @@ final class WorkDetailsViewModelLoadTests: XCTestCase {
     }
 
     func testSuccess() async throws {
-        let item = WorkItemUseCaseModel(documentId: "abc", company: "abc", companyLogoUrl: "abc", title: "abc", location: "abc", startDate: Date(), endDate: Date())
-        let items = [item, item, item, item]
-        let model = WorkUseCaseModel(type: .localCache, items: items)
-        self.fetchWorksUseCase?.fetchResult = .success(model)
+        let item = WorkDetailsItemUseCaseModel(company: "abc", companyLogoUrl: "abc", title: "abc", location: "abc", startDate: Date(), endDate: Date(), summary: "abc", goalsAchieved: ["abc", "abc"])
+        let model = WorkDetailsUseCaseModel(type: .localCache, item: item)
+        var data = [String: Result<WorkDetailsUseCaseModel, Error>]()
+        data[documentId] = .success(model)
+        self.fetchWorkDetailsUseCase?.fetchResult = data
         
         await self.viewModel?.load()
         
-        guard let worksLoaded = self.viewModel?.works else {
-            XCTFail("Works not loaded")
+        guard let workDetailsLoaded = self.viewModel?.workDetails else {
+            XCTFail("Work Details not loaded")
             return
         }
         
-        XCTAssertEqual(worksLoaded.count, items.count)
+        XCTAssertEqual(workDetailsLoaded.goalsAchieved?.count ?? 0, 2)
     }
 }
