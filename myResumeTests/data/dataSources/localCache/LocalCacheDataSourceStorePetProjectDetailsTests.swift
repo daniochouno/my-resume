@@ -48,7 +48,10 @@ final class LocalCacheDataSourceStorePetProjectDetailsTests: XCTestCase {
         }
         do {
             let decoded = try JSONDecoder().decode(PetProjectDetailsLocalCacheModel.self, from: data)
-            let downloads = Int(decoded.item.fields.downloads.integerValue) ?? 0
+            guard let iDownloads = decoded.item.fields.downloads?.integerValue, let downloads = Int(iDownloads) else {
+                XCTFail("Unexpected null downloads")
+                return
+            }
             XCTAssertEqual(downloads, 4000, "Found Pet Project with \(downloads) downloads")
         } catch {
             XCTFail("Unexpected parser error")

@@ -28,7 +28,6 @@ extension PetProjectDetailsItemUseCaseModel {
         self.subtitleKey = firestoreModel.fields.subtitleKey.stringValue
         self.iconUrl = firestoreModel.fields.iconUrl.stringValue
         self.headerColor = firestoreModel.fields.headerColor.stringValue
-        self.downloads = Int(firestoreModel.fields.downloads.integerValue)
         if let linkAppStore = firestoreModel.fields.linkAppStore?.stringValue {
             self.linkAppStore = linkAppStore
         } else {
@@ -38,6 +37,11 @@ extension PetProjectDetailsItemUseCaseModel {
             self.linkPlayStore = linkPlayStore
         } else {
             self.linkPlayStore = nil
+        }
+        if let iDownloads = firestoreModel.fields.downloads?.integerValue, let downloads = Int(iDownloads) {
+            self.downloads = downloads
+        } else {
+            self.downloads = nil
         }
     }
 }

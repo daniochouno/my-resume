@@ -69,7 +69,10 @@ final class FirestoreDataSourceFetchPetProjectDetailsTests: XCTestCase {
         let result = await self.dataSource?.fetchPetProjectDetails(id: documentId)
         switch result {
         case .success(let details):
-            let downloads = Int(details.fields.downloads.integerValue) ?? 0
+            guard let iDownloads = details.fields.downloads?.integerValue, let downloads = Int(iDownloads) else {
+                XCTFail("Unexpected null downloads")
+                return
+            }
             XCTAssertEqual(downloads, 3000, "Found Pet Project with \(downloads) downloads")
         case .failure(let error):
             XCTFail("Unexpected error: \(error)")

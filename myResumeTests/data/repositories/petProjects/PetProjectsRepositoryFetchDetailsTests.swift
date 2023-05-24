@@ -41,7 +41,10 @@ final class PetProjectsRepositoryFetchDetailsTests: XCTestCase {
         let result = await self.repository?.fetchDetails(id: documentId)
         switch result {
         case .success(let repositoryModel):
-            let downloads = Int(repositoryModel.item.fields.downloads.integerValue) ?? 0
+            guard let iDownloads = repositoryModel.item.fields.downloads?.integerValue, let downloads = Int(iDownloads) else {
+                XCTFail("Unexpected null downloads")
+                return
+            }
             XCTAssertEqual(downloads, 7000)
         case .failure(let error):
             XCTFail("Unexpected error: \(error)")

@@ -45,7 +45,10 @@ final class LocalCacheDataSourceFetchPetProjectDetailsTests: XCTestCase {
         let result = self.dataSource?.fetchPetProjectDetails(id: petProjectDetailsId)
         switch result {
         case .success(let details):
-            let downloads = Int(details.item.fields.downloads.integerValue) ?? 0
+            guard let iDownloads = details.item.fields.downloads?.integerValue, let downloads = Int(iDownloads) else {
+                XCTFail("Unexpected null downloads")
+                return
+            }
             XCTAssertEqual(downloads, 2000, "Found Pet Project with \(downloads) downloads")
         case .failure(let error):
             XCTFail("Unexpected error: \(error)")

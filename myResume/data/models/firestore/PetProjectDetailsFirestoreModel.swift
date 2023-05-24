@@ -17,7 +17,7 @@ struct PetProjectDetailsFieldFirestoreModel: Encodable, Decodable {
     let subtitleKey: FieldStringFirestoreModel
     let iconUrl: FieldStringFirestoreModel
     let headerColor: FieldStringFirestoreModel
-    let downloads: FieldIntegerFirestoreModel
+    let downloads: FieldIntegerFirestoreModel?
     let linkAppStore: FieldStringFirestoreModel?
     let linkPlayStore: FieldStringFirestoreModel?
 }
