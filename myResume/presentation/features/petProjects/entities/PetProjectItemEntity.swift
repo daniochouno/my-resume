@@ -9,6 +9,7 @@ import Foundation
 
 struct PetProjectItemEntity: Identifiable, Equatable {
     let id: UUID
+    let documentId: String
     let titleKey: String
     let subtitleKey: String
     let iconUrl: String
@@ -22,6 +23,7 @@ struct PetProjectItemEntity: Identifiable, Equatable {
 extension PetProjectItemEntity {
     init(from itemUseCaseModel: PetProjectItemUseCaseModel) {
         self.id = UUID()
+        self.documentId = itemUseCaseModel.documentId
         self.titleKey = itemUseCaseModel.titleKey
         self.subtitleKey = itemUseCaseModel.subtitleKey
         self.iconUrl = itemUseCaseModel.iconUrl

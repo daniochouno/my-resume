@@ -108,6 +108,7 @@ struct PetProjectsCardView_Previews: PreviewProvider {
     static var previews: some View {
         let petProject = PetProjectItemEntity(
             id: UUID(),
+            documentId: "abc",
             titleKey: "petProjects.myWardrobe.title",
             subtitleKey: "petProjects.myWardrobe.subtitle",
             iconUrl: "https://play-lh.googleusercontent.com/TJxlM5eKv-g0_lo7emIZb9FrWkgrk0EejfVsObOC97Z2hpbgOV4Fkp1b6Lu-HOPXf_k=w240-h480",
