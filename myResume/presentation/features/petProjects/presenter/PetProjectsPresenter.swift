@@ -5,18 +5,20 @@
 //  Created by Daniel Martínez Muñoz on 5/5/23.
 //
 
-import Foundation
+import SwiftUI
 
 final class PetProjectsPresenter: ObservableObject {
     private let interactor: PetProjectsInteractor
+    private let router: PetProjectsRouter
     
     @Published var isLoading = true
     @Published var petProjects: [PetProjectItemEntity] = []
     @Published var dataLoadedOrigin: String?
     @Published var errorMessage: String?
     
-    init(interactor: PetProjectsInteractor) {
+    init(interactor: PetProjectsInteractor, router: PetProjectsRouter) {
         self.interactor = interactor
+        self.router = router
     }
     
     @MainActor
@@ -31,5 +33,9 @@ final class PetProjectsPresenter: ObservableObject {
             self.errorMessage = "\(error)"
         }
         self.isLoading = false
+    }
+    
+    func detailsView(id: String) -> some View {
+        router.details(id: id)
     }
 }

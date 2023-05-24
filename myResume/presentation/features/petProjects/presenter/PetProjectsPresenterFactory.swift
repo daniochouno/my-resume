@@ -10,6 +10,7 @@ import Foundation
 enum PetProjectsPresenterFactory {
     static func make() -> PetProjectsPresenter {
         let interactor = PetProjectsInteractorFactory.make()
-        return PetProjectsPresenter(interactor: interactor)
+        let router = PetProjectsRouterFactory.make()
+        return PetProjectsPresenter(interactor: interactor, router: router)
     }
 }

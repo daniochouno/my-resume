@@ -15,8 +15,9 @@ final class PetProjectsPresenterOnViewAppearTests: XCTestCase {
 
     override func setUpWithError() throws {
         self.interactor = MockPetProjectsInteractor()
+        let router = PetProjectsRouter()
         
-        self.presenter = PetProjectsPresenter(interactor: self.interactor!)
+        self.presenter = PetProjectsPresenter(interactor: self.interactor!, router: router)
     }
 
     override func tearDownWithError() throws {

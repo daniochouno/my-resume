@@ -21,7 +21,12 @@ struct PetProjectsView: View {
                         ProgressView()
                     } else {
                         ForEach(presenter.petProjects) { petProject in
-                            PetProjectsCardView(petProject: petProject)
+                            NavigationLink {
+                                presenter.detailsView(id: petProject.documentId)
+                            } label: {
+                                PetProjectsCardView(petProject: petProject)
+                            }
+                            .buttonStyle(PlainButtonStyle())
                         }
                         
                         DataOriginMessageView(message: presenter.dataLoadedOrigin)

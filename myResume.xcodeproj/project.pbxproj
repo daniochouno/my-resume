@@ -90,6 +90,8 @@
 		EB51403C2A1545E800CA5FF0 /* WorkDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB51403B2A1545E800CA5FF0 /* WorkDetailsView.swift */; };
 		EB51403E2A15468500CA5FF0 /* WorkDetailsViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB51403D2A15468500CA5FF0 /* WorkDetailsViewFactory.swift */; };
 		EB5140412A15577100CA5FF0 /* ErrorMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5140402A15577100CA5FF0 /* ErrorMessageView.swift */; };
+		EB70AF3F2A1E600B007D8023 /* PetProjectsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB70AF3E2A1E600B007D8023 /* PetProjectsRouter.swift */; };
+		EB70AF412A1E6121007D8023 /* PetProjectsRouterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB70AF402A1E6121007D8023 /* PetProjectsRouterFactory.swift */; };
 		EB70AF472A1E6862007D8023 /* FetchPetProjectDetailsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB70AF462A1E6862007D8023 /* FetchPetProjectDetailsUseCaseTests.swift */; };
 		EB70AF4A2A1E6920007D8023 /* PetProjectDetailsViewModelLoadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB70AF492A1E6920007D8023 /* PetProjectDetailsViewModelLoadTests.swift */; };
 		EB70AF4C2A1E6A7E007D8023 /* MockFetchPetProjectDetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB70AF4B2A1E6A7E007D8023 /* MockFetchPetProjectDetailsUseCase.swift */; };
@@ -274,6 +276,8 @@
 		EB51403B2A1545E800CA5FF0 /* WorkDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailsView.swift; sourceTree = "<group>"; };
 		EB51403D2A15468500CA5FF0 /* WorkDetailsViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailsViewFactory.swift; sourceTree = "<group>"; };
 		EB5140402A15577100CA5FF0 /* ErrorMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessageView.swift; sourceTree = "<group>"; };
+		EB70AF3E2A1E600B007D8023 /* PetProjectsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectsRouter.swift; sourceTree = "<group>"; };
+		EB70AF402A1E6121007D8023 /* PetProjectsRouterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectsRouterFactory.swift; sourceTree = "<group>"; };
 		EB70AF462A1E6862007D8023 /* FetchPetProjectDetailsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPetProjectDetailsUseCaseTests.swift; sourceTree = "<group>"; };
 		EB70AF492A1E6920007D8023 /* PetProjectDetailsViewModelLoadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectDetailsViewModelLoadTests.swift; sourceTree = "<group>"; };
 		EB70AF4B2A1E6A7E007D8023 /* MockFetchPetProjectDetailsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFetchPetProjectDetailsUseCase.swift; sourceTree = "<group>"; };
@@ -779,6 +783,15 @@
 			path = shared;
 			sourceTree = "<group>";
 		};
+		EB70AF3D2A1E5FEA007D8023 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				EB70AF3E2A1E600B007D8023 /* PetProjectsRouter.swift */,
+				EB70AF402A1E6121007D8023 /* PetProjectsRouterFactory.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
 		EB70AF452A1E6840007D8023 /* petProjectDetails */ = {
 			isa = PBXGroup;
 			children = (
@@ -1209,6 +1222,7 @@
 				EBD987862A04FEED00495DF3 /* interactor */,
 				EBD9878E2A050A1900495DF3 /* presenter */,
 				EBD987832A04FE3100495DF3 /* entities */,
+				EB70AF3D2A1E5FEA007D8023 /* router */,
 			);
 			path = petProjects;
 			sourceTree = "<group>";
@@ -1481,6 +1495,7 @@
 				EBD987982A0517F000495DF3 /* PetProjectsPresenterFactory.swift in Sources */,
 				EBDAB8AE2A1D29EB0046C570 /* PetProjectDetailsModel.swift in Sources */,
 				EBD9877A2A043F5400495DF3 /* FetchPetProjectsUseCase.swift in Sources */,
+				EB70AF3F2A1E600B007D8023 /* PetProjectsRouter.swift in Sources */,
 				EB5140362A1419B800CA5FF0 /* WorkDetailsFirestoreModel.swift in Sources */,
 				EBD987882A04FF2200495DF3 /* PetProjectsInteractor.swift in Sources */,
 				EB5140262A1413BF00CA5FF0 /* WorkDetailsViewModel.swift in Sources */,
@@ -1512,6 +1527,7 @@
 				EB513FD42A09E00200CA5FF0 /* SkillsView.swift in Sources */,
 				EB513F992A093B5400CA5FF0 /* SkillSectionJsonModel.swift in Sources */,
 				EBD9879A2A05181800495DF3 /* PetProjectsInteractorFactory.swift in Sources */,
+				EB70AF412A1E6121007D8023 /* PetProjectsRouterFactory.swift in Sources */,
 				EB51403E2A15468500CA5FF0 /* WorkDetailsViewFactory.swift in Sources */,
 				EBDAB8AA2A1BEE220046C570 /* PetProjectDetailsUseCaseModel.swift in Sources */,
 				EB51402D2A14173E00CA5FF0 /* FetchWorkDetailsUseCase.swift in Sources */,
