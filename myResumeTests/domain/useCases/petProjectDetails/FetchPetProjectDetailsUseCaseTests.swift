@@ -28,7 +28,7 @@ final class FetchPetProjectDetailsUseCaseTests: XCTestCase {
         let documentId = "abc123"
         let stringField = FieldStringFirestoreModel(stringValue: "abc")
         let integerField = FieldIntegerFirestoreModel(integerValue: "8000")
-        let fields = PetProjectDetailsFieldFirestoreModel(titleKey: stringField, subtitleKey: stringField, iconUrl: stringField, headerColor: stringField, downloads: integerField, linkAppStore: stringField, linkPlayStore: stringField, linkWeb: stringField)
+        let fields = PetProjectDetailsFieldFirestoreModel(titleKey: stringField, subtitleKey: stringField, iconUrl: stringField, headerColor: stringField, downloads: integerField, linkAppStore: stringField, linkPlayStore: stringField, linkWeb: stringField, descriptionLargeKey: stringField)
         let petProjectDetailsFirestoreModel = PetProjectDetailsFirestoreModel(name: "abc123", fields: fields)
         let repositoryModel = PetProjectDetailsRepositoryModel(type: .localCache, item: petProjectDetailsFirestoreModel)
         let dictionary: [String: Result<PetProjectDetailsRepositoryModel, Error>] = [

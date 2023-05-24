@@ -26,7 +26,7 @@ final class PetProjectDetailsViewModelLoadTests: XCTestCase {
     }
 
     func testSuccess() async throws {
-        let item = PetProjectDetailsItemUseCaseModel(titleKey: "abc", subtitleKey: "abc", iconUrl: "abc", headerColor: "abc", downloads: 9000, linkAppStore: "abc", linkPlayStore: "abc", linkWeb: "abc")
+        let item = PetProjectDetailsItemUseCaseModel(titleKey: "abc", subtitleKey: "abc", iconUrl: "abc", headerColor: "abc", downloads: 9000, linkAppStore: "abc", linkPlayStore: "abc", linkWeb: "abc", descriptionLargeKey: "abc")
         let model = PetProjectDetailsUseCaseModel(type: .localCache, item: item)
         var data = [String: Result<PetProjectDetailsUseCaseModel, Error>]()
         data[documentId] = .success(model)

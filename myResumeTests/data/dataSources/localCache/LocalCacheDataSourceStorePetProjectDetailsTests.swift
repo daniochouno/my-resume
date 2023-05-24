@@ -30,7 +30,7 @@ final class LocalCacheDataSourceStorePetProjectDetailsTests: XCTestCase {
         let petProjectDetailsId = UUID().uuidString
         let stringField = FieldStringFirestoreModel(stringValue: "abc")
         let integerField = FieldIntegerFirestoreModel(integerValue: "4000")
-        let fields = PetProjectDetailsFieldFirestoreModel(titleKey: stringField, subtitleKey: stringField, iconUrl: stringField, headerColor: stringField, downloads: integerField, linkAppStore: stringField, linkPlayStore: stringField, linkWeb: stringField)
+        let fields = PetProjectDetailsFieldFirestoreModel(titleKey: stringField, subtitleKey: stringField, iconUrl: stringField, headerColor: stringField, downloads: integerField, linkAppStore: stringField, linkPlayStore: stringField, linkWeb: stringField, descriptionLargeKey: stringField)
         let petProjectFirestoreModel = PetProjectDetailsFirestoreModel(name: "abc123", fields: fields)
         
         guard let result = self.dataSource?.storePetProjectDetails(id: petProjectDetailsId, item: petProjectFirestoreModel) else {

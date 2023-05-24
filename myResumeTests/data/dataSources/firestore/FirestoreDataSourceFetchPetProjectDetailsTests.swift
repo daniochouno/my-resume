@@ -48,6 +48,9 @@ final class FirestoreDataSourceFetchPetProjectDetailsTests: XCTestCase {
                 },
                 "titleKey": {
                     "stringValue": "petProjects.foodCalendar.title"
+                },
+                "descriptionLargeKey": {
+                    "stringValue": "petProjects.foodCalendar.descriptionLarge"
                 }
             },
             "createTime": "2023-05-08T10:14:06.889746Z",

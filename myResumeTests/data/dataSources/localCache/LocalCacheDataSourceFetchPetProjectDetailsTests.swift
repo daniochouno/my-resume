@@ -31,7 +31,7 @@ final class LocalCacheDataSourceFetchPetProjectDetailsTests: XCTestCase {
         let now = Date().timeIntervalSince1970
         let stringField = FieldStringFirestoreModel(stringValue: "abc")
         let integerField = FieldIntegerFirestoreModel(integerValue: "2000")
-        let fields = PetProjectDetailsFieldFirestoreModel(titleKey: stringField, subtitleKey: stringField, iconUrl: stringField, headerColor: stringField, downloads: integerField, linkAppStore: stringField, linkPlayStore: stringField, linkWeb: stringField)
+        let fields = PetProjectDetailsFieldFirestoreModel(titleKey: stringField, subtitleKey: stringField, iconUrl: stringField, headerColor: stringField, downloads: integerField, linkAppStore: stringField, linkPlayStore: stringField, linkWeb: stringField, descriptionLargeKey: stringField)
         let petProjectFirestoreModel = PetProjectDetailsFirestoreModel(name: "abc123", fields: fields)
         let model = PetProjectDetailsLocalCacheModel(createdAt: now, item: petProjectFirestoreModel)
         do {
