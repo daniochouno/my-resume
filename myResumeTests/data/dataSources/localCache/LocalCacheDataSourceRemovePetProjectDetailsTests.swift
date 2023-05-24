@@ -31,7 +31,7 @@ final class LocalCacheDataSourceRemovePetProjectDetailsTests: XCTestCase {
         let now = Date().timeIntervalSince1970
         let stringField = FieldStringFirestoreModel(stringValue: "abc")
         let integerField = FieldIntegerFirestoreModel(integerValue: "5000")
-        let fields = PetProjectDetailsFieldFirestoreModel(titleKey: stringField, subtitleKey: stringField, iconUrl: stringField, headerColor: stringField, downloads: integerField, linkAppStore: stringField, linkPlayStore: stringField)
+        let fields = PetProjectDetailsFieldFirestoreModel(titleKey: stringField, subtitleKey: stringField, iconUrl: stringField, headerColor: stringField, downloads: integerField, linkAppStore: stringField, linkPlayStore: stringField, linkWeb: stringField)
         let petProjectFirestoreModel = PetProjectDetailsFirestoreModel(name: "abc123", fields: fields)
         let model = PetProjectDetailsLocalCacheModel(createdAt: now, item: petProjectFirestoreModel)
         let key = LocalCacheKey.cachePetProjectDetails.rawValue + "." + petProjectDetailsId

@@ -20,4 +20,5 @@ struct PetProjectDetailsFieldFirestoreModel: Encodable, Decodable {
     let downloads: FieldIntegerFirestoreModel?
     let linkAppStore: FieldStringFirestoreModel?
     let linkPlayStore: FieldStringFirestoreModel?
+    let linkWeb: FieldStringFirestoreModel?
 }

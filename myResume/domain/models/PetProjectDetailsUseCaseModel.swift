@@ -20,6 +20,7 @@ struct PetProjectDetailsItemUseCaseModel: Decodable {
     let downloads: Int?
     let linkAppStore: String?
     let linkPlayStore: String?
+    let linkWeb: String?
 }
 
 extension PetProjectDetailsItemUseCaseModel {
@@ -37,6 +38,11 @@ extension PetProjectDetailsItemUseCaseModel {
             self.linkPlayStore = linkPlayStore
         } else {
             self.linkPlayStore = nil
+        }
+        if let linkWeb = firestoreModel.fields.linkWeb?.stringValue {
+            self.linkWeb = linkWeb
+        } else {
+            self.linkWeb = nil
         }
         if let iDownloads = firestoreModel.fields.downloads?.integerValue, let downloads = Int(iDownloads) {
             self.downloads = downloads

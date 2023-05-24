@@ -34,7 +34,7 @@ final class PetProjectsRepositoryFetchDetailsTests: XCTestCase {
         let documentId = "abc123"
         let stringField = FieldStringFirestoreModel(stringValue: "abc")
         let integerField = FieldIntegerFirestoreModel(integerValue: "7000")
-        let fields = PetProjectDetailsFieldFirestoreModel(titleKey: stringField, subtitleKey: stringField, iconUrl: stringField, headerColor: stringField, downloads: integerField, linkAppStore: stringField, linkPlayStore: stringField)
+        let fields = PetProjectDetailsFieldFirestoreModel(titleKey: stringField, subtitleKey: stringField, iconUrl: stringField, headerColor: stringField, downloads: integerField, linkAppStore: stringField, linkPlayStore: stringField, linkWeb: stringField)
         let petProjectDetailsFirestoreModel = PetProjectDetailsFirestoreModel(name: "abc123", fields: fields)
         self.remoteDataSource?.fetchPetProjectDetailsResult = .success(petProjectDetailsFirestoreModel)
         
