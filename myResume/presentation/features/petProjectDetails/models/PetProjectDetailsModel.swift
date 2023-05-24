@@ -17,6 +17,7 @@ struct PetProjectDetailsModel: Identifiable, Equatable {
     let linkPlayStore: String?
     let linkWeb: String?
     let downloads: String?
+    let descriptionLargeKey: String
 }
 
 extension PetProjectDetailsModel {
@@ -29,6 +30,7 @@ extension PetProjectDetailsModel {
         self.linkAppStore = itemUseCaseModel.linkAppStore
         self.linkPlayStore = itemUseCaseModel.linkPlayStore
         self.linkWeb = itemUseCaseModel.linkWeb
+        self.descriptionLargeKey = itemUseCaseModel.descriptionLargeKey
         
         if let downloads = itemUseCaseModel.downloads {
             if downloads >= 0 && downloads < 1000 {

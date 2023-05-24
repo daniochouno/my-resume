@@ -15,77 +15,86 @@ struct PetProjectDetailsView: View {
     
     var body: some View {
         ZStack {
-            VStack {
-                if self.viewModel.isLoading {
-                    ProgressView()
-                        .padding()
-                } else if let details = viewModel.petProjectDetails {
-                    ZStack {
-                        Color(hex: details.headerColor)
-                            .frame(height: 120)
-                        
-                        AsyncImage(url: URL(string: details.iconUrl)) { phase in
-                            switch phase {
-                            case .empty:
-                                ProgressView()
-                            case .success(let image):
-                                image.resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 96, height: 96)
-                            case .failure:
-                                Image(systemName: "photo")
-                            @unknown default:
-                                EmptyView()
-                            }
-                        }
-                        .clipShape(Circle())
-                        .background(
-                            Circle()
-                                .stroke(.white, lineWidth: 4)
-                        )
-                        .offset(y: 60)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.horizontal)
-                    }
-                    
-                    VStack(spacing: 0) {
-                        if let downloads = details.downloads {
-                            Text("petProjects.downloads.\(downloads)")
-                                .frame(maxWidth: .infinity, alignment: .trailing)
-                                .padding()
-                        }
-                        
-                        Text(LocalizedStringKey(details.titleKey))
-                            .fontWeight(.bold)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(.horizontal)
-                        
-                        Text(LocalizedStringKey(details.subtitleKey))
-                            .font(.body)
-                            .foregroundColor(.secondary)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(.horizontal)
-                            .padding(.top, 4)
-                        
-                        HStack(spacing: 12) {
-                            if let linkAppStore = details.linkAppStore {
-                                storeButton(.appStore, url: URL(string: linkAppStore)!)
-                            }
-                            if let linkPlayStore = details.linkPlayStore {
-                                storeButton(.googlePlay, url: URL(string: linkPlayStore)!)
-                            }
-                        }
-                        .frame(maxWidth: .infinity, alignment: .trailing)
-                        .padding()
-                        
-                        DataOriginMessageView(message: viewModel.dataLoadedOrigin)
+            ScrollView(.vertical, showsIndicators: false) {
+                LazyVStack {
+                    if self.viewModel.isLoading {
+                        ProgressView()
                             .padding()
+                    } else if let details = viewModel.petProjectDetails {
+                        ZStack {
+                            Color(hex: details.headerColor)
+                                .frame(height: 120)
+                            
+                            AsyncImage(url: URL(string: details.iconUrl)) { phase in
+                                switch phase {
+                                case .empty:
+                                    ProgressView()
+                                case .success(let image):
+                                    image.resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 96, height: 96)
+                                case .failure:
+                                    Image(systemName: "photo")
+                                @unknown default:
+                                    EmptyView()
+                                }
+                            }
+                            .clipShape(Circle())
+                            .background(
+                                Circle()
+                                    .stroke(.white, lineWidth: 4)
+                            )
+                            .offset(y: 60)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.horizontal)
+                        }
                         
-                        Spacer()
+                        VStack(spacing: 0) {
+                            if let downloads = details.downloads {
+                                Text("petProjects.downloads.\(downloads)")
+                                    .frame(maxWidth: .infinity, alignment: .trailing)
+                                    .padding()
+                            }
+                            
+                            Text(LocalizedStringKey(details.titleKey))
+                                .fontWeight(.bold)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.horizontal)
+                            
+                            Text(LocalizedStringKey(details.subtitleKey))
+                                .font(.body)
+                                .foregroundColor(.secondary)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.horizontal)
+                                .padding(.top, 4)
+                            
+                            Text(LocalizedStringKey(details.descriptionLargeKey))
+                                .font(.body)
+                                .foregroundColor(.secondary)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.horizontal)
+                                .padding(.top, 4)
+                            
+                            HStack(spacing: 12) {
+                                if let linkAppStore = details.linkAppStore {
+                                    storeButton(.appStore, url: URL(string: linkAppStore)!)
+                                }
+                                if let linkPlayStore = details.linkPlayStore {
+                                    storeButton(.googlePlay, url: URL(string: linkPlayStore)!)
+                                }
+                            }
+                            .frame(maxWidth: .infinity, alignment: .trailing)
+                            .padding()
+                            
+                            DataOriginMessageView(message: viewModel.dataLoadedOrigin)
+                                .padding()
+                            
+                            Spacer()
+                        }
                     }
                 }
             }
-            
+                
             ErrorMessageView(message: viewModel.errorMessage) {
                 self.viewModel.errorMessage = nil
             }

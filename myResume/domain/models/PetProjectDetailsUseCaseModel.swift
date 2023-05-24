@@ -21,6 +21,7 @@ struct PetProjectDetailsItemUseCaseModel: Decodable {
     let linkAppStore: String?
     let linkPlayStore: String?
     let linkWeb: String?
+    let descriptionLargeKey: String
 }
 
 extension PetProjectDetailsItemUseCaseModel {
@@ -29,6 +30,7 @@ extension PetProjectDetailsItemUseCaseModel {
         self.subtitleKey = firestoreModel.fields.subtitleKey.stringValue
         self.iconUrl = firestoreModel.fields.iconUrl.stringValue
         self.headerColor = firestoreModel.fields.headerColor.stringValue
+        self.descriptionLargeKey = firestoreModel.fields.descriptionLargeKey.stringValue
         if let linkAppStore = firestoreModel.fields.linkAppStore?.stringValue {
             self.linkAppStore = linkAppStore
         } else {
