@@ -91,6 +91,8 @@
 		EB51403E2A15468500CA5FF0 /* WorkDetailsViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB51403D2A15468500CA5FF0 /* WorkDetailsViewFactory.swift */; };
 		EB5140412A15577100CA5FF0 /* ErrorMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5140402A15577100CA5FF0 /* ErrorMessageView.swift */; };
 		EB70AF472A1E6862007D8023 /* FetchPetProjectDetailsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB70AF462A1E6862007D8023 /* FetchPetProjectDetailsUseCaseTests.swift */; };
+		EB70AF4A2A1E6920007D8023 /* PetProjectDetailsViewModelLoadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB70AF492A1E6920007D8023 /* PetProjectDetailsViewModelLoadTests.swift */; };
+		EB70AF4C2A1E6A7E007D8023 /* MockFetchPetProjectDetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB70AF4B2A1E6A7E007D8023 /* MockFetchPetProjectDetailsUseCase.swift */; };
 		EB75A85B2A169BA7002BD628 /* DataOriginMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB75A85A2A169BA7002BD628 /* DataOriginMessageView.swift */; };
 		EB75A85D2A16B841002BD628 /* LocalCacheDataSourceStoreWorkDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB75A85C2A16B841002BD628 /* LocalCacheDataSourceStoreWorkDetailsTests.swift */; };
 		EB75A85F2A16B92D002BD628 /* LocalCacheDataSourceRemoveWorksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB75A85E2A16B92D002BD628 /* LocalCacheDataSourceRemoveWorksTests.swift */; };
@@ -273,6 +275,8 @@
 		EB51403D2A15468500CA5FF0 /* WorkDetailsViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailsViewFactory.swift; sourceTree = "<group>"; };
 		EB5140402A15577100CA5FF0 /* ErrorMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessageView.swift; sourceTree = "<group>"; };
 		EB70AF462A1E6862007D8023 /* FetchPetProjectDetailsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPetProjectDetailsUseCaseTests.swift; sourceTree = "<group>"; };
+		EB70AF492A1E6920007D8023 /* PetProjectDetailsViewModelLoadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectDetailsViewModelLoadTests.swift; sourceTree = "<group>"; };
+		EB70AF4B2A1E6A7E007D8023 /* MockFetchPetProjectDetailsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFetchPetProjectDetailsUseCase.swift; sourceTree = "<group>"; };
 		EB75A85A2A169BA7002BD628 /* DataOriginMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataOriginMessageView.swift; sourceTree = "<group>"; };
 		EB75A85C2A16B841002BD628 /* LocalCacheDataSourceStoreWorkDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSourceStoreWorkDetailsTests.swift; sourceTree = "<group>"; };
 		EB75A85E2A16B92D002BD628 /* LocalCacheDataSourceRemoveWorksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSourceRemoveWorksTests.swift; sourceTree = "<group>"; };
@@ -779,10 +783,15 @@
 			isa = PBXGroup;
 			children = (
 				EB70AF462A1E6862007D8023 /* FetchPetProjectDetailsUseCaseTests.swift */,
+				EB70AF4B2A1E6A7E007D8023 /* MockFetchPetProjectDetailsUseCase.swift */,
 			);
 			path = petProjectDetails;
 			sourceTree = "<group>";
 		};
+		EB70AF482A1E6901007D8023 /* petProjectDetails */ = {
+			isa = PBXGroup;
+			children = (
+				EB70AF492A1E6920007D8023 /* PetProjectDetailsViewModelLoadTests.swift */,
 			);
 			path = petProjectDetails;
 			sourceTree = "<group>";
@@ -1577,6 +1586,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB513FA52A0979A800CA5FF0 /* SkillsRepositoryFetchTests.swift in Sources */,
+				EB70AF4C2A1E6A7E007D8023 /* MockFetchPetProjectDetailsUseCase.swift in Sources */,
 				EB513F9F2A0956C800CA5FF0 /* JsonDataSourceFetchSkillsTests.swift in Sources */,
 				EBDAB8872A1BCBF40046C570 /* WorkDetailsViewModelLoadTests.swift in Sources */,
 				EB513FBF2A09864E00CA5FF0 /* SkillsViewModelLoadTests.swift in Sources */,
@@ -1621,6 +1631,7 @@
 				EBDAB88A2A1BCC550046C570 /* FetchWorkDetailsUseCaseTests.swift in Sources */,
 				EBDAB8A12A1BDE4D0046C570 /* LocalCacheDataSourceStorePetProjectDetailsTests.swift in Sources */,
 				EBA53C2C29FA8C7F00D7095F /* FirestoreDataSourceSignInTests.swift in Sources */,
+				EB70AF4A2A1E6920007D8023 /* PetProjectDetailsViewModelLoadTests.swift in Sources */,
 				EBD987752A043E8700495DF3 /* FetchPetProjectsUseCaseTests.swift in Sources */,
 				EBD9876A2A04247A00495DF3 /* FirestoreDataSourceFetchPetProjectsTests.swift in Sources */,
 				EB70AF472A1E6862007D8023 /* FetchPetProjectDetailsUseCaseTests.swift in Sources */,
