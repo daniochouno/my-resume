@@ -13,6 +13,7 @@ struct PetProjectUseCaseModel: Decodable {
 }
 
 struct PetProjectItemUseCaseModel: Decodable {
+    let documentId: String
     let titleKey: String
     let subtitleKey: String
     let iconUrl: String
@@ -25,6 +26,8 @@ struct PetProjectItemUseCaseModel: Decodable {
 
 extension PetProjectItemUseCaseModel {
     init(from firestoreModel: PetProjectFirestoreModel) {
+        let documentIdUrl = URL(string: firestoreModel.name)!
+        self.documentId = documentIdUrl.lastPathComponent
         self.titleKey = firestoreModel.fields.titleKey.stringValue
         self.subtitleKey = firestoreModel.fields.subtitleKey.stringValue
         self.iconUrl = firestoreModel.fields.iconUrl.stringValue

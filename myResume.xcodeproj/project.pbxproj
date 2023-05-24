@@ -163,6 +163,11 @@
 		EBDAB8A82A1BEDAA0046C570 /* FetchPetProjectDetailsUseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB8A72A1BEDAA0046C570 /* FetchPetProjectDetailsUseCaseFactory.swift */; };
 		EBDAB8AA2A1BEE220046C570 /* PetProjectDetailsUseCaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB8A92A1BEE220046C570 /* PetProjectDetailsUseCaseModel.swift */; };
 		EBDAB8AC2A1BEFB50046C570 /* PetProjectsRepositoryFetchDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB8AB2A1BEFB50046C570 /* PetProjectsRepositoryFetchDetailsTests.swift */; };
+		EBDAB8AE2A1D29EB0046C570 /* PetProjectDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB8AD2A1D29EB0046C570 /* PetProjectDetailsModel.swift */; };
+		EBDAB8B02A1D2B1D0046C570 /* PetProjectDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB8AF2A1D2B1D0046C570 /* PetProjectDetailsViewModel.swift */; };
+		EBDAB8B22A1D2B2A0046C570 /* PetProjectDetailsViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB8B12A1D2B2A0046C570 /* PetProjectDetailsViewModelFactory.swift */; };
+		EBDAB8B42A1D2BD10046C570 /* PetProjectDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB8B32A1D2BD10046C570 /* PetProjectDetailsView.swift */; };
+		EBDAB8B62A1D2BE00046C570 /* PetProjectDetailsViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB8B52A1D2BE00046C570 /* PetProjectDetailsViewFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -346,6 +351,11 @@
 		EBDAB8A72A1BEDAA0046C570 /* FetchPetProjectDetailsUseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPetProjectDetailsUseCaseFactory.swift; sourceTree = "<group>"; };
 		EBDAB8A92A1BEE220046C570 /* PetProjectDetailsUseCaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectDetailsUseCaseModel.swift; sourceTree = "<group>"; };
 		EBDAB8AB2A1BEFB50046C570 /* PetProjectsRepositoryFetchDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectsRepositoryFetchDetailsTests.swift; sourceTree = "<group>"; };
+		EBDAB8AD2A1D29EB0046C570 /* PetProjectDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectDetailsModel.swift; sourceTree = "<group>"; };
+		EBDAB8AF2A1D2B1D0046C570 /* PetProjectDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectDetailsViewModel.swift; sourceTree = "<group>"; };
+		EBDAB8B12A1D2B2A0046C570 /* PetProjectDetailsViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectDetailsViewModelFactory.swift; sourceTree = "<group>"; };
+		EBDAB8B32A1D2BD10046C570 /* PetProjectDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectDetailsView.swift; sourceTree = "<group>"; };
+		EBDAB8B52A1D2BE00046C570 /* PetProjectDetailsViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProjectDetailsViewFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1122,6 +1132,7 @@
 				EBA53C5D29FBE0B900D7095F /* works */,
 				EBDAB8852A1BCBBD0046C570 /* workDetails */,
 				EBD987892A05012E00495DF3 /* petProjects */,
+				EB70AF482A1E6901007D8023 /* petProjectDetails */,
 				EB513FBD2A09863200CA5FF0 /* skills */,
 			);
 			path = features;
@@ -1286,6 +1297,7 @@
 		EBDAB8932A1BD7AC0046C570 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				EBDAB8AD2A1D29EB0046C570 /* PetProjectDetailsModel.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -1293,6 +1305,8 @@
 		EBDAB8942A1BD7B10046C570 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				EBDAB8B32A1D2BD10046C570 /* PetProjectDetailsView.swift */,
+				EBDAB8B52A1D2BE00046C570 /* PetProjectDetailsViewFactory.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -1300,6 +1314,8 @@
 		EBDAB8952A1BD7B60046C570 /* viewModel */ = {
 			isa = PBXGroup;
 			children = (
+				EBDAB8AF2A1D2B1D0046C570 /* PetProjectDetailsViewModel.swift */,
+				EBDAB8B12A1D2B2A0046C570 /* PetProjectDetailsViewModelFactory.swift */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -1454,6 +1470,7 @@
 				EB3C830A29F9A96A00742C21 /* FirestoreDataSource.swift in Sources */,
 				EB513FAE2A097DF400CA5FF0 /* SkillSectionUseCaseModel.swift in Sources */,
 				EBD987982A0517F000495DF3 /* PetProjectsPresenterFactory.swift in Sources */,
+				EBDAB8AE2A1D29EB0046C570 /* PetProjectDetailsModel.swift in Sources */,
 				EBD9877A2A043F5400495DF3 /* FetchPetProjectsUseCase.swift in Sources */,
 				EB5140362A1419B800CA5FF0 /* WorkDetailsFirestoreModel.swift in Sources */,
 				EBD987882A04FF2200495DF3 /* PetProjectsInteractor.swift in Sources */,
@@ -1473,6 +1490,7 @@
 				EBD987712A043C9600495DF3 /* PetProjectsRepository.swift in Sources */,
 				EB513FF82A0AF79300CA5FF0 /* PetProjectRepositoryModel.swift in Sources */,
 				EB51402A2A14152700CA5FF0 /* WorkDetailsUseCaseModel.swift in Sources */,
+				EBDAB8B02A1D2B1D0046C570 /* PetProjectDetailsViewModel.swift in Sources */,
 				EB513FE82A0AA43200CA5FF0 /* LocalCacheDataSourceFactory.swift in Sources */,
 				EB51400D2A0C102B00CA5FF0 /* SettingsBundleRepositoryFactory.swift in Sources */,
 				EB513FCA2A09DB5700CA5FF0 /* SkillsViewControllerFactory.swift in Sources */,
@@ -1493,6 +1511,8 @@
 				EBDAB8972A1BD8A40046C570 /* PetProjectDetailsFirestoreModel.swift in Sources */,
 				EBA53C4529FAEAE800D7095F /* WorksViewModel.swift in Sources */,
 				EB513FAC2A097CE100CA5FF0 /* SkillUseCaseModel.swift in Sources */,
+				EBDAB8B42A1D2BD10046C570 /* PetProjectDetailsView.swift in Sources */,
+				EBDAB8B62A1D2BE00046C570 /* PetProjectDetailsViewFactory.swift in Sources */,
 				EBD9877C2A043FA000495DF3 /* PetProjectUseCaseModel.swift in Sources */,
 				EB5140182A0C2D5500CA5FF0 /* SessionDataSource.swift in Sources */,
 				EB3C830D29F9A9CA00742C21 /* FirestoreDataSourceFactory.swift in Sources */,
@@ -1521,6 +1541,7 @@
 				EB7FB7ED29EEAEFD00DEA576 /* View.swift in Sources */,
 				EBD987822A04FD5900495DF3 /* PetProjectsViewFactory.swift in Sources */,
 				EB513FD62A09E11D00CA5FF0 /* SkillsViewFactory.swift in Sources */,
+				EBDAB8B22A1D2B2A0046C570 /* PetProjectDetailsViewModelFactory.swift in Sources */,
 				EB5140102A0C176700CA5FF0 /* SettingsBundleDataSource.swift in Sources */,
 				EB513FC42A098A3D00CA5FF0 /* SkillsViewController.swift in Sources */,
 				EBD987902A050ACB00495DF3 /* PetProjectsPresenter.swift in Sources */,
