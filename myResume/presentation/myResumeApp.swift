@@ -9,9 +9,17 @@ import SwiftUI
 
 @main
 struct myResumeApp: App {
+    @State var isSplashBeingDisplayed = true
+    
     var body: some Scene {
         WindowGroup {
-            TabsViewFactory.makeView()
+            ZStack {
+                TabsViewFactory.makeView()
+                
+                if isSplashBeingDisplayed {
+                    SplashViewFactory.makeView(isSplashBeingDisplayed: $isSplashBeingDisplayed)
+                }
+            }
         }
     }
 }
