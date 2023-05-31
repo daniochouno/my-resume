@@ -19,6 +19,8 @@
 		EB3C831929F9B52D00742C21 /* APIClientFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C831829F9B52D00742C21 /* APIClientFactory.swift */; };
 		EB3C831B29F9BAC100742C21 /* SessionFirestoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C831A29F9BAC100742C21 /* SessionFirestoreModel.swift */; };
 		EB3C831E29F9BB4900742C21 /* WorksRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C831D29F9BB4900742C21 /* WorksRepository.swift */; };
+		EB4987722A27A1B3003D457D /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4987712A27A1B3003D457D /* SplashView.swift */; };
+		EB4987742A27A1C2003D457D /* SplashViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4987732A27A1C2003D457D /* SplashViewFactory.swift */; };
 		EB4987772A27B6D5003D457D /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4987762A27B6D5003D457D /* SplashViewModel.swift */; };
 		EB4987792A27B6DF003D457D /* SplashViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4987782A27B6DF003D457D /* SplashViewModelFactory.swift */; };
 		EB513F942A093AF200CA5FF0 /* skills.json in Resources */ = {isa = PBXBuildFile; fileRef = EB513F932A093AF200CA5FF0 /* skills.json */; };
@@ -206,6 +208,8 @@
 		EB3C831829F9B52D00742C21 /* APIClientFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientFactory.swift; sourceTree = "<group>"; };
 		EB3C831A29F9BAC100742C21 /* SessionFirestoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionFirestoreModel.swift; sourceTree = "<group>"; };
 		EB3C831D29F9BB4900742C21 /* WorksRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksRepository.swift; sourceTree = "<group>"; };
+		EB4987712A27A1B3003D457D /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		EB4987732A27A1C2003D457D /* SplashViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewFactory.swift; sourceTree = "<group>"; };
 		EB4987762A27B6D5003D457D /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		EB4987782A27B6DF003D457D /* SplashViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModelFactory.swift; sourceTree = "<group>"; };
 		EB513F932A093AF200CA5FF0 /* skills.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = skills.json; sourceTree = "<group>"; };
@@ -476,8 +480,18 @@
 			isa = PBXGroup;
 			children = (
 				EB4987752A27B6C5003D457D /* viewModel */,
+				EB4987702A27A19E003D457D /* view */,
 			);
 			path = splash;
+			sourceTree = "<group>";
+		};
+		EB4987702A27A19E003D457D /* view */ = {
+			isa = PBXGroup;
+			children = (
+				EB4987712A27A1B3003D457D /* SplashView.swift */,
+				EB4987732A27A1C2003D457D /* SplashViewFactory.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		EB4987752A27B6C5003D457D /* viewModel */ = {
@@ -1595,10 +1609,12 @@
 				EB51403C2A1545E800CA5FF0 /* WorkDetailsView.swift in Sources */,
 				EBD9879E2A05188F00495DF3 /* PetProjectsRepositoryFactory.swift in Sources */,
 				EB5140032A0C0DFC00CA5FF0 /* TabsViewModelFactory.swift in Sources */,
+				EB4987722A27A1B3003D457D /* SplashView.swift in Sources */,
 				EB513FDC2A0A4AA700CA5FF0 /* AboutMeView.swift in Sources */,
 				EB513FCE2A09DD4400CA5FF0 /* FetchSkillSectionsUseCaseFactory.swift in Sources */,
 				EBA53C3129FA9F0500D7095F /* APIClientRequest.swift in Sources */,
 				EB51403A2A15435400CA5FF0 /* WorkDetailsLocalCacheModel.swift in Sources */,
+				EB4987742A27A1C2003D457D /* SplashViewFactory.swift in Sources */,
 				EB02FA4029E9CD7100CAA9DC /* TabsView.swift in Sources */,
 				EBA53C3929FAE3FC00D7095F /* FetchWorksUseCase.swift in Sources */,
 				EBA53C4929FAEB5800D7095F /* WorksViewFactory.swift in Sources */,
