@@ -6,5 +6,10 @@
 	<string>$(FIRESTORE_API_KEY)</string>
 	<key>FIRESTORE_PROJECT_NAME</key>
 	<string>$(FIRESTORE_PROJECT_NAME)</string>
+	<key>UILaunchScreen</key>
+	<dict>
+		<key>UIColorName</key>
+		<string>SplashViewBackground</string>
+	</dict>
 </dict>
 </plist>
