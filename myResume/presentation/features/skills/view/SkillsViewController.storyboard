@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -28,25 +29,43 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="skillCollectionViewCell" id="DW3-F5-ZZ4" userLabel="skillsCollectionViewCell" customClass="SkillsCollectionViewCell" customModule="myResume" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="55.666666666666657" height="33.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="50" width="71.666666666666657" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="YFH-7t-cns">
-                                            <rect key="frame" x="0.0" y="0.0" width="55.666666666666657" height="33.666666666666657"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="71.666666666666657" height="38"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuo-Yw-OmE">
-                                                    <rect key="frame" x="6" y="6.0000000000000018" width="43.666666666666664" height="21.666666666666671"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fv6-yP-wls">
+                                                    <rect key="frame" x="0.0" y="0.0" width="71.666666666666671" height="38"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuo-Yw-OmE">
+                                                            <rect key="frame" x="15.999999999999996" y="4" width="39.666666666666657" height="30"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.26274511220000002" green="0.33725491169999999" blue="0.57647061349999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="yuo-Yw-OmE" secondAttribute="trailing" constant="16" id="B7E-Yf-kah"/>
+                                                        <constraint firstItem="yuo-Yw-OmE" firstAttribute="top" secondItem="fv6-yP-wls" secondAttribute="top" constant="4" id="LBQ-yy-bDL"/>
+                                                        <constraint firstAttribute="bottom" secondItem="yuo-Yw-OmE" secondAttribute="bottom" constant="4" id="TCq-Dt-Xeo"/>
+                                                        <constraint firstAttribute="height" constant="38" id="buG-r3-7m4"/>
+                                                        <constraint firstItem="yuo-Yw-OmE" firstAttribute="leading" secondItem="fv6-yP-wls" secondAttribute="leading" constant="16" id="yYD-Ry-GTk"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="19"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="yuo-Yw-OmE" firstAttribute="centerY" secondItem="YFH-7t-cns" secondAttribute="centerY" id="GfJ-nL-Tem"/>
-                                                <constraint firstAttribute="bottom" secondItem="yuo-Yw-OmE" secondAttribute="bottom" constant="6" id="UK9-SM-1iQ"/>
-                                                <constraint firstItem="yuo-Yw-OmE" firstAttribute="top" secondItem="YFH-7t-cns" secondAttribute="top" constant="6" id="VSW-hU-lPQ"/>
-                                                <constraint firstAttribute="trailing" secondItem="yuo-Yw-OmE" secondAttribute="trailing" constant="6" id="aRN-Tt-XLr"/>
-                                                <constraint firstItem="yuo-Yw-OmE" firstAttribute="leading" secondItem="YFH-7t-cns" secondAttribute="leading" constant="6" id="sDh-uc-xRW"/>
+                                                <constraint firstAttribute="bottom" secondItem="fv6-yP-wls" secondAttribute="bottom" id="0m9-MV-5Jc"/>
+                                                <constraint firstAttribute="trailing" secondItem="fv6-yP-wls" secondAttribute="trailing" id="Lu2-87-zyb"/>
+                                                <constraint firstItem="fv6-yP-wls" firstAttribute="leading" secondItem="YFH-7t-cns" secondAttribute="leading" id="ZX0-V8-XLx"/>
+                                                <constraint firstItem="fv6-yP-wls" firstAttribute="top" secondItem="YFH-7t-cns" secondAttribute="top" id="ppG-dw-yQ0"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
@@ -86,7 +105,6 @@
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xe6-Lv-UHO" secondAttribute="trailing" constant="16" id="EZG-98-s1s"/>
                             <constraint firstItem="LMY-wn-DJl" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="Eva-Xd-kri"/>
