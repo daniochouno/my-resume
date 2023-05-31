@@ -14,17 +14,19 @@ struct CareerView: View {
         NavigationView {
             VStack{
                 TopTabBar(tabIndex: $tabIndex)
-                    .padding(.bottom)
-                if tabIndex == 0 {
-                    WorksViewFactory.makeView()
+                
+                ZStack {
+                    if tabIndex == 0 {
+                        WorksViewFactory.makeView()
+                    } else {
+                        PetProjectsViewFactory.makeView()
+                    }
                 }
-                else {
-                    PetProjectsViewFactory.makeView()
-                }
+                .frame(width: UIScreen.main.bounds.width - 24, alignment: .center)
+                .padding([.leading, .trailing])
+                
                 Spacer()
             }
-            .frame(width: UIScreen.main.bounds.width - 24, alignment: .center)
-            .padding([.top, .leading, .trailing])
         }
     }
 }
@@ -33,14 +35,14 @@ struct TopTabBar: View {
     @Binding var tabIndex: Int
     
     var body: some View {
-        HStack(spacing: 20) {
+        HStack(spacing: 12) {
             TabBarButton(text: "career.tabs.works.title", isSelected: .constant(tabIndex == 0))
                 .onTapGesture { onButtonTapped(index: 0) }
             TabBarButton(text: "career.tabs.sideProjects.title", isSelected: .constant(tabIndex == 1))
                 .onTapGesture { onButtonTapped(index: 1) }
-            Spacer()
         }
-        .border(width: 1, edges: [.bottom], color: .black)
+        .frame(maxWidth: .infinity)
+        .background(Color("PrimaryColor"))
     }
     
     private func onButtonTapped(index: Int) {
@@ -55,9 +57,17 @@ struct TabBarButton: View {
     var body: some View {
         Text(LocalizedStringKey(text))
             .font(.title3)
-            .fontWeight(isSelected ? .heavy : .regular)
-            .padding(.bottom, 10)
-            .border(width: isSelected ? 4 : 1, edges: [.bottom], color: .black)
+            .foregroundColor(isSelected ? Color("PrimaryColor") : .white)
+            .frame(height: 42)
+            .padding(.horizontal)
+            .background {
+                if isSelected {
+                    Rectangle()
+                        .fill(.white)
+                        .cornerRadius(12)
+                }
+            }
+            .padding()
     }
 }
 
