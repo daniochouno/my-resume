@@ -10,7 +10,6 @@ import SwiftUI
 struct PetProjectDetailsView: View {
     @ObservedObject var viewModel: PetProjectDetailsViewModel
     
-    @Environment(\.dismiss) private var dismiss
     @Environment(\.openURL) private var openURL
     
     var body: some View {
@@ -100,26 +99,12 @@ struct PetProjectDetailsView: View {
             }
         }
         .navigationBarBackButtonHidden()
-        .navigationBarItems(leading: backButton)
+        .navigationBarItems(leading: BackButtonView())
         .onAppear {
             Task {
                 await self.viewModel.load()
             }
         }
-    }
-    
-    private var backButton: some View {
-        Button(action: {
-            self.dismiss()
-        }) {
-            Label(title: {
-                Text(LocalizedStringKey("navigation.back"))
-            }, icon: {
-                Image(systemName: "arrow.left")
-            })
-            .foregroundColor(.black)
-        }
-        .labelStyle(.titleAndIcon)
     }
     
     private func storeButton(_ style: PetProjectsAppStoreType, url: URL) -> some View {

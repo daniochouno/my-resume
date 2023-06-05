@@ -10,8 +10,6 @@ import SwiftUI
 struct WorkDetailsView: View {
     @ObservedObject var viewModel: WorkDetailsViewModel
     
-    @Environment(\.dismiss) private var dismiss
-    
     var body: some View {
         ZStack {
             ScrollView(.vertical, showsIndicators: false) {
@@ -96,26 +94,12 @@ struct WorkDetailsView: View {
             }
         }
         .navigationBarBackButtonHidden()
-        .navigationBarItems(leading: backButton)
+        .navigationBarItems(leading: BackButtonView())
         .onAppear {
             Task {
                 await self.viewModel.load()
             }
         }
-    }
-    
-    private var backButton: some View {
-        Button(action: {
-            self.dismiss()
-        }) {
-            Label(title: {
-                Text(LocalizedStringKey("navigation.back"))
-            }, icon: {
-                Image(systemName: "arrow.left")
-            })
-            .foregroundColor(.black)
-        }
-        .labelStyle(.titleAndIcon)
     }
 }
 
