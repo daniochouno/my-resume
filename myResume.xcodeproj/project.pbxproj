@@ -104,6 +104,8 @@
 		EB75A85F2A16B92D002BD628 /* LocalCacheDataSourceRemoveWorksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB75A85E2A16B92D002BD628 /* LocalCacheDataSourceRemoveWorksTests.swift */; };
 		EB75A8612A16BAC1002BD628 /* LocalCacheDataSourceRemovePetProjectsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB75A8602A16BAC1002BD628 /* LocalCacheDataSourceRemovePetProjectsTests.swift */; };
 		EB75A8632A16BB27002BD628 /* LocalCacheDataSourceRemoveWorkDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB75A8622A16BB27002BD628 /* LocalCacheDataSourceRemoveWorkDetailsTests.swift */; };
+		EB7EB5082A290BE700F67085 /* BackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7EB5072A290BE700F67085 /* BackButtonView.swift */; };
+		EB7EB50C2A291CA000F67085 /* PrimaryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7EB50B2A291CA000F67085 /* PrimaryButtonView.swift */; };
 		EB7FB7E729EEA35900DEA576 /* CareerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7E629EEA35900DEA576 /* CareerView.swift */; };
 		EB7FB7E929EEA7A200DEA576 /* CareerViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7E829EEA7A200DEA576 /* CareerViewFactory.swift */; };
 		EB7FB7ED29EEAEFD00DEA576 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7EC29EEAEFD00DEA576 /* View.swift */; };
@@ -293,6 +295,8 @@
 		EB75A85E2A16B92D002BD628 /* LocalCacheDataSourceRemoveWorksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSourceRemoveWorksTests.swift; sourceTree = "<group>"; };
 		EB75A8602A16BAC1002BD628 /* LocalCacheDataSourceRemovePetProjectsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSourceRemovePetProjectsTests.swift; sourceTree = "<group>"; };
 		EB75A8622A16BB27002BD628 /* LocalCacheDataSourceRemoveWorkDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSourceRemoveWorkDetailsTests.swift; sourceTree = "<group>"; };
+		EB7EB5072A290BE700F67085 /* BackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonView.swift; sourceTree = "<group>"; };
+		EB7EB50B2A291CA000F67085 /* PrimaryButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonView.swift; sourceTree = "<group>"; };
 		EB7FB7E629EEA35900DEA576 /* CareerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerView.swift; sourceTree = "<group>"; };
 		EB7FB7E829EEA7A200DEA576 /* CareerViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerViewFactory.swift; sourceTree = "<group>"; };
 		EB7FB7EC29EEAEFD00DEA576 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
@@ -810,8 +814,10 @@
 		EB51403F2A15575A00CA5FF0 /* shared */ = {
 			isa = PBXGroup;
 			children = (
+				EB7EB5072A290BE700F67085 /* BackButtonView.swift */,
 				EB75A85A2A169BA7002BD628 /* DataOriginMessageView.swift */,
 				EB5140402A15577100CA5FF0 /* ErrorMessageView.swift */,
+				EB7EB50B2A291CA000F67085 /* PrimaryButtonView.swift */,
 			);
 			path = shared;
 			sourceTree = "<group>";
@@ -1557,6 +1563,7 @@
 				EB513F9C2A093D2F00CA5FF0 /* JsonDataSource.swift in Sources */,
 				EBD987802A04FD3900495DF3 /* PetProjectsView.swift in Sources */,
 				EB513FAA2A097C6800CA5FF0 /* FetchSkillSectionsUseCase.swift in Sources */,
+				EB7EB5082A290BE700F67085 /* BackButtonView.swift in Sources */,
 				EB513FD42A09E00200CA5FF0 /* SkillsView.swift in Sources */,
 				EB513F992A093B5400CA5FF0 /* SkillSectionJsonModel.swift in Sources */,
 				EBD9879A2A05181800495DF3 /* PetProjectsInteractorFactory.swift in Sources */,
@@ -1589,6 +1596,7 @@
 				EBD987A52A052FD100495DF3 /* PetProjectsCardView.swift in Sources */,
 				EB5140122A0C178100CA5FF0 /* SettingsBundleDataSourceFactory.swift in Sources */,
 				EB5140282A1413D200CA5FF0 /* WorkDetailsViewModelFactory.swift in Sources */,
+				EB7EB50C2A291CA000F67085 /* PrimaryButtonView.swift in Sources */,
 				EB3C831729F9B07C00742C21 /* WorkFirestoreModel.swift in Sources */,
 				EBD9876C2A04396400495DF3 /* PetProjectFirestoreModel.swift in Sources */,
 				EB513FBC2A0984F800CA5FF0 /* SkillModel.swift in Sources */,
