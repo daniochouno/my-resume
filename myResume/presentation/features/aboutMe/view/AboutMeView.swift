@@ -8,26 +8,39 @@
 import SwiftUI
 
 struct AboutMeView: View {
+    @State var isPdfViewerActive = false
+    
     var body: some View {
-        ScrollView {
-            Text("aboutMe.hello.title")
-                .font(.title)
-                .frame(maxWidth: .infinity, alignment: .leading)
-            
-            Text("aboutMe.hello.text")
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.vertical)
-            
-            Text("aboutMe.aboutThisProject.title")
-                .fontWeight(.semibold)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.vertical)
-            
-            Text("aboutMe.aboutThisProject.text")
-                .padding(.bottom, 44)
+        NavigationView {
+            ScrollView {
+                Text("aboutMe.hello.title")
+                    .font(.title)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                
+                Text("aboutMe.hello.text")
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.vertical)
+                
+                Text("aboutMe.aboutThisProject.title")
+                    .fontWeight(.semibold)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.vertical)
+                
+                Text("aboutMe.aboutThisProject.text")
+                    .padding(.bottom, 44)
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink(destination: PDFViewerView(), isActive: $isPdfViewerActive) {
+                        PrimaryButtonView(title: "aboutMe.resume.pdf") {
+                            isPdfViewerActive = true
+                        }
+                    }
+                }
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding([.leading, .top, .trailing], 24)
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .padding([.leading, .top, .trailing], 24)
     }
 }
 

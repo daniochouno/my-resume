@@ -82,5 +82,9 @@
 "aboutMe.hello.text" = "Soy Daniel Martínez, un desarrollador de aplicaciones para iOS con más de 15 años de experiencia laboral, los 7 últimos de ellos especializados en iOS, y que he trabajado en el desarrollo de más de 10 aplicaciones de iOS, la mayoría de ellas en entornos de despliegue continuo en la AppStore (fast-paced environment), normalmente con un ciclo de publicación de 2 semanas.\n\nComo proyectos adicionales a mi trabajo, he creado desde cero 3 aplicaciones que se encuentran disponibles en las tiendas de iOS y Android. Una de ellas ha sido descargada más de 100.000 veces desde que se publicó.\n\nMis puntos fuertes son la organización de tareas, mi alto nivel de autonomía y el compromiso al máximo con la fidelidad en la implementación de las funcionalidades.\n\nLo que más me motiva y la razón principal por la que me apasiona mi trabajo es poder llegar y ayudar con mis apps a cualquier persona que posea un teléfono móvil, un iPhone.\n\nMe considero un buen trabajador en equipo, abierto a dialogar sobre la mejor forma de desarrollar una feature y a colaborar para mejorarla.";
 "aboutMe.aboutThisProject.title" = "Sobre este proyecto";
 "aboutMe.aboutThisProject.text" = "Este proyecto nace para poder mostrar parte de mis capacidades como desarrollador en iOS.\n\nHe usado SwiftUI, UIKit, arquitecturas como MVVM y VIPER, conexiones de red a una API REST, etc... en un proyecto real, dejando disponible el código para que cualquier persona interesada pueda verlo.\n\nTienes mucha más información de cómo he creado todo esto en el README del proyecto en GitHub.";
+"aboutMe.resume.pdf" = "CV en PDF";
+// Resume
+"pdfViewer.resume.filename" = "Resume-es";
+"pdfViewer.resume.download" = "Descargar PDF";
 // Errors
 "parser" = "An error occurred while getting the data";

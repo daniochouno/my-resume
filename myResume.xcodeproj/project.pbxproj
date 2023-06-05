@@ -104,7 +104,12 @@
 		EB75A85F2A16B92D002BD628 /* LocalCacheDataSourceRemoveWorksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB75A85E2A16B92D002BD628 /* LocalCacheDataSourceRemoveWorksTests.swift */; };
 		EB75A8612A16BAC1002BD628 /* LocalCacheDataSourceRemovePetProjectsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB75A8602A16BAC1002BD628 /* LocalCacheDataSourceRemovePetProjectsTests.swift */; };
 		EB75A8632A16BB27002BD628 /* LocalCacheDataSourceRemoveWorkDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB75A8622A16BB27002BD628 /* LocalCacheDataSourceRemoveWorkDetailsTests.swift */; };
+		EB7EB4FF2A29037000F67085 /* PDFViewerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7EB4FE2A29037000F67085 /* PDFViewerView.swift */; };
+		EB7EB5012A29076100F67085 /* PDFViewerViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7EB5002A29076100F67085 /* PDFViewerViewFactory.swift */; };
+		EB7EB5052A29095900F67085 /* Resume-es.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EB7EB5032A29095800F67085 /* Resume-es.pdf */; };
+		EB7EB5062A29095900F67085 /* Resume-en.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EB7EB5042A29095900F67085 /* Resume-en.pdf */; };
 		EB7EB5082A290BE700F67085 /* BackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7EB5072A290BE700F67085 /* BackButtonView.swift */; };
+		EB7EB50A2A291B7C00F67085 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7EB5092A291B7C00F67085 /* UIApplication.swift */; };
 		EB7EB50C2A291CA000F67085 /* PrimaryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7EB50B2A291CA000F67085 /* PrimaryButtonView.swift */; };
 		EB7FB7E729EEA35900DEA576 /* CareerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7E629EEA35900DEA576 /* CareerView.swift */; };
 		EB7FB7E929EEA7A200DEA576 /* CareerViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FB7E829EEA7A200DEA576 /* CareerViewFactory.swift */; };
@@ -295,7 +300,12 @@
 		EB75A85E2A16B92D002BD628 /* LocalCacheDataSourceRemoveWorksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSourceRemoveWorksTests.swift; sourceTree = "<group>"; };
 		EB75A8602A16BAC1002BD628 /* LocalCacheDataSourceRemovePetProjectsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSourceRemovePetProjectsTests.swift; sourceTree = "<group>"; };
 		EB75A8622A16BB27002BD628 /* LocalCacheDataSourceRemoveWorkDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSourceRemoveWorkDetailsTests.swift; sourceTree = "<group>"; };
+		EB7EB4FE2A29037000F67085 /* PDFViewerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewerView.swift; sourceTree = "<group>"; };
+		EB7EB5002A29076100F67085 /* PDFViewerViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewerViewFactory.swift; sourceTree = "<group>"; };
+		EB7EB5032A29095800F67085 /* Resume-es.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Resume-es.pdf"; sourceTree = "<group>"; };
+		EB7EB5042A29095900F67085 /* Resume-en.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Resume-en.pdf"; sourceTree = "<group>"; };
 		EB7EB5072A290BE700F67085 /* BackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonView.swift; sourceTree = "<group>"; };
+		EB7EB5092A291B7C00F67085 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		EB7EB50B2A291CA000F67085 /* PrimaryButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonView.swift; sourceTree = "<group>"; };
 		EB7FB7E629EEA35900DEA576 /* CareerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerView.swift; sourceTree = "<group>"; };
 		EB7FB7E829EEA7A200DEA576 /* CareerViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerViewFactory.swift; sourceTree = "<group>"; };
@@ -848,6 +858,32 @@
 			path = petProjectDetails;
 			sourceTree = "<group>";
 		};
+		EB7EB4FC2A29032F00F67085 /* pdfViewer */ = {
+			isa = PBXGroup;
+			children = (
+				EB7EB4FD2A29034F00F67085 /* view */,
+			);
+			path = pdfViewer;
+			sourceTree = "<group>";
+		};
+		EB7EB4FD2A29034F00F67085 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				EB7EB4FE2A29037000F67085 /* PDFViewerView.swift */,
+				EB7EB5002A29076100F67085 /* PDFViewerViewFactory.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		EB7EB5022A29093700F67085 /* pdfs */ = {
+			isa = PBXGroup;
+			children = (
+				EB7EB5042A29095900F67085 /* Resume-en.pdf */,
+				EB7EB5032A29095800F67085 /* Resume-es.pdf */,
+			);
+			path = pdfs;
+			sourceTree = "<group>";
+		};
 		EB7FB7E429EEA33900DEA576 /* career */ = {
 			isa = PBXGroup;
 			children = (
@@ -879,6 +915,7 @@
 			children = (
 				EBD987A62A056EA400495DF3 /* Color.swift */,
 				EB7FB7EC29EEAEFD00DEA576 /* View.swift */,
+				EB7EB5092A291B7C00F67085 /* UIApplication.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -973,6 +1010,7 @@
 				EBDAB8922A1BD79A0046C570 /* petProjectDetails */,
 				EB513FB42A09822800CA5FF0 /* skills */,
 				EB513FD92A0A4A7500CA5FF0 /* aboutMe */,
+				EB7EB4FC2A29032F00F67085 /* pdfViewer */,
 			);
 			path = features;
 			sourceTree = "<group>";
@@ -980,6 +1018,7 @@
 		EB86A60429E89D8800373ED1 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				EB7EB5022A29093700F67085 /* pdfs */,
 				EBA090FF29E5C2E2001B3005 /* Assets.xcassets */,
 				EB02FA4729E9D19D00CAA9DC /* Localizable.strings */,
 			);
@@ -1499,7 +1538,9 @@
 				EB513F942A093AF200CA5FF0 /* skills.json in Resources */,
 				EB02FA4529E9D19D00CAA9DC /* Localizable.strings in Resources */,
 				EBA0910029E5C2E2001B3005 /* Assets.xcassets in Resources */,
+				EB7EB5052A29095900F67085 /* Resume-es.pdf in Resources */,
 				EB513FFE2A0C041B00CA5FF0 /* Settings.bundle in Resources */,
+				EB7EB5062A29095900F67085 /* Resume-en.pdf in Resources */,
 				EB513FC62A098A6000CA5FF0 /* SkillsViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1548,6 +1589,7 @@
 				EB513FD22A09DDC200CA5FF0 /* JsonDataSourceFactory.swift in Sources */,
 				EB513FE42A0A9C8000CA5FF0 /* WorksLocalCacheModel.swift in Sources */,
 				EBDAB89B2A1BD9B60046C570 /* PetProjectDetailsRepositoryModel.swift in Sources */,
+				EB7EB50A2A291B7C00F67085 /* UIApplication.swift in Sources */,
 				EB51401A2A0C2D6100CA5FF0 /* SessionDataSourceFactory.swift in Sources */,
 				EB513FF62A0AF77C00CA5FF0 /* WorkRepositoryModel.swift in Sources */,
 				EBD987712A043C9600495DF3 /* PetProjectsRepository.swift in Sources */,
@@ -1579,6 +1621,7 @@
 				EBDAB8B42A1D2BD10046C570 /* PetProjectDetailsView.swift in Sources */,
 				EBDAB8B62A1D2BE00046C570 /* PetProjectDetailsViewFactory.swift in Sources */,
 				EBD9877C2A043FA000495DF3 /* PetProjectUseCaseModel.swift in Sources */,
+				EB7EB4FF2A29037000F67085 /* PDFViewerView.swift in Sources */,
 				EB5140182A0C2D5500CA5FF0 /* SessionDataSource.swift in Sources */,
 				EB3C830D29F9A9CA00742C21 /* FirestoreDataSourceFactory.swift in Sources */,
 				EB51402F2A14174E00CA5FF0 /* FetchWorkDetailsUseCaseFactory.swift in Sources */,
@@ -1630,6 +1673,7 @@
 				EB513FC82A09DA6C00CA5FF0 /* SkillsCollectionViewCell.swift in Sources */,
 				EB3C831929F9B52D00742C21 /* APIClientFactory.swift in Sources */,
 				EB02FA4229E9CF9300CAA9DC /* TabsViewFactory.swift in Sources */,
+				EB7EB5012A29076100F67085 /* PDFViewerViewFactory.swift in Sources */,
 				EB5140342A14197700CA5FF0 /* WorkDetailsRepositoryModel.swift in Sources */,
 				EB5140242A14122C00CA5FF0 /* WorkDetailsModel.swift in Sources */,
 				EB4987792A27B6DF003D457D /* SplashViewModelFactory.swift in Sources */,
