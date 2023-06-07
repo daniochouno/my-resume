@@ -59,7 +59,7 @@ struct WorksView: View {
                 .frame(width: 36, height: 36)
                 
                 Rectangle()
-                    .fill(.black)
+                    .fill(Color("Black"))
                     .frame(width: 3)
             }
             .padding(.top, 6)
