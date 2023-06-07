@@ -8,7 +8,7 @@
 import Foundation
 
 struct SkillSectionJsonModel: Decodable {
-    let title: String
+    let titleKey: String
     let order: Int
     let items: [SkillJsonModel]
 }

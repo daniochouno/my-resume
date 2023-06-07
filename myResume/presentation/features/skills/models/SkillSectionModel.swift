@@ -9,7 +9,7 @@ import Foundation
 
 struct SkillSectionModel: Identifiable, Equatable {
     let id: UUID
-    let title: String
+    let titleKey: String
     let order: Int
     let items: [SkillModel]
 }
@@ -17,7 +17,7 @@ struct SkillSectionModel: Identifiable, Equatable {
 extension SkillSectionModel {
     init(from useCaseModel: SkillSectionUseCaseModel) {
         self.id = UUID()
-        self.title = useCaseModel.title
+        self.titleKey = useCaseModel.titleKey
         self.order = useCaseModel.order
         self.items = useCaseModel.items.map { SkillModel(from: $0) }
     }

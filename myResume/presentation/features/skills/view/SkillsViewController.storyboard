@@ -3,7 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -29,17 +29,24 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="skillCollectionViewCell" id="DW3-F5-ZZ4" userLabel="skillsCollectionViewCell" customClass="SkillsCollectionViewCell" customModule="myResume" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="71.666666666666657" height="38"/>
+                                        <rect key="frame" x="0.0" y="50" width="103.66666666666666" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="YFH-7t-cns">
-                                            <rect key="frame" x="0.0" y="0.0" width="71.666666666666657" height="38"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="103.66666666666666" height="38"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fv6-yP-wls">
-                                                    <rect key="frame" x="0.0" y="0.0" width="71.666666666666671" height="38"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="103.66666666666667" height="38"/>
                                                     <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nuh-Q9-ci5">
+                                                            <rect key="frame" x="16" y="7" width="24" height="24"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="24" id="4CK-vD-p32"/>
+                                                                <constraint firstAttribute="height" constant="24" id="wrw-VQ-fR2"/>
+                                                            </constraints>
+                                                        </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuo-Yw-OmE">
-                                                            <rect key="frame" x="15.999999999999996" y="4" width="39.666666666666657" height="30"/>
+                                                            <rect key="frame" x="48" y="4" width="39.666666666666657" height="30"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -51,7 +58,9 @@
                                                         <constraint firstItem="yuo-Yw-OmE" firstAttribute="top" secondItem="fv6-yP-wls" secondAttribute="top" constant="4" id="LBQ-yy-bDL"/>
                                                         <constraint firstAttribute="bottom" secondItem="yuo-Yw-OmE" secondAttribute="bottom" constant="4" id="TCq-Dt-Xeo"/>
                                                         <constraint firstAttribute="height" constant="38" id="buG-r3-7m4"/>
-                                                        <constraint firstItem="yuo-Yw-OmE" firstAttribute="leading" secondItem="fv6-yP-wls" secondAttribute="leading" constant="16" id="yYD-Ry-GTk"/>
+                                                        <constraint firstItem="nuh-Q9-ci5" firstAttribute="centerY" secondItem="fv6-yP-wls" secondAttribute="centerY" id="keU-zP-mAu"/>
+                                                        <constraint firstItem="yuo-Yw-OmE" firstAttribute="leading" secondItem="nuh-Q9-ci5" secondAttribute="trailing" constant="8" id="ker-aj-CCF"/>
+                                                        <constraint firstItem="nuh-Q9-ci5" firstAttribute="leading" secondItem="fv6-yP-wls" secondAttribute="leading" constant="16" id="sKI-j9-42K"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -69,6 +78,7 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
+                                            <outlet property="icon" destination="nuh-Q9-ci5" id="MMr-JA-6Hv"/>
                                             <outlet property="title" destination="yuo-Yw-OmE" id="pFW-rV-RJ8"/>
                                         </connections>
                                     </collectionViewCell>

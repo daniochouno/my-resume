@@ -1,89 +1,59 @@
 [{
-	"title": "Programming Languages",
+	"titleKey": "skills.group.programmingLanguages",
 	"order": 0,
 	"items": [{
 		"title": "Swift",
-		"experienceInYears": 8,
-		"iconAsset": "",
-		"foregroundColor": "",
-		"backgroundColor": ""
+		"iconAsset": "swift"
 	},{
 		"title": "SwiftUI",
-		"experienceInYears": 2,
-		"iconAsset": "",
-		"foregroundColor": "",
-		"backgroundColor": ""
+		"iconAsset": "swiftui"
 	},{
+        "title": "Objective-C",
+        "iconAsset": "objectiveC"
+    },{
 		"title": "Flutter",
-		"experienceInYears": 8,
-		"iconAsset": "",
-		"foregroundColor": "",
-		"backgroundColor": ""
+		"iconAsset": "flutter"
 	},{
 		"title": "Kotlin",
-		"experienceInYears": 8,
-		"iconAsset": "",
-		"foregroundColor": "",
-		"backgroundColor": ""
+		"iconAsset": "kotlin"
 	}]
 },{
-	"title": "Platforms",
+	"titleKey": "skills.group.platforms",
 	"order": 1,
 	"items": [{
 		"title": "iOS",
-		"experienceInYears": 12,
-		"iconAsset": "",
-		"foregroundColor": "",
-		"backgroundColor": ""
-	},{
-		"title": "Android",
-		"experienceInYears": 6,
-		"iconAsset": "",
-		"foregroundColor": "",
-		"backgroundColor": ""
+		"iconAsset": "ios"
 	},{
 		"title": "watchOS",
-		"experienceInYears": 4,
-		"iconAsset": "",
-		"foregroundColor": "",
-		"backgroundColor": ""
+		"iconAsset": "watchOS"
+	},{
+		"title": "Android",
+		"iconAsset": "android"
 	}]
 },{
-	"title": "Testing",
+	"titleKey": "skills.group.testing",
 	"order": 2,
 	"items": [{
-		"title": "Unit Testing",
-		"experienceInYears": 8,
-		"iconAsset": "",
-		"foregroundColor": "",
-		"backgroundColor": ""
+		"title": "Unit Tests",
+		"iconAsset": "unitTests"
 	},{
 		"title": "UI Testing",
-		"experienceInYears": 4,
-		"iconAsset": "",
-		"foregroundColor": "",
-		"backgroundColor": ""
+		"iconAsset": "uiTesting"
 	},{
 		"title": "TDD",
-		"experienceInYears": 4,
-		"iconAsset": "",
-		"foregroundColor": "",
-		"backgroundColor": ""
+		"iconAsset": "tdd"
 	}]
 },{
-	"title": "Architectures",
+	"titleKey": "skills.group.architectures",
 	"order": 3,
 	"items": [{
 		"title": "MVVM",
-		"experienceInYears": 6,
-		"iconAsset": "",
-		"foregroundColor": "",
-		"backgroundColor": ""
+		"iconAsset": "mvvm"
 	},{
 		"title": "VIPER",
-		"experienceInYears": 6,
-		"iconAsset": "",
-		"foregroundColor": "",
-		"backgroundColor": ""
-	}]
+		"iconAsset": "viper"
+	},{
+        "title": "MVP",
+        "iconAsset": "mvp"
+    }]
 }]

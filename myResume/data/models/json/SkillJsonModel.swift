@@ -9,8 +9,5 @@ import Foundation
 
 struct SkillJsonModel: Decodable {
     let title: String
-    let experienceInYears: Int
     let iconAsset: String
-    let foregroundColor: String
-    let backgroundColor: String
 }

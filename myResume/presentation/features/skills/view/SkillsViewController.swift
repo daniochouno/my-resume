@@ -49,6 +49,7 @@ extension SkillsViewController: UICollectionViewDataSource {
         guard let cell = self.collectionView?.dequeueReusableCell(withReuseIdentifier: SkillsCollectionViewCell.identifier, for: indexPath) as? SkillsCollectionViewCell else {
             return UICollectionViewCell()
         }
+        cell.icon?.image = UIImage(named: item.iconAsset)
         cell.title?.text = item.title
         return cell
     }
@@ -60,7 +61,7 @@ extension SkillsViewController: UICollectionViewDataSource {
                 return UICollectionReusableView()
             }
             guard let section = self.viewModel?.sections?[indexPath.section] else { return UICollectionReusableView() }
-            headerView.title?.text = section.title
+            headerView.title?.text = NSLocalizedString(section.titleKey, comment: "")
             return headerView
         default:
             return UICollectionReusableView()

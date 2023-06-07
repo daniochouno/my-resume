@@ -10,5 +10,6 @@ import UIKit
 class SkillsCollectionViewCell: UICollectionViewCell {
     static let identifier = "skillCollectionViewCell"
     
+    @IBOutlet weak var icon: UIImageView?
     @IBOutlet weak var title: UILabel?
 }

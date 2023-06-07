@@ -8,14 +8,14 @@
 import Foundation
 
 struct SkillSectionUseCaseModel: Decodable {
-    let title: String
+    let titleKey: String
     let order: Int
     let items: [SkillUseCaseModel]
 }
 
 extension SkillSectionUseCaseModel {
     init(from jsonModel: SkillSectionJsonModel) {
-        self.title = jsonModel.title
+        self.titleKey = jsonModel.titleKey
         self.order = jsonModel.order
         self.items = jsonModel.items.map { SkillUseCaseModel(from: $0) }
     }
