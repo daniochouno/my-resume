@@ -17,10 +17,10 @@ struct WorkFirestoreModel: Encodable, Decodable {
 }
 
 struct WorkFieldFirestoreModel: Encodable, Decodable {
-    let company: FieldStringFirestoreModel
+    let companyKey: FieldStringFirestoreModel
     let companyLogoUrl: FieldStringFirestoreModel
     let titleKey: FieldStringFirestoreModel
-    let location: FieldStringFirestoreModel
+    let locationKey: FieldStringFirestoreModel
     let startDate: FieldTimestampFirestoreModel
     let endDate: FieldTimestampFirestoreModel?
 }

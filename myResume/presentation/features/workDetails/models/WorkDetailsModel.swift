@@ -9,26 +9,26 @@ import Foundation
 
 struct WorkDetailsModel: Identifiable, Equatable {
     let id: UUID
-    let title: String
-    let company: String
+    let titleKey: String
+    let companyKey: String
     let companyLogoUrl: String
-    let location: String
+    let locationKey: String
     let startDate: Date
     let endDate: Date?
-    let summary: String?
+    let summaryKey: String?
     let goalsAchieved: [String]?
 }
 
 extension WorkDetailsModel {
     init(from itemUseCaseModel: WorkDetailsItemUseCaseModel) {
         self.id = UUID()
-        self.title = itemUseCaseModel.title
-        self.company = itemUseCaseModel.company
+        self.titleKey = itemUseCaseModel.titleKey
+        self.companyKey = itemUseCaseModel.companyKey
         self.companyLogoUrl = itemUseCaseModel.companyLogoUrl
-        self.location = itemUseCaseModel.location
+        self.locationKey = itemUseCaseModel.locationKey
         self.startDate = itemUseCaseModel.startDate
         self.endDate = itemUseCaseModel.endDate
-        self.summary = itemUseCaseModel.summary
+        self.summaryKey = itemUseCaseModel.summaryKey
         self.goalsAchieved = itemUseCaseModel.goalsAchieved
     }
 }

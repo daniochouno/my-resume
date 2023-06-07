@@ -19,7 +19,7 @@ struct WorkDetailsView: View {
                             .padding()
                     } else if let details = viewModel.workDetails {
                         
-                        Text(LocalizedStringKey(details.title))
+                        Text(LocalizedStringKey(details.titleKey))
                             .font(.title)
                             .fontWeight(.semibold)
                             .frame(maxWidth: .infinity, alignment: .leading)
@@ -36,7 +36,7 @@ struct WorkDetailsView: View {
                             }
                             .frame(width: 36, height: 36)
                             
-                            Text(details.company)
+                            Text(LocalizedStringKey(details.companyKey))
                                 .frame(maxWidth: .infinity, alignment: .leading)
                         }.padding(.horizontal)
                         
@@ -52,14 +52,14 @@ struct WorkDetailsView: View {
                             }
                         }.padding(.horizontal)
                         
-                        if let summary = details.summary {
+                        if let summaryKey = details.summaryKey {
                             Text("workDetails.summary")
                                 .font(.title2)
                                 .fontWeight(.bold)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 .padding(.horizontal)
                             
-                            Text(LocalizedStringKey(summary))
+                            Text(LocalizedStringKey(summaryKey))
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 .padding(.horizontal)
                         }

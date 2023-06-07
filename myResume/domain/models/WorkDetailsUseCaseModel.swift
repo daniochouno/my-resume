@@ -13,22 +13,22 @@ struct WorkDetailsUseCaseModel: Decodable {
 }
 
 struct WorkDetailsItemUseCaseModel: Decodable {
-    let company: String
+    let companyKey: String
     let companyLogoUrl: String
-    let title: String
-    let location: String
+    let titleKey: String
+    let locationKey: String
     let startDate: Date
     let endDate: Date?
-    let summary: String?
+    let summaryKey: String?
     let goalsAchieved: [String]?
 }
 
 extension WorkDetailsItemUseCaseModel {
     init(from firestoreModel: WorkDetailsFirestoreModel) {
-        self.company = firestoreModel.fields.company.stringValue
+        self.companyKey = firestoreModel.fields.companyKey.stringValue
         self.companyLogoUrl = firestoreModel.fields.companyLogoUrl.stringValue
-        self.title = firestoreModel.fields.titleKey.stringValue
-        self.location = firestoreModel.fields.location.stringValue
+        self.titleKey = firestoreModel.fields.titleKey.stringValue
+        self.locationKey = firestoreModel.fields.locationKey.stringValue
         let startDateString = firestoreModel.fields.startDate.timestampValue
         if let startDate = startDateString.parseDate() {
             self.startDate = startDate
@@ -45,9 +45,9 @@ extension WorkDetailsItemUseCaseModel {
             self.endDate = nil
         }
         if let summaryString = firestoreModel.fields.summaryKey?.stringValue {
-            self.summary = summaryString
+            self.summaryKey = summaryString
         } else {
-            self.summary = nil
+            self.summaryKey = nil
         }
         if let array = firestoreModel.fields.goalsAchievedKeys?.arrayValue {
             self.goalsAchieved = array.values.map({ $0.stringValue })

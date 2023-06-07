@@ -19,7 +19,7 @@ struct BackButtonView: View {
             }, icon: {
                 Image(systemName: "arrow.left")
             })
-            .foregroundColor(.black)
+            .foregroundColor(Color("Black"))
         }
         .labelStyle(.titleAndIcon)
     }

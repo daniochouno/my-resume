@@ -26,35 +26,48 @@
 "workDetails.summary" = "Summary";
 "workDetails.goalsAchieved" = "Goals achieved";
 // Work - Loycus - Mobile
-"works.loycus.mobile.title" = "Mobile Teach Lead";
+"works.loycus.mobile.title" = "Mobile Lead";
+"works.loycus.mobile.company" = "Loycus";
 "works.loycus.mobile.summary" = "";
-"works.loycus.mobile.goalsAchieved.0" = "";
-"works.loycus.mobile.goalsAchieved.1" = "";
-"works.loycus.mobile.goalsAchieved.2" = "";
+"works.loycus.mobile.goalsAchieved.0" = "Technical leadership in the Mobile section of the apps.";
+"works.loycus.mobile.goalsAchieved.1" = "Loycus iOS app development.";
+"works.loycus.mobile.location" = "Madrid, Spain";
 // Work - Loycus - iOS
-"works.loycus.ios.title" = "Senior iOS Engineer";
+"works.loycus.ios.title" = "Senior iOS Developer";
+"works.loycus.ios.company" = "Loycus";
 "works.loycus.ios.summary" = "";
-"works.loycus.ios.goalsAchieved.0" = "Development of the application for iOS.";
-"works.loycus.ios.goalsAchieved.1" = "";
-"works.loycus.ios.goalsAchieved.2" = "";
+"works.loycus.ios.goalsAchieved.0" = "Loycus iOS app development.";
+"works.loycus.ios.location" = "Madrid, Spain";
 // Work - Infinia - Mobile
-"works.infinia.mobile.title" = "Mobile Teach Lead";
+"works.infinia.mobile.title" = "Mobile Engineer";
+"works.infinia.mobile.company" = "Infinia Mobile";
 "works.infinia.mobile.summary" = "";
-"works.infinia.mobile.goalsAchieved.0" = "Leadership of the development of an own SDK in Swift (iOS) and Kotlin (Android).";
-"works.infinia.mobile.goalsAchieved.1" = "Support for the integration of the SDK in leading companies in their sector.";
-"works.infinia.mobile.goalsAchieved.2" = "Development of applications for iOS and Android.";
+"works.infinia.mobile.goalsAchieved.0" = "Development and improvements in own SDKs in Swift (iOS) and Kotlin (Android).";
+"works.infinia.mobile.goalsAchieved.1" = "Support in the integration of the SDKs in applications of leading companies in their sector.";
+"works.infinia.mobile.location" = "Madrid, Spain";
 // Work - Infinia - iOS
-"works.infinia.ios.title" = "iOS Tech Lead";
-"works.infinia.ios.summary" = "Responsible for the development of an own SDK.";
-"works.infinia.ios.goalsAchieved.0" = "Leadership of the development of an own SDK from scratch in Swift (iOS).";
-"works.infinia.ios.goalsAchieved.1" = "Support for the integration of the SDK in leading companies in their sector.";
-"works.infinia.ios.goalsAchieved.2" = "Development of applications for iOS and Android.";
+"works.infinia.ios.title" = "Senior iOS Developer";
+"works.infinia.ios.company" = "Infinia Mobile";
+"works.infinia.ios.summary" = "";
+"works.infinia.ios.goalsAchieved.0" = "Development of our own SDK from scratch in Swift.";
+"works.infinia.ios.goalsAchieved.1" = "Support in the integration of the SDKs in applications of leading companies in their sector.";
+"works.infinia.ios.goalsAchieved.2" = "Development of several applications for iOS and Android.";
+"works.infinia.ios.location" = "Madrid, Spain";
 // Work - Intelygenz - iOS
-"works.intelygenz.ios.title" = "Senior iOS Engineer";
+"works.intelygenz.ios.title" = "Senior iOS Developer";
+"works.intelygenz.ios.company" = "Intelygenz";
 "works.intelygenz.ios.summary" = "";
-"works.intelygenz.ios.goalsAchieved.0" = "Leadership of the development of the iOS application for a leading company in the electrical sector.";
+"works.intelygenz.ios.goalsAchieved.0" = "Design and development of an application for a leading company in the electrical sector.";
 "works.intelygenz.ios.goalsAchieved.1" = "Development of an application for iOS and watchOS for a leading company in the security sector.";
-"works.intelygenz.ios.goalsAchieved.2" = "Team development of several applications for iOS.";
+"works.intelygenz.ios.goalsAchieved.2" = "Participation in the development of various applications for iOS.";
+"works.intelygenz.ios.location" = "Madrid, Spain";
+// Work - AGELEIA
+"works.ageleia.title" = "Tech Head";
+"works.ageleia.company" = "Ageleia SS (formerly Atelsys IT)";
+"works.ageleia.summary" = "";
+"works.ageleia.goalsAchieved.0" = "Design and development of a CRM/ERP for a local telephone distributor.";
+"works.ageleia.goalsAchieved.1" = "Design and development of a B2B application for iOS and Android that sends and receives encrypted messages between users.";
+"works.ageleia.location" = "Seville, Spain";
 // Pet projects
 "petProjects.title" = "These applications have been completely developed by me, from their concept and design to their publication in the various app stores.";
 "petProjects.downloads.%@" = "+%@ downloads";

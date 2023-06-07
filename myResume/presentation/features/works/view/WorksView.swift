@@ -67,10 +67,10 @@ struct WorksView: View {
             VStack {
                 HStack(alignment: .top, spacing: 10) {
                     VStack(alignment: .leading, spacing: 8) {
-                        Text(LocalizedStringKey(work.title))
+                        Text(LocalizedStringKey(work.titleKey))
                             .font(.title2.bold())
                         
-                        Text(work.company)
+                        Text(LocalizedStringKey(work.companyKey))
                             .font(.callout)
                         
                         HStack(spacing: 4) {
