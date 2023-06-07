@@ -29,6 +29,7 @@ struct AboutMeView: View {
                 Text("aboutMe.aboutThisProject.text")
                     .padding(.bottom, 44)
             }
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink(destination: PDFViewerView(), isActive: $isPdfViewerActive) {

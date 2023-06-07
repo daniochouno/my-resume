@@ -27,6 +27,7 @@ struct CareerView: View {
                 
                 Spacer()
             }
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
