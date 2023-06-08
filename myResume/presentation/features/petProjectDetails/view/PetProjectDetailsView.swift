@@ -75,11 +75,13 @@ struct PetProjectDetailsView: View {
                                 .padding(.top, 4)
                             
                             HStack(spacing: 12) {
-                                if let linkAppStore = details.linkAppStore {
-                                    storeButton(.appStore, url: URL(string: linkAppStore)!)
+                                if let linkAppStore = details.linkAppStore,
+                                   let url = URL(string: NSLocalizedString(linkAppStore, comment: "")) {
+                                    storeButton(.appStore, url: url)
                                 }
-                                if let linkPlayStore = details.linkPlayStore {
-                                    storeButton(.googlePlay, url: URL(string: linkPlayStore)!)
+                                if let linkPlayStore = details.linkPlayStore,
+                                   let url = URL(string: NSLocalizedString(linkPlayStore, comment: "")) {
+                                    storeButton(.googlePlay, url: url)
                                 }
                             }
                             .frame(maxWidth: .infinity, alignment: .trailing)
