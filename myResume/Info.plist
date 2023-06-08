@@ -8,6 +8,8 @@
 	<string>$(FIRESTORE_API_KEY)</string>
 	<key>FIRESTORE_PROJECT_NAME</key>
 	<string>$(FIRESTORE_PROJECT_NAME)</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>UILaunchScreen</key>
 	<dict>
 		<key>UIColorName</key>
