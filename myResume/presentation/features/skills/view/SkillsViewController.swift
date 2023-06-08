@@ -49,7 +49,8 @@ extension SkillsViewController: UICollectionViewDataSource {
         guard let cell = self.collectionView?.dequeueReusableCell(withReuseIdentifier: SkillsCollectionViewCell.identifier, for: indexPath) as? SkillsCollectionViewCell else {
             return UICollectionViewCell()
         }
-        cell.icon?.image = UIImage(named: item.iconAsset)
+        let image = UIImage(named: item.iconAsset)?.withTintColor(.white, renderingMode: .alwaysTemplate)
+        cell.icon?.image = image
         cell.title?.text = item.title
         return cell
     }
