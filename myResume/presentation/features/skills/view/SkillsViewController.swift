@@ -25,11 +25,50 @@ class SkillsViewController: UIViewController {
         super.viewDidLoad()
         
         self.errorMessageLabel?.isHidden = true
-        self.collectionView?.dataSource = self
+        self.setUpCollectionView()
         
         Task {
             await self.viewModel?.load()
         }
+    }
+    
+    private func setUpCollectionView() {
+        self.collectionView?.dataSource = self
+        
+        let layout = generateLayout()
+        self.collectionView?.setCollectionViewLayout(layout, animated: true)
+    }
+    
+    private func generateLayout() -> UICollectionViewLayout {
+        let itemSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .fractionalHeight(1.0))
+        let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
+        layoutItem.contentInsets = NSDirectionalEdgeInsets(
+          top: 2,
+          leading: 2,
+          bottom: 2,
+          trailing: 2)
+        let groupSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .estimated(44))
+        let group = NSCollectionLayoutGroup.horizontal(
+            layoutSize: groupSize,
+            subitem: layoutItem,
+            count: 2)
+        
+        let section = NSCollectionLayoutSection(group: group)
+        
+        let headerSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .estimated(44))
+        let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: headerSize,
+            elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
+        sectionHeader.pinToVisibleBounds = true
+        section.boundarySupplementaryItems = [sectionHeader]
+        
+        return UICollectionViewCompositionalLayout(section: section)
     }
 }
 
