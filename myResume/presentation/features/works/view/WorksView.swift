@@ -53,13 +53,18 @@ struct WorksView: View {
                         .resizable()
                         .cornerRadius(18)
                         .aspectRatio(contentMode: .fill)
+                        .overlay(
+                            Circle()
+                                .stroke(Color("Background"), lineWidth: 1)
+                        )
                 } placeholder: {
                     ProgressView()
+                        .foregroundColor(Color("Background"))
                 }
                 .frame(width: 36, height: 36)
                 
                 Rectangle()
-                    .fill(Color("Black"))
+                    .fill(Color("Background"))
                     .frame(width: 3)
             }
             .padding(.top, 6)
