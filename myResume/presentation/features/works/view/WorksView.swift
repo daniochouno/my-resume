@@ -55,7 +55,7 @@ struct WorksView: View {
                         .aspectRatio(contentMode: .fill)
                         .overlay(
                             Circle()
-                                .stroke(Color("AccentColor"), lineWidth: 1)
+                                .stroke(.white, lineWidth: 1)
                         )
                 } placeholder: {
                     ProgressView()

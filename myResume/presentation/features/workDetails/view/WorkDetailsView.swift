@@ -31,6 +31,10 @@ struct WorkDetailsView: View {
                                     .resizable()
                                     .cornerRadius(18)
                                     .aspectRatio(contentMode: .fill)
+                                    .overlay(
+                                        Circle()
+                                            .stroke(.white, lineWidth: 1)
+                                    )
                             } placeholder: {
                                 ProgressView()
                             }
