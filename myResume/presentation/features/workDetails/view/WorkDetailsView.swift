@@ -96,6 +96,8 @@ struct WorkDetailsView: View {
         .navigationBarBackButtonHidden()
         .navigationBarItems(leading: BackButtonView())
         .onAppear {
+            UINavigationBar.appearance().barTintColor = UIColor(named: "BackgroundColor") ?? .white
+            
             Task {
                 await self.viewModel.load()
             }

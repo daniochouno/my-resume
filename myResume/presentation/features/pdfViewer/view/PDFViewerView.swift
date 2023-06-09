@@ -35,7 +35,7 @@ struct PDFViewerView: View {
             }
         }
         .onAppear {
-            UINavigationBar.appearance().barTintColor = .white
+            UINavigationBar.appearance().barTintColor = UIColor(named: "BackgroundColor") ?? .white
         }
     }
     
@@ -68,7 +68,7 @@ private struct PDFKitView: UIViewRepresentable {
     
     func makeUIView(context: Context) -> PDFView {
         let pdfView = PDFView()
-        pdfView.backgroundColor = .white
+        pdfView.backgroundColor = UIColor(named: "BackgroundColor") ?? .white
         pdfView.document = pdfDocument
         pdfView.autoScales = true
         return pdfView
