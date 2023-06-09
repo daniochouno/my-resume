@@ -64,11 +64,11 @@ struct PetProjectsCardView: View {
                 HStack(spacing: 12) {
                     if let linkAppStore = petProject.linkAppStore,
                        let url = URL(string: NSLocalizedString(linkAppStore, comment: "")) {
-                        storeButton(.appStore, url: url)
+                        StoreButtonView(type: .appStore, url: url)
                     }
                     if let linkPlayStore = petProject.linkPlayStore,
                        let url = URL(string: NSLocalizedString(linkPlayStore, comment: "")) {
-                        storeButton(.googlePlay, url: url)
+                        StoreButtonView(type: .googlePlay, url: url)
                     }
                 }
                 .frame(maxWidth: .infinity, alignment: .trailing)
@@ -77,32 +77,6 @@ struct PetProjectsCardView: View {
         }
         .background(Color(.tertiarySystemFill))
         .cornerRadius(12)
-    }
-    
-    private func storeButton(_ style: PetProjectsAppStoreType, url: URL) -> some View {
-        Button {
-            openURL(url)
-        } label: {
-            Label {
-                Text(LocalizedStringKey(String("petProjects.stores.\(style.rawValue)")))
-                    .font(.footnote)
-            } icon: {
-                Image(style.rawValue)
-                    .resizable()
-                    .padding(2)
-                    .frame(width: 20, height: 20)
-            }
-            .padding(.vertical, 4)
-            .padding(.horizontal)
-            .background(.black)
-            .cornerRadius(16)
-        }
-        .foregroundColor(.white)
-    }
-    
-    enum PetProjectsAppStoreType: String {
-        case appStore
-        case googlePlay
     }
 }
 
