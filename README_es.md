@@ -12,7 +12,7 @@ Me considero un buen trabajador en equipo, abierto a dialogar sobre la mejor for
 # Sobre este proyecto
 Este proyecto nace para poder mostrar parte de mis capacidades como desarrollador en iOS en un proyecto real y actualizado.
 
-He usado __SwiftUI__, __UIKit__, arquitecturas como __MVVM__ y __VIPER__, conexiones de red a una API REST, etc... sin utilizar ninguna librería externa, tan sólo con las APIs que proporciona Apple en su SDK nativo. El código fuente de esta aplicación está disponible para que cualquier persona interesada pueda verlo.
+He usado __SwiftUI__, __UIKit__, arquitecturas como __MVVM__ y __VIPER__, conexiones de red a una API REST utilizando __Async/Await__, etc... sin utilizar ninguna librería externa, tan sólo con las APIs que proporciona Apple en su SDK nativo. El código fuente de esta aplicación está disponible para que cualquier persona interesada pueda verlo.
 
 A continuación describo en detalle cómo he desarrollado el proyecto y cómo he creado cada feature.
 
@@ -47,6 +47,8 @@ Contiene los __recursos__ (Assets, cadenas de texto localizadas, etc...) y las _
 
 ### Networking
 En esta capa he incluído todo lo necesario para hacer las conexiones de red. Normalmente se incluye en la capa __Data__, pero he querido separarla para darle más importancia.
+
+He creado un protocolo __APIClient__ con un único método __fetch__ que será el que se encargue de hacer la llamada a la API REST. En la implementación del método creo un __URLRequest__ con los datos de la petición y después llamo a __URLSession__ utilizando __Async/Await__. Compruebo que la respuesta tiene un estado válido (entre 200 y 299) y parseo el contenido al tipo de datos esperado en la respuesta.
 
 ### Config
 Aquí he incluído los archivos de configuración del proyecto y los archivos necesarios para el apartado de Ajustes de la aplicación, accesible desde los Ajustes del sistema operativo.
@@ -86,6 +88,10 @@ El __caso de uso__ (capa de _domain_) carga la lista de trabajos desde el reposi
 
 El __repositorio__ tiene la lógica de la carga de los datos. Es el repositorio el que determina si los datos de la caché siguen siendo válidos y, si no es así, los carga desde la API remota. Para que los datos de la caché sean válidos deben existir en la caché y deben haber sido guardados en una fecha igual o posterior a la fecha actual menos el tiempo de expiración de la caché. Este tiempo de expiración se puede cambiar en los ajustes de la aplicación y por defecto es de __3600 segundos__ (1 hora). Para acceder a los datos de la caché utilizo el __data source de LocalCache__, y para acceder a los datos de la API remota utilizo el __data source de Firebase Firestore__. Cada vez que se obtienen los datos de la API remota se actualiza la caché local.
 
+Las llamadas a la API de Firestore tienen que estar autenticadas. Por eso, la primera vez hago una llamada para autenticarme y obtener los datos de la sesión: __access token__, __refresh token__ y __expires in__. Cuando obtengo estos datos los guardo en la caché local para las próximas llamadas, hasta que los datos de la sesión dejen de ser válidos.
+
+Tanto el __data source de LocalCache__ como el __data source de la sesión__ utilizan __UserDefaults__ para guardar los datos de la caché.
+
 ## Work Details
 Esta feature utiliza la arquitectura __MVVM__.
 
@@ -97,6 +103,10 @@ El __caso de uso__ (capa de _domain_) carga todos los datos del trabajo desde el
 
 El __repositorio__ tiene la lógica de la carga de los datos. Es el repositorio el que determina si los datos de la caché siguen siendo válidos y, si no es así, los carga desde la API remota. Para que los datos de la caché sean válidos deben existir en la caché y deben haber sido guardados en una fecha igual o posterior a la fecha actual menos el tiempo de expiración de la caché. Este tiempo de expiración se puede cambiar en los ajustes de la aplicación y por defecto es de __3600 segundos__ (1 hora). Para acceder a los datos de la caché utilizo el __data source de LocalCache__, y para acceder a los datos de la API remota utilizo el __data source de Firebase Firestore__. Cada vez que se obtienen los datos de la API remota se actualiza la caché local.
 
+Las llamadas a la API de Firestore tienen que estar autenticadas. Por eso, la primera vez hago una llamada para autenticarme y obtener los datos de la sesión: __access token__, __refresh token__ y __expires in__. Cuando obtengo estos datos los guardo en la caché local para las próximas llamadas, hasta que los datos de la sesión dejen de ser válidos.
+
+Tanto el __data source de LocalCache__ como el __data source de la sesión__ utilizan __UserDefaults__ para guardar los datos de la caché.
+
 ## Pet Projects
 Esta feature utiliza la arquitectura __VIPER__.
 
@@ -107,6 +117,10 @@ Uso un __Presenter__ para cargar la información. Este Presenter llama al __Inte
 El __caso de uso__ (capa de _domain_) carga la lista de proyectos personales desde el repositorio de la capa de _data_ y los ordena según el número de descargas de las aplicaciones.
 
 El __repositorio__ tiene la lógica de la carga de los datos. Es el repositorio el que determina si los datos de la caché siguen siendo válidos y, si no es así, los carga desde la API remota. Para que los datos de la caché sean válidos deben existir en la caché y deben haber sido guardados en una fecha igual o posterior a la fecha actual menos el tiempo de expiración de la caché. Este tiempo de expiración se puede cambiar en los ajustes de la aplicación y por defecto es de __3600 segundos__ (1 hora). Para acceder a los datos de la caché utilizo el __data source de LocalCache__, y para acceder a los datos de la API remota utilizo el __data source de Firebase Firestore__. Cada vez que se obtienen los datos de la API remota se actualiza la caché local.
+
+Las llamadas a la API de Firestore tienen que estar autenticadas. Por eso, la primera vez hago una llamada para autenticarme y obtener los datos de la sesión: __access token__, __refresh token__ y __expires in__. Cuando obtengo estos datos los guardo en la caché local para las próximas llamadas, hasta que los datos de la sesión dejen de ser válidos.
+
+Tanto el __data source de LocalCache__ como el __data source de la sesión__ utilizan __UserDefaults__ para guardar los datos de la caché.
 
 Para acceder al detalle de un proyecto personal se utiliza el __Router__.
 
@@ -120,6 +134,10 @@ Uso un __ViewModel__ para cargar la información. Este ViewModel hace una llamad
 El __caso de uso__ (capa de _domain_) carga todos los datos del proyecto personal desde el repositorio de la capa de _data_.
 
 El __repositorio__ tiene la lógica de la carga de los datos. Es el repositorio el que determina si los datos de la caché siguen siendo válidos y, si no es así, los carga desde la API remota. Para que los datos de la caché sean válidos deben existir en la caché y deben haber sido guardados en una fecha igual o posterior a la fecha actual menos el tiempo de expiración de la caché. Este tiempo de expiración se puede cambiar en los ajustes de la aplicación y por defecto es de __3600 segundos__ (1 hora). Para acceder a los datos de la caché utilizo el __data source de LocalCache__, y para acceder a los datos de la API remota utilizo el __data source de Firebase Firestore__. Cada vez que se obtienen los datos de la API remota se actualiza la caché local.
+
+Las llamadas a la API de Firestore tienen que estar autenticadas. Por eso, la primera vez hago una llamada para autenticarme y obtener los datos de la sesión: __access token__, __refresh token__ y __expires in__. Cuando obtengo estos datos los guardo en la caché local para las próximas llamadas, hasta que los datos de la sesión dejen de ser válidos.
+
+Tanto el __data source de LocalCache__ como el __data source de la sesión__ utilizan __UserDefaults__ para guardar los datos de la caché.
 
 ## Skills
 Esta feature utiliza la arquitectura __MVVM__.
