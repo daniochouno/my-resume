@@ -33,7 +33,7 @@ La versión mínima soportada es __iOS 15__. Esto me permite utilizar SwiftUI en
 
 Todos los textos que aparecen en la aplicación están localizados y se muestran en __Inglés (EN)__ o en __Español (ES)__ según el idioma del dispositivo en el que se ejecute. Por defecto se utiliza el inglés.
 
-Los datos de la aplicación están almacenados en varias colecciones de __Firebase Firestore__ y se almacenan en una caché local de la aplicación.
+Los datos de la aplicación están almacenados en varias colecciones de __Firebase Firestore__ y también se almacenan en una caché local de la aplicación.
 
 # Estructura del proyecto
 He dividido el proyecto en distintas capas, siguiendo los principios de la __arquitectura Clean__:
