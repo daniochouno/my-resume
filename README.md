@@ -1,3 +1,5 @@
+[Ver version en Español](../blob/main/README_es.md)
+
 # Hello 👋
 I am Daniel Martínez, an iOS application developer with more than 15 years of work experience, the last 8 of them specialized in iOS, and I have worked on the development of more than 10 iOS applications, most of them in desktop environments. continuous deployment on the AppStore (fast-paced environment), typically with a 2-week release cycle.
 
