@@ -66,6 +66,8 @@ He creado un protocolo __APIClient__ con un único método __fetch__ que será e
 ### Config
 Aquí he incluído los archivos de configuración del proyecto y los archivos necesarios para el apartado de Ajustes de la aplicación, accesible desde los Ajustes del sistema operativo.
 
+![App settings screenshot](../main/screenshots/es/appSettings.jpeg)
+
 # Features
 A continuación describo cómo he desarrollado cada una de las features/pantallas que he incluído en la aplicación.
 
