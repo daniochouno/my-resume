@@ -1,6 +1,14 @@
 [Ver versión en Español](../main/README_es.md)
 
+![Platform](https://img.shields.io/badge/platform-iOS-lightgrey)
 ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/daniochouno/my-resume?label=version)
+![Unit tests](https://img.shields.io/badge/Unit%20Tests-44-success)
+![SwiftUI](https://img.shields.io/badge/-SwiftUI-green)
+![UIKit](https://img.shields.io/badge/-UIKit-green)
+![MVVM](https://img.shields.io/badge/-MVVM-blue)
+![VIPER](https://img.shields.io/badge/-VIPER-blue)
+![Async/Await](https://img.shields.io/badge/-Async%20Await-orange)
+![TDD](https://img.shields.io/badge/-TDD-9cf)
 
 # Hello 👋
 I am Daniel Martínez, an iOS application developer with more than 15 years of work experience, the last 8 of them specialized in iOS, and I have worked on the development of more than 10 iOS applications, most of them in desktop environments. continuous deployment on the AppStore (fast-paced environment), typically with a 2-week release cycle.
