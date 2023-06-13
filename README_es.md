@@ -84,6 +84,63 @@ Uso un __ViewModel__ para cargar la información. Este ViewModel hace una llamad
 
 El __caso de uso__ (capa de _domain_) carga la lista de trabajos desde el repositorio de la capa de _data_ y los ordena según la fecha de comienzo del trabajo.
 
-El __repositorio__ tiene la lógica de la carga de los datos. Es el repositorio el que determina si los datos de la caché siguen siendo válidos y, si no es así, los carga desde la API remota. Para que los datos de la caché sean válidos deben existir en la caché y deben haber sido guardados en una fecha igual o posterior a la fecha actual menos el tiempo de expiración de la caché. Este tiempo de expiración se puede cambiar en los ajustes de la aplicación y por defecto es de 3600 segundos (1 hora). Para acceder a los datos de la caché utilizo el data source de LocalCache, y para acceder a los datos de la API remota utilizo el data source de Firebase Firestore. Cada vez que se obtienen los datos de la API remota se actualiza la caché local.
+El __repositorio__ tiene la lógica de la carga de los datos. Es el repositorio el que determina si los datos de la caché siguen siendo válidos y, si no es así, los carga desde la API remota. Para que los datos de la caché sean válidos deben existir en la caché y deben haber sido guardados en una fecha igual o posterior a la fecha actual menos el tiempo de expiración de la caché. Este tiempo de expiración se puede cambiar en los ajustes de la aplicación y por defecto es de __3600 segundos__ (1 hora). Para acceder a los datos de la caché utilizo el __data source de LocalCache__, y para acceder a los datos de la API remota utilizo el __data source de Firebase Firestore__. Cada vez que se obtienen los datos de la API remota se actualiza la caché local.
 
+## Work Details
+Esta feature utiliza la arquitectura __MVVM__.
+
+La vista está escrita en __SwiftUI__ y muestra el detalle de un trabajo después de haberlo seleccionado en el listado anterior. Al final del listado se muestra un texto que indica si la información se ha cargado desde la API remota o desde la caché.
+
+Uso un __ViewModel__ para cargar la información. Este ViewModel hace una llamada al __caso de uso__ que obtiene el modelo de datos que después se parsea para obtener el __modelo__ de la vista. 
+
+El __caso de uso__ (capa de _domain_) carga todos los datos del trabajo desde el repositorio de la capa de _data_.
+
+El __repositorio__ tiene la lógica de la carga de los datos. Es el repositorio el que determina si los datos de la caché siguen siendo válidos y, si no es así, los carga desde la API remota. Para que los datos de la caché sean válidos deben existir en la caché y deben haber sido guardados en una fecha igual o posterior a la fecha actual menos el tiempo de expiración de la caché. Este tiempo de expiración se puede cambiar en los ajustes de la aplicación y por defecto es de __3600 segundos__ (1 hora). Para acceder a los datos de la caché utilizo el __data source de LocalCache__, y para acceder a los datos de la API remota utilizo el __data source de Firebase Firestore__. Cada vez que se obtienen los datos de la API remota se actualiza la caché local.
+
+## Pet Projects
+Esta feature utiliza la arquitectura __VIPER__.
+
+La vista está escrita en __SwiftUI__ y muestra un listado de mis proyectos personales. Al final del listado se muestra un texto que indica si la información se ha cargado desde la API remota o desde la caché.
+
+Uso un __Presenter__ para cargar la información. Este Presenter llama al __Interactor__ y es éste el que hace una llamada al __caso de uso__ que obtiene el modelo de datos que después se parsea para obtener las __entidades__ de la vista.
+
+El __caso de uso__ (capa de _domain_) carga la lista de proyectos personales desde el repositorio de la capa de _data_ y los ordena según el número de descargas de las aplicaciones.
+
+El __repositorio__ tiene la lógica de la carga de los datos. Es el repositorio el que determina si los datos de la caché siguen siendo válidos y, si no es así, los carga desde la API remota. Para que los datos de la caché sean válidos deben existir en la caché y deben haber sido guardados en una fecha igual o posterior a la fecha actual menos el tiempo de expiración de la caché. Este tiempo de expiración se puede cambiar en los ajustes de la aplicación y por defecto es de __3600 segundos__ (1 hora). Para acceder a los datos de la caché utilizo el __data source de LocalCache__, y para acceder a los datos de la API remota utilizo el __data source de Firebase Firestore__. Cada vez que se obtienen los datos de la API remota se actualiza la caché local.
+
+Para acceder al detalle de un proyecto personal se utiliza el __Router__.
+
+## Pet Project Details
+Esta feature utiliza la arquitectura __MVVM__.
+
+La vista está escrita en __SwiftUI__ y muestra el detalle de un proyecto personal después de haberlo seleccionado en el listado anterior. Al final del listado se muestra un texto que indica si la información se ha cargado desde la API remota o desde la caché.
+
+Uso un __ViewModel__ para cargar la información. Este ViewModel hace una llamada al __caso de uso__ que obtiene el modelo de datos que después se parsea para obtener el __modelo__ de la vista. 
+
+El __caso de uso__ (capa de _domain_) carga todos los datos del proyecto personal desde el repositorio de la capa de _data_.
+
+El __repositorio__ tiene la lógica de la carga de los datos. Es el repositorio el que determina si los datos de la caché siguen siendo válidos y, si no es así, los carga desde la API remota. Para que los datos de la caché sean válidos deben existir en la caché y deben haber sido guardados en una fecha igual o posterior a la fecha actual menos el tiempo de expiración de la caché. Este tiempo de expiración se puede cambiar en los ajustes de la aplicación y por defecto es de __3600 segundos__ (1 hora). Para acceder a los datos de la caché utilizo el __data source de LocalCache__, y para acceder a los datos de la API remota utilizo el __data source de Firebase Firestore__. Cada vez que se obtienen los datos de la API remota se actualiza la caché local.
+
+## Skills
+Esta feature utiliza la arquitectura __MVVM__.
+
+La vista está escrita en __UIKit__ y muestra un listado agrupado de mis habilidades profesionales. Para mostrar la vista he creado un __Storyboard__ que contiene un __UICollectionView__. Este CollectionView tiene un tipo de celda __UICollectionViewCell__ para mostrar el texto que define la habilidad junto con su icono. Además, existe un __UICollectionReusableView__ que utilizo para mostrar los headers de las categorías.
+
+Para integrar esta vista en __UIKit__ en el resto de la aplicación, que usa __SwiftUI__, he creado un __UIViewControllerRepresentable__ que se encarga de encapsularla.
+
+Uso un __ViewModel__ para cargar la información. Este ViewModel hace una llamada al __caso de uso__ que obtiene el modelo de datos que después se parsea para obtener el __modelo__ de la vista. 
+
+El __caso de uso__ (capa de _domain_) carga la lista de habilidades profesionales desde el repositorio de la capa de _data_.
+
+El __repositorio__ carga los datos desde el __data source de Json__. Debido a que es un archivo local no es necesario establecer un mecanismo de caché de acceso a los datos, así que se cargan directamente desde el JSON siempre.
+
+El __data source de Json__ lee el archivo JSON de la base de datos y parsea su contenido.
+
+## About Me
+La vista está escrita en __SwiftUI__ y muestra varios textos con información sobre mí y sobre este proyecto.
+
+## PDF Viewer
+La vista está escrita en __SwiftUI__ y muestra un PDF con mi curriculum. Para mostrarlo utilizo la API de Apple __PDFKit__. Como PDFKit usa UIKit, utilizo un __UIViewRepresentable__ para mostrarlo en la vista de SwiftUI.
+
+Además, he añadido un botón en la parte superior que permite compartir el archivo PDF que se está visualizando.
 
