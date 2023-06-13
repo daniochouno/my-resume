@@ -19,11 +19,11 @@ I have used __SwiftUI__, __UIKit__, architectures like __MVVM__ and __VIPER__, n
 Below I describe in detail how I have developed the project and how I have created each feature.
 
 # TDD
-Throughout the development I have used __TDD__ (__Test Driven Development__). This development technique consists of first writing the tests that will define the feature. In this phase, __edge cases__ or extreme cases can be discovered that can condition the writing of the code that will later pass the tests.
+Throughout the development I have used __TDD__ (__Test Driven Development__). This development technique consists of first writing the tests that will define the feature. In this phase, __edge cases__ can be discovered that can condition the writing of the code that will later pass the tests.
 
 Once the tests have been written, we move on to the next phase: writing the code that will fulfill the feature. Throughout this phase, the tests that we wrote previously will be launched to check the evolution of the development of the feature.
 
-When all the tests pass, the feature can be terminated.
+When all the tests pass, the feature can be finished.
 
 # Factory Pattern
 I have used the __Factory__ pattern throughout the project for the creation and initialization of the classes and, for example, to be able to use protocols throughout the different layers. Using this pattern has also made it easier to write tests, because it allows you to follow __SOLID__ principles.
@@ -33,10 +33,10 @@ The minimum version supported is __iOS 15__. This allows me to use SwiftUI in an
 
 All the texts that appear in the application are localized and are displayed in __English (EN)__ or __Spanish (ES)__ depending on the language of the device on which it is run. By default English is used.
 
-Application data is stored in various collections in __Firebase Firestore__ and is stored in a local application cache.
+Application data is stored in various collections in __Firebase Firestore__ and it is stored in a local cache too.
 
 # Project structure
-I have divided the project into different layers, following the principles of the __Clean__ architecture:
+I have split the project into different layers, following the principles of the __Clean__ architecture:
 
 ### Data
 Contains the __databases__, __Data Sources__, __Repositories__, and models used in this layer.
