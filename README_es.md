@@ -26,8 +26,10 @@ Cuando todos los tests pasen, se podrá dar por finalizada la feature.
 # Patrón Factory
 He usado el patrón __Factory__ en todo el proyecto para la creación e inicialización de las clases y, por ejemplo, poder utilizar protocolos a lo largo de las distintas capas. El uso de este patrón también ha hecho que sea más sencillo escribir los tests, porque permite seguir los principios __SOLID__. 
 
-# Versión mínima
+# Sobre la aplicación
 La versión mínima soportada es __iOS 15__. Esto me permite utilizar SwiftUI en un avanzado estado de estabilidad.
+
+Todos los textos que aparecen en la aplicación están localizados y se muestran en __Inglés (EN)__ o en __Español (ES)__ según el idioma del dispositivo en el que se ejecute. Por defecto se utiliza el inglés.
 
 # Estructura del proyecto
 He dividido el proyecto en distintas capas, siguiendo los principios de la __arquitectura Clean__:
@@ -46,3 +48,32 @@ En esta capa he incluído todo lo necesario para hacer las conexiones de red. No
 
 ### Config
 Aquí he incluído los archivos de configuración del proyecto y los archivos necesarios para el apartado de Ajustes de la aplicación, accesible desde los Ajustes del sistema operativo.
+
+# Features
+A continuación describo cómo he desarrollado cada una de las features/pantallas que he incluído en la aplicación.
+
+## Splash
+La vista está escrita en __SwiftUI__ y tiene una animación que consta de 2 fases inspirada en la animación inicial de la aplicación de __Twitter__. 
+
+En la primera, el logo que he usado para esta aplicación se muestra creciendo y decreciendo durante 5 segundos con un efecto de escalado, donde cada cambio entre crecimiento/decrecimiento dura 0.65 segundos.
+
+En la segunda, el logo crece hasta cubrir por completo la pantalla y dura 1 segundo.
+
+Después se produce la navegación automáticamente hacia la pantalla principal de la aplicación.
+
+Uso un __ViewModel__ para controlar las distintas fases de la animación.
+
+## Tabs
+La vista está escrita en __SwiftUI__ y contiene un TabView personalizado con 3 opciones para ver la información sobre mi carrera profesional, mis habilidades y más información sobre mí.
+
+El TabView personalizado incluye una animación al navegar entre los distintos ítems.
+
+Uso un __ViewModel__ para inicializar la configuración del Settings.bundle al abrirse la pantalla.
+
+## Career
+La vista está escrita en __SwiftUI__ y contiene un menú superior con 2 opciones: mis trabajos y mis proyectos personales.
+
+## Works
+La vista está escrita en __SwiftUI__ y sigue la arquitectura __MVVM__.
+
+
