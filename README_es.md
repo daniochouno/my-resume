@@ -31,6 +31,8 @@ La versión mínima soportada es __iOS 15__. Esto me permite utilizar SwiftUI en
 
 Todos los textos que aparecen en la aplicación están localizados y se muestran en __Inglés (EN)__ o en __Español (ES)__ según el idioma del dispositivo en el que se ejecute. Por defecto se utiliza el inglés.
 
+Los datos de la aplicación están almacenados en varias colecciones de __Firebase Firestore__ y se almacenan en una caché local de la aplicación.
+
 # Estructura del proyecto
 He dividido el proyecto en distintas capas, siguiendo los principios de la __arquitectura Clean__:
 
@@ -74,6 +76,14 @@ Uso un __ViewModel__ para inicializar la configuración del Settings.bundle al a
 La vista está escrita en __SwiftUI__ y contiene un menú superior con 2 opciones: mis trabajos y mis proyectos personales.
 
 ## Works
-La vista está escrita en __SwiftUI__ y sigue la arquitectura __MVVM__.
+Esta feature utiliza la arquitectura __MVVM__.
+
+La vista está escrita en __SwiftUI__ y muestra un listado de mis trabajos y experiencia profesional. Al final del listado se muestra un texto que indica si la información se ha cargado desde la API remota o desde la caché.
+
+Uso un __ViewModel__ para cargar la información. Este ViewModel hace una llamada al __caso de uso__ que obtiene el modelo de datos que después se parsea para obtener el __modelo__ de la vista. 
+
+El __caso de uso__ (capa de _domain_) carga la lista de trabajos desde el repositorio de la capa de _data_ y los ordena según la fecha de comienzo del trabajo.
+
+El __repositorio__ tiene la lógica de la carga de los datos. Es el repositorio el que determina si los datos de la caché siguen siendo válidos y, si no es así, los carga desde la API remota. Para que los datos de la caché sean válidos deben existir en la caché y deben haber sido guardados en una fecha igual o posterior a la fecha actual menos el tiempo de expiración de la caché. Este tiempo de expiración se puede cambiar en los ajustes de la aplicación y por defecto es de 3600 segundos (1 hora). Para acceder a los datos de la caché utilizo el data source de LocalCache, y para acceder a los datos de la API remota utilizo el data source de Firebase Firestore. Cada vez que se obtienen los datos de la API remota se actualiza la caché local.
 
 
