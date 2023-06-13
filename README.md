@@ -66,6 +66,8 @@ I have created a protocol __APIClient__ with a single method __fetch__ that will
 ### Settings
 Here I have included the project configuration files and the necessary files for the Application Settings section, accessible from the operating system Settings.
 
+![App settings screenshot](../main/screenshots/en/appSettings.jpeg)
+
 # Features
 Below I describe how I have developed each of the features/screens that I have included in the application.
 
@@ -91,6 +93,8 @@ I use a __ViewModel__ to initialize the settings in the Settings.bundle when the
 The view is written in __SwiftUI__ and contains a top menu with 2 options: my works and my personal projects.
 
 ## Works
+![Works screenshot](../main/screenshots/en/works.jpeg)
+
 This feature uses the __MVVM__ architecture.
 
 The view is written in __SwiftUI__ and displays a listing of my work and professional experience. At the end of the list, a text is shown indicating whether the information has been loaded from the remote API or from the cache.
@@ -106,6 +110,8 @@ Firestore API calls need to be authenticated. So the first time I make a call to
 Both the __LocalCache__ data source and the __Session__ data source use __UserDefaults__ to hold cache data.
 
 ## Work Details
+![Work Details screenshot](../main/screenshots/en/workDetails.jpeg)
+
 This feature uses the __MVVM__ architecture.
 
 The view is written in __SwiftUI__ and shows the detail of a job after having selected it in the list above. At the end of the list, a text is shown indicating whether the information has been loaded from the remote API or from the cache.
@@ -121,6 +127,8 @@ Firestore API calls need to be authenticated. So the first time I make a call to
 Both the __LocalCache__ data source and the __Session__ data source use __UserDefaults__ to hold cache data.
 
 ## Pet Projects
+![Pet Projects screenshot](../main/screenshots/en/petProjects.jpeg)
+
 This feature uses the __VIPER__ architecture.
 
 The view is written in __SwiftUI__ and displays a list of my personal projects. At the end of the list, a text is shown indicating whether the information has been loaded from the remote API or from the cache.
@@ -138,6 +146,8 @@ Both the __LocalCache__ data source and the __Session__ data source use __UserDe
 To access the detail of a personal project, use the __Router__.
 
 ## Pet Project Details
+![Pet Project Details screenshot](../main/screenshots/en/petProjectDetails.jpeg)
+
 This feature uses the __MVVM__ architecture.
 
 The view is written in __SwiftUI__ and shows the detail of a personal project after having selected it in the list above. At the end of the list, a text is shown indicating whether the information has been loaded from the remote API or from the cache.
@@ -153,6 +163,8 @@ Firestore API calls need to be authenticated. So the first time I make a call to
 Both the __LocalCache__ data source and the __Session__ data source use __UserDefaults__ to hold cache data.
 
 ## Skills
+![Skills screenshot](../main/screenshots/en/skills.jpeg)
+
 This feature uses the __MVVM__ architecture.
 
 The view is written in __UIKit__ and displays a grouped listing of my professional skills. To display the view I have created a __Storyboard__ which contains a __UICollectionView__. This CollectionView has a cell type of __UICollectionViewCell__ to display the text that defines the skill along with its icon. Also, there is a __UICollectionReusableView__ that I use to display the category headers.
@@ -168,9 +180,13 @@ The __repository__ loads the data from the __Json__ data source. Because it is a
 The Json__ __data source reads the JSON file from the database and parses its content.
 
 ## About me
+![About me screenshot](../main/screenshots/en/aboutMe.jpeg)
+
 The view is written in __SwiftUI__ and displays various texts with information about me and this project.
 
 ## PDF Viewer
+![PDF Viewer screenshot](../main/screenshots/en/pdfViewer.jpeg)
+
 The view is written in __SwiftUI__ and displays a PDF of my resume. To display it I use the Apple API __PDFKit__. Since PDFKit uses UIKit, I use a __UIViewRepresentable__ to display it in the SwiftUI view.
 
 In addition, I have added a button at the top that allows you to share the PDF file that is being viewed.
