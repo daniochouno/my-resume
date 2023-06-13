@@ -91,6 +91,8 @@ Uso un __ViewModel__ para inicializar la configuración del Settings.bundle al a
 La vista está escrita en __SwiftUI__ y contiene un menú superior con 2 opciones: mis trabajos y mis proyectos personales.
 
 ## Works
+![Works screenshot](../main/screenshots/es/works.jpeg)
+
 Esta feature utiliza la arquitectura __MVVM__.
 
 La vista está escrita en __SwiftUI__ y muestra un listado de mis trabajos y experiencia profesional. Al final del listado se muestra un texto que indica si la información se ha cargado desde la API remota o desde la caché.
@@ -106,6 +108,8 @@ Las llamadas a la API de Firestore tienen que estar autenticadas. Por eso, la pr
 Tanto el __data source de LocalCache__ como el __data source de la sesión__ utilizan __UserDefaults__ para guardar los datos de la caché.
 
 ## Work Details
+![Work Details screenshot](../main/screenshots/es/workDetails.jpeg)
+
 Esta feature utiliza la arquitectura __MVVM__.
 
 La vista está escrita en __SwiftUI__ y muestra el detalle de un trabajo después de haberlo seleccionado en el listado anterior. Al final del listado se muestra un texto que indica si la información se ha cargado desde la API remota o desde la caché.
@@ -121,6 +125,8 @@ Las llamadas a la API de Firestore tienen que estar autenticadas. Por eso, la pr
 Tanto el __data source de LocalCache__ como el __data source de la sesión__ utilizan __UserDefaults__ para guardar los datos de la caché.
 
 ## Pet Projects
+![Pet Projects screenshot](../main/screenshots/es/petProjects.jpeg)
+
 Esta feature utiliza la arquitectura __VIPER__.
 
 La vista está escrita en __SwiftUI__ y muestra un listado de mis proyectos personales. Al final del listado se muestra un texto que indica si la información se ha cargado desde la API remota o desde la caché.
@@ -138,6 +144,8 @@ Tanto el __data source de LocalCache__ como el __data source de la sesión__ uti
 Para acceder al detalle de un proyecto personal se utiliza el __Router__.
 
 ## Pet Project Details
+![Pet Project Details screenshot](../main/screenshots/es/petProjectDetails.jpeg)
+
 Esta feature utiliza la arquitectura __MVVM__.
 
 La vista está escrita en __SwiftUI__ y muestra el detalle de un proyecto personal después de haberlo seleccionado en el listado anterior. Al final del listado se muestra un texto que indica si la información se ha cargado desde la API remota o desde la caché.
@@ -153,6 +161,8 @@ Las llamadas a la API de Firestore tienen que estar autenticadas. Por eso, la pr
 Tanto el __data source de LocalCache__ como el __data source de la sesión__ utilizan __UserDefaults__ para guardar los datos de la caché.
 
 ## Skills
+![Skills screenshot](../main/screenshots/es/skills.jpeg)
+
 Esta feature utiliza la arquitectura __MVVM__.
 
 La vista está escrita en __UIKit__ y muestra un listado agrupado de mis habilidades profesionales. Para mostrar la vista he creado un __Storyboard__ que contiene un __UICollectionView__. Este CollectionView tiene un tipo de celda __UICollectionViewCell__ para mostrar el texto que define la habilidad junto con su icono. Además, existe un __UICollectionReusableView__ que utilizo para mostrar los headers de las categorías.
@@ -168,9 +178,13 @@ El __repositorio__ carga los datos desde el __data source de Json__. Debido a qu
 El __data source de Json__ lee el archivo JSON de la base de datos y parsea su contenido.
 
 ## About Me
+![About me screenshot](../main/screenshots/es/aboutMe.jpeg)
+
 La vista está escrita en __SwiftUI__ y muestra varios textos con información sobre mí y sobre este proyecto.
 
 ## PDF Viewer
+![PDF Viewer screenshot](../main/screenshots/es/pdfViewer.jpeg)
+
 La vista está escrita en __SwiftUI__ y muestra un PDF con mi curriculum. Para mostrarlo utilizo la API de Apple __PDFKit__. Como PDFKit usa UIKit, utilizo un __UIViewRepresentable__ para mostrarlo en la vista de SwiftUI.
 
 Además, he añadido un botón en la parte superior que permite compartir el archivo PDF que se está visualizando.
